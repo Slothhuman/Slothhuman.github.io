@@ -12,7 +12,7 @@
         <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/p/%E5%90%84%E6%9C%89%E5%8D%83%E7%A7%8B%E7%9A%84@requestparam@requestbody@pathvariable/</guid>
-        <description>&lt;img src="https://example.com/pawel-czerwinski-8uZPynIu-rQ-unsplash1.jpg" alt="Featured image of post 各有千秋的@RequestParam、@RequestBody、@PathVariable" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+        <description>&lt;img src="https://example.com/img/yes.jpg" alt="Featured image of post 各有千秋的@RequestParam、@RequestBody、@PathVariable" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;在Spring框架中，@RequestParam、@RequestBody、@PathVariable是常用的注解之一。这些注解可以用于控制器（Controller）中的方法参数，方便处理HTTP请求。本文将分别介绍这三个注解的使用方法、原理、代码示例以及它们之间的对比不同。&lt;/p&gt;
 &lt;h2 id=&#34;1requestparam注解&#34;&gt;1.@RequestParam注解&lt;/h2&gt;
 &lt;h3 id=&#34;11-使用方法&#34;&gt;1.1 使用方法&lt;/h3&gt;
