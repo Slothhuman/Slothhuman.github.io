@@ -2,24 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Slothhuman&#39;s Blog</title>
-        <link>https://example.com/tags/</link>
+        <link>https://slothhuman.github.io/tags/</link>
         <description>Recent content in Tags on Slothhuman&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>@RequestBody</title>
-        <link>https://example.com/tags/@requestbody/</link>
-        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+        <lastBuildDate>Wed, 09 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>@PathVariable</title>
+        <link>https://slothhuman.github.io/tags/@pathvariable/</link>
+        <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/@requestbody/</guid>
+        <guid>https://slothhuman.github.io/tags/@pathvariable/</guid>
         <description></description>
         </item>
         <item>
-        <title>注解</title>
-        <link>https://example.com/tags/%E6%B3%A8%E8%A7%A3/</link>
-        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+        <title>@RequestBody</title>
+        <link>https://slothhuman.github.io/tags/@requestbody/</link>
+        <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/%E6%B3%A8%E8%A7%A3/</guid>
+        <guid>https://slothhuman.github.io/tags/@requestbody/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>@RequestParam</title>
+        <link>https://slothhuman.github.io/tags/@requestparam/</link>
+        <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/@requestparam/</guid>
         <description></description>
         </item>
         
