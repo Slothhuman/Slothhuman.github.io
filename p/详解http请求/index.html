@@ -266,7 +266,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#http请求方法">HTTP请求方法</a>
       <ol>
         <li><a href="#get">GET</a></li>
         <li><a href="#post">POST</a></li>
@@ -275,20 +276,14 @@
         <li><a href="#其他方法">其他方法</a></li>
       </ol>
     </li>
-  </ol>
-
-  <ol>
-    <li>
+    <li><a href="#http请求参数">HTTP请求参数</a>
       <ol>
         <li><a href="#查询参数">查询参数</a></li>
         <li><a href="#请求头">请求头</a></li>
         <li><a href="#请求体">请求体</a></li>
       </ol>
     </li>
-  </ol>
-
-  <ol>
-    <li>
+    <li><a href="#http响应">HTTP响应</a>
       <ol>
         <li><a href="#状态行">状态行</a></li>
         <li><a href="#响应头">响应头</a></li>
@@ -386,10 +381,10 @@
     <section class="article-content">
     
     
-    <h1 id="简介">简介</h1>
+    <h2 id="简介">简介</h2>
 <p>当今的应用程序通常需要与其他应用程序或服务进行通信，以实现数据的共享和协作。为了实现这种通信，通常需要使用API（Application Programming Interface）接口，而自定义API接口允许应用程序与其他应用程序或服务进行交互。</p>
 <p>而HTTP请求是应用程序之间最常用的通信方式之一，它允许应用程序通过网络向其他应用程序或服务发送请求，并接收返回的响应，使用HTTP请求可以使应用程序与其他应用程序或服务进行交互，共享数据和资源。</p>
-<h1 id="http请求方法">HTTP请求方法</h1>
+<h2 id="http请求方法">HTTP请求方法</h2>
 <p>HTTP请求方法是HTTP协议定义的一组标准方法，用于指示客户端要执行的操作类型。常用的HTTP请求方法包括GET、POST、PUT和DELETE。</p>
 <h3 id="get">GET</h3>
 <p>用于从服务器获取资源，通过查询参数传递参数，不会改变服务器状态。通常用于获取数据。</p>
@@ -402,7 +397,7 @@
 <h3 id="其他方法">其他方法</h3>
 <p>除了上述常见的HTTP请求方法，还有一些其他的HTTP请求方法，如OPTIONS、HEAD、PATCH等，但它们使用较少，本文不作过多介绍。</p>
 <p>在使用HTTP请求时，应该根据实际需求选择合适的HTTP请求方法，例如，如果只需要获取数据，应该使用GET方法；如果需要向服务器提交数据，应该使用POST方法；如果需要更新数据，应该使用PUT方法；如果需要删除数据，应该使用DELETE方法。此外还需要根据HTTP规范设置请求头和请求体。</p>
-<h1 id="http请求参数">HTTP请求参数</h1>
+<h2 id="http请求参数">HTTP请求参数</h2>
 <p>HTTP请求参数是客户端向服务器传递信息的一种方式，包括查询参数、请求头和请求体。</p>
 <h3 id="查询参数">查询参数</h3>
 <p>查询参数是通过URL的查询字符串传递的键值对，使用“?”分隔URL和查询参数，使用“&amp;”连接多个查询参数。</p>
@@ -454,7 +449,7 @@
 </div>
 </div><p>这个示例中，通过POST方法向example.com的/api/users接口提交表单数据，使用Content-Type请求头指定请求体类型为application/x-www-form-urlencoded。</p>
 <p>在使用HTTP请求时，应该根据实际需求选择合适的HTTP请求参数。例如，如果需要传递一些简单的参数，可以使用查询参数；如果需要传递一些复杂的参数或数据，可以使用请求体；如果需要指定请求的一些元数据信息，可以使用请求头。同时，还应该注意HTTP请求参数的编码方式，避免出现乱码等问题。</p>
-<h1 id="http响应">HTTP响应</h1>
+<h2 id="http响应">HTTP响应</h2>
 <p>HTTP响应是服务器返回给客户端的信息，通常包括三个部分：状态行、响应头和响应体。</p>
 <h3 id="状态行">状态行</h3>
 <p>状态行包含三个字段，分别是HTTP版本号、状态码和状态码的原因短语。例如：</p>
