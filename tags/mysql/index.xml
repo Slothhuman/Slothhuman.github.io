@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MySQL on Slothhuman&#39;s Blog</title>
+        <link>https://slothhuman.github.io/tags/mysql/</link>
+        <description>Recent content in MySQL on Slothhuman&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MySQL（七）大表优化</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%B8%83%E5%A4%A7%E8%A1%A8%E4%BC%98%E5%8C%96/</link>
+        <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%B8%83%E5%A4%A7%E8%A1%A8%E4%BC%98%E5%8C%96/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/22.jpg" alt="Featured image of post MySQL（七）大表优化" /&gt;&lt;h2 id=&#34;大表优化&#34;&gt;大表优化&lt;/h2&gt;
+&lt;h3 id=&#34;限定数据的范围&#34;&gt;限定数据的范围&lt;/h3&gt;
+&lt;h3 id=&#34;读写分离&#34;&gt;读/写分离&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;拆分数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;表拆分&#34;&gt;表拆分&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;垂直分区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;⽔平分区&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;客户端代理&lt;/li&gt;
+&lt;li&gt;中间件代理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;子主题-4&#34;&gt;子主题 4&lt;/h3&gt;
+&lt;h3 id=&#34;子主题-5&#34;&gt;子主题 5&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（六）索引</title>
+        <link>https://slothhuman.github.io/p/mysql%E5%85%AD%E7%B4%A2%E5%BC%95/</link>
+        <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E5%85%AD%E7%B4%A2%E5%BC%95/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/21.jpg" alt="Featured image of post MySQL（六）索引" /&gt;&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
+&lt;h3 id=&#34;btree索引&#34;&gt;B+Tree索引&lt;/h3&gt;
+&lt;h3 id=&#34;哈希索引&#34;&gt;哈希索引&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（五）锁</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%BA%94%E9%94%81/</link>
+        <pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%BA%94%E9%94%81/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/20.jpg" alt="Featured image of post MySQL（五）锁" /&gt;&lt;h2 id=&#34;锁&#34;&gt;锁&lt;/h2&gt;
+&lt;h3 id=&#34;表级锁&#34;&gt;表级锁&lt;/h3&gt;
+&lt;p&gt;粒度大
+资源消耗少
+加锁快
+触发锁冲突概率最高
+没有死锁
+并发低&lt;/p&gt;
+&lt;h3 id=&#34;行级锁&#34;&gt;行级锁&lt;/h3&gt;
+&lt;p&gt;粒度小
+加锁开销大
+加锁慢
+并发度高
+会出现死锁&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Record lock：单个⾏记录上的锁&lt;/li&gt;
+&lt;li&gt;Gap lock：间隙锁，锁定⼀个范围，不包括记录本身&lt;/li&gt;
+&lt;li&gt;Next-key lock：record+gap 锁定⼀个范围，包含记录本身&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（四）事务</title>
+        <link>https://slothhuman.github.io/p/mysql%E5%9B%9B%E4%BA%8B%E5%8A%A1/</link>
+        <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E5%9B%9B%E4%BA%8B%E5%8A%A1/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/19.jpg" alt="Featured image of post MySQL（四）事务" /&gt;&lt;h2 id=&#34;事务&#34;&gt;事务&lt;/h2&gt;
+&lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;事务是逻辑上的一组操作，要么都执行，要么都不执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;原子性&lt;/li&gt;
+&lt;li&gt;隔离性&lt;/li&gt;
+&lt;li&gt;持久性&lt;/li&gt;
+&lt;li&gt;一致性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;并发事务的问题&#34;&gt;并发事务的问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;脏读&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;丢失修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不可重复读&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重点是修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;幻读&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重点是新增或者删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;隔离级别&#34;&gt;隔离级别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;READ-UNCOMMITTED(读取未提交)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能导致脏读、不可重复读、幻读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;READ-COMMITTED(读取已提交)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能导致不可重复读、幻读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;REPEATABLE-READ(可重复读)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能导致幻读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SERIALIZABLE(可串⾏化)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（三）存储引擎</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%B8%89%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</link>
+        <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%B8%89%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/18.jpg" alt="Featured image of post MySQL（三）存储引擎" /&gt;&lt;h2 id=&#34;存储引擎&#34;&gt;存储引擎&lt;/h2&gt;
+&lt;p&gt;存储引擎基于表的，因此同一数据库内的不同表可以选择不同的存储引擎&lt;/p&gt;
+&lt;h3 id=&#34;innodb&#34;&gt;InnoDB&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;支持行级锁与表级锁，默认为行级锁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持事务与崩溃后的安全恢复&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持外键&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持MVCC&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;实现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;隐藏字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;trx_id（6字节）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每次一个事务对某条聚簇索引记录进行改动时，都会把该事务的事务id赋值给DB_TRX_ID隐藏列。此外，delete 操作在内部被视为更新，只不过会在记录头 Record header 中的 deleted_flag 字段将其标记为已删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;roll_pointer（7字节）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回滚指针，指向该行的 undo log 。如果该行未被更新，则为空。&lt;/li&gt;
+&lt;li&gt;每次对某条聚簇索引记录进行改动时，都会把旧的版本写入到undo日志中，任何通过回滚指针找到该记录修改前的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;row_id（6字节）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果没有设置主键且该表没有唯一非空索引时，InnoDB 会使用该 id 来生成聚簇索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read View&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;某个具体事务在使用MVCC机制进行快照读操作时产生的读视图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;m_creator_trx_id&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建该 Read View 的事务 ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;m_low_limit_id&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目前出现过的最大的事务 ID+1，即下一个将被分配的事务 ID。大于等于这个 ID 的数据版本均不可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;m_up_limit_id&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;活跃事务列表 m_ids 中最小的事务 ID，如果 m_ids 为空，则 m_up_limit_id 为 m_low_limit_id。小于这个 ID 的数据版本均可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;m_ids&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Read View 创建时其他未提交的活跃事务 ID 列表。创建 Read View时，将当前未提交事务 ID 记录下来，后续即使它们修改了记录行的值，对于当前事务也是不可见的。m_ids 不包括当前事务自己和已提交的事务（正在内存中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;隔离级别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RC（读已提交）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 RC 隔离级别下的 每次select 查询前都生成一个Read View (m_ids 列表)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RR（可重复读）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 RR 隔离级别下只在事务开始后 第一次select 数据前生成一个Read View（m_ids 列表）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;undo log版本链&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对记录每次更新后，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当事务回滚时用于将数据恢复到修改前的样子&lt;/li&gt;
+&lt;li&gt;另一个作用是 MVCC ，当读取记录时，若该记录被其他事务占用或当前版本对该事务不可见，则可以通过 undo log 读取之前的版本数据，以此实现非锁定读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;insert undo log&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指在 insert 操作中产生的 undo log。因为 insert 操作的记录只对事务本身可见，对其他事务不可见，故该 undo log 可以在事务提交后直接删除。不需要进行 purge 操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;update undo log&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;update 或 delete 操作中产生的 undo log。该 undo log可能需要提供 MVCC 机制，因此不能在事务提交时就进行删除。提交时放入 undo log 链表，等待 purge线程 进行最后的删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL InnoDB默认的隔离级别可以解决幻读&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;快照读（非一致性锁定读）：由 MVCC （对非锁定读的实现）机制来保证不出现幻读。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;快照即记录的历史版本，每行记录可能存在多个历史版本（多版本技术）。&lt;/li&gt;
+&lt;li&gt;在 RC （读已提交）级别下，对于快照数据，非一致性读总是读取被锁定行的最新一份快照数据&lt;/li&gt;
+&lt;li&gt;在 RR （可重复读）级别下，对于快照数据，非一致性读总是读取本事务开始时的行数据版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前读 （一致性锁定读）： 使用 Next-Key Lock 进行加锁来保证不出现幻读。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据⽂件本身就是按B+Tree组织的⼀个索引结构&lt;/li&gt;
+&lt;li&gt;聚集索引是通过主键查找数据。而辅助索引先通过Key查找主键，然后再走一遍聚集索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;myisam&#34;&gt;MyISAM&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;支持表级锁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;索引⽂件和数据⽂件是分离的&lt;/li&gt;
+&lt;li&gt;B+Tree叶节点的data域存放的是数据记录的地址，先根据Key取出data域的值，然后通过data域的值（即地址）读取相应的数据记录。这被称为“⾮聚簇索引”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（二）SQL语句执行</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%BA%8Csql%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C/</link>
+        <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%BA%8Csql%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/17.jpg" alt="Featured image of post MySQL（二）SQL语句执行" /&gt;&lt;h2 id=&#34;sql语句执行&#34;&gt;SQL语句执行&lt;/h2&gt;
+&lt;h3 id=&#34;连接器-身份认证和权限相关登录-mysql-的时候&#34;&gt;连接器： 身份认证和权限相关(登录 MySQL 的时候)&lt;/h3&gt;
+&lt;h3 id=&#34;查询缓存--执行查询语句的时候会先查询缓存mysql-80-版本后移除因为这个功能不太实用&#34;&gt;查询缓存:  执行查询语句的时候，会先查询缓存（MySQL 8.0 版本后移除，因为这个功能不太实用）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查询缓存前需要校验用户的权限，看是否能查询该表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分析器--没有命中缓存的话sql-语句就会经过分析器分析器说白了就是要先看你的-sql-语句要干嘛再检查你的-sql-语句语法是否正确&#34;&gt;分析器:  没有命中缓存的话，SQL 语句就会经过分析器，分析器说白了就是要先看你的 SQL 语句要干嘛，再检查你的 SQL 语句语法是否正确。&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;词法分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提取SQL语句中的关键字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断语法是否正确&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优化器-按照-mysql-认为最优的方案去执行&#34;&gt;优化器： 按照 MySQL 认为最优的方案去执行&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;比如多个索引时如何选择索引，多表查询时如何选择关联顺序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;执行器--执行语句然后从存储引擎返回数据&#34;&gt;执行器:  执行语句，然后从存储引擎返回数据&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;执行前校验用户是否有权限，如果有权限则去调用引擎接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一条sql语句执行很慢&#34;&gt;一条SQL语句执行很慢&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一直很慢&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;没有用索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.可能该字段没有索引&lt;/li&gt;
+&lt;li&gt;2.由于对字段进行运算或者函数操作导致索引无法使用&lt;/li&gt;
+&lt;li&gt;3.由于统计错误，系统不走索引而走了全表扫描&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;偶尔很慢&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数据库在刷新脏页&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能redo log写满了需要刷到磁盘上&lt;/li&gt;
+&lt;li&gt;一次性查询比较多的数据，恰好这些数据不在内存上，恰好内存不够了需要淘汰一部分数据页，如果是干净页就直接释放，如果恰好是脏页就需要刷脏页&lt;/li&gt;
+&lt;li&gt;MySQL认为系统“空闲”的时候&lt;/li&gt;
+&lt;li&gt;MySQL正常关闭时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行时遇到锁了，需要等待&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（一）基础架构</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</link>
+        <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/16.jpg" alt="Featured image of post MySQL（一）基础架构" /&gt;&lt;h2 id=&#34;基础架构&#34;&gt;基础架构&lt;/h2&gt;
+&lt;h3 id=&#34;连接器&#34;&gt;连接器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;管理连接，身份验证、权限验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;查询缓存&#34;&gt;查询缓存&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;命中缓存，直接返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分析器&#34;&gt;分析器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;词法分析，语法分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优化器&#34;&gt;优化器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;选择最优执行方案，，选择索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;执行器&#34;&gt;执行器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;操作引擎，返回结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;插件式存储引擎&#34;&gt;插件式存储引擎&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;存储数据，提供读写接口&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

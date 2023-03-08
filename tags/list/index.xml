@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>List on Slothhuman&#39;s Blog</title>
+        <link>https://slothhuman.github.io/tags/list/</link>
+        <description>Recent content in List on Slothhuman&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 21 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/list/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java集合（一）List</title>
+        <link>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%B8%80list/</link>
+        <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%B8%80list/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/9.jpg" alt="Featured image of post Java集合（一）List" /&gt;&lt;h2 id=&#34;list&#34;&gt;List&lt;/h2&gt;
+&lt;p&gt;List (对付顺序的好帮⼿)： 存储的元素是有序的、可重复的&lt;/p&gt;
+&lt;h3 id=&#34;arraylist&#34;&gt;Arraylist&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不保证线程安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;底层数据结构是Object数组&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;采用数组存储&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;插入和删除元素的时间复杂度受元素位置影响&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插入数组末尾 O(1)&lt;/li&gt;
+&lt;li&gt;插入指定位置 O(n-i)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持高效的随机元素访问&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过数组下标访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空间占用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;list 列表的结尾会预留⼀定的容量空
+间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所实现的接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;List&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RandomAccess&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标志接口，表明实现这个这个接口的 List 集合是支持快速随机访问的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cloneable&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;java.io.Serializable&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩容机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;add()&lt;/p&gt;
+&lt;p&gt;第一次扩容成10，后面每一次扩容成之前的1.5倍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以无参构造函数创建ArrayList时，创建的是空数组&lt;/li&gt;
+&lt;li&gt;当向数组中添加第一个元素，则数组会扩容为10&lt;/li&gt;
+&lt;li&gt;当添加到第11个元素时，则再次扩容为15，即10+（10&amp;raquo;1）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;addAll()&lt;/p&gt;
+&lt;p&gt;addAll(Collection c)没有元素时，扩容为Math.max(10,实际元素长度)
+有元素时，扩容为Math.max(原容量的1.5倍，实际元素长度)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以无参构造函数创建ArrayList时，创建的是空数组&lt;/li&gt;
+&lt;li&gt;向数组中添加11个元素，则直接扩容成11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linkedlist&#34;&gt;LinkedList&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;线程不安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;底层数据结构是双向链表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链表存储&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插入删除元素的时间复杂度不受元素位置影响。O(1)&lt;/li&gt;
+&lt;li&gt;但是如果在指定位置插入就有影响   O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不支持高效的随机访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空间占用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元素需要存放直接后继、直接前驱、数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;底层数据结构是Object数组&lt;/li&gt;
+&lt;li&gt;线程安全&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

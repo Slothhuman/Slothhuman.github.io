@@ -6,7 +6,55 @@
         <description>Recent content in Tags on Slothhuman&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Thu, 22 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MySQL</title>
+        <link>https://slothhuman.github.io/tags/mysql/</link>
+        <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/mysql/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JVM</title>
+        <link>https://slothhuman.github.io/tags/jvm/</link>
+        <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/jvm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Map</title>
+        <link>https://slothhuman.github.io/tags/map/</link>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/map/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>List</title>
+        <link>https://slothhuman.github.io/tags/list/</link>
+        <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/list/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OS</title>
+        <link>https://slothhuman.github.io/tags/os/</link>
+        <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/os/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>read</title>
+        <link>https://slothhuman.github.io/tags/read/</link>
+        <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/read/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>SDK</title>
         <link>https://slothhuman.github.io/tags/sdk/</link>
         <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
@@ -44,6 +92,14 @@
         <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
         
         <guid>https://slothhuman.github.io/tags/http%E8%AF%B7%E6%B1%82/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>redis</title>
+        <link>https://slothhuman.github.io/tags/redis/</link>
+        <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/redis/</guid>
         <description></description>
         </item>
         <item>

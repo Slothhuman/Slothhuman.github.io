@@ -6,7 +6,2043 @@
         <description>Recent content on Slothhuman&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Thu, 22 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MySQL（七）大表优化</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%B8%83%E5%A4%A7%E8%A1%A8%E4%BC%98%E5%8C%96/</link>
+        <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%B8%83%E5%A4%A7%E8%A1%A8%E4%BC%98%E5%8C%96/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/22.jpg" alt="Featured image of post MySQL（七）大表优化" /&gt;&lt;h2 id=&#34;大表优化&#34;&gt;大表优化&lt;/h2&gt;
+&lt;h3 id=&#34;限定数据的范围&#34;&gt;限定数据的范围&lt;/h3&gt;
+&lt;h3 id=&#34;读写分离&#34;&gt;读/写分离&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;拆分数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;表拆分&#34;&gt;表拆分&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;垂直分区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;⽔平分区&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;客户端代理&lt;/li&gt;
+&lt;li&gt;中间件代理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;子主题-4&#34;&gt;子主题 4&lt;/h3&gt;
+&lt;h3 id=&#34;子主题-5&#34;&gt;子主题 5&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（六）索引</title>
+        <link>https://slothhuman.github.io/p/mysql%E5%85%AD%E7%B4%A2%E5%BC%95/</link>
+        <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E5%85%AD%E7%B4%A2%E5%BC%95/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/21.jpg" alt="Featured image of post MySQL（六）索引" /&gt;&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
+&lt;h3 id=&#34;btree索引&#34;&gt;B+Tree索引&lt;/h3&gt;
+&lt;h3 id=&#34;哈希索引&#34;&gt;哈希索引&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（五）锁</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%BA%94%E9%94%81/</link>
+        <pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%BA%94%E9%94%81/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/20.jpg" alt="Featured image of post MySQL（五）锁" /&gt;&lt;h2 id=&#34;锁&#34;&gt;锁&lt;/h2&gt;
+&lt;h3 id=&#34;表级锁&#34;&gt;表级锁&lt;/h3&gt;
+&lt;p&gt;粒度大
+资源消耗少
+加锁快
+触发锁冲突概率最高
+没有死锁
+并发低&lt;/p&gt;
+&lt;h3 id=&#34;行级锁&#34;&gt;行级锁&lt;/h3&gt;
+&lt;p&gt;粒度小
+加锁开销大
+加锁慢
+并发度高
+会出现死锁&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Record lock：单个⾏记录上的锁&lt;/li&gt;
+&lt;li&gt;Gap lock：间隙锁，锁定⼀个范围，不包括记录本身&lt;/li&gt;
+&lt;li&gt;Next-key lock：record+gap 锁定⼀个范围，包含记录本身&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（四）事务</title>
+        <link>https://slothhuman.github.io/p/mysql%E5%9B%9B%E4%BA%8B%E5%8A%A1/</link>
+        <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E5%9B%9B%E4%BA%8B%E5%8A%A1/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/19.jpg" alt="Featured image of post MySQL（四）事务" /&gt;&lt;h2 id=&#34;事务&#34;&gt;事务&lt;/h2&gt;
+&lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;事务是逻辑上的一组操作，要么都执行，要么都不执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;原子性&lt;/li&gt;
+&lt;li&gt;隔离性&lt;/li&gt;
+&lt;li&gt;持久性&lt;/li&gt;
+&lt;li&gt;一致性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;并发事务的问题&#34;&gt;并发事务的问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;脏读&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;丢失修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不可重复读&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重点是修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;幻读&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重点是新增或者删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;隔离级别&#34;&gt;隔离级别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;READ-UNCOMMITTED(读取未提交)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能导致脏读、不可重复读、幻读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;READ-COMMITTED(读取已提交)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能导致不可重复读、幻读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;REPEATABLE-READ(可重复读)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能导致幻读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SERIALIZABLE(可串⾏化)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（三）存储引擎</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%B8%89%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</link>
+        <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%B8%89%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/18.jpg" alt="Featured image of post MySQL（三）存储引擎" /&gt;&lt;h2 id=&#34;存储引擎&#34;&gt;存储引擎&lt;/h2&gt;
+&lt;p&gt;存储引擎基于表的，因此同一数据库内的不同表可以选择不同的存储引擎&lt;/p&gt;
+&lt;h3 id=&#34;innodb&#34;&gt;InnoDB&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;支持行级锁与表级锁，默认为行级锁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持事务与崩溃后的安全恢复&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持外键&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持MVCC&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;实现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;隐藏字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;trx_id（6字节）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每次一个事务对某条聚簇索引记录进行改动时，都会把该事务的事务id赋值给DB_TRX_ID隐藏列。此外，delete 操作在内部被视为更新，只不过会在记录头 Record header 中的 deleted_flag 字段将其标记为已删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;roll_pointer（7字节）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回滚指针，指向该行的 undo log 。如果该行未被更新，则为空。&lt;/li&gt;
+&lt;li&gt;每次对某条聚簇索引记录进行改动时，都会把旧的版本写入到undo日志中，任何通过回滚指针找到该记录修改前的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;row_id（6字节）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果没有设置主键且该表没有唯一非空索引时，InnoDB 会使用该 id 来生成聚簇索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Read View&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;某个具体事务在使用MVCC机制进行快照读操作时产生的读视图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;m_creator_trx_id&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建该 Read View 的事务 ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;m_low_limit_id&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目前出现过的最大的事务 ID+1，即下一个将被分配的事务 ID。大于等于这个 ID 的数据版本均不可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;m_up_limit_id&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;活跃事务列表 m_ids 中最小的事务 ID，如果 m_ids 为空，则 m_up_limit_id 为 m_low_limit_id。小于这个 ID 的数据版本均可见&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;m_ids&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Read View 创建时其他未提交的活跃事务 ID 列表。创建 Read View时，将当前未提交事务 ID 记录下来，后续即使它们修改了记录行的值，对于当前事务也是不可见的。m_ids 不包括当前事务自己和已提交的事务（正在内存中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;隔离级别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RC（读已提交）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 RC 隔离级别下的 每次select 查询前都生成一个Read View (m_ids 列表)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RR（可重复读）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 RR 隔离级别下只在事务开始后 第一次select 数据前生成一个Read View（m_ids 列表）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;undo log版本链&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对记录每次更新后，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当事务回滚时用于将数据恢复到修改前的样子&lt;/li&gt;
+&lt;li&gt;另一个作用是 MVCC ，当读取记录时，若该记录被其他事务占用或当前版本对该事务不可见，则可以通过 undo log 读取之前的版本数据，以此实现非锁定读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;insert undo log&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指在 insert 操作中产生的 undo log。因为 insert 操作的记录只对事务本身可见，对其他事务不可见，故该 undo log 可以在事务提交后直接删除。不需要进行 purge 操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;update undo log&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;update 或 delete 操作中产生的 undo log。该 undo log可能需要提供 MVCC 机制，因此不能在事务提交时就进行删除。提交时放入 undo log 链表，等待 purge线程 进行最后的删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL InnoDB默认的隔离级别可以解决幻读&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;快照读（非一致性锁定读）：由 MVCC （对非锁定读的实现）机制来保证不出现幻读。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;快照即记录的历史版本，每行记录可能存在多个历史版本（多版本技术）。&lt;/li&gt;
+&lt;li&gt;在 RC （读已提交）级别下，对于快照数据，非一致性读总是读取被锁定行的最新一份快照数据&lt;/li&gt;
+&lt;li&gt;在 RR （可重复读）级别下，对于快照数据，非一致性读总是读取本事务开始时的行数据版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前读 （一致性锁定读）： 使用 Next-Key Lock 进行加锁来保证不出现幻读。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据⽂件本身就是按B+Tree组织的⼀个索引结构&lt;/li&gt;
+&lt;li&gt;聚集索引是通过主键查找数据。而辅助索引先通过Key查找主键，然后再走一遍聚集索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;myisam&#34;&gt;MyISAM&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;支持表级锁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;索引⽂件和数据⽂件是分离的&lt;/li&gt;
+&lt;li&gt;B+Tree叶节点的data域存放的是数据记录的地址，先根据Key取出data域的值，然后通过data域的值（即地址）读取相应的数据记录。这被称为“⾮聚簇索引”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（二）SQL语句执行</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%BA%8Csql%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C/</link>
+        <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%BA%8Csql%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/17.jpg" alt="Featured image of post MySQL（二）SQL语句执行" /&gt;&lt;h2 id=&#34;sql语句执行&#34;&gt;SQL语句执行&lt;/h2&gt;
+&lt;h3 id=&#34;连接器-身份认证和权限相关登录-mysql-的时候&#34;&gt;连接器： 身份认证和权限相关(登录 MySQL 的时候)&lt;/h3&gt;
+&lt;h3 id=&#34;查询缓存--执行查询语句的时候会先查询缓存mysql-80-版本后移除因为这个功能不太实用&#34;&gt;查询缓存:  执行查询语句的时候，会先查询缓存（MySQL 8.0 版本后移除，因为这个功能不太实用）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查询缓存前需要校验用户的权限，看是否能查询该表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分析器--没有命中缓存的话sql-语句就会经过分析器分析器说白了就是要先看你的-sql-语句要干嘛再检查你的-sql-语句语法是否正确&#34;&gt;分析器:  没有命中缓存的话，SQL 语句就会经过分析器，分析器说白了就是要先看你的 SQL 语句要干嘛，再检查你的 SQL 语句语法是否正确。&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;词法分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提取SQL语句中的关键字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法分析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断语法是否正确&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优化器-按照-mysql-认为最优的方案去执行&#34;&gt;优化器： 按照 MySQL 认为最优的方案去执行&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;比如多个索引时如何选择索引，多表查询时如何选择关联顺序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;执行器--执行语句然后从存储引擎返回数据&#34;&gt;执行器:  执行语句，然后从存储引擎返回数据&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;执行前校验用户是否有权限，如果有权限则去调用引擎接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一条sql语句执行很慢&#34;&gt;一条SQL语句执行很慢&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一直很慢&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;没有用索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.可能该字段没有索引&lt;/li&gt;
+&lt;li&gt;2.由于对字段进行运算或者函数操作导致索引无法使用&lt;/li&gt;
+&lt;li&gt;3.由于统计错误，系统不走索引而走了全表扫描&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;偶尔很慢&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数据库在刷新脏页&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能redo log写满了需要刷到磁盘上&lt;/li&gt;
+&lt;li&gt;一次性查询比较多的数据，恰好这些数据不在内存上，恰好内存不够了需要淘汰一部分数据页，如果是干净页就直接释放，如果恰好是脏页就需要刷脏页&lt;/li&gt;
+&lt;li&gt;MySQL认为系统“空闲”的时候&lt;/li&gt;
+&lt;li&gt;MySQL正常关闭时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行时遇到锁了，需要等待&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MySQL（一）基础架构</title>
+        <link>https://slothhuman.github.io/p/mysql%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</link>
+        <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/mysql%E4%B8%80%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/16.jpg" alt="Featured image of post MySQL（一）基础架构" /&gt;&lt;h2 id=&#34;基础架构&#34;&gt;基础架构&lt;/h2&gt;
+&lt;h3 id=&#34;连接器&#34;&gt;连接器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;管理连接，身份验证、权限验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;查询缓存&#34;&gt;查询缓存&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;命中缓存，直接返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分析器&#34;&gt;分析器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;词法分析，语法分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优化器&#34;&gt;优化器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;选择最优执行方案，，选择索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;执行器&#34;&gt;执行器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;操作引擎，返回结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;插件式存储引擎&#34;&gt;插件式存储引擎&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;存储数据，提供读写接口&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>JVM（四）Java的自动内存管理</title>
+        <link>https://slothhuman.github.io/p/jvm%E5%9B%9Bjava%E7%9A%84%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</link>
+        <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/jvm%E5%9B%9Bjava%E7%9A%84%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/14.jpg" alt="Featured image of post JVM（四）Java的自动内存管理" /&gt;&lt;h2 id=&#34;java的自动内存管理&#34;&gt;Java的自动内存管理&lt;/h2&gt;
+&lt;p&gt;Java 自动内存管理最核心的功能是 堆 内存中对象的分配与回收&lt;/p&gt;
+&lt;h3 id=&#34;jvm内存分配&#34;&gt;JVM内存分配&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;策略&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对象a优先在eden区分配&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.若eden区原本有对象b，且有足够的空间，则分配在eden区                                                     2.若eden区没有足够的空间进行分配，虚拟机将发起Minor GC，将对象b存入Survivor空间        3.如果如果对象b无法存入Survivor空间中，则通过分配担保机制存入老年代                            &lt;br&gt;
+4.如果老年代没有足够的空间存入对象b，则执行Full GC，总之让eden区有足够的内存存入对象a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大对象直接进入老年代&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要大量连续内存空间的对象，比如字符串、数组&lt;/li&gt;
+&lt;li&gt;好处：了避免为⼤对象分配内存时由于分配担保机制带来的复制⽽降低效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;长期存活的对象将进入老年代&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给每个对象一个年龄计数器，对象每在Survivor区中存活过一次Minor GC，年龄+1；达到一定年龄（默认15）后进入老年代&lt;/li&gt;
+&lt;li&gt;如果Survivor空间中同一年龄的所有对象的总和大于Survivor空间的一半，则年龄大于等于该年龄的对象就可以直接进入老年代&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;jvm内存回收&#34;&gt;JVM内存回收&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;强引⽤(StrongReference)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必不可少，当内存空间不⾜，Java虚拟机
+宁愿抛出OutOfMemoryError错误，也不回收&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;软引⽤(SoftReference)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果一个对象只有软引用，当内存空间不⾜了，就会回收这些对象的内存&lt;/li&gt;
+&lt;li&gt;可以和⼀个引⽤队列（ReferenceQueue）联合使⽤&lt;/li&gt;
+&lt;li&gt;一般用软引用比较多，软引⽤可以加速JVM对垃圾内存的回收速度，可以维护系统的运⾏安全，防⽌内存溢出（OutOfMemory）等问题的产⽣。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;弱引⽤(WeakReference)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;垃圾回收器一旦发现弱引用，不管内存空间是否充足，都回收&lt;/li&gt;
+&lt;li&gt;可以和⼀个引⽤队列（ReferenceQueue）联合使⽤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚引⽤（PhantomReference）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要⽤来跟踪对象被垃圾回收的活动&lt;/li&gt;
+&lt;li&gt;如果一个对象有虚引用，那么回收它之前必须将虚引用加入到引用队列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;废弃常量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运行时常量池来回收&lt;/li&gt;
+&lt;li&gt;当前没有任何对象来引用此常量，则为废弃&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无用的类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该类所有的实例都已经被回收，也就是 Java 堆中不存在该类的任何实例&lt;/li&gt;
+&lt;li&gt;加载该类的 ClassLoader 已经被回收&lt;/li&gt;
+&lt;li&gt;该类对应的 java.lang.Class 对象没有在任何地⽅被引⽤，⽆法在任何地⽅通过反射访问该类
+的⽅法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对象是否死亡&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引⽤计数法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缺点是不能解决对象之间相互循环引用的问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可达性分析算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;找到一系列被称为“GC roots”的对象作为起点，从这些节点向下遍历，走过的路径称为引用链，当一个对象到“GC roots”没有任何一条引用链相连，则说明这个对象不可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;步骤&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该算法的全过程都需要基于一个能保障一致性的快照中才能够分析，这意味着必须全程冻结用户线程的运行&lt;/li&gt;
+&lt;li&gt;1.根节点枚举&lt;/li&gt;
+&lt;li&gt;2.向下遍历对象图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GC roots&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟机栈中引用的对象&lt;/li&gt;
+&lt;li&gt;本地方法栈中引用的对象&lt;/li&gt;
+&lt;li&gt;方法区中类静态属性引用的对象&lt;/li&gt;
+&lt;li&gt;方法区中常量引用的对象&lt;/li&gt;
+&lt;li&gt;所有被同步锁持有的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;经过可达性分析为不可达的对象并不会马上回收，需要经过两次标记才可以宣告死亡&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GC&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对象晋升老年代&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.动态对象年龄判断机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.新生代垃圾回收之后，存活对象太多，导致大量对象直接进入老年代&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3.大对象直接进入老年代&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4.对象躲过了15次垃圾回收（默认），进入老年代&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5.空间担保机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;当要MinorGC之前，首先会计算老年代剩余空间是否大于新生代所有对象大小之和(防止极端情况下eden区所有对象都幸存)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;2.如果剩余空间不够放全部的新生代对象，但是配置了-XX:-HandlePromotionFailure参数（1.6以后废弃），那么就会计算每次MinorGC后存活对象的平均大小，如果老年代剩余内存大小大于这个平均大小，则大胆认为这次MinorGC回收后，老年代还是可以放得下&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;如果该次MinorGC之后老年代的确是放不下就进行Fulll GC，如果Full GC完了还是放不下则oom&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;行为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;部分收集 (Partial GC)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;新⽣代收集（Minor GC / Young GC）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当eden区内存分配满了时，触发Young GC，然后会有部分对象进入老年代，老年代内存占用会提高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;⽼年代收集（Major GC / Old GC）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合收集（Mixed GC）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;整堆收集 (Full GC)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当准备触发新生代收集时，如果发现统计数据说之前Young GC的平均晋升大小比目前老年代剩余的空间大，则不会触发Young GC而是转而触发Full GC。&lt;/li&gt;
+&lt;li&gt;老年代空间不足&lt;/li&gt;
+&lt;li&gt;永久代空间不足：如果有Perm Gen，要在Perm Gen分配空间但已经没有足够的空间时，触发一次Full GC&lt;/li&gt;
+&lt;li&gt;使用System.gc()，默认也是触发Full GC&lt;/li&gt;
+&lt;li&gt;由eden区向Survivor区复制时，对象大于Survivor内存，同时大于老年代可用空间，则触发Full GC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;算法（内存回收的方法论）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;标记-清除算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分“标记”和“清除”阶段，先标记所有存活的对象，然后统一回收没有标记的对象&lt;/li&gt;
+&lt;li&gt;1.效率问题     2.空间问题（会产生大量不连续的碎片）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标记-复制算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每次对内存空间的一半进行回收&lt;/li&gt;
+&lt;li&gt;将内存分为两块，标记存活对象，将存活对象复制到另一块内存，然后把这块内存进行回收&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标记-整理算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标记存活对象，把存活对象向一端移动，然后直接清理端边界以外的内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分代收集算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据对象存活周期不同将内存分为几块&lt;/li&gt;
+&lt;li&gt;新生代使用标记-复制算法，老年代使用标记-清除算法或者标记-整理算法&lt;/li&gt;
+&lt;li&gt;分代主要是为了提升GC效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;垃圾回收器（内存回收的具体实现）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Serial收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;新生代采用复制算法，老年代采用标记-整理算法&lt;/li&gt;
+&lt;li&gt;单线程&lt;/li&gt;
+&lt;li&gt;简单高效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ParNew收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Serial收集器的多线程版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Serial Old 收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Serial收集器的老年代版本&lt;/li&gt;
+&lt;li&gt;单线程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parallel Scavenge收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;新生代采用复制算法，老年代采用标记-整理算法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多线程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关注点是吞吐量（⾼效率的利⽤ CPU）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;吞吐量就是 CPU 中⽤于运⾏⽤户代码
+的时间与 CPU 总消耗时间的⽐值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JDK1.8 默认使⽤的是 Parallel Scavenge + Parallel Old&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parallel Old 收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parallel Scavenge收集器的老年代版本&lt;/li&gt;
+&lt;li&gt;多线程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CMS收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关注点更多的是⽤户线程的停顿时间（提⾼⽤户体验）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标记-清除算法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;过程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;初始标记&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并发标记（基于增量更新来做的）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;特点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;垃圾回收器和用户线程同时运行，并发工作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三色标记法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在遍历对象图的过程中，把访问都的对象按照&amp;quot;是否访问过&amp;quot;这个条件标记成以下三种颜色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;白色&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表示对象尚未被垃圾回收器访问过&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;灰色&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表示对象已经被垃圾回收器访问过，但这个对象至少存在一个引用还没有被扫描过。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;黑色&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表示对象已经被垃圾回收器访问过，且这个对象的所有引用都已经扫描过&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决的问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;减少STW，主要是减少从GC roots节点往下遍历对象图并进行标记这一过程的停顿时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;带来了问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;浮动垃圾&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;产生原因&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;垃圾回收器在工作时，用户线程在同时修改引用关系，把原本应该回收的对象修改为存活的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下次清理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对象消失&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;产生原因&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;垃圾回收器在工作时，用户线程在同时修改引用关系，把原本应该存活的对象修改为回收的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;增量更新（Incremental Update）和原始快照（Snapshot At The Beginning，SATB）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重新标记&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并发清除&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;并发、低停顿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缺点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.对CPU资源敏感&lt;/li&gt;
+&lt;li&gt;2.无法处理浮动垃圾&lt;/li&gt;
+&lt;li&gt;使用的回收算法-“标记-清除”算法会导致收集结束时会有大量空间碎片产生&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;G1收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;面向服务器，主要针对配备多颗处理器及大容量内存的机器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;过程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始标记&lt;/li&gt;
+&lt;li&gt;并发标记&lt;/li&gt;
+&lt;li&gt;最终标记&lt;/li&gt;
+&lt;li&gt;筛选回收&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.并发与并行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.分代收集&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3.空间整合&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;整体看是标记-整理算法实现&lt;/li&gt;
+&lt;li&gt;局部看是标记-复制算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4.可预测的停顿&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ZGC 收集器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标记-复制算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;位置&lt;/p&gt;
+&lt;p&gt;JVM的GC并不是任何时刻都发生的，只有STW，才会执行GC&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安全点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序执行时并非在所有地方都能停顿下来开始GC ， 只有在特定的位置才能停顿下来开始GC ， 这些位置称为“ 安全点（Safepoint）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GC时线程的中断策略&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;抢先式中断&lt;/li&gt;
+&lt;li&gt;主动式中断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;循环的末尾&lt;/li&gt;
+&lt;li&gt;方法临返回前&lt;/li&gt;
+&lt;li&gt;调用方法之后&lt;/li&gt;
+&lt;li&gt;抛异常的位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安全区&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安全区域是指在一段代码片段中， 对象的引用关系不会发生变化， 在这个区域中的任何位置开始GC 都是安全的。我们也可以把Safe Region 看做是被扩展了的Safepoint&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 、当线程运行到 Safe Region 的代码时， 首先标识己经进入了safe Region ，如果这段时间内发生GC ,JVM会忽略标识为 Safe Region 状态的线程(认为它是安全的)&lt;/li&gt;
+&lt;li&gt;2.当线程即将离开时， 会检查JVM是否己经完成GC ， 如果完成 ， 则继续运行， 否则线程必须等待直到收到可以安全离开Safe Region 的信号为止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>JVM（三）Java内存区域</title>
+        <link>https://slothhuman.github.io/p/jvm%E4%B8%89java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/</link>
+        <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/jvm%E4%B8%89java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/13.jpg" alt="Featured image of post JVM（三）Java内存区域" /&gt;&lt;h2 id=&#34;java内存区域&#34;&gt;Java内存区域&lt;/h2&gt;
+&lt;h3 id=&#34;线程私有&#34;&gt;线程私有&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;程序计数器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字节码解释器通过改变程序计数器来依次读取指令，从⽽实现代码的流程控制，如：顺序执
+⾏、选择、循环、异常处理&lt;/li&gt;
+&lt;li&gt;在多线程的情况下，程序计数器⽤于记录当前线程执⾏的位置，从⽽当线程被切换回来的时
+候能够知道该线程上次运⾏到哪⼉了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序计数器是唯⼀⼀个不会出现OutOfMemoryError 的内存区域&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随着线程的创建⽽创建，随着线程的死亡⽽死亡&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟机栈&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;栈帧&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;局部变量表&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要存放编译期可知的各种数据类型与对象引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作数表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态链接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法出口信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;错误&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;StackOverFlowError 和 OutOfMemoryError&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随着线程的创建⽽创建，随着线程的死亡⽽死亡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;return语句和抛出异常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟机栈为虚拟机执⾏ Java ⽅法 （也就是字节
+码）服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本地方法栈&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地⽅法栈则为虚拟机使⽤到的 Native ⽅法服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;线程共享&#34;&gt;线程共享&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;堆&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存放对象实例，⼏乎所有的对象实例以及数组都在这⾥分配内存。&lt;/li&gt;
+&lt;li&gt;从jdk 1.7开始已经默认开启逃逸分析，如果某些⽅法中的对象引⽤没有被返回或者未被外⾯使⽤（也就是未逃逸出去），那么对象可以直接在栈上分配内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OutOfMemoryError&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基本结构（JDK1.7）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;新生代&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Eden区&lt;/li&gt;
+&lt;li&gt;Survivor区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;老年代&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;永久代&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法区&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;实现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JDK 7 版本及JDK 7 版本之前，永生代&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JVM 本身设置固定⼤⼩上限，⽆法进⾏调整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JDK 8 版本之后，元空间&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接内存，受本机可⽤内存的限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行时常量池&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JDK1.7之前存放在方法区&lt;/li&gt;
+&lt;li&gt;JDK1.7存放在方法区，但字符串常量池被拿到堆中&lt;/li&gt;
+&lt;li&gt;JDK1.8存放在方法区，但字符串常量池被拿到堆中，方法区实现变成元空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主要⽤于存放已被加载的类信息、常量、静态变量、即时编译器编译后的代码等数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直接内存 (⾮运⾏时数据区的⼀部分)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元空间&lt;/li&gt;
+&lt;li&gt;OutOfMemoryError&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>JVM（二）类</title>
+        <link>https://slothhuman.github.io/p/jvm%E4%BA%8C%E7%B1%BB/</link>
+        <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/jvm%E4%BA%8C%E7%B1%BB/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/12.jpg" alt="Featured image of post JVM（二）类" /&gt;&lt;h2 id=&#34;类&#34;&gt;类&lt;/h2&gt;
+&lt;h3 id=&#34;类文件结构&#34;&gt;类文件结构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;魔数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Class文件的标志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Class文件版本号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常量池&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问标志&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当前类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段表集合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法表集合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性表集合&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;类的生命周期&#34;&gt;类的生命周期&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;类加载过程&lt;/p&gt;
+&lt;p&gt;Class 文件需要加载到虚拟机中之后才能运行和使用，那么虚拟机是如何加载这些 Class 文件呢&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;加载&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.通过全类名获取定义此类的二进制字节流&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比如：比较常见的就是从 ZIP 包中读取（日后出现的 JAR、EAR、WAR 格式的基础）、其他文件生成（典型应用就是 JSP）等等&lt;/li&gt;
+&lt;li&gt;非数组类我们可以去自定义类加载器去控制字节流的获取方式（重写一个类加载器的 loadClass() 方法）&lt;/li&gt;
+&lt;li&gt;数组类型不通过类加载器创建，它由 Java 虚拟机直接创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.将字节流所代表的静态存储结构转换为方法区的运行时数据结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3.在内存中生成一个代表该类的 Class 对象，作为方法区这些数据的访问入口&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连接&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;验证&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件格式验证&lt;/li&gt;
+&lt;li&gt;元数据验证&lt;/li&gt;
+&lt;li&gt;字节码验证&lt;/li&gt;
+&lt;li&gt;符号引用验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;准备&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;准备阶段是正式为类变量（即静态变量）分配内存并设置类变量初始值（数据类型默认的零值）的阶段，这些内存都将在方法区分配&lt;/li&gt;
+&lt;li&gt;而在 JDK 7 及之后，HotSpot 已经把原本放在永久代的字符串常量池、静态变量等移动到堆中，这个时候类变量则会随着 Class 对象一起存放在 Java 堆中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;必须对类进行初始化的情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当遇到 new 、 getstatic、putstatic 或 invokestatic 这 4 条直接码指令时，比如 new 一个类，读取一个静态字段(未被 final 修饰)、或调用一个类的静态方法时&lt;/li&gt;
+&lt;li&gt;使用 java.lang.reflect 包的方法对类进行反射调用时如 Class.forname(&amp;quot;&amp;hellip;&amp;quot;), newInstance() 等等。如果类没初始化，需要触发其初始化&lt;/li&gt;
+&lt;li&gt;初始化一个类，如果其父类还未初始化，则先触发该父类的初始化&lt;/li&gt;
+&lt;li&gt;当虚拟机启动时，用户需要定义一个要执行的主类 (包含 main 方法的那个类)，虚拟机会先初始化这个类&lt;/li&gt;
+&lt;li&gt;MethodHandle 和 VarHandle 可以看作是轻量级的反射调用机制，而要想使用这 2 个调用， 就必须先使用 findStaticVarHandle 来初始化要调用的类&lt;/li&gt;
+&lt;li&gt;当一个接口中定义了 JDK8 新加入的默认方法（被 default 关键字修饰的接口方法）时，如果有这个接口的实现类发生了初始化，那该接口要在其之前被初始化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;卸载&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;卸载类即该类的 Class 对象被 GC&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;满足3个要求即可卸载类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该类的所有的实例对象都已被 GC，也就是说堆不存在该类的实例对象。&lt;/li&gt;
+&lt;li&gt;该类没有在其他任何地方被引用&lt;/li&gt;
+&lt;li&gt;该类的类加载器的实例已被 GC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>JVM（一）Java对象</title>
+        <link>https://slothhuman.github.io/p/jvm%E4%B8%80java%E5%AF%B9%E8%B1%A1/</link>
+        <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/jvm%E4%B8%80java%E5%AF%B9%E8%B1%A1/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/11.jpg" alt="Featured image of post JVM（一）Java对象" /&gt;&lt;h2 id=&#34;java对象&#34;&gt;Java对象&lt;/h2&gt;
+&lt;h3 id=&#34;java对象创建&#34;&gt;Java对象创建&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.类加载检查&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟机遇到new指令，检查这个类之前是否加载过，若没有就执行类加载检查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.分配内存&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;分配方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指针碰撞&lt;/li&gt;
+&lt;li&gt;空闲列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择哪种方式由Java堆是否规整决定，⽽ Java 堆内存是否规整，取决于GC 收集器的算法是&amp;quot;标记-清除&amp;quot;，还是&amp;quot;标记-整理&amp;quot;（也称作&amp;quot;标记-压缩&amp;quot;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3.初始化零值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4.设置对象头&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5.执行init方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对象访问定位&#34;&gt;对象访问定位&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;句柄&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java堆中划分一块内存作为句柄池，句柄池中包含“到对象实例数据的指针”和“到对象类型数据的指针”，reference存储对象的句柄地址。&lt;/li&gt;
+&lt;li&gt;假如对象移动时，reference存储对象的句柄地址不需要改变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直接指针&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象中包含“对象实例数据”和“到对象类型数据的指针”，⽽reference 中存储的直接就是对象的地址。&lt;/li&gt;
+&lt;li&gt;速度快，节省了⼀次指针定位的时间开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Java集合（二）Map</title>
+        <link>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%BA%8Cmap/</link>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%BA%8Cmap/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/10.jpg" alt="Featured image of post Java集合（二）Map" /&gt;&lt;h2 id=&#34;map&#34;&gt;Map&lt;/h2&gt;
+&lt;p&gt;Key 是⽆序的、不可重复的，value 是⽆序的、可重复
+的，每个键最多映射到⼀个值&lt;/p&gt;
+&lt;h3 id=&#34;hashmap&#34;&gt;HashMap&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;非线程安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;效率比Hashtable高一点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashMap 可以存储 null 的 key 和 value，但 null 作为
+键只能有⼀个，null 作为值可以有多个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始大小和扩容量大小&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果不指定容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HashMap 默认的初始化⼤⼩为 16。之后每次扩充，容量变为原来的 2 倍。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果给定了容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HashMap 会将其扩充为 2 的幂次⽅⼤⼩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;底层数据结构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JDK1.8之前&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;底层是 数组和链表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JDK1.8&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当链表⻓度⼤于阈值（默认为 8）（将链表转换成红⿊树前会判断，如果当前数组的⻓度⼩于 64，那么会选择先进⾏数组扩容，⽽不是转换为红⿊树）时，将链表转化为红⿊树，以减少搜索时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hashtable&#34;&gt;HashTable&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;线程安全&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HashTable 内部的⽅法基本都经过 synchronized 修饰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashTable基本被淘汰&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashTable 不允许有 null 键和 null 值，否则会抛出NullPointerException&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始大小和扩容量大小&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果不指定容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认初始化大小为11，之后每次扩充，容量变为原来的2n+1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果给定了容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接使用给定的大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;子主题 5&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Java集合（一）List</title>
+        <link>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%B8%80list/</link>
+        <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%B8%80list/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/9.jpg" alt="Featured image of post Java集合（一）List" /&gt;&lt;h2 id=&#34;list&#34;&gt;List&lt;/h2&gt;
+&lt;p&gt;List (对付顺序的好帮⼿)： 存储的元素是有序的、可重复的&lt;/p&gt;
+&lt;h3 id=&#34;arraylist&#34;&gt;Arraylist&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不保证线程安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;底层数据结构是Object数组&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;采用数组存储&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;插入和删除元素的时间复杂度受元素位置影响&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插入数组末尾 O(1)&lt;/li&gt;
+&lt;li&gt;插入指定位置 O(n-i)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持高效的随机元素访问&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过数组下标访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空间占用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;list 列表的结尾会预留⼀定的容量空
+间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所实现的接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;List&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RandomAccess&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标志接口，表明实现这个这个接口的 List 集合是支持快速随机访问的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cloneable&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;java.io.Serializable&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩容机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;add()&lt;/p&gt;
+&lt;p&gt;第一次扩容成10，后面每一次扩容成之前的1.5倍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以无参构造函数创建ArrayList时，创建的是空数组&lt;/li&gt;
+&lt;li&gt;当向数组中添加第一个元素，则数组会扩容为10&lt;/li&gt;
+&lt;li&gt;当添加到第11个元素时，则再次扩容为15，即10+（10&amp;raquo;1）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;addAll()&lt;/p&gt;
+&lt;p&gt;addAll(Collection c)没有元素时，扩容为Math.max(10,实际元素长度)
+有元素时，扩容为Math.max(原容量的1.5倍，实际元素长度)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以无参构造函数创建ArrayList时，创建的是空数组&lt;/li&gt;
+&lt;li&gt;向数组中添加11个元素，则直接扩容成11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linkedlist&#34;&gt;LinkedList&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;线程不安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;底层数据结构是双向链表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链表存储&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插入删除元素的时间复杂度不受元素位置影响。O(1)&lt;/li&gt;
+&lt;li&gt;但是如果在指定位置插入就有影响   O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不支持高效的随机访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空间占用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元素需要存放直接后继、直接前驱、数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;底层数据结构是Object数组&lt;/li&gt;
+&lt;li&gt;线程安全&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>操作系统（四）内存管理</title>
+        <link>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9B%9B%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</link>
+        <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9B%9B%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/8.jpg" alt="Featured image of post 操作系统（四）内存管理" /&gt;&lt;h2 id=&#34;内存管理&#34;&gt;内存管理&lt;/h2&gt;
+&lt;h3 id=&#34;内存管理主要是做什么&#34;&gt;内存管理主要是做什么&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内存的分配与回收&lt;/li&gt;
+&lt;li&gt;地址转换即将逻辑地址转换成相应的物理地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;内存管理方式&#34;&gt;内存管理方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;连续分配管理方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;块式管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非连续分配管理方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;页式管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;页式管理通过页表对应逻辑地址和物理地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;页是物理单位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;页与页之间是离散的，页中的内存是连续的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;快表&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为了提高虚拟地址到物理地址的转换速度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多级页表&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时间换空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;段式管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;段式管理通过段表对应逻辑地址和物理地址。&lt;/li&gt;
+&lt;li&gt;段是有实际意义的，每个段定义了一组逻辑信息&lt;/li&gt;
+&lt;li&gt;段与段之间是离散的，段中的内存是连续的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;段页式管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;逻辑虚拟地址与物理地址&#34;&gt;逻辑（虚拟）地址与物理地址&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑地址&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;C 语言中，指针里面存储的数值就可以理解成为内存里的一个地址，这个地址也就是我们说的逻辑地址，逻辑地址由操作系统决定&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优势&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以用一系列相邻的虚拟内存来代表物理内存中不相邻的大内存缓冲区，然后访问&lt;/li&gt;
+&lt;li&gt;程序可以使用一系列虚拟地址来访问大于可用物理内存的内存缓冲区。当物理内存的供应量变小时，内存管理器会将物理内存页（通常大小为 4 KB）保存到磁盘文件。数据或代码页会根据需要在物理内存与磁盘之间移动。&lt;/li&gt;
+&lt;li&gt;不同进程使用的虚拟地址彼此隔离。一个进程中的代码无法更改正在由另一进程或操作系统使用的物理内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;物理地址&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理地址指的是真实物理内存中地址，更具体一点来说就是内存地址寄存器中的地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不足&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果直接把物理地址暴露出来的话会带来严重问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;虚拟内存时间换空间&#34;&gt;虚拟内存（时间换空间）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟内存是计算机系统管理内存的一种技术&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟内存为每个进程提供了一个一致的、私有的地址空间，它让每个进程产生了一种自己在独享主存的错觉（每个进程拥有一片连续完整的内存空间）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚拟内存的重要意义是它定义了一个连续的虚拟内存空间，并把内存扩展到了硬盘空间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实现方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请求分页存储管理&lt;/li&gt;
+&lt;li&gt;请求分段存储管理&lt;/li&gt;
+&lt;li&gt;请求段页式存储管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;页面置换算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OPT 页面置换算法（最佳页面置换算法）&lt;/li&gt;
+&lt;li&gt;FIFO（First In First Out） 页面置换算法（先进先出页面置换算法）&lt;/li&gt;
+&lt;li&gt;LRU （Least Recently Used）页面置换算法（最近最久未使用页面置换算法）&lt;/li&gt;
+&lt;li&gt;LFU （Least Frequently Used）页面置换算法（最少使用页面置换算法）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>操作系统（三）线程</title>
+        <link>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%89%E7%BA%BF%E7%A8%8B/</link>
+        <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%89%E7%BA%BF%E7%A8%8B/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/5.jpg" alt="Featured image of post 操作系统（三）线程" /&gt;&lt;h2 id=&#34;线程&#34;&gt;线程&lt;/h2&gt;
+&lt;h3 id=&#34;状态&#34;&gt;状态&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NEW（新建）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线程刚刚创建的状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;READY（就绪）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调用start()方法后&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RUNNABLE（运⾏中）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;获得时间片后&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WAITING（等待）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行wait()后进入等待，执行notify()后回到可运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TIME_WAITING(超时等待)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行wait(long)或者sleep(long)后进入超时等待，时间到或者notify()后回到可运行状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BLOCKED（阻塞）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调用同步方法时，在没有获得锁的情况下就会阻塞,获得锁后又回到可运行状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TERMINATED（终⽌）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行run()后&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;线程间同步的方式&#34;&gt;线程间同步的方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;互斥量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;互斥对象机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信号量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;多线程&#34;&gt;多线程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可能带来的问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内存泄露&lt;/li&gt;
+&lt;li&gt;上下文切换&lt;/li&gt;
+&lt;li&gt;死锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多线程使用原因&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;计算机底层&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;资源的花销&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多核CPU时，多个线程可以同时运行，减少了线程上下文切换的开销&lt;/li&gt;
+&lt;li&gt;线程量级较小，线程间的切换和调度成本远小于进程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPU&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单核&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;此时多线程是为了提高CPU和IO设备的综合利用率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;即CPU工作时不能让IO设备闲着&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多核&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;此时是为了提高CPU的利用率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有多个CPU，这个CPU工作时，不能让其他CPU闲着&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当代互联网发展趋势&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统要求的并发量非常高，利用多线程可以提供系统的并发能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>操作系统（二）进程</title>
+        <link>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BA%8C%E8%BF%9B%E7%A8%8B/</link>
+        <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BA%8C%E8%BF%9B%E7%A8%8B/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/6.jpg" alt="Featured image of post 操作系统（二）进程" /&gt;&lt;h2 id=&#34;进程&#34;&gt;进程&lt;/h2&gt;
+&lt;h3 id=&#34;状态&#34;&gt;状态&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;就绪状态&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一旦得到处理器分配的时间片就可以运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行状态&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程正在处理器上运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;阻塞状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结束状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进程间通信方式&#34;&gt;进程间通信方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;管道/匿名管道&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;父子进程或兄弟进程&lt;/li&gt;
+&lt;li&gt;只存在于内存中的文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有名管道&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先进先出&lt;/li&gt;
+&lt;li&gt;以磁盘文件的方式存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;消息队列&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通信数据先进先出&lt;/li&gt;
+&lt;li&gt;存放在内核中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信号量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;共享内存&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;套接字&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;调度算法&#34;&gt;调度算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;先到先服务调度算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给最快进入就绪队列的进程分配资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;短作业优先调度算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选出一个估计运行时间最短的进程，给它分配资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时间片轮转调度算法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给每个进程分配时间片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多级反馈队列调度算法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优先级调度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;死锁&#34;&gt;死锁&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多个进程/线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于进程/线程被无限期地阻塞，因此程序不可能正常终止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;产生死锁的四个必要条件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;互斥&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资源为非共享，即一次只能由一个线程使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;占用并等待&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非抢占&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;循环等待&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决死锁的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;预防&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用某种策略，限制并发进程对资源的请求，使得死锁的必要条件不满足，破坏四大必要条件中的一个就行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;破坏“占用并等待”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;静态分配策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;破坏“循环等待”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;层次分配策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;避免&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在系统分配资源时，根据资源的使用情况做出预测，从而避免死锁的发生（允许四大必要条件同时存在）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;银行家算法判断系统是否处于安全状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检测&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统定时地运行一个“死锁检测”程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;立即结束所有进程的执行，重新启动操作系统&lt;/li&gt;
+&lt;li&gt;撤销涉及死锁的所有进程，解除死锁后继续运行&lt;/li&gt;
+&lt;li&gt;逐个撤销涉及死锁的进程，回收其资源直至死锁解除&lt;/li&gt;
+&lt;li&gt;抢占资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>操作系统（一）基础</title>
+        <link>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%80%E5%9F%BA%E7%A1%80/</link>
+        <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%80%E5%9F%BA%E7%A1%80/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/4.jpg" alt="Featured image of post 操作系统（一）基础" /&gt;&lt;h2 id=&#34;基础&#34;&gt;基础&lt;/h2&gt;
+&lt;h3 id=&#34;系统调用&#34;&gt;系统调用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;设备管理&lt;/li&gt;
+&lt;li&gt;文件管理&lt;/li&gt;
+&lt;li&gt;进程控制&lt;/li&gt;
+&lt;li&gt;进程通信&lt;/li&gt;
+&lt;li&gt;内存管理&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>《蛤蟆先生去看心里医生》读后记录</title>
+        <link>https://slothhuman.github.io/p/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E9%87%8C%E5%8C%BB%E7%94%9F%E8%AF%BB%E5%90%8E%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E9%87%8C%E5%8C%BB%E7%94%9F%E8%AF%BB%E5%90%8E%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/15.jpg" alt="Featured image of post 《蛤蟆先生去看心里医生》读后记录" /&gt;&lt;h2 id=&#34;三个状态&#34;&gt;三个状态&lt;/h2&gt;
+&lt;p&gt;每个人都有儿童、父母以及成年人的状态，三位一体，成年人之所以痛苦，恰恰是因为不在成人状态。&lt;/p&gt;
+&lt;p&gt;苍鹭在蛤蟆先生咨询的过程中，将我们的人生分为：儿童、成人、父母三个状态。&lt;/p&gt;
+&lt;p&gt;1、儿童自我状态。当一个人处于儿童自我状态时，他会下意识用童年时的习惯作出反应，表现出像孩子一样的感受和行为。在这种状态下，他会本能地顺从和依赖他人，再现过去的情形，体验过去压抑的痛苦情绪，学不到任何新的东西。&lt;/p&gt;
+&lt;p&gt;2、父母自我状态。处在父母自我状态的人，不是在挑剔别人就是在挑剔自己。处在这种状态下的人，会用言行重复父母那里学到的是非观和价值观，想方设法让别人接受自己的这套想法。甚至会将审判的矛头指向自己，进行毫不留情的自我批判。&lt;/p&gt;
+&lt;p&gt;3、成人自我状态。在成人自我状态的时候，我们能摆脱情绪化的控制，合理地计划、考虑、决定、行动，用知识和技能解决当下的事情。成人自我状态是唯一能学到自我新知识的状态，因为在儿童自我状态里，只是在体验过去的情绪，在父母自我状态里，不是挑剔就是在教育别人，所以这两种状态都不会学到东西。&lt;/p&gt;
+&lt;h2 id=&#34;四个坐标&#34;&gt;四个坐标&lt;/h2&gt;
+&lt;p&gt;人生有四个坐标，你选择的坐标决定了你成为什么样的人，“你好我好”是我们奋斗的终极目标。&lt;/p&gt;
+&lt;p&gt;苍鹭曾问过蛤蟆两个问题：第一个问题是：你是怎么看自己的？你好吗？第二个问题是：你是怎么看别人的？他好吗？&lt;/p&gt;
+&lt;p&gt;根据这两个问题的回答，产生了以下四种人生坐标：&lt;/p&gt;
+&lt;p&gt;1、你好，我不好。处在这个坐标的人认为自己是生活的受害者，无法掌控人生，从而产生焦虑、抑郁、自责等情绪。&lt;/p&gt;
+&lt;p&gt;2、我好，你不好。处于这个坐标的人常常会占据权力和权威的制高点，时常攻击、指责别人，产生愤怒、挑剔、指责等情绪。&lt;/p&gt;
+&lt;p&gt;3、我不好，你也不好。处于这个坐标的人更确切来说是“犯罪者”，既自卑又自大，既自我贬低也攻击他人，情绪反复无常，很容易产生报复社会的行为。&lt;/p&gt;
+&lt;p&gt;4、你好，我也好。这不仅是一种状态，更是一种选择和承诺。你相信自己是好的，更相信别人是好的，通过行为和态度，持续对自己和别人展现美好。&lt;/p&gt;
+&lt;h2 id=&#34;自我证言&#34;&gt;自我证言&lt;/h2&gt;
+&lt;p&gt;假如认为自己是一个失败者，往往就会真的成为失败者，这应该是一种消极的心里暗示&lt;/p&gt;
+&lt;h2 id=&#34;游戏&#34;&gt;游戏&lt;/h2&gt;
+&lt;p&gt;比如”我很弱小“游戏，玩家会从各方面去证明，让别人认同自己很可怜很弱小，有点像受害者心理。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;每个人都有自己的内心世界和情感状态，只有通过认真倾听和探索，才能够发现自己真正的内心需求和意义。正视、接纳自己内心深处的想法和情感需求。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不要自我批判，或对自己要求太过苛刻&lt;/li&gt;
+&lt;li&gt;能帮自己的只有自己，只有自己真正发自内心想去改变才能有所成效&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>《天才程序员：技术狂人如何改变世界》读后记录</title>
+        <link>https://slothhuman.github.io/p/%E5%A4%A9%E6%89%8D%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8A%80%E6%9C%AF%E7%8B%82%E4%BA%BA%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E8%AF%BB%E5%90%8E%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E5%A4%A9%E6%89%8D%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8A%80%E6%9C%AF%E7%8B%82%E4%BA%BA%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E8%AF%BB%E5%90%8E%E8%AE%B0%E5%BD%95/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/3.jpg" alt="Featured image of post 《天才程序员：技术狂人如何改变世界》读后记录" /&gt;&lt;h2 id=&#34;技术改变世界&#34;&gt;技术改变世界&lt;/h2&gt;
+&lt;p&gt;随着技术的不断进步，它已经成为了改变世界的一个强大工具。无论是从商业、政治还是文化角度看，技术的进步都对人类产生了深远的影响。书中提到了很多令人震撼的案例，比如谷歌搜索引擎、苹果公司的iPhone，以及无人驾驶汽车等等。这些人通过他们的技术创新和创意，成功地改变了我们的世界。&lt;/p&gt;
+&lt;p&gt;天才程序员通过开发软件和硬件来解决现实世界中的问题，从而创造出新的商业模式和产品，影响着我们的日常生活。技术的进步带来便利的同时也会带来许多新的问题和挑战，例如隐私和安全问题，以及人工智能对就业的影响等等。这些问题需要我们思考和解决。程序员也应负起社会责任，在技术发展和应用中也需要考虑人类的利益和社会的可持续发展。&lt;/p&gt;
+&lt;h2 id=&#34;四代程序员发展变化&#34;&gt;四代程序员发展变化&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;编程语言：机器语言到高级编程语言（JAVA等）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开发工具：大型计算机到个人计算机&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序员：现代软件工程师需要具备更广泛的技术技能，如前端和后端开发、数据库管理和安全性等方面的知识。此外，现代软件工程师还需要了解如何与团队合作，如何管理项目和与客户进行沟通等技能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;程序员的逻辑思维模式&#34;&gt;程序员的逻辑思维模式&lt;/h2&gt;
+&lt;p&gt;极致的求真精神、强烈的好奇心和创新意识，创造力，以及敏锐的洞察力和分析能力。追求效率，厌恶重复低效的事情。&lt;/p&gt;
+&lt;h2 id=&#34;程序员的性格特征&#34;&gt;程序员的性格特征&lt;/h2&gt;
+&lt;p&gt;内向、喜欢独处和专注等等，这些特质在程序员工作中发挥了很大的作用。但是，这些特质也可能导致程序员们感到孤独和焦虑，特别是在面对技术难题时。&lt;/p&gt;
+&lt;h2 id=&#34;程序员的焦虑抑郁状态&#34;&gt;程序员的焦虑抑郁状态&lt;/h2&gt;
+&lt;p&gt;（工作环境、工作压力、工作不确定性、工作时长、缺乏社交，作息不规律）&lt;/p&gt;
+&lt;p&gt;许多程序员患有抑郁症或者有严重的焦虑、狂躁情绪，也听说一些程序员因为饱受精神疾病的困扰最终自杀。很多人不禁好奇，编程是否和心理健康有着某种联系？&lt;/p&gt;
+&lt;p&gt;折磨人的挫败感与突发的愉悦感相互交织，频繁变化，程序员的自尊也常常大幅波动。如果你恰好碰到某个程序员都3个星期了还没解决自己的程序问题，那么他肯定已经陷入极端郁闷和自我否定的状态，但可能一个小时后，问题就被解决了，他瞬间就会成为一个自高自大到无以复加的人。&lt;/p&gt;
+&lt;h2 id=&#34;程序员心流状态&#34;&gt;程序员心流状态&lt;/h2&gt;
+&lt;p&gt;心流状态是一种高度集中和沉浸的状态，提高工作效率和创造力。这种状态可以提高程序员们的工作效率和满意度。过度追求心流状态也会让我们忽略身体健康和生活平衡，或许这也是程序员的焦虑抑郁状态的其中一个原因。&lt;/p&gt;
+&lt;p&gt;程序员一旦进入状态，对整个程序的框架了然于心，编程会变得非常愉悦。整个人都沉浸其中，将个人技能发挥至极致。但是，这个状态非常脆弱，即使是最轻微的干扰也会让那小心翼翼形成的思维空间顷刻消失。&lt;/p&gt;
+&lt;p&gt;程序员处在自己的状态中时，突然被人打断他们可能会暴跳如雷。他们好不容易在脑海里精心搭建起细密的框架结构，这时有人来了一句“嘿，你收到我发的邮件了吗”，他们脑海中的架构瞬间不复存在。&lt;/p&gt;
+&lt;p&gt;程序员在工作的时候，会竭尽所能避开其他人，因为从本质上说，其他人就是干扰。有的程序员会戴上耳机，屏蔽一切噪声。有的程序员会把最复杂的工作留到夜深人静的时候，留到所有电话、短信、时政新闻都消停时再做。&lt;/p&gt;
+&lt;h2 id=&#34;程序员代码重构精神&#34;&gt;程序员代码重构精神&lt;/h2&gt;
+&lt;p&gt;（不断地寻求更好的解决方案）&lt;/p&gt;
+&lt;p&gt;越紧凑的代码质量越高，主要是因为代码的行数越少，出现程序错误的概率越小。程序错误很容易藏身于一大堆面条式代码中，而短小紧凑的代码更容易让人看出各处正常与否，就像桦树林，棵棵树木挺拔笔直，放眼望去一清二楚。&lt;/p&gt;
+&lt;p&gt;重构和润色有一些相似之处。无论你是写信、写讲稿抑或写文章，第一稿总有些冗长或含糊，传达出了基本信息，却不够简洁明了，可能啰里啰唆，可能拐弯抹角，还可能逻辑不清。&lt;/p&gt;
+&lt;p&gt;但是没关系，因为你的目标不是完美的，先写出来，稍后慢慢修改。润色的过程会让文意更清晰，让语言更真切，让絮絮叨叨的话语不复存在，让行文更紧凑有力。字斟句酌，精雕细琢，润色后的文本往往比初稿更简洁。&lt;/p&gt;
+&lt;h2 id=&#34;程序员的开源精神&#34;&gt;程序员的开源精神&lt;/h2&gt;
+&lt;p&gt;（开放与分享）&lt;/p&gt;
+&lt;p&gt;在阅读这本书的过程中，我深刻感受到了开源精神所带来的巨大价值。作者通过讲述开源项目（例如Linux）的发展历程以及参与者的思考方式和精神状态，展现了开源精神对于技术进步和社会发展的巨大推动力。开源项目可以吸引全球的开发者参与其中，共同完成项目的开发和维护，这不仅可以让技术得到不断的完善，也可以为社会提供更加优质的产品和服务。&lt;/p&gt;
+&lt;p&gt;此外，作者还深入探讨了开源精神对于创新的重要作用。在开源项目中，每个参与者都可以自由地贡献自己的思想和创意，这种协作方式不仅可以让项目得到更多的创新思路，也可以激发每个参与者的创造力和积极性。通过开源精神，我们可以打破原有的知识壁垒和传统思维，让更多的人参与到创新的过程中。&lt;/p&gt;
+&lt;p&gt;在读完这本书之后，我更加认识到了开源精神对于技术和社会的发展所起到的作用。开源精神不仅可以促进技术进步和创新，也可以增强社会的协作和共同进步意识。这些精神也可以被应用到更广泛的领域中，为社会的发展带来更多的积极影响。&lt;/p&gt;
+&lt;h2 id=&#34;程序员男性化&#34;&gt;程序员男性化&lt;/h2&gt;
+&lt;p&gt;通过对历史和现实的案例分析，汤普森指出，程序员文化中的男性化现象源于社会文化环境的影响，如对男性的期望和刻板印象等。这种偏见会导致女性和其他少数族裔在技术领域中面临着更大的挑战和障碍，这种性别偏见不仅仅是一种歧视，更是一种威胁。因为它会让许多有天赋和潜力的女性和少数族裔放弃追求科技领域的职业，从而限制了创新和发展。&lt;/p&gt;
+&lt;h2 id=&#34;人工智能&#34;&gt;人工智能&lt;/h2&gt;
+&lt;p&gt;最近比较热门的聊天机器人ChatGPT，因其高效的语言处理能力备受关注。AI+行业正在重塑这个世界，有人对未来的AI充满期待，也有人对AI的发展充满担忧，认为可能成为人类的威胁。&lt;/p&gt;
+&lt;p&gt;人工智能的崛起也带来了一些问题和挑战。例如，人工智能可能会替代一些传统行业的工作，导致失业和社会不平等；人工智能的算法也可能存在一些偏见和歧视，影响公正性和透明度。&lt;/p&gt;
+&lt;p&gt;人工智能的发展和应用在未来的发展中需要平衡技术发展和社会责任，确保人工智能的应用能够为人类带来更多的利益和福祉。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>API调用方式-SDK调用</title>
         <link>https://slothhuman.github.io/p/api%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F-sdk%E8%B0%83%E7%94%A8/</link>
         <pubDate>Thu, 22 Dec 2022 00:00:00 +0000</pubDate>
@@ -708,6 +2744,94 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>redis（五）生产问题</title>
+        <link>https://slothhuman.github.io/p/redis%E4%BA%94%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%BA%94%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/27.jpg" alt="Featured image of post redis（五）生产问题" /&gt;&lt;h2 id=&#34;生产问题&#34;&gt;生产问题&lt;/h2&gt;
+&lt;h3 id=&#34;缓存雪崩&#34;&gt;缓存雪崩&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存在同一时间大面积失效，后面的请求都直接落到数据库上面，导致数据库短时间承受大量请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;针对Redis服务不可用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;采⽤ Redis 集群，避免单机出现问题整个缓存服务都没办法使⽤。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;限流，避免同时处理⼤量的请求&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;针对热点缓存失效的情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;设置不同的失效时间⽐如随机设置缓存的失效时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;缓存永不失效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存穿透&#34;&gt;缓存穿透&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大量请求的key不存在于缓存中，导致请求直接到了数据库上面，根本没经过缓存层&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决办法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;做好参数校验&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;，不合法的参数请求直接抛异常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缓存无效的key&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果在缓存和数据库中都查询不到某个key对应的数据，就把这个key加入到缓存中并设置一个比较短的过期时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;布隆过滤器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先把所有可能存在的请求的值存放在布隆过滤器中，当用户请求过来，先判断是否存在于布隆过滤器中，若存在再去查询缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;子主题 4&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>详解HTTP请求</title>
         <link>https://slothhuman.github.io/p/%E8%AF%A6%E8%A7%A3http%E8%AF%B7%E6%B1%82/</link>
         <pubDate>Sun, 20 Nov 2022 00:00:00 +0000</pubDate>
@@ -854,6 +2978,169 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在使用HTTP请求时，需要对响应状态码、响应头和响应体进行处理，根据实际需求进行解析和转换。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（四）持久化</title>
+        <link>https://slothhuman.github.io/p/redis%E5%9B%9B%E6%8C%81%E4%B9%85%E5%8C%96/</link>
+        <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E5%9B%9B%E6%8C%81%E4%B9%85%E5%8C%96/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/26.jpg" alt="Featured image of post redis（四）持久化" /&gt;&lt;h2 id=&#34;持久化&#34;&gt;持久化&lt;/h2&gt;
+&lt;h3 id=&#34;快照rdbredis默认的持久化方式&#34;&gt;快照（RDB）（Redis默认的持久化方式）&lt;/h3&gt;
+&lt;h3 id=&#34;追加文件aof&#34;&gt;追加文件（AOF）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;appendfsync always   #每次有数据修改发⽣时都会写⼊AOF⽂件,这样会严重降低Redis的速度&lt;/li&gt;
+&lt;li&gt;appendfsync everysec   #每秒钟同步⼀次，显示地将多个写命令同步到硬盘&lt;/li&gt;
+&lt;li&gt;appendfsync no   #让操作系统决定何时进⾏同步&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（三）缓存数据</title>
+        <link>https://slothhuman.github.io/p/redis%E4%B8%89%E7%BC%93%E5%AD%98%E6%95%B0%E6%8D%AE/</link>
+        <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%B8%89%E7%BC%93%E5%AD%98%E6%95%B0%E6%8D%AE/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/25.jpg" alt="Featured image of post redis（三）缓存数据" /&gt;&lt;h2 id=&#34;缓存数据&#34;&gt;缓存数据&lt;/h2&gt;
+&lt;h3 id=&#34;设置过期时间&#34;&gt;设置过期时间&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;有助于缓解内存的消耗&lt;/li&gt;
+&lt;li&gt;有利于业务场景，有时候某些数据就是只在某个时间段存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;过期删除策略&#34;&gt;过期删除策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;惰性删除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用到这个数据时才进行过期检查，对CPU友好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;定期删除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定期对过期数据进行删除，对内存友好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;redis采用两者结合&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据淘汰策略&#34;&gt;数据淘汰策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-lru（least recently used）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-ttl&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-random&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allkeys-lru（least recently used）（这个是最常⽤的）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allkeys-random&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;no-eviction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-lfu（least frequently used）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allkeys-lfu（least frequently used）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;面试题：MySQL ⾥有 2000w 数据，Redis 中只存 20w 的数据，如何保证 Redis 中的数
+据都是热点数据?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算数据所占用，设置最大内存空间&lt;/li&gt;
+&lt;li&gt;选择合适的内存淘汰策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存利用率和一致性问题&#34;&gt;缓存利用率和一致性问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提高缓存利用率&lt;/p&gt;
+&lt;p&gt;想法：缓存中只保留“热数据”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.写请求只写入数据库&lt;/li&gt;
+&lt;li&gt;2.读请求先读缓存，缓存没有再去读数据库，并重建缓存&lt;/li&gt;
+&lt;li&gt;3.同时，写入缓存中的数据都设置过期时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保证缓存与数据库实时一致&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;写数据时，不但要更新数据库，同时也更新缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;如何保证缓存和数据库数据的致性&#34;&gt;如何保证缓存和数据库数据的⼀致性？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;子主题 1&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（二）单线程模型</title>
+        <link>https://slothhuman.github.io/p/redis%E4%BA%8C%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</link>
+        <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%BA%8C%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/24.jpg" alt="Featured image of post redis（二）单线程模型" /&gt;&lt;h2 id=&#34;单线程模型&#34;&gt;单线程模型&lt;/h2&gt;
+&lt;h3 id=&#34;文件事件处理器&#34;&gt;文件事件处理器&lt;/h3&gt;
+&lt;p&gt;Redis 基于 Reactor 模式来设计开发了⾃⼰的⼀套⾼效的事件处理模型，这套事件处理模型对应的是 Redis 中的⽂件事件处理器（file event handler）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多个 socket（客户端连接）&lt;/li&gt;
+&lt;li&gt;IO 多路复⽤程序（⽀持多个客户端连接的关键）&lt;/li&gt;
+&lt;li&gt;⽂件事件分派器（将 socket 关联到相应的事件处理器）&lt;/li&gt;
+&lt;li&gt;事件处理器（连接应答处理器、命令请求处理器、命令回复处理器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redis-通过io-多路复程序-来监听来客户端的量连接或者说是监听多个-socket它会&#34;&gt;Redis 通过IO 多路复⽤程序 来监听来⾃客户端的⼤量连接（或者说是监听多个 socket），它会&lt;/h3&gt;
+&lt;p&gt;将感兴趣的事件及类型(读、写）注册到内核中并监听每个事件是否发⽣&lt;/p&gt;
+&lt;h3 id=&#34;redis-60之前没有使多线程&#34;&gt;Redis 6.0之前没有使⽤多线程？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1.单线程编程容易且更容易维护&lt;/li&gt;
+&lt;li&gt;2.redis性能瓶颈不在CPU，主要在内存和网络&lt;/li&gt;
+&lt;li&gt;多线程就可能会出现死锁、上下文切换等问题，可能会影响性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redis60-之后为何引了多线程&#34;&gt;Redis6.0 之后为何引⼊了多线程？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;为了提高网络IO读写功能，但执行命令还是单线程&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（一）数据结构</title>
+        <link>https://slothhuman.github.io/p/redis%E4%B8%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%B8%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/23.jpg" alt="Featured image of post redis（一）数据结构" /&gt;&lt;h2 id=&#34;数据结构&#34;&gt;数据结构&lt;/h2&gt;
+&lt;h3 id=&#34;string&#34;&gt;String&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;简单动态字符串&lt;/li&gt;
+&lt;li&gt;保存文本数据、保存二进制数据&lt;/li&gt;
+&lt;li&gt;获取字符串长度复杂度为O(1)&lt;/li&gt;
+&lt;li&gt;SDS API是安全的，不会造成缓冲区溢出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;list&#34;&gt;List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;双向链表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hash&#34;&gt;hash&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数组+链表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;set&#34;&gt;set&lt;/h3&gt;
+&lt;h3 id=&#34;sorted-set&#34;&gt;sorted set&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;增加了⼀个权重参数 score，有序&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>

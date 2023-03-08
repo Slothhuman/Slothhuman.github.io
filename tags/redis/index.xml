@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>redis on Slothhuman&#39;s Blog</title>
+        <link>https://slothhuman.github.io/tags/redis/</link>
+        <description>Recent content in redis on Slothhuman&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>redis（五）生产问题</title>
+        <link>https://slothhuman.github.io/p/redis%E4%BA%94%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%BA%94%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/27.jpg" alt="Featured image of post redis（五）生产问题" /&gt;&lt;h2 id=&#34;生产问题&#34;&gt;生产问题&lt;/h2&gt;
+&lt;h3 id=&#34;缓存雪崩&#34;&gt;缓存雪崩&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存在同一时间大面积失效，后面的请求都直接落到数据库上面，导致数据库短时间承受大量请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;针对Redis服务不可用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;采⽤ Redis 集群，避免单机出现问题整个缓存服务都没办法使⽤。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;限流，避免同时处理⼤量的请求&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;针对热点缓存失效的情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;设置不同的失效时间⽐如随机设置缓存的失效时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;缓存永不失效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存穿透&#34;&gt;缓存穿透&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大量请求的key不存在于缓存中，导致请求直接到了数据库上面，根本没经过缓存层&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决办法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;做好参数校验&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;，不合法的参数请求直接抛异常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缓存无效的key&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果在缓存和数据库中都查询不到某个key对应的数据，就把这个key加入到缓存中并设置一个比较短的过期时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;布隆过滤器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先把所有可能存在的请求的值存放在布隆过滤器中，当用户请求过来，先判断是否存在于布隆过滤器中，若存在再去查询缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;子主题 4&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（四）持久化</title>
+        <link>https://slothhuman.github.io/p/redis%E5%9B%9B%E6%8C%81%E4%B9%85%E5%8C%96/</link>
+        <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E5%9B%9B%E6%8C%81%E4%B9%85%E5%8C%96/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/26.jpg" alt="Featured image of post redis（四）持久化" /&gt;&lt;h2 id=&#34;持久化&#34;&gt;持久化&lt;/h2&gt;
+&lt;h3 id=&#34;快照rdbredis默认的持久化方式&#34;&gt;快照（RDB）（Redis默认的持久化方式）&lt;/h3&gt;
+&lt;h3 id=&#34;追加文件aof&#34;&gt;追加文件（AOF）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;appendfsync always   #每次有数据修改发⽣时都会写⼊AOF⽂件,这样会严重降低Redis的速度&lt;/li&gt;
+&lt;li&gt;appendfsync everysec   #每秒钟同步⼀次，显示地将多个写命令同步到硬盘&lt;/li&gt;
+&lt;li&gt;appendfsync no   #让操作系统决定何时进⾏同步&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（三）缓存数据</title>
+        <link>https://slothhuman.github.io/p/redis%E4%B8%89%E7%BC%93%E5%AD%98%E6%95%B0%E6%8D%AE/</link>
+        <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%B8%89%E7%BC%93%E5%AD%98%E6%95%B0%E6%8D%AE/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/25.jpg" alt="Featured image of post redis（三）缓存数据" /&gt;&lt;h2 id=&#34;缓存数据&#34;&gt;缓存数据&lt;/h2&gt;
+&lt;h3 id=&#34;设置过期时间&#34;&gt;设置过期时间&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;有助于缓解内存的消耗&lt;/li&gt;
+&lt;li&gt;有利于业务场景，有时候某些数据就是只在某个时间段存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;过期删除策略&#34;&gt;过期删除策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;惰性删除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用到这个数据时才进行过期检查，对CPU友好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;定期删除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定期对过期数据进行删除，对内存友好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;redis采用两者结合&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据淘汰策略&#34;&gt;数据淘汰策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-lru（least recently used）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-ttl&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-random&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allkeys-lru（least recently used）（这个是最常⽤的）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allkeys-random&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;no-eviction&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;volatile-lfu（least frequently used）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allkeys-lfu（least frequently used）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;面试题：MySQL ⾥有 2000w 数据，Redis 中只存 20w 的数据，如何保证 Redis 中的数
+据都是热点数据?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算数据所占用，设置最大内存空间&lt;/li&gt;
+&lt;li&gt;选择合适的内存淘汰策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存利用率和一致性问题&#34;&gt;缓存利用率和一致性问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提高缓存利用率&lt;/p&gt;
+&lt;p&gt;想法：缓存中只保留“热数据”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.写请求只写入数据库&lt;/li&gt;
+&lt;li&gt;2.读请求先读缓存，缓存没有再去读数据库，并重建缓存&lt;/li&gt;
+&lt;li&gt;3.同时，写入缓存中的数据都设置过期时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保证缓存与数据库实时一致&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;写数据时，不但要更新数据库，同时也更新缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;如何保证缓存和数据库数据的致性&#34;&gt;如何保证缓存和数据库数据的⼀致性？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;子主题 1&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（二）单线程模型</title>
+        <link>https://slothhuman.github.io/p/redis%E4%BA%8C%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</link>
+        <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%BA%8C%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/24.jpg" alt="Featured image of post redis（二）单线程模型" /&gt;&lt;h2 id=&#34;单线程模型&#34;&gt;单线程模型&lt;/h2&gt;
+&lt;h3 id=&#34;文件事件处理器&#34;&gt;文件事件处理器&lt;/h3&gt;
+&lt;p&gt;Redis 基于 Reactor 模式来设计开发了⾃⼰的⼀套⾼效的事件处理模型，这套事件处理模型对应的是 Redis 中的⽂件事件处理器（file event handler）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多个 socket（客户端连接）&lt;/li&gt;
+&lt;li&gt;IO 多路复⽤程序（⽀持多个客户端连接的关键）&lt;/li&gt;
+&lt;li&gt;⽂件事件分派器（将 socket 关联到相应的事件处理器）&lt;/li&gt;
+&lt;li&gt;事件处理器（连接应答处理器、命令请求处理器、命令回复处理器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redis-通过io-多路复程序-来监听来客户端的量连接或者说是监听多个-socket它会&#34;&gt;Redis 通过IO 多路复⽤程序 来监听来⾃客户端的⼤量连接（或者说是监听多个 socket），它会&lt;/h3&gt;
+&lt;p&gt;将感兴趣的事件及类型(读、写）注册到内核中并监听每个事件是否发⽣&lt;/p&gt;
+&lt;h3 id=&#34;redis-60之前没有使多线程&#34;&gt;Redis 6.0之前没有使⽤多线程？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1.单线程编程容易且更容易维护&lt;/li&gt;
+&lt;li&gt;2.redis性能瓶颈不在CPU，主要在内存和网络&lt;/li&gt;
+&lt;li&gt;多线程就可能会出现死锁、上下文切换等问题，可能会影响性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redis60-之后为何引了多线程&#34;&gt;Redis6.0 之后为何引⼊了多线程？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;为了提高网络IO读写功能，但执行命令还是单线程&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>redis（一）数据结构</title>
+        <link>https://slothhuman.github.io/p/redis%E4%B8%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/redis%E4%B8%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/23.jpg" alt="Featured image of post redis（一）数据结构" /&gt;&lt;h2 id=&#34;数据结构&#34;&gt;数据结构&lt;/h2&gt;
+&lt;h3 id=&#34;string&#34;&gt;String&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;简单动态字符串&lt;/li&gt;
+&lt;li&gt;保存文本数据、保存二进制数据&lt;/li&gt;
+&lt;li&gt;获取字符串长度复杂度为O(1)&lt;/li&gt;
+&lt;li&gt;SDS API是安全的，不会造成缓冲区溢出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;list&#34;&gt;List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;双向链表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hash&#34;&gt;hash&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数组+链表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;set&#34;&gt;set&lt;/h3&gt;
+&lt;h3 id=&#34;sorted-set&#34;&gt;sorted set&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;增加了⼀个权重参数 score，有序&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

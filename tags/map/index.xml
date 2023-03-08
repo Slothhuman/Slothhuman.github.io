@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Map on Slothhuman&#39;s Blog</title>
+        <link>https://slothhuman.github.io/tags/map/</link>
+        <description>Recent content in Map on Slothhuman&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/map/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java集合（二）Map</title>
+        <link>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%BA%8Cmap/</link>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/java%E9%9B%86%E5%90%88%E4%BA%8Cmap/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/10.jpg" alt="Featured image of post Java集合（二）Map" /&gt;&lt;h2 id=&#34;map&#34;&gt;Map&lt;/h2&gt;
+&lt;p&gt;Key 是⽆序的、不可重复的，value 是⽆序的、可重复
+的，每个键最多映射到⼀个值&lt;/p&gt;
+&lt;h3 id=&#34;hashmap&#34;&gt;HashMap&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;非线程安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;效率比Hashtable高一点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashMap 可以存储 null 的 key 和 value，但 null 作为
+键只能有⼀个，null 作为值可以有多个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始大小和扩容量大小&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果不指定容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HashMap 默认的初始化⼤⼩为 16。之后每次扩充，容量变为原来的 2 倍。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果给定了容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HashMap 会将其扩充为 2 的幂次⽅⼤⼩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;底层数据结构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JDK1.8之前&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;底层是 数组和链表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JDK1.8&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当链表⻓度⼤于阈值（默认为 8）（将链表转换成红⿊树前会判断，如果当前数组的⻓度⼩于 64，那么会选择先进⾏数组扩容，⽽不是转换为红⿊树）时，将链表转化为红⿊树，以减少搜索时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hashtable&#34;&gt;HashTable&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;线程安全&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HashTable 内部的⽅法基本都经过 synchronized 修饰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashTable基本被淘汰&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashTable 不允许有 null 键和 null 值，否则会抛出NullPointerException&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始大小和扩容量大小&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果不指定容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认初始化大小为11，之后每次扩充，容量变为原来的2n+1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建时如果给定了容量初始值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接使用给定的大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;子主题 5&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
