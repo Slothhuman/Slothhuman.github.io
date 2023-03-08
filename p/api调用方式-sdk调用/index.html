@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SDK全称为Software Development Kit，它通过提供简单易用的接口，让开发者可以轻松地调用第三方API，避免了繁琐的HTTP请求和参数处理'>
+<title>API调用方式-SDK调用</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/api%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F-sdk%E8%B0%83%E7%94%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='API调用方式-SDK调用'>
+<meta property='og:description' content='SDK全称为Software Development Kit，它通过提供简单易用的接口，让开发者可以轻松地调用第三方API，避免了繁琐的HTTP请求和参数处理'>
+<meta property='og:url' content='https://slothhuman.github.io/p/api%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F-sdk%E8%B0%83%E7%94%A8/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='SDK' /><meta property='article:tag' content='SDK调用' /><meta property='article:published_time' content='2022-12-22T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-12-22T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/2.jpg' />
+<meta name="twitter:title" content="API调用方式-SDK调用">
+<meta name="twitter:description" content="SDK全称为Software Development Kit，它通过提供简单易用的接口，让开发者可以轻松地调用第三方API，避免了繁琐的HTTP请求和参数处理"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/2.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#什么是sdk调用方式">什么是SDK调用方式</a></li>
+    <li><a href="#什么是sdk">什么是SDK</a></li>
+    <li><a href="#sdk调用方式的特点">SDK调用方式的特点</a></li>
+    <li><a href="#sdk调用方式的优势使用别人的sdk">SDK调用方式的优势（使用别人的SDK）</a></li>
+    <li><a href="#为自定义的接口封装一个sdk的优势使用自己的sdk">为自定义的接口封装一个SDK的优势（使用自己的SDK）</a></li>
+    <li><a href="#sdk调用方式的实现原理">SDK调用方式的实现原理：</a></li>
+    <li><a href="#sdk调用适用于以下场景">SDK调用适用于以下场景：</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/api%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F-sdk%E8%B0%83%E7%94%A8/">
+                
+                    <img src="/img/2.jpg" loading="lazy" alt="Featured image of post API调用方式-SDK调用" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+            <a href="/categories/api/" style="background-color: #2a9d8f; color: #fff;">
+                API
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/api%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F-sdk%E8%B0%83%E7%94%A8/">API调用方式-SDK调用</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            SDK全称为Software Development Kit，它通过提供简单易用的接口，让开发者可以轻松地调用第三方API，避免了繁琐的HTTP请求和参数处理
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 22, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="什么是sdk调用方式">什么是SDK调用方式</h2>
+<p>SDK调用方式是现代软件开发中常用的一种方式，它通过提供简单易用的接口，让开发者可以轻松地调用第三方API，避免了繁琐的HTTP请求和参数处理。使用SDK调用方式可以大大提高开发效率和代码可读性，同时也能够降低出错的风险。</p>
+<h2 id="什么是sdk">什么是SDK</h2>
+<p>SDK全称为Software Development Kit，中文名为软件开发工具包，是一种为特定软件包、软件框架、硬件平台、操作系统等开发者提供的一系列工具的集合，它包含了开发所需的一些资源、API、文档、示例代码等。SDK的目的是简化开发者的工作，提供一些常用的开发工具和接口，使开发者能够快速地开发出满足业务需求的软件或应用。一些著名的SDK包括Android SDK、iOS SDK、AWS SDK等。</p>
+<h2 id="sdk调用方式的特点">SDK调用方式的特点</h2>
+<p>SDK调用方式是指使用第三方提供的SDK来调用其API，这种方式相对于直接调用API具有以下几个特点：</p>
+<ul>
+<li>封装性：SDK通常会对API进行封装，使得调用更加简单易用；</li>
+<li>统一性：SDK提供了统一的接口和规范，可以方便地进行开发和维护；</li>
+<li>兼容性：SDK通常会提供多种编程语言的版本，以便不同编程语言的开发者使用；</li>
+<li>可靠性：SDK通常会对API进行错误处理和异常处理，提高调用的可靠性。</li>
+</ul>
+<h2 id="sdk调用方式的优势使用别人的sdk">SDK调用方式的优势（使用别人的SDK）</h2>
+<p>使用SDK调用方式具有以下优势：</p>
+<ul>
+<li>提高开发效率：使用SDK可以避免开发者自己编写大量的代码来调用API，从而节省了时间和精力；</li>
+<li>提高调用的可靠性：SDK通常会对API进行错误处理和异常处理，提高了调用的可靠性；</li>
+<li>方便快捷：SDK通常提供了示例代码和文档，开发者可以很方便地进行开发和调试；</li>
+<li>降低开发成本：使用SDK可以降低开发成本，避免了重复造轮子。</li>
+</ul>
+<h2 id="为自定义的接口封装一个sdk的优势使用自己的sdk">为自定义的接口封装一个SDK的优势（使用自己的SDK）</h2>
+<ol>
+<li>简化接口调用流程：SDK将复杂的接口调用流程封装起来，用户只需要调用SDK提供的接口方法即可完成接口调用，避免了用户需要了解底层接口实现的复杂性。</li>
+<li>提高开发效率：SDK可以提供更友好的API，降低使用接口的门槛，简化开发流程，从而提高开发效率。</li>
+<li>提高代码复用率：SDK可以将接口调用相关的代码封装在一起，使得接口调用逻辑可以被多个项目复用，减少重复开发的工作量。</li>
+<li>方便版本升级：当接口升级时，只需要修改SDK的实现，而不需要修改使用该接口的所有项目，降低了接口升级的成本。</li>
+<li>提高可维护性：封装SDK的过程中，可以将接口调用的异常处理、日志记录等细节封装在一起，使得代码更易于维护。</li>
+</ol>
+<h2 id="sdk调用方式的实现原理">SDK调用方式的实现原理：</h2>
+<ol>
+<li>使用SDK调用第三方API的方式通常是通过对应的SDK库来实现的。</li>
+<li>SDK库通常封装了API调用的具体实现，包括请求参数的构建、请求的发送和响应的处理等。</li>
+<li>调用SDK库需要先进行初始化，通常需要传入API的认证信息、请求地址、端口号等配置信息。</li>
+<li>通过调用SDK库提供的API接口，将构建好的请求参数传入，即可完成对第三方API的调用。</li>
+</ol>
+<h2 id="sdk调用适用于以下场景">SDK调用适用于以下场景：</h2>
+<ol>
+<li>需要频繁调用第三方API的应用程序，例如支付、短信发送、邮件发送等。</li>
+<li>需要简化API调用过程的应用程序，例如通过SDK可以提供更高层次的封装，减少编码量和出错率。</li>
+<li>需要快速开发并且集成第三方服务的应用程序，例如SDK可以提供开发文档和示例代码，快速上手并集成第三方服务。</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/sdk/">SDK</a>
+        
+            <a href="/tags/sdk%E8%B0%83%E7%94%A8/">SDK调用</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/rpc%E8%B0%83%E7%94%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/green.jpg" loading="lazy" data-key="" data-hash="/img/green.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RPC调用</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BD%BF%E7%94%A8http%E8%AF%B7%E6%B1%82%E8%B0%83%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/blue.jpg" loading="lazy" data-key="" data-hash="/img/blue.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用HTTP请求调用自定义接口</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%AF%A6%E8%A7%A3http%E8%AF%B7%E6%B1%82/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/purple.jpg" loading="lazy" data-key="" data-hash="/img/purple.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">详解HTTP请求</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E8%AF%A6%E8%A7%A3@requestparam@requestbody@pathvariable/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/yes.jpg" loading="lazy" data-key="" data-hash="/img/yes.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">详解@RequestParam、@RequestBody、@PathVariable</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
