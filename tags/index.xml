@@ -6,7 +6,63 @@
         <description>Recent content in Tags on Slothhuman&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>毕设</title>
+        <link>https://slothhuman.github.io/tags/%E6%AF%95%E8%AE%BE/</link>
+        <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/%E6%AF%95%E8%AE%BE/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java</title>
+        <link>https://slothhuman.github.io/tags/java/</link>
+        <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>云服务器</title>
+        <link>https://slothhuman.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>API</title>
+        <link>https://slothhuman.github.io/tags/api/</link>
+        <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/api/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SPI</title>
+        <link>https://slothhuman.github.io/tags/spi/</link>
+        <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/spi/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AOT编译器</title>
+        <link>https://slothhuman.github.io/tags/aot%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/aot%E7%BC%96%E8%AF%91%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JIT编译器</title>
+        <link>https://slothhuman.github.io/tags/jit%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/jit%E7%BC%96%E8%AF%91%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>MySQL</title>
         <link>https://slothhuman.github.io/tags/mysql/</link>
         <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
@@ -124,6 +180,30 @@
         <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
         
         <guid>https://slothhuman.github.io/tags/@requestparam/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>实验报告</title>
+        <link>https://slothhuman.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>报告</title>
+        <link>https://slothhuman.github.io/tags/%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/%E6%8A%A5%E5%91%8A/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>信息杯</title>
+        <link>https://slothhuman.github.io/tags/%E4%BF%A1%E6%81%AF%E6%9D%AF/</link>
+        <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/tags/%E4%BF%A1%E6%81%AF%E6%9D%AF/</guid>
         <description></description>
         </item>
         

@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>实验报告 on Slothhuman&#39;s Blog</title>
+        <link>https://slothhuman.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
+        <description>Recent content in 实验报告 on Slothhuman&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>传感器实验报告</title>
+        <link>https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/33.jpg" alt="Featured image of post 传感器实验报告" /&gt;&lt;h2 id=&#34;实验一金属箔式应变片及转换电路性能&#34;&gt;实验一：金属箔式应变片及转换电路性能&lt;/h2&gt;
+&lt;h3 id=&#34;1-实验目的&#34;&gt;&lt;strong&gt;1.&lt;/strong&gt; 实验目的&lt;/h3&gt;
+&lt;p&gt;1、了解应变片的测试原理与应用领域；&lt;/p&gt;
+&lt;p&gt;2、掌握应变片测试方法及典型转换电路原理；&lt;/p&gt;
+&lt;p&gt;3、通过实验数据分析处理，掌握获得传感器静态特性性能指标的过程和方法。&lt;/p&gt;
+&lt;h3 id=&#34;2-实验内容和要求&#34;&gt;&lt;strong&gt;2.&lt;/strong&gt; 实验内容和要求&lt;/h3&gt;
+&lt;p&gt;1、观察金属箔式应变片的结构、贴片方式以及接桥方式；&lt;/p&gt;
+&lt;p&gt;2、测试应变梁变形时的应变输出；&lt;/p&gt;
+&lt;p&gt;3、比较应变片不同接桥方式对电桥输出结果的影响。&lt;/p&gt;
+&lt;p&gt;4、进行实验前，先预习附录一“CYS型传感器系统综合实验仪使用指南”，了解该设备的基本结构与组成。&lt;/p&gt;
+&lt;h3 id=&#34;3实验主要仪器设备和材料&#34;&gt;3.实验主要仪器设备和材料&lt;/h3&gt;
+&lt;p&gt;1、CYS型传感器系统综合实验仪本次实验所用模块包括：①悬臂梁及金属箔式应变片；②电桥模块；③差动放大器；④直流稳压电源（±4Ｖ档）；⑤测&lt;/p&gt;
+&lt;p&gt;微头；⑥毫伏表。&lt;/p&gt;
+&lt;p&gt;2、若干接插连接实验导线。&lt;/p&gt;
+&lt;p&gt;3、万用表（非必需）。&lt;/p&gt;
+&lt;h3 id=&#34;4-实验原理与步骤&#34;&gt;&lt;strong&gt;4.&lt;/strong&gt; 实验原理与步骤&lt;/h3&gt;
+&lt;p&gt;实验原理&lt;/p&gt;
+&lt;p&gt;应变片是最常用的测力传感元件。当使用应变片进行测试时，首先要将应变片牢固地粘贴到测试体表面。当测件受力发生变形，应变片敏感栅也随同变形，其电阻值也随之发生相应变化。之后，再通过测量转换电路，将电阻值变化转换成电压信号输出显示。&lt;/p&gt;
+&lt;p&gt;实验步骤&lt;/p&gt;
+&lt;p&gt;1、仪表及电路调零&lt;/p&gt;
+&lt;p&gt;2、半桥单臂接桥方式测试&lt;/p&gt;
+&lt;p&gt;3、半桥双臂接桥方式测试&lt;/p&gt;
+&lt;p&gt;4、全桥接桥方式测试&lt;/p&gt;
+&lt;h3 id=&#34;5实验数据及统计&#34;&gt;5.实验数据及统计&lt;/h3&gt;
+&lt;p&gt;半桥单臂接桥方式测试（向上调节）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3.9&lt;/td&gt;
+&lt;td&gt;6.1&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;9.9&lt;/td&gt;
+&lt;td&gt;7.9&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;半桥单臂接桥方式测试（向下调节）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;-0.5&lt;/th&gt;
+&lt;th&gt;-1&lt;/th&gt;
+&lt;th&gt;-1.5&lt;/th&gt;
+&lt;th&gt;-2&lt;/th&gt;
+&lt;th&gt;-2.5&lt;/th&gt;
+&lt;th&gt;-2&lt;/th&gt;
+&lt;th&gt;-1.5&lt;/th&gt;
+&lt;th&gt;-1&lt;/th&gt;
+&lt;th&gt;-0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;-1.9&lt;/td&gt;
+&lt;td&gt;-3.9&lt;/td&gt;
+&lt;td&gt;-6&lt;/td&gt;
+&lt;td&gt;-8.1&lt;/td&gt;
+&lt;td&gt;-10&lt;/td&gt;
+&lt;td&gt;-8&lt;/td&gt;
+&lt;td&gt;-6.1&lt;/td&gt;
+&lt;td&gt;-4&lt;/td&gt;
+&lt;td&gt;-2.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;半桥双臂接桥方式测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;8.1&lt;/td&gt;
+&lt;td&gt;12.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;19.9&lt;/td&gt;
+&lt;td&gt;15.9&lt;/td&gt;
+&lt;td&gt;12.1&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;3.9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;全桥接桥方式测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;8.1&lt;/td&gt;
+&lt;td&gt;15.9&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;39.9&lt;/td&gt;
+&lt;td&gt;31.9&lt;/td&gt;
+&lt;td&gt;24.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;全桥接桥方式测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;8.1&lt;/td&gt;
+&lt;td&gt;15.9&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;39.9&lt;/td&gt;
+&lt;td&gt;31.9&lt;/td&gt;
+&lt;td&gt;24.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;6实验数据分析&#34;&gt;6.实验数据分析&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;半桥单臂接桥方式测试（向上调节）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps159.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps160.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;半桥双臂接桥方式测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps161.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;全桥接桥方式测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps162.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;数据分析;&lt;/p&gt;
+&lt;p&gt;灵敏度
+&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps163.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;半桥单臂接桥方式：S≈3.93&lt;/p&gt;
+&lt;p&gt;半桥双臂接桥方式：S≈7.98&lt;/p&gt;
+&lt;p&gt;全桥接桥方式：S≈15.96&lt;/p&gt;
+&lt;p&gt;线性度&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps164.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;半桥单臂接桥方式：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps165.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;≈1.01%&lt;/p&gt;
+&lt;p&gt;半桥双臂接桥方式：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps166.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;≈0.50%&lt;/p&gt;
+&lt;p&gt;全桥接桥方式：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps167.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;≈0.25%&lt;/p&gt;
+&lt;h3 id=&#34;7实验思考&#34;&gt;7.实验思考&lt;/h3&gt;
+&lt;p&gt;1.若要计算系统的回程误差，测试数据该如何处理？&lt;/p&gt;
+&lt;p&gt;答：应该要再加一组从位移最远点回到原点的电压-位移的数据。&lt;/p&gt;
+&lt;p&gt;2.在半桥单臂电桥接线原理图中，如R和R1-R3均为应变片，接桥时未能接成差动形式，系统能否正常工作？&lt;/p&gt;
+&lt;p&gt;答：不能，因为如果不是差动式，电桥桥臂电阻差值无法通过电压侧面体现。&lt;/p&gt;
+&lt;p&gt;3．实验中，在电桥的三种状态（半桥单臂、半桥双臂和全桥）下测试，为什么要求保持差动放大器的增益不变？&lt;/p&gt;
+&lt;p&gt;答：只有保持差动放大器增益不变，三种状态下测的数据才有对比性。&lt;/p&gt;
+&lt;h2 id=&#34;实验二电容式传感器静特性测试与动特性观测&#34;&gt;实验二：电容式传感器静特性测试与动特性观测&lt;/h2&gt;
+&lt;h3 id=&#34;1-实验目的-1&#34;&gt;&lt;strong&gt;1.&lt;/strong&gt; 实验目的&lt;/h3&gt;
+&lt;p&gt;1、掌握电容式传感器的工作原理及结构类型。&lt;/p&gt;
+&lt;p&gt;2、掌握电容传感器特性的实验测试方法。&lt;/p&gt;
+&lt;p&gt;3、了解电容式传感器的工程应用。&lt;/p&gt;
+&lt;h3 id=&#34;2-实验内容和要求-1&#34;&gt;&lt;strong&gt;2.&lt;/strong&gt; 实验内容和要求&lt;/h3&gt;
+&lt;p&gt;1、观察传感器综合实验仪上电容式传感器的结构型式。&lt;/p&gt;
+&lt;p&gt;2、了解电容变换器的转换原理（参见附录二）。&lt;/p&gt;
+&lt;p&gt;3、电容式传感器静特性测试。&lt;/p&gt;
+&lt;p&gt;4、电容式传感器动态测试。&lt;/p&gt;
+&lt;p&gt;5、进行实验前，先预习附录一“CYS型传感器系统综合实验仪使用指南”，了解该设备的基本结构与组成。&lt;/p&gt;
+&lt;h3 id=&#34;3-实验主要仪器设备和材料&#34;&gt;&lt;strong&gt;3.&lt;/strong&gt; 实验主要仪器设备和材料&lt;/h3&gt;
+&lt;p&gt;1、CYS型传感器系统综合实验仪本次实验所用模块包括：①电容式传感器；②电容变换器；③差动放大器；④低通滤波器；⑤低频振荡器；⑥测微头。⑦&lt;/p&gt;
+&lt;p&gt;毫伏表或数字电压表。&lt;/p&gt;
+&lt;p&gt;2、双线示波器及实验连接导线若干。&lt;/p&gt;
+&lt;h3 id=&#34;4-实验原理与步骤-1&#34;&gt;&lt;strong&gt;4.&lt;/strong&gt; 实验原理与步骤&lt;/h3&gt;
+&lt;p&gt;实验原理&lt;/p&gt;
+&lt;p&gt;实验仪器中的电容式传感器为差动变面积型，电容传感器由两组定片和一组动片组成。当安装于振动台上的动片上、下改变位置，与两组定片之间的重叠面积发生变化，极间电容也发生相应变化，成为两差动式电容。两金属极板间电容的计算式C＝εS／δ&lt;/p&gt;
+&lt;p&gt;实验步骤&lt;/p&gt;
+&lt;p&gt;相关仪表和电路调零.&lt;/p&gt;
+&lt;p&gt;电容传感器静态特性测试&lt;/p&gt;
+&lt;p&gt;电容传感器动态特性观测&lt;/p&gt;
+&lt;h3 id=&#34;5-实验数据及统计&#34;&gt;&lt;strong&gt;5.&lt;/strong&gt; 实验数据及统计&lt;/h3&gt;
+&lt;p&gt;（1）静态试验数据与结果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps168.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x/mm&lt;/th&gt;
+&lt;th&gt;-5&lt;/th&gt;
+&lt;th&gt;-4.5&lt;/th&gt;
+&lt;th&gt;-4&lt;/th&gt;
+&lt;th&gt;-3.5&lt;/th&gt;
+&lt;th&gt;-3&lt;/th&gt;
+&lt;th&gt;-2.5&lt;/th&gt;
+&lt;th&gt;-2&lt;/th&gt;
+&lt;th&gt;-1.5&lt;/th&gt;
+&lt;th&gt;-1&lt;/th&gt;
+&lt;th&gt;-0.5&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压U/V&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2.58&lt;/td&gt;
+&lt;td&gt;2.21&lt;/td&gt;
+&lt;td&gt;1.91&lt;/td&gt;
+&lt;td&gt;1.63&lt;/td&gt;
+&lt;td&gt;1.395&lt;/td&gt;
+&lt;td&gt;1.11&lt;/td&gt;
+&lt;td&gt;0.846&lt;/td&gt;
+&lt;td&gt;0.536&lt;/td&gt;
+&lt;td&gt;0.304&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;0.5&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1.5&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.5&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3.5&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;4.5&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;0.312&lt;/td&gt;
+&lt;td&gt;0.572&lt;/td&gt;
+&lt;td&gt;0.886&lt;/td&gt;
+&lt;td&gt;1.173&lt;/td&gt;
+&lt;td&gt;1.457&lt;/td&gt;
+&lt;td&gt;1.738&lt;/td&gt;
+&lt;td&gt;2.01&lt;/td&gt;
+&lt;td&gt;2.36&lt;/td&gt;
+&lt;td&gt;2.66&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从所得数据绘出的图表以及拟合直线可以得出，该传感器的灵敏度S≈0.585&lt;/p&gt;
+&lt;p&gt;（2）动态实验&lt;/p&gt;
+&lt;p&gt;现象：在改变激振器的频率时候（1HZ-30HZ），低通输出的波形随着频率增大，幅值增大，此时振动台剧烈震动；到了一定的频率时候，幅值开始下降，出现了失真，此时振动台由高频的轻微震动慢慢停下来了。&lt;/p&gt;
+&lt;p&gt;此时示波器的图像如图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps169.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;6.思考题&lt;/p&gt;
+&lt;p&gt;1、实验出现的问题&lt;/p&gt;
+&lt;p&gt;答：在实验中示波器不容易找到波形，许多台机器的激振器都达不到预期的效果，使得波形不稳定。&lt;/p&gt;
+&lt;p&gt;2、实验原理图 2 中，信号处理过程是先滤波再放大，能否先 放大再滤波？观察两种状态下的波形输出。&lt;/p&gt;
+&lt;p&gt;答：如果先放大再滤波的话放大会使噪声也也被同步放大此时再滤波可能导致部分噪声无法被过滤会产生误差。&lt;/p&gt;
+&lt;p&gt;3、拟合直线的选取方法有哪几种？不同拟合直线得出的传感器静态特性指标的数值会一致吗？此时该如何合理评价传感器的特性？&lt;/p&gt;
+&lt;p&gt;答：一般有两种；解析表达式逼近离散数据法、最小二乘法。不同拟合直线得出的传感器静态特性指标的数值一般不一致。&lt;/p&gt;
+&lt;h2 id=&#34;实验三霍尔传感器的应用位移及振幅测量&#34;&gt;实验三：霍尔传感器的应用――位移及振幅测量&lt;/h2&gt;
+&lt;h3 id=&#34;1-实验目的-2&#34;&gt;&lt;strong&gt;1.&lt;/strong&gt; 实验目的&lt;/h3&gt;
+&lt;p&gt;1.了解霍尔位移传感器的工作原理与结构，学会用霍尔传感器进行位移测试；&lt;/p&gt;
+&lt;p&gt;2.了解霍尔式传感器在振动测量中的应用。&lt;/p&gt;
+&lt;h3 id=&#34;2-实验内容和要求-2&#34;&gt;&lt;strong&gt;2.&lt;/strong&gt; 实验内容和要求&lt;/h3&gt;
+&lt;p&gt;1、观察传感器系统综合实验仪上霍尔位移传感器的结构；&lt;/p&gt;
+&lt;p&gt;2、直流激励下，用霍尔位移传感器进行静态位移测试；&lt;/p&gt;
+&lt;p&gt;3、直流激励下，用霍尔位移传感器进行振动测试；&lt;/p&gt;
+&lt;p&gt;4、交流激励下，用霍尔位移传感器进行振动测试；&lt;/p&gt;
+&lt;p&gt;5、进行实验前，先预习信号幅值调制的原理。&lt;/p&gt;
+&lt;h3 id=&#34;3-实验主要仪器设备和材料-1&#34;&gt;&lt;strong&gt;3.&lt;/strong&gt; 实验主要仪器设备和材料&lt;/h3&gt;
+&lt;p&gt;1、CYS型传感器系统综合实验仪本次实验所用模块包括：①直流稳压电源；②霍尔传感器；③电桥；④差动放大器；⑤毫伏表；⑥测微头；⑦移相器；⑧相敏检波器；⑨低通滤波器；⑩音频振荡器。&lt;/p&gt;
+&lt;p&gt;2、双线示波器；&lt;/p&gt;
+&lt;p&gt;3、接插连接实验导线若干。&lt;/p&gt;
+&lt;h3 id=&#34;4-实验原理与步骤-2&#34;&gt;&lt;strong&gt;4.&lt;/strong&gt; 实验原理与步骤&lt;/h3&gt;
+&lt;p&gt;**（1）**实验原理&lt;/p&gt;
+&lt;p&gt;实验台上的霍尔传感器，由两个环形磁钢组成梯度磁场和位于梯度磁场中的霍尔元件组成。当保持霍尔元件的控制电流Ｉ恒定，在与霍尔元件控制电流相垂直的方向上就有霍尔电势输出。霍尔元件在梯度磁场中上下移动时，输出的霍尔电势U0取决于其在磁场中的位移量x，即U0＝kx，所以测得霍尔电势的大小便可获知霍尔元件的位移量。&lt;/p&gt;
+&lt;p&gt;（2）实验步骤&lt;/p&gt;
+&lt;p&gt;霍尔传感器静态位移测试&lt;/p&gt;
+&lt;p&gt;相关仪表和电路调零&lt;/p&gt;
+&lt;p&gt;按图3直流激励接线&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps170.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;旋转测微头，使测微头顶杆与振动圆盘接触。&lt;/p&gt;
+&lt;p&gt;开启电源，调节测微头和电位器WＤ，使差放输出为零&lt;/p&gt;
+&lt;p&gt;上、下移动测微头各3.5mm，每变化0.5mm读取相应的电压值&lt;/p&gt;
+&lt;p&gt;直流激励下霍尔传感器振动测试&lt;/p&gt;
+&lt;p&gt;交流激励下霍尔传感器振动测试&lt;/p&gt;
+&lt;h3 id=&#34;5-实验数据及统计-1&#34;&gt;&lt;strong&gt;5.&lt;/strong&gt; 实验数据及统计&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;（1）霍尔传感器静态位移测试&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;位移****x/mm&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****2.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****2.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****2.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;电压&lt;strong&gt;&lt;strong&gt;U&lt;/strong&gt;&lt;/strong&gt;0&lt;/strong&gt;**/m****v**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.51**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.98**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.36**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.65**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.83**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.65**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.36**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.96**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.51**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;位移****x/mm&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;7.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;电压&lt;strong&gt;&lt;strong&gt;U&lt;/strong&gt;&lt;/strong&gt;0&lt;/strong&gt;**/**&lt;strong&gt;v&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-0.61&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.19&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.65&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-2.17&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-2.48&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-2.08&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.62&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.11&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-0.58&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-0.03&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;（2）直流激励下霍尔传感器振动测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps171.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;（1） &lt;strong&gt;交流激励下霍尔传感器振动测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps172.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6-实验数据分析&#34;&gt;&lt;strong&gt;6.&lt;/strong&gt; 实验数据分析&lt;/h3&gt;
+&lt;p&gt;1、 根据直流激励下静态位移测试数据，在坐标纸上绘出霍尔位移传感器实验曲线。并按某一规则作出拟合直线，依此分析计算传感器系统的灵敏度、线性度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps173.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如上图中，虚线为拟合的曲线。拟合的方程为：y = 0.9215x-9.3573&lt;/p&gt;
+&lt;p&gt;测试的曲线与拟合直线的R平方值相关性为0.9899，说明拟合性极高。及线性度为：0.99&lt;/p&gt;
+&lt;p&gt;传感器系统的灵敏度为0.9215v/mm&lt;/p&gt;
+&lt;p&gt;2.在交流激励下的振动测试中，观察记录到了各环节输出波形变化规律，给出相应合理的解释。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps174.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt; &lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps175.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在经过低通滤波器后，波形发生了变化。&lt;/p&gt;
+&lt;p&gt;思考题：&lt;/p&gt;
+&lt;p&gt;1.对实验中存在的问题、进一步的想法等进行讨论。&lt;/p&gt;
+&lt;p&gt;答：在静态特性的测试中，开始接的为+—2V的电源，但是在测试中发现无论如何调整差动放大器的增益都会超出最大量程13V，后选用了+2V、接地测试，发现数据线性度好且不会超出量程。&lt;/p&gt;
+&lt;p&gt;2.霍尔元件用作位移测量时，为什么只允许工作在梯度磁场范围？&lt;/p&gt;
+&lt;p&gt;答：因为霍尔元件在梯度磁场中因为磁场的变化能够产生电压的变化，而电压的变化与磁场的变化在磁场范围内成线性关系，而电压的变化能够被仪器检测出来，同时它能反映出磁场的变化，因此能够准确的计算出位移与磁场强度的变化关系。&lt;/p&gt;
+&lt;p&gt;3.解释在激励源为交流且信号变化也是交变时需采用相敏检波器的原因？&lt;/p&gt;
+&lt;p&gt;答:用相敏检波器的原因是要坚持该传感器的响应时间的，同过该检波器可以检测到传感器的输入信号和输出信号之间的相位差。也就是通常所说的角差。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

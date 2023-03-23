@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='传感器技术及应用课程实验报告'>
+<title>传感器实验报告</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='传感器实验报告'>
+<meta property='og:description' content='传感器技术及应用课程实验报告'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='实验报告' /><meta property='article:tag' content='报告' /><meta property='article:published_time' content='2021-11-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-11-24T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/33.jpg' />
+<meta name="twitter:title" content="传感器实验报告">
+<meta name="twitter:description" content="传感器技术及应用课程实验报告"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/33.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#实验一金属箔式应变片及转换电路性能">实验一：金属箔式应变片及转换电路性能</a>
+      <ol>
+        <li><a href="#1-实验目的"><strong>1.</strong> 实验目的</a></li>
+        <li><a href="#2-实验内容和要求"><strong>2.</strong> 实验内容和要求</a></li>
+        <li><a href="#3实验主要仪器设备和材料">3.实验主要仪器设备和材料</a></li>
+        <li><a href="#4-实验原理与步骤"><strong>4.</strong> 实验原理与步骤</a></li>
+        <li><a href="#5实验数据及统计">5.实验数据及统计</a></li>
+        <li><a href="#6实验数据分析">6.实验数据分析</a></li>
+        <li><a href="#7实验思考">7.实验思考</a></li>
+      </ol>
+    </li>
+    <li><a href="#实验二电容式传感器静特性测试与动特性观测">实验二：电容式传感器静特性测试与动特性观测</a>
+      <ol>
+        <li><a href="#1-实验目的-1"><strong>1.</strong> 实验目的</a></li>
+        <li><a href="#2-实验内容和要求-1"><strong>2.</strong> 实验内容和要求</a></li>
+        <li><a href="#3-实验主要仪器设备和材料"><strong>3.</strong> 实验主要仪器设备和材料</a></li>
+        <li><a href="#4-实验原理与步骤-1"><strong>4.</strong> 实验原理与步骤</a></li>
+        <li><a href="#5-实验数据及统计"><strong>5.</strong> 实验数据及统计</a></li>
+      </ol>
+    </li>
+    <li><a href="#实验三霍尔传感器的应用位移及振幅测量">实验三：霍尔传感器的应用――位移及振幅测量</a>
+      <ol>
+        <li><a href="#1-实验目的-2"><strong>1.</strong> 实验目的</a></li>
+        <li><a href="#2-实验内容和要求-2"><strong>2.</strong> 实验内容和要求</a></li>
+        <li><a href="#3-实验主要仪器设备和材料-1"><strong>3.</strong> 实验主要仪器设备和材料</a></li>
+        <li><a href="#4-实验原理与步骤-2"><strong>4.</strong> 实验原理与步骤</a></li>
+        <li><a href="#5-实验数据及统计-1"><strong>5.</strong> 实验数据及统计</a></li>
+        <li><a href="#6-实验数据分析"><strong>6.</strong> 实验数据分析</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
+                
+                    <img src="/img/33.jpg" loading="lazy" alt="Featured image of post 传感器实验报告" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">传感器实验报告</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            传感器技术及应用课程实验报告
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 24, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="实验一金属箔式应变片及转换电路性能">实验一：金属箔式应变片及转换电路性能</h2>
+<h3 id="1-实验目的"><strong>1.</strong> 实验目的</h3>
+<p>1、了解应变片的测试原理与应用领域；</p>
+<p>2、掌握应变片测试方法及典型转换电路原理；</p>
+<p>3、通过实验数据分析处理，掌握获得传感器静态特性性能指标的过程和方法。</p>
+<h3 id="2-实验内容和要求"><strong>2.</strong> 实验内容和要求</h3>
+<p>1、观察金属箔式应变片的结构、贴片方式以及接桥方式；</p>
+<p>2、测试应变梁变形时的应变输出；</p>
+<p>3、比较应变片不同接桥方式对电桥输出结果的影响。</p>
+<p>4、进行实验前，先预习附录一“CYS型传感器系统综合实验仪使用指南”，了解该设备的基本结构与组成。</p>
+<h3 id="3实验主要仪器设备和材料">3.实验主要仪器设备和材料</h3>
+<p>1、CYS型传感器系统综合实验仪本次实验所用模块包括：①悬臂梁及金属箔式应变片；②电桥模块；③差动放大器；④直流稳压电源（±4Ｖ档）；⑤测</p>
+<p>微头；⑥毫伏表。</p>
+<p>2、若干接插连接实验导线。</p>
+<p>3、万用表（非必需）。</p>
+<h3 id="4-实验原理与步骤"><strong>4.</strong> 实验原理与步骤</h3>
+<p>实验原理</p>
+<p>应变片是最常用的测力传感元件。当使用应变片进行测试时，首先要将应变片牢固地粘贴到测试体表面。当测件受力发生变形，应变片敏感栅也随同变形，其电阻值也随之发生相应变化。之后，再通过测量转换电路，将电阻值变化转换成电压信号输出显示。</p>
+<p>实验步骤</p>
+<p>1、仪表及电路调零</p>
+<p>2、半桥单臂接桥方式测试</p>
+<p>3、半桥双臂接桥方式测试</p>
+<p>4、全桥接桥方式测试</p>
+<h3 id="5实验数据及统计">5.实验数据及统计</h3>
+<p>半桥单臂接桥方式测试（向上调节）</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>位移x(mm)</th>
+<th>0</th>
+<th>0.5</th>
+<th>1</th>
+<th>1.5</th>
+<th>2</th>
+<th>2.5</th>
+<th>2</th>
+<th>1.5</th>
+<th>1</th>
+<th>0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压V(mv)</td>
+<td>0</td>
+<td>2</td>
+<td>3.9</td>
+<td>6.1</td>
+<td>8</td>
+<td>9.9</td>
+<td>7.9</td>
+<td>6</td>
+<td>4</td>
+<td>2.1</td>
+</tr>
+</tbody>
+</table></div>
+<p>半桥单臂接桥方式测试（向下调节）</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>位移x(mm)</th>
+<th>0</th>
+<th>-0.5</th>
+<th>-1</th>
+<th>-1.5</th>
+<th>-2</th>
+<th>-2.5</th>
+<th>-2</th>
+<th>-1.5</th>
+<th>-1</th>
+<th>-0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压V(mv)</td>
+<td>0</td>
+<td>-1.9</td>
+<td>-3.9</td>
+<td>-6</td>
+<td>-8.1</td>
+<td>-10</td>
+<td>-8</td>
+<td>-6.1</td>
+<td>-4</td>
+<td>-2.1</td>
+</tr>
+</tbody>
+</table></div>
+<p>半桥双臂接桥方式测试</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>位移x(mm)</th>
+<th>0</th>
+<th>0.5</th>
+<th>1</th>
+<th>1.5</th>
+<th>2</th>
+<th>2.5</th>
+<th>2</th>
+<th>1.5</th>
+<th>1</th>
+<th>0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压V(mv)</td>
+<td>0</td>
+<td>4</td>
+<td>8.1</td>
+<td>12.1</td>
+<td>16</td>
+<td>19.9</td>
+<td>15.9</td>
+<td>12.1</td>
+<td>8</td>
+<td>3.9</td>
+</tr>
+</tbody>
+</table></div>
+<p>全桥接桥方式测试</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>位移x(mm)</th>
+<th>0</th>
+<th>0.5</th>
+<th>1</th>
+<th>1.5</th>
+<th>2</th>
+<th>2.5</th>
+<th>2</th>
+<th>1.5</th>
+<th>1</th>
+<th>0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压V(mv)</td>
+<td>0</td>
+<td>8.1</td>
+<td>15.9</td>
+<td>24</td>
+<td>32</td>
+<td>39.9</td>
+<td>31.9</td>
+<td>24.1</td>
+<td>16</td>
+<td>8</td>
+</tr>
+</tbody>
+</table></div>
+<p>全桥接桥方式测试</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>位移x(mm)</th>
+<th>0</th>
+<th>0.5</th>
+<th>1</th>
+<th>1.5</th>
+<th>2</th>
+<th>2.5</th>
+<th>2</th>
+<th>1.5</th>
+<th>1</th>
+<th>0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压V(mv)</td>
+<td>0</td>
+<td>8.1</td>
+<td>15.9</td>
+<td>24</td>
+<td>32</td>
+<td>39.9</td>
+<td>31.9</td>
+<td>24.1</td>
+<td>16</td>
+<td>8</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="6实验数据分析">6.实验数据分析</h3>
+<p><strong>半桥单臂接桥方式测试（向上调节）</strong></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps159.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps160.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p><strong>半桥双臂接桥方式测试</strong></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps161.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p><strong>全桥接桥方式测试</strong></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps162.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>数据分析;</p>
+<p>灵敏度
+<img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps163.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>半桥单臂接桥方式：S≈3.93</p>
+<p>半桥双臂接桥方式：S≈7.98</p>
+<p>全桥接桥方式：S≈15.96</p>
+<p>线性度</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps164.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>半桥单臂接桥方式：<img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps165.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+>≈1.01%</p>
+<p>半桥双臂接桥方式：<img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps166.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+>≈0.50%</p>
+<p>全桥接桥方式：<img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps167.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+>≈0.25%</p>
+<h3 id="7实验思考">7.实验思考</h3>
+<p>1.若要计算系统的回程误差，测试数据该如何处理？</p>
+<p>答：应该要再加一组从位移最远点回到原点的电压-位移的数据。</p>
+<p>2.在半桥单臂电桥接线原理图中，如R和R1-R3均为应变片，接桥时未能接成差动形式，系统能否正常工作？</p>
+<p>答：不能，因为如果不是差动式，电桥桥臂电阻差值无法通过电压侧面体现。</p>
+<p>3．实验中，在电桥的三种状态（半桥单臂、半桥双臂和全桥）下测试，为什么要求保持差动放大器的增益不变？</p>
+<p>答：只有保持差动放大器增益不变，三种状态下测的数据才有对比性。</p>
+<h2 id="实验二电容式传感器静特性测试与动特性观测">实验二：电容式传感器静特性测试与动特性观测</h2>
+<h3 id="1-实验目的-1"><strong>1.</strong> 实验目的</h3>
+<p>1、掌握电容式传感器的工作原理及结构类型。</p>
+<p>2、掌握电容传感器特性的实验测试方法。</p>
+<p>3、了解电容式传感器的工程应用。</p>
+<h3 id="2-实验内容和要求-1"><strong>2.</strong> 实验内容和要求</h3>
+<p>1、观察传感器综合实验仪上电容式传感器的结构型式。</p>
+<p>2、了解电容变换器的转换原理（参见附录二）。</p>
+<p>3、电容式传感器静特性测试。</p>
+<p>4、电容式传感器动态测试。</p>
+<p>5、进行实验前，先预习附录一“CYS型传感器系统综合实验仪使用指南”，了解该设备的基本结构与组成。</p>
+<h3 id="3-实验主要仪器设备和材料"><strong>3.</strong> 实验主要仪器设备和材料</h3>
+<p>1、CYS型传感器系统综合实验仪本次实验所用模块包括：①电容式传感器；②电容变换器；③差动放大器；④低通滤波器；⑤低频振荡器；⑥测微头。⑦</p>
+<p>毫伏表或数字电压表。</p>
+<p>2、双线示波器及实验连接导线若干。</p>
+<h3 id="4-实验原理与步骤-1"><strong>4.</strong> 实验原理与步骤</h3>
+<p>实验原理</p>
+<p>实验仪器中的电容式传感器为差动变面积型，电容传感器由两组定片和一组动片组成。当安装于振动台上的动片上、下改变位置，与两组定片之间的重叠面积发生变化，极间电容也发生相应变化，成为两差动式电容。两金属极板间电容的计算式C＝εS／δ</p>
+<p>实验步骤</p>
+<p>相关仪表和电路调零.</p>
+<p>电容传感器静态特性测试</p>
+<p>电容传感器动态特性观测</p>
+<h3 id="5-实验数据及统计"><strong>5.</strong> 实验数据及统计</h3>
+<p>（1）静态试验数据与结果</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps168.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>位移x/mm</th>
+<th>-5</th>
+<th>-4.5</th>
+<th>-4</th>
+<th>-3.5</th>
+<th>-3</th>
+<th>-2.5</th>
+<th>-2</th>
+<th>-1.5</th>
+<th>-1</th>
+<th>-0.5</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压U/V</td>
+<td>3</td>
+<td>2.58</td>
+<td>2.21</td>
+<td>1.91</td>
+<td>1.63</td>
+<td>1.395</td>
+<td>1.11</td>
+<td>0.846</td>
+<td>0.536</td>
+<td>0.304</td>
+<td>0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.5</td>
+<td>1</td>
+<td>1.5</td>
+<td>2</td>
+<td>2.5</td>
+<td>3</td>
+<td>3.5</td>
+<td>4</td>
+<td>4.5</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>0.312</td>
+<td>0.572</td>
+<td>0.886</td>
+<td>1.173</td>
+<td>1.457</td>
+<td>1.738</td>
+<td>2.01</td>
+<td>2.36</td>
+<td>2.66</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>从所得数据绘出的图表以及拟合直线可以得出，该传感器的灵敏度S≈0.585</p>
+<p>（2）动态实验</p>
+<p>现象：在改变激振器的频率时候（1HZ-30HZ），低通输出的波形随着频率增大，幅值增大，此时振动台剧烈震动；到了一定的频率时候，幅值开始下降，出现了失真，此时振动台由高频的轻微震动慢慢停下来了。</p>
+<p>此时示波器的图像如图所示</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps169.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>6.思考题</p>
+<p>1、实验出现的问题</p>
+<p>答：在实验中示波器不容易找到波形，许多台机器的激振器都达不到预期的效果，使得波形不稳定。</p>
+<p>2、实验原理图 2 中，信号处理过程是先滤波再放大，能否先 放大再滤波？观察两种状态下的波形输出。</p>
+<p>答：如果先放大再滤波的话放大会使噪声也也被同步放大此时再滤波可能导致部分噪声无法被过滤会产生误差。</p>
+<p>3、拟合直线的选取方法有哪几种？不同拟合直线得出的传感器静态特性指标的数值会一致吗？此时该如何合理评价传感器的特性？</p>
+<p>答：一般有两种；解析表达式逼近离散数据法、最小二乘法。不同拟合直线得出的传感器静态特性指标的数值一般不一致。</p>
+<h2 id="实验三霍尔传感器的应用位移及振幅测量">实验三：霍尔传感器的应用――位移及振幅测量</h2>
+<h3 id="1-实验目的-2"><strong>1.</strong> 实验目的</h3>
+<p>1.了解霍尔位移传感器的工作原理与结构，学会用霍尔传感器进行位移测试；</p>
+<p>2.了解霍尔式传感器在振动测量中的应用。</p>
+<h3 id="2-实验内容和要求-2"><strong>2.</strong> 实验内容和要求</h3>
+<p>1、观察传感器系统综合实验仪上霍尔位移传感器的结构；</p>
+<p>2、直流激励下，用霍尔位移传感器进行静态位移测试；</p>
+<p>3、直流激励下，用霍尔位移传感器进行振动测试；</p>
+<p>4、交流激励下，用霍尔位移传感器进行振动测试；</p>
+<p>5、进行实验前，先预习信号幅值调制的原理。</p>
+<h3 id="3-实验主要仪器设备和材料-1"><strong>3.</strong> 实验主要仪器设备和材料</h3>
+<p>1、CYS型传感器系统综合实验仪本次实验所用模块包括：①直流稳压电源；②霍尔传感器；③电桥；④差动放大器；⑤毫伏表；⑥测微头；⑦移相器；⑧相敏检波器；⑨低通滤波器；⑩音频振荡器。</p>
+<p>2、双线示波器；</p>
+<p>3、接插连接实验导线若干。</p>
+<h3 id="4-实验原理与步骤-2"><strong>4.</strong> 实验原理与步骤</h3>
+<p>**（1）**实验原理</p>
+<p>实验台上的霍尔传感器，由两个环形磁钢组成梯度磁场和位于梯度磁场中的霍尔元件组成。当保持霍尔元件的控制电流Ｉ恒定，在与霍尔元件控制电流相垂直的方向上就有霍尔电势输出。霍尔元件在梯度磁场中上下移动时，输出的霍尔电势U0取决于其在磁场中的位移量x，即U0＝kx，所以测得霍尔电势的大小便可获知霍尔元件的位移量。</p>
+<p>（2）实验步骤</p>
+<p>霍尔传感器静态位移测试</p>
+<p>相关仪表和电路调零</p>
+<p>按图3直流激励接线</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps170.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>旋转测微头，使测微头顶杆与振动圆盘接触。</p>
+<p>开启电源，调节测微头和电位器WＤ，使差放输出为零</p>
+<p>上、下移动测微头各3.5mm，每变化0.5mm读取相应的电压值</p>
+<p>直流激励下霍尔传感器振动测试</p>
+<p>交流激励下霍尔传感器振动测试</p>
+<h3 id="5-实验数据及统计-1"><strong>5.</strong> 实验数据及统计</h3>
+<p><strong>（1）霍尔传感器静态位移测试</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><strong>位移****x/mm</strong></th>
+<th><strong>1****0</strong></th>
+<th><strong>1****0.5</strong></th>
+<th><strong>1****1.0</strong></th>
+<th><strong>1****1.5</strong></th>
+<th><strong>1****2.0</strong></th>
+<th><strong>1****2.5</strong></th>
+<th><strong>1****2.0</strong></th>
+<th><strong>1****1.5</strong></th>
+<th><strong>1****1.0</strong></th>
+<th><strong>1****0.5</strong></th>
+<th><strong>1****0</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电压<strong><strong>U</strong></strong>0</strong>**/m****v**</td>
+<td><strong>0</strong></td>
+<td><strong>0</strong>**.51**</td>
+<td><strong>0</strong>**.98**</td>
+<td><strong>1</strong>**.36**</td>
+<td><strong>1</strong>**.65**</td>
+<td><strong>1</strong>**.83**</td>
+<td><strong>1</strong>**.65**</td>
+<td><strong>1</strong>**.36**</td>
+<td><strong>0</strong>**.96**</td>
+<td><strong>0</strong>**.51**</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><strong>位移****x/mm</strong></th>
+<th><strong>1****0</strong></th>
+<th><strong>9.5</strong></th>
+<th><strong>9.0</strong></th>
+<th><strong>8.5</strong></th>
+<th><strong>8.0</strong></th>
+<th><strong>7.5</strong></th>
+<th><strong>8.0</strong></th>
+<th><strong>8.5</strong></th>
+<th><strong>9.0</strong></th>
+<th><strong>9.5</strong></th>
+<th><strong>1****0</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电压<strong><strong>U</strong></strong>0</strong>**/**<strong>v</strong></td>
+<td><strong>0</strong></td>
+<td><strong>-0.61</strong></td>
+<td><strong>-1.19</strong></td>
+<td><strong>-1.65</strong></td>
+<td><strong>-2.17</strong></td>
+<td><strong>-2.48</strong></td>
+<td><strong>-2.08</strong></td>
+<td><strong>-1.62</strong></td>
+<td><strong>-1.11</strong></td>
+<td><strong>-0.58</strong></td>
+<td><strong>-0.03</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>（2）直流激励下霍尔传感器振动测试</strong></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps171.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>（1） <strong>交流激励下霍尔传感器振动测试</strong></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps172.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h3 id="6-实验数据分析"><strong>6.</strong> 实验数据分析</h3>
+<p>1、 根据直流激励下静态位移测试数据，在坐标纸上绘出霍尔位移传感器实验曲线。并按某一规则作出拟合直线，依此分析计算传感器系统的灵敏度、线性度。</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps173.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>如上图中，虚线为拟合的曲线。拟合的方程为：y = 0.9215x-9.3573</p>
+<p>测试的曲线与拟合直线的R平方值相关性为0.9899，说明拟合性极高。及线性度为：0.99</p>
+<p>传感器系统的灵敏度为0.9215v/mm</p>
+<p>2.在交流激励下的振动测试中，观察记录到了各环节输出波形变化规律，给出相应合理的解释。</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps174.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+> <img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps175.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>在经过低通滤波器后，波形发生了变化。</p>
+<p>思考题：</p>
+<p>1.对实验中存在的问题、进一步的想法等进行讨论。</p>
+<p>答：在静态特性的测试中，开始接的为+—2V的电源，但是在测试中发现无论如何调整差动放大器的增益都会超出最大量程13V，后选用了+2V、接地测试，发现数据线性度好且不会超出量程。</p>
+<p>2.霍尔元件用作位移测量时，为什么只允许工作在梯度磁场范围？</p>
+<p>答：因为霍尔元件在梯度磁场中因为磁场的变化能够产生电压的变化，而电压的变化与磁场的变化在磁场范围内成线性关系，而电压的变化能够被仪器检测出来，同时它能反映出磁场的变化，因此能够准确的计算出位移与磁场强度的变化关系。</p>
+<p>3.解释在激励源为交流且信号变化也是交变时需采用相敏检波器的原因？</p>
+<p>答:用相敏检波器的原因是要坚持该传感器的响应时间的，同过该检波器可以检测到传感器的输入信号和输出信号之间的相位差。也就是通常所说的角差。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">实验报告</a>
+        
+            <a href="/tags/%E6%8A%A5%E5%91%8A/">报告</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/34.jpg" loading="lazy" data-key="" data-hash="/img/34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常见的加速度传感器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/30.jpg" loading="lazy" data-key="" data-hash="/img/30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设开题报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/29.jpg" loading="lazy" data-key="" data-hash="/img/29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/28.jpg" loading="lazy" data-key="" data-hash="/img/28.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设选题调研报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/27.jpg" loading="lazy" data-key="" data-hash="/img/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java程序分层编译技术研究</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

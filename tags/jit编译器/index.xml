@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>JIT编译器 on Slothhuman&#39;s Blog</title>
+        <link>https://slothhuman.github.io/tags/jit%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+        <description>Recent content in JIT编译器 on Slothhuman&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 08 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/tags/jit%E7%BC%96%E8%AF%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AOT编译器和JIT编译器</title>
+        <link>https://slothhuman.github.io/p/aot%E7%BC%96%E8%AF%91%E5%99%A8%E5%92%8Cjit%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/aot%E7%BC%96%E8%AF%91%E5%99%A8%E5%92%8Cjit%E7%BC%96%E8%AF%91%E5%99%A8/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/23.jpg" alt="Featured image of post AOT编译器和JIT编译器" /&gt;&lt;h2 id=&#34;运行时编译runtime-compilation&#34;&gt;运行时编译（Runtime Compilation）&lt;/h2&gt;
+&lt;p&gt;运行时编译（Runtime Compilation）是一种编译技术，它将代码编译为可执行程序的过程延迟到程序运行时执行，而不是在编译期间执行。在运行时编译期间，代码被编译成一种中间代码，然后由解释器或即时编译器（Just-In-Time Compiler，JIT）转换成可执行代码，以便直接在CPU上运行。&lt;/p&gt;
+&lt;p&gt;运行时编译技术常用于动态语言和脚本语言，因为这些语言通常需要在运行时才能确定变量的类型和值，而运行时编译技术可以根据变量的类型和值来优化代码，从而提高程序的性能。&lt;/p&gt;
+&lt;p&gt;另外，运行时编译也可以用于一些需要动态加载代码的应用程序，例如插件系统、动态链接库等。在这种情况下，运行时编译可以将代码编译成与宿主程序兼容的中间代码，并在程序运行时加载并执行该代码。&lt;/p&gt;
+&lt;h2 id=&#34;jitjust-in-time-compiler编译器是什么&#34;&gt;JIT（Just-In-Time Compiler）编译器是什么&lt;/h2&gt;
+&lt;p&gt;JIT（Just-In-Time）编译器是一种将字节码或中间代码转换为本地机器代码的编译器。与传统的静态编译器不同，JIT编译器在程序运行时实时地将中间代码转换成本地机器代码，以便直接在CPU上运行。这种即时编译技术可以提高程序的性能，尤其对于动态语言和脚本语言等动态生成代码的语言来说，更是有着重要的作用。JIT编译器可以将代码的执行速度提高数倍，尤其是对于一些需要频繁执行的代码块来说，它的优势更为明显。&lt;/p&gt;
+&lt;p&gt;JIT编译器工作的过程大致如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在程序运行时，JIT编译器将字节码或中间代码转换成本地机器代码。&lt;/li&gt;
+&lt;li&gt;转换的过程中，JIT编译器会进行各种优化，例如去除无用代码、减少代码执行次数等等，以提高程序的性能。&lt;/li&gt;
+&lt;li&gt;转换完成后，JIT编译器将生成的本地机器代码存储在内存中，并将程序的控制权交给生成的本地代码。&lt;/li&gt;
+&lt;li&gt;以后每次执行该代码块时，JIT编译器会直接使用存储在内存中的本地机器代码，而不需要重新编译。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;那转换完成后，JIT编译器将生成的本地机器代码存储在内存中，并将程序的控制权交给生成的本地代码。这是存储在哪里的内存中呢？&lt;/p&gt;
+&lt;p&gt;JIT编译器生成的本地机器代码存储在内存的代码段中，也称为可执行代码段。代码段通常是只读的，因为在运行时不应该修改已经编译的代码。这些代码段通常在程序的虚拟地址空间中被映射到可执行区域。不同的操作系统和架构会有不同的内存分配和映射方式。例如，Windows下的代码段通常被映射到可执行文件的 .text 节中，而Linux下的代码段通常被映射到程序的.text 段中。无论代码段在内存中的具体位置如何，JIT编译器都会将生成的本地机器代码存储在其中，并将程序的控制权交给生成的本地代码。&lt;/p&gt;
+&lt;h2 id=&#34;aotahead-of-time-compilation是什么&#34;&gt;AOT(Ahead of Time Compilation)是什么&lt;/h2&gt;
+&lt;p&gt;AOT（Ahead of Time）编译是一种在程序运行之前，将代码编译成本地机器代码的编译技术。与JIT编译器不同，AOT编译器在程序运行之前，将所有代码都编译成本地机器代码，并生成一个可执行文件，程序在运行时直接执行该文件，而不需要再进行编译。这种编译技术可以提高程序的启动速度和执行效率，因为在程序运行时，不需要再进行编译，而是直接执行本地机器代码。&lt;/p&gt;
+&lt;p&gt;AOT编译器一般用于静态编程语言，例如C、C++等，因为这些语言的代码在编译时就已经被转换成本地机器代码了。AOT编译器可以对这些代码进行各种优化，例如去除无用代码、减少代码执行次数等等，从而提高程序的性能。与JIT编译器相比，AOT编译器不需要在程序运行时进行编译，因此可以提高程序的启动速度，同时也可以减少内存的占用。但是，AOT编译器生成的代码不能根据程序运行时的状态进行优化，因此可能无法达到JIT编译器的性能优化水平。&lt;/p&gt;
+&lt;h2 id=&#34;aotahead-of-time-compilation和jit编译器有什么区别&#34;&gt;AOT(Ahead of Time Compilation)和JIT编译器有什么区别&lt;/h2&gt;
+&lt;p&gt;AOT（Ahead of Time）编译和JIT（Just-In-Time）编译是两种不同的编译技术，它们之间有以下几个区别：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;编译时机不同：AOT编译器在程序运行之前，将所有代码都编译成本地机器代码，并生成一个可执行文件，程序在运行时直接执行该文件，而不需要再进行编译。JIT编译器则是在程序运行时，实时将中间代码转换为本地机器代码。&lt;/li&gt;
+&lt;li&gt;优化策略不同：AOT编译器可以对所有代码进行全局优化，因为它在程序运行之前就已经将所有代码都编译成了本地机器代码。而JIT编译器只能对实际执行的代码进行优化，因为它是在程序运行时实时编译的。&lt;/li&gt;
+&lt;li&gt;程序启动速度和执行效率不同：AOT编译器可以提高程序的启动速度和执行效率，因为它在程序运行时不需要再进行编译，而是直接执行本地机器代码。而JIT编译器在程序运行时需要进行实时编译，因此可能会降低程序的启动速度，但可以根据程序运行时的状态进行优化，从而提高执行效率。&lt;/li&gt;
+&lt;li&gt;内存占用不同：AOT编译器生成的可执行文件通常比JIT编译器生成的代码占用更多的磁盘空间，但在程序运行时占用的内存可能会更少，因为不需要在运行时再进行编译。而JIT编译器生成的代码不需要预先编译成可执行文件，因此占用的磁盘空间更少，但在程序运行时需要占用额外的内存空间来存储生成的本地机器代码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总地来说，AOT编译器和JIT编译器是两种不同的编译技术，各自有其优缺点，应该根据具体的应用场景来选择。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='阐述RESTful API的定义和特点等'>
+<title>RESTful API</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/restful-api/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='RESTful API'>
+<meta property='og:description' content='阐述RESTful API的定义和特点等'>
+<meta property='og:url' content='https://slothhuman.github.io/p/restful-api/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='API' /><meta property='article:published_time' content='2023-02-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-11T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/25.jpg' />
+<meta name="twitter:title" content="RESTful API">
+<meta name="twitter:description" content="阐述RESTful API的定义和特点等"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/25.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一什么是restful-api">一、什么是RESTful API？</a>
+      <ol>
+        <li><a href="#11-定义和特点">1.1 定义和特点</a></li>
+        <li><a href="#12-restful规范">1.2 RESTful规范</a></li>
+      </ol>
+    </li>
+    <li><a href="#二restful-api设计原则">二、RESTful API设计原则</a>
+      <ol>
+        <li><a href="#21-可读和可理解">2.1 可读和可理解</a></li>
+        <li><a href="#22-可以被缓存">2.2 可以被缓存</a></li>
+        <li><a href="#23-统一的接口">2.3 统一的接口</a></li>
+        <li><a href="#24-使用hateoas">2.4 使用HATEOAS</a></li>
+        <li><a href="#25-无状态">2.5 无状态</a></li>
+      </ol>
+    </li>
+    <li><a href="#三restful-api请求方法">三、RESTful API请求方法</a>
+      <ol>
+        <li><a href="#31-get请求">3.1 GET请求</a></li>
+        <li><a href="#32-post请求">3.2 POST请求</a></li>
+        <li><a href="#33-put请求">3.3 PUT请求</a></li>
+        <li><a href="#34-delete请求">3.4 DELETE请求</a></li>
+      </ol>
+    </li>
+    <li><a href="#四restful-api状态码">四、RESTful API状态码</a>
+      <ol>
+        <li><a href="#41-1xx临时响应">4.1 1xx（临时响应）</a></li>
+        <li><a href="#42-2xx成功">4.2 2xx（成功）</a></li>
+        <li><a href="#43-3xx重定向">4.3 3xx（重定向）</a></li>
+        <li><a href="#44-4xx客户端错误">4.4 4xx（客户端错误）</a></li>
+        <li><a href="#45-5xx服务器错误">4.5 5xx（服务器错误）</a></li>
+      </ol>
+    </li>
+    <li><a href="#五restful-api安全">五、RESTful API安全</a>
+      <ol>
+        <li><a href="#51-安全性考虑">5.1 安全性考虑</a></li>
+        <li><a href="#52-csrf攻击预防">5.2 CSRF攻击预防</a></li>
+        <li><a href="#53-xss攻击预防">5.3 XSS攻击预防</a></li>
+      </ol>
+    </li>
+    <li><a href="#六restful-api实战步骤">六、RESTful API实战步骤</a>
+      <ol>
+        <li><a href="#61-创建restful-api">6.1 创建RESTful API</a></li>
+        <li><a href="#62-设计api文档">6.2 设计API文档</a></li>
+        <li><a href="#63-api测试和调试">6.3 API测试和调试</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/restful-api/">
+                
+                    <img src="/img/25.jpg" loading="lazy" alt="Featured image of post RESTful API" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/restful-api/">RESTful API</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            阐述RESTful API的定义和特点等
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 11, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一什么是restful-api">一、什么是RESTful API？</h2>
+<p>RESTful API（Representational State Transfer）是一种针对网络应用程序设计的风格和约束。它是一种基于HTTP协议的API，通过对URI的设计和对控制状态的管理来实现资源的管理和处理。</p>
+<h3 id="11-定义和特点">1.1 定义和特点</h3>
+<p>RESTful API是建立在REST原则之上的API，具有以下特点：</p>
+<ol>
+<li>
+<p>基于HTTP协议设计，使用标准的HTTP方法；</p>
+</li>
+<li>
+<p>资源通过URI进行标识；</p>
+</li>
+<li>
+<p>交互操作的状态以HTTP状态码返回，支持缓存机制；</p>
+</li>
+<li>
+<p>支持多种格式，如JSON、XML等。</p>
+</li>
+</ol>
+<h3 id="12-restful规范">1.2 RESTful规范</h3>
+<p>RESTful API的规范主要包括以下几个方面：</p>
+<ol>
+<li>
+<p>资源的URI设计应符合RESTful原则；</p>
+</li>
+<li>
+<p>HTTP方法的使用应符合HTTP协议，并且应使用标准HTTP方法；</p>
+</li>
+<li>
+<p>交互操作的状态码应符合HTTP状态码的规范；</p>
+</li>
+<li>
+<p>返回的信息应包含必要的描述信息和格式信息；</p>
+</li>
+<li>
+<p>接口应该尽可能简单和一致。</p>
+</li>
+</ol>
+<h2 id="二restful-api设计原则">二、RESTful API设计原则</h2>
+<p>在设计RESTful API时，应该遵循以下几个原则：</p>
+<h3 id="21-可读和可理解">2.1 可读和可理解</h3>
+<p>接口应该具有可读性和可理解性，能够让开发人员和使用者很容易理解其功能和使用方法。</p>
+<h3 id="22-可以被缓存">2.2 可以被缓存</h3>
+<p>接口应该支持缓存机制，减少重复请求的次数，提高效率。</p>
+<h3 id="23-统一的接口">2.3 统一的接口</h3>
+<p>接口应该具有统一的设计，统一的返回格式和错误码，让开发人员和使用者更容易使用。</p>
+<h3 id="24-使用hateoas">2.4 使用HATEOAS</h3>
+<p>HATEOAS（Hypertext As The Engine Of Application State）指的是把超链接嵌入到返回资源中，让客户端能够根据资源状态自主选择下一步操作。</p>
+<h3 id="25-无状态">2.5 无状态</h3>
+<p>每个请求都是独立的，服务器不保存请求的上下文信息，这样可使服务更容易扩展。</p>
+<h2 id="三restful-api请求方法">三、RESTful API请求方法</h2>
+<p>RESTful API中主要使用以下HTTP方法进行资源的管理和处理:</p>
+<h3 id="31-get请求">3.1 GET请求</h3>
+<p>用于获取资源的信息，不会对服务器数据进行修改。</p>
+<h3 id="32-post请求">3.2 POST请求</h3>
+<p>用于创建资源，会在服务器上创建一个新的资源。</p>
+<h3 id="33-put请求">3.3 PUT请求</h3>
+<p>用于更新资源信息，会更新服务器中已有的资源。</p>
+<h3 id="34-delete请求">3.4 DELETE请求</h3>
+<p>用于删除指定的资源，从服务器上删除。</p>
+<h2 id="四restful-api状态码">四、RESTful API状态码</h2>
+<p>RESTful API中使用HTTP状态码来表示请求的状态和结果，具体分为以下几类：</p>
+<h3 id="41-1xx临时响应">4.1 1xx（临时响应）</h3>
+<p>表示接收到请求并正在处理。</p>
+<h3 id="42-2xx成功">4.2 2xx（成功）</h3>
+<p>表示操作成功完成，如200表示正常返回数据，201表示资源已创建。</p>
+<h3 id="43-3xx重定向">4.3 3xx（重定向）</h3>
+<p>表示需要进一步操作才能完成请求，如302表示需要重定向到另一个URI，303表示需要重定向到客户端缓存中的URI。</p>
+<h3 id="44-4xx客户端错误">4.4 4xx（客户端错误）</h3>
+<p>表示请求错误或无法处理，如400表示请求参数错误，401表示需要认证或授权，403表示没有权限访问资源，404表示找不到资源。</p>
+<h3 id="45-5xx服务器错误">4.5 5xx（服务器错误）</h3>
+<p>表示服务器错误或无法完成请求，如500表示服务器内部错误，503表示服务不可用。</p>
+<h2 id="五restful-api安全">五、RESTful API安全</h2>
+<p>在设计RESTful API时，需要考虑接口的安全性，主要包括以下几点：</p>
+<h3 id="51-安全性考虑">5.1 安全性考虑</h3>
+<p>在设计RESTful API时，需要考虑接口的安全性，包括身份认证、访问控制和数据加密等。</p>
+<h3 id="52-csrf攻击预防">5.2 CSRF攻击预防</h3>
+<p>CSRF（Cross-site Request Forgery）攻击是一种通过让用户访问恶意网站来执行攻击的方式，因此需要在RESTful API中加入CSRF攻击的防范措施。</p>
+<h3 id="53-xss攻击预防">5.3 XSS攻击预防</h3>
+<p>XSS（Cross-site Scripting）攻击是一种攻击方式，通过在网页中插入恶意脚本来执行攻击，因此需要在RESTful API中加入XSS攻击的防范措施。</p>
+<h2 id="六restful-api实战步骤">六、RESTful API实战步骤</h2>
+<p>要创建和使用RESTful API，需要遵循以下步骤：</p>
+<h3 id="61-创建restful-api">6.1 创建RESTful API</h3>
+<p>首先，需定义好资源和它们的操作，规定好URI、HTTP方法和返回格式。</p>
+<h3 id="62-设计api文档">6.2 设计API文档</h3>
+<p>其次，要编写API文档，包括接口的功能、使用方法、请求参数和返回格式等。</p>
+<h3 id="63-api测试和调试">6.3 API测试和调试</h3>
+<p>最后，需要对API进行测试和调试，确保它能够正常地工作，并且符合预期的设计要求。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/api/">API</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/api%E5%92%8Cspi/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/24.jpg" loading="lazy" data-key="" data-hash="/img/24.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">API和SPI</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/30.jpg" loading="lazy" data-key="" data-hash="/img/30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设开题报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/29.jpg" loading="lazy" data-key="" data-hash="/img/29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/28.jpg" loading="lazy" data-key="" data-hash="/img/28.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设选题调研报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/27.jpg" loading="lazy" data-key="" data-hash="/img/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java程序分层编译技术研究</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

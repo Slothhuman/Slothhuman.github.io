@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='毕设《开放集合的多标签图像识别技术研究》题目确定后的开题报告'>
+<title>毕设开题报告</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='毕设开题报告'>
+<meta property='og:description' content='毕设《开放集合的多标签图像识别技术研究》题目确定后的开题报告'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='毕设' /><meta property='article:published_time' content='2023-02-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-21T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/30.jpg' />
+<meta name="twitter:title" content="毕设开题报告">
+<meta name="twitter:description" content="毕设《开放集合的多标签图像识别技术研究》题目确定后的开题报告"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/30.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一课题背景及意义">一、课题背景及意义</a></li>
+    <li><a href="#二课题的主要内容">二、课题的主要内容</a></li>
+    <li><a href="#三课题的研究或调研方案">三、课题的研究（或调研）方案</a>
+      <ol>
+        <li><a href="#1拟采用的研究方法">（1）拟采用的研究方法：</a></li>
+        <li><a href="#2准备工作情况及主要措施">（2）准备工作情况及主要措施：</a></li>
+      </ol>
+    </li>
+    <li><a href="#四论文设计框架结构">四、论文（设计）框架结构</a></li>
+    <li><a href="#五写作安排包含相似性检查的时间安排">五、写作安排（包含相似性检查的时间安排）</a></li>
+    <li><a href="#六参考文献">六、参考文献</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+                
+                    <img src="/img/30.jpg" loading="lazy" alt="Featured image of post 毕设开题报告" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">毕设开题报告</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            毕设《开放集合的多标签图像识别技术研究》题目确定后的开题报告
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 21, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一课题背景及意义">一、课题背景及意义</h2>
+<p>随着科学技术的进步与发展，图像作为信息传播的重要媒介，在通信、无人驾驶、医学影像分析、航天、遥感等多个领域得到了广泛的研究，并在国民社会、经济生活中承担着更加重要的角色。人们对图像研究的愈发重视，也促使计算机视觉领域迎来了蓬勃发展的黄金时代。</p>
+<p>对于视觉应用来说，一个更现实的场景是开放集识别，在训练时存在不完整的世界知识，在测试时未知的类可以提交给算法。开放集识别就是要既能识别训练集中出现过的类，也要识别训练集中没有出现过的类。</p>
+<p>在大多数场景下，图像中都不会只有一个孤零零的类别，随着对内容理解要求的不断提高，我们越来越需要尽可能精确的识别出图像视频中的所有类别，这时就需要用多标签识别。多标签识别旨在识别图像中的所有相关标签，是计算机视觉应用（如场景理解、监控系统和自动驾驶汽车）中的一项基本任务。在实际应用中，多标签识别系统应该学习数万个标签，在图像中定位它们，甚至处理许多看不见的标签。，迄今为止，使用可见标签训练和测试的经典多标签分类方法远远不能满足实际应用的要求，因为实际应用存在大量看不见的标签。</p>
+<p>随着深度学习技术的发展，多标签图像识别技术已经成为当今研究热点，广泛应用于计算机视觉、图像处理等领域。然而，传统的多标签图像识别技术存在一定的局限性，如标签空间的稀疏性、标签空间的不可见性等，这些问题限制了多标签图像识别技术的发展。因此，开发一种新的多标签图像识别技术，即开放集合的多标签图像识别技术，具有重要的研究价值和应用前景。</p>
+<h2 id="二课题的主要内容">二、课题的主要内容</h2>
+<p>本课题的主要内容是研究开放集合的多标签图像识别技术。</p>
+<p>（1）从方法角度，旨在找出找出一种新的研究方法或者改进现有的方法，以改善如标签空间的稀疏性、标签空间的不可见性所带来的局限，使其能更通用地使用在不同的应用场景中。同时能更好地处理在存在多个物体、多个类别标签时，建模不同物体、不同标签的相关性与依赖关系。（</p>
+<p>2）从性能角度，对比不同的数据集与研究方法，思考在多标签识别任务时的性能提升。</p>
+<h2 id="三课题的研究或调研方案">三、课题的研究（或调研）方案</h2>
+<h3 id="1拟采用的研究方法">（1）拟采用的研究方法：</h3>
+<p>多标签任务特性主要是不同物体、不同标签之间的关系建模，因此大部分方法是基于RNN、GCN、Transformer这类与关联建模相关的网络结构。但作为一个识别任务，很多其他识别任务的方法在多标签识别中也管用，比如各种attention。</p>
+<p>例如：RNN-based Methods，引入递归神经网络（RNN）来显式地建模标签之间的依赖关系；Attention-based Methods，将attention引入多标签识别领域，用于隐式地建模不同标签之间的空间关系；GCN-based Methods，图神经网络（GCN）是一种可以明确建模关系的结构，多标签识别中对标签共现依赖的建模往往依赖于这种适合关系建模的网络结构。</p>
+<h3 id="2准备工作情况及主要措施">（2）准备工作情况及主要措施：</h3>
+<p>在老师悉心指导下，通过查阅图书、期刊、学术论文以及网上资源来确立研究思路，同时选择适合自身毕设的数据集。研究不同研究方法的设计思路与使用场景，认识到其局限，比对不同方法之间的性能差异。从现有方法中选择性能优异的部分进行研究并改进。</p>
+<h2 id="四论文设计框架结构">四、论文（设计）框架结构</h2>
+<p>论文的组成主要包括题目、摘要、关键词、正文、参考文献等这几个部分。</p>
+<p>主要以正文框架的各组成部分进行技巧的分享与提炼，正文一般分为引言、理论基础、研究假设、论证过程、研究结论、研究不足与展望这几章节组成。</p>
+<p>一）绪论</p>
+<p>这部分主要是提出文中要研究的问题，引导读者阅读和理解全文，向读者勾勒出全文的基本内容和轮廓。关键内容首先是介绍本文的研究背景、目的、意义；其次是概括论文的主要内容，勾勒大体轮廓；最后是对本文运用的研究方法进行阐述。</p>
+<p>（二）文献综述</p>
+<p>研究往往是基于前人在本研究领域作出的贡献与理论之上展开的，理论基础这部分内容 就是为了让我们的论文更加有说服性，更加有理有据。主要从以下几个维度去组织：</p>
+<p>\1. 研究国内相关的文献综述，分析国内外现有研究的优缺点，总结出自己的文献评述；</p>
+<p>\2. 介绍论文重点研究的相关场景，例如研究适用于哪些场景，存在哪些局限，怎么完善优化，目前国内外现状如何；</p>
+<p>\3. 结合自己的论文对论文使用到的相关理论内容、作用、方法以及理论的提出者进行介绍。</p>
+<p>（三）提出研究假设</p>
+<p>（三）（四）（五）部分是全文写作的核心内容，提出研究假设与你是否能找到正确的课堂研究方向密切相关。</p>
+<p>（四）论证过程</p>
+<p>这部分需要对收集的数据或材料进行分析研究，来论证研究假设是否成立，此过程会涉及到研究或者计算，如果做出来的实验有问题，需要反复进行验证。</p>
+<p>（五）研究结果</p>
+<p>研究结果主要是阐述研究过程可以得出什么样的结论，论文的成果到底有什么意义，有没有实用价值。</p>
+<p>（六）研究不足与展望</p>
+<p>选择几个研究中非原则性的问题谈一谈，例如：研究对象的范围不够广，理论模型可以再细化等。展望部分可以简单表达，例如：希望未来有人可以做相关领域的进一步研究。</p>
+<h2 id="五写作安排包含相似性检查的时间安排">五、写作安排（包含相似性检查的时间安排）</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><em><strong>*序号*</strong></em></th>
+<th><em><strong>*设计（论文）写作的阶段性*</strong></em><em><strong>*任务*</strong></em></th>
+<th><em><strong>*时间*</strong></em><em><strong>*安排*</strong></em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>收集并熟悉毕业论文资料，撰写开题报告</td>
+<td>2023年2月25日前</td>
+</tr>
+<tr>
+<td>2</td>
+<td>搭建毕设所需的训练模型，获取毕设所需数据与成果</td>
+<td>2023年2月26日—3月15日</td>
+</tr>
+<tr>
+<td>3</td>
+<td>完成毕业论文初稿</td>
+<td>2023年3月16日—3月26日</td>
+</tr>
+<tr>
+<td>4</td>
+<td>完成论文修改工作</td>
+<td>2023年3月27日—4月10日</td>
+</tr>
+<tr>
+<td>5</td>
+<td>定稿、打印、装订</td>
+<td>2023年4月11日—4月20日</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="六参考文献">六、参考文献</h2>
+<p>[1] He, S., Guo, T., Dai, T., Qiao, R., Ren, B., &amp; Xia, S. (2022). Open-Vocabulary Multi-Label Classification via Multi-modal Knowledge Transfer. ArXiv, abs/2207.01887.</p>
+<p>[2] Chen, T., Xu, M., Hui, X., Wu, H., &amp; Lin, L. (2019). Learning Semantic-Specific Graph Representation for Multi-Label Image Recognition. 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 522-531.</p>
+<p>[3] Guo, Z., Dong, B., Ji, Z., Bai, J., Guo, Y., &amp; Zuo, W. (2022). Texts as Images in Prompt Tuning for Multi-Label Image Recognition. ArXiv, abs/2211.12739.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%AF%95%E8%AE%BE/">毕设</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/29.jpg" loading="lazy" data-key="" data-hash="/img/29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/28.jpg" loading="lazy" data-key="" data-hash="/img/28.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设选题调研报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/27.jpg" loading="lazy" data-key="" data-hash="/img/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java程序分层编译技术研究</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%86%85%E7%BD%91%E7%9A%84%E4%BA%A4%E4%BA%92/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/26.jpg" loading="lazy" data-key="" data-hash="/img/26.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">云服务器通过内网的交互</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/restful-api/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/25.jpg" loading="lazy" data-key="" data-hash="/img/25.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RESTful API</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='介绍常见的几种加速度传感器'>
+<title>常见的加速度传感器</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='常见的加速度传感器'>
+<meta property='og:description' content='介绍常见的几种加速度传感器'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='报告' /><meta property='article:published_time' content='2021-10-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-10-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/34.jpg' />
+<meta name="twitter:title" content="常见的加速度传感器">
+<meta name="twitter:description" content="介绍常见的几种加速度传感器"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/34.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一-简介">一． 简介</a></li>
+    <li><a href="#二-分类及原理">二． 分类及原理</a>
+      <ol>
+        <li><a href="#压电式加速度传感器">压电式加速度传感器</a></li>
+        <li><a href="#电容式加速度传感器">电容式加速度传感器</a></li>
+        <li><a href="#压阻式加速度传感器">压阻式加速度传感器</a></li>
+      </ol>
+    </li>
+    <li><a href="#三-应用">三． 应用</a>
+      <ol>
+        <li><a href="#三轴加速度传感器">三轴加速度传感器</a></li>
+        <li><a href="#加速度传感器应用于地震检波器设计">加速度传感器应用于地震检波器设计</a></li>
+        <li><a href="#加速度传感器应用于监测高压导线舞动">加速度传感器应用于监测高压导线舞动</a></li>
+        <li><a href="#计步器功能">计步器功能</a></li>
+      </ol>
+    </li>
+    <li><a href="#四-发展前景">四． 发展前景</a></li>
+    <li><a href="#五-总结">五． 总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">
+                
+                    <img src="/img/34.jpg" loading="lazy" alt="Featured image of post 常见的加速度传感器" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">常见的加速度传感器</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            介绍常见的几种加速度传感器
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 10, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一-简介">一． 简介</h2>
+<p>加速度传感器是一种能够测量加速度的传感器。通常由质量块、阻尼器、弹性元件、敏感元件和适调电路等部分组成。传感器在加速过程中，通过对质量块所受惯性力的测量，利用牛顿第二定律获得加速度值。根据传感器敏感元件的不同，常见的加速度传感器包括电容式、电感式、应变式、压阻式、压电式等。</p>
+<h2 id="二-分类及原理">二． 分类及原理</h2>
+<ol>
+<li>
+<h3 id="压电式加速度传感器">压电式加速度传感器</h3>
+</li>
+</ol>
+<p>简介：</p>
+<p>压电式加速度传感器因为具有测量频率范围宽、量程大、体积小、重量轻、对被测件的影响小以及安装使用方便等优点, 成为最常用的振动测量传感器, 广泛应用于振动测试中。</p>
+<p>原理：</p>
+<p>压电加速度计的工作原理是沿压电晶体的极化方向施加一外力使其变形，则压电晶体内部发生极化，受力的两端面出现极性相反的电荷，若撤去外力则压电晶体恢复到初始状态，这就是正压电效应。</p>
+<p>压电式加速度传感器就是利用了压电晶体的正压电效应，将机械能转换为电能从而实现对振动加速度信号的测量。</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps176.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>压电式加速度传感器常见的结构形式有中心压缩式、环形剪切式、三角剪切式。测量被测对象振动大小时，需选择测点并将加速度传感器安装牢靠。将压电式加速度传感器的压电晶体看做理想弹性体，忽略压电晶体与壳体之间连接胶层的质量，只考虑胶层的阻尼系数，并将压电式加速度传感器一端简化为自由端、一端简化为固定端，则可得到其工作时的力。</p>
+<p>压电式加速度传感器的振动方程为mx2+cx1+kx=F（t）</p>
+<p>方程式中：</p>
+<p>m为压电晶体的质量kg</p>
+<p>c为胶层的阻尼系数N·s/m</p>
+<p>k为压电晶体的刚度系数N/m</p>
+<p>x为压电晶体的位移m</p>
+<p>x1为压电晶体的速度m/s</p>
+<p>x2为压电晶体的加速度m/s2</p>
+<p>F（t）为作用于压电式加速度传感器的外力N。</p>
+<ol start="2">
+<li>
+<h3 id="电容式加速度传感器">电容式加速度传感器</h3>
+</li>
+</ol>
+<p>电容式MEMS加速度计因具有灵敏度高、温度漂移小、过载保护能力好等优点，成为目前重点研究的微加速度计之一。</p>
+<p>电容式加速度计的敏感结构主要包含3个部分：惯性质量块以及与惯性质量一体的活动电容极板、固定电容极板和两者之间的弹性连接部分。MEMS电容式加速度计中，一个质量为m的质量块通过一个弹性系数为k的弹簧悬浮在两个固定电极之间，形成了两个可变电容C1、C2。当质量块受到外力的作用而偏离原位置，电容C1、C2产生了差分变化，如图1所示，通过检测电容C1、C2的变化可以得到外加加速度的值。</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps177.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>当差动电容信号输出后，正弦载波将低频信号调制至高频载波，通过T型阻容网络放大电路输出带载波的电压放大信号；模拟开关解调电路将信号从高频段解调至低频段；经四阶带通滤波电路得到最终的输出电压，实现电容电压转换，供后续电路检测和处理。信号读出电路原理框图如图2所示。</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps178.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<ol start="3">
+<li>
+<h3 id="压阻式加速度传感器">压阻式加速度传感器</h3>
+</li>
+</ol>
+<p>MEMS压阻式加速度传感器的敏感元件由弹性梁、质量块、固定框组成。压阻式加速度传感器实质上是一个力传感器，他是利用用测量固定质量块在受到加速度作用时产生的力F来测得加速度a的。在目前研究尺度内，可以认为其基本原理仍遵从牛顿第二定律。也就是说当有加速度a作用于传感器时，传感器的惯性质量块便会产生一个惯性力:F=ma,此惯性力F作用于传感器的弹性梁上，便会产生一个正比于F的应变。，此时弹性梁上的压敏电阻也会随之产生一个变化量△R，由压敏电阻组成的惠斯通电桥输出一个与△R成正比的电压信号V。</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps179.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps180.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>电桥输出表达式为：<img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps181.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="三-应用">三． 应用</h2>
+<ol>
+<li>
+<h3 id="三轴加速度传感器">三轴加速度传感器</h3>
+</li>
+</ol>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps182.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>三轴加速度计是一种惯性传感器，能够测量物体的比力，即去掉重力后的整体加速度或者单位质量上作用的非引力。当加速度计保持静止时，加速度计能够感知重力加速度，而整体加速度为零。在自由落体运动中，整体加速度就是重力加速度，但加速度计内部处于失重状态，而此时三轴加速度计输出为零。</p>
+<p>一方面，要准确了解物体的运动状态，必须测得其三个坐标轴上的分量；另一方面，在预先不知道物体运动方向的场合下，只有应用三轴加速度传感器来检测加速度信号。由于三轴加速度传感器也是基于重力原理的，因此用三轴加速度传感器可以实现双轴正负90度或双轴0-360度的倾角，通过校正后期精度要高于双轴加速度传感器大于测量角度为60度的情况。</p>
+<p>目前的三轴加速度传感器大多采用压阻式、压电式和电容式工作原理，产生的加速度正比于电阻、电压和电容的变化，通过相应的放大和滤波电路进行采集。这个和普通的加速度传感器是基于同样的原理，所以在一定的技术上三个单轴就可以变成一个三轴。而此时三轴加速度计输出为零。</p>
+<ol start="2">
+<li>
+<h3 id="加速度传感器应用于地震检波器设计">加速度传感器应用于地震检波器设计</h3>
+</li>
+</ol>
+<p>地震检波器是用于地质勘探和工程测量的专用传感器，是一种将地面振动转变为电信号的传感器，能把地震波引起的地面震动转换成电信号，经过模/数转换器转换成二进制数据、进行数据组织、存储、运算处理。加速度传感器是一种能够测量加速力的电子设备，典型应用在手机、笔记本电脑、步程计和运动检测等。</p>
+<ol start="3">
+<li>
+<h3 id="加速度传感器应用于监测高压导线舞动">加速度传感器应用于监测高压导线舞动</h3>
+</li>
+</ol>
+<p>目前国内对导线舞动监测多采用视频图像采集和运动加速度测量两种主要技术方案。前者在野外高温、高湿、严寒、浓雾、沙尘等天气条件下，不仅对视频设备的可靠性、稳定性要求很高，而且拍摄的视频图像的效果也会受到影响，在实际使用中只能作为辅助监测手段，无法定量分析导线运动参数；而采用加速度传感器监测导线舞动情况，虽可定量分析输电导线某一点上下振动和左右摆动的情况，但只能测出导线直线运动的振幅和频率，而对于复杂的圆周运动，则无法准确测量。所以我们必须加快加速度传感器的发展来适应诸如此类环境下进行应用。</p>
+<ol start="4">
+<li>
+<h3 id="计步器功能">计步器功能</h3>
+</li>
+</ol>
+<p>加速度传感器还可以检测交流信号以及物体的振动，人在走动的时候会产生一定周期性的振动，而加速度传感器还可以检测振动的过零点，慢跑测算出人所走的步或跑步所走的步数，慢跑测算出人所移动的位移。并且利用一定的公式还可以测算出卡路里的损耗。</p>
+<h2 id="四-发展前景">四． 发展前景</h2>
+<p>某些传感器市场比如压力传感器、温度传感器、流量传感器、水平传感器已表现出成熟市场的特征。流量传感器、压力传感器、温度传感器的市场规模较大，分别占到整个传感器市场的21%、19%和14%。传感器市场的主要增长来自于无线传感器、MEMS传感器、生物传感器等新兴传感器。 全世界的传感器市场在不断变化的革新之中呈现出快速增长的发展趋势。相关专家指出，传感器领域的主要技术将在现有基础上予以拓宽和提升 ，世界各国将竞相加速新一代传感器的开发和产业发展，竞争也将日益激烈。新技术的发展将彻底改变未来的传感器市场，比如无线传感器、光纤传感器、智能传感器和金属氧化传感器等新型传感器的出现与市场占有率的扩大。</p>
+<h2 id="五-总结">五． 总结</h2>
+<p>加速度传感器，在我们各个领域之中都发挥着重要的作用，就世界范围而言，传感器市场上增长最快的依旧是汽车市场，占第二位的是过程控制市场，看好通讯市场前景。而在未来的电子产品中，多传感器将是一个重要的发展趋势，其会让电子产品在使用上更加人性化；此外，为了缩小产品尺寸和提高产品的应用价值，混合式感测器（Hybrid Sensor），如加速度传感器与陀螺仪的集成，也必然是一个发展方向，多功能混合式传感器必将以其较高的附加价值和用户操控体验占领高端市场；同时随着技术的进步，单一功能结构的传感器也将向低端市场推广和普及。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%8A%A5%E5%91%8A/">报告</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/33.jpg" loading="lazy" data-key="" data-hash="/img/33.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">传感器实验报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/30.jpg" loading="lazy" data-key="" data-hash="/img/30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设开题报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/29.jpg" loading="lazy" data-key="" data-hash="/img/29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/28.jpg" loading="lazy" data-key="" data-hash="/img/28.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设选题调研报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/27.jpg" loading="lazy" data-key="" data-hash="/img/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java程序分层编译技术研究</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

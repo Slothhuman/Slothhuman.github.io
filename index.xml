@@ -6,7 +6,444 @@
         <description>Recent content on Slothhuman&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://slothhuman.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>毕设开题报告</title>
+        <link>https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/30.jpg" alt="Featured image of post 毕设开题报告" /&gt;&lt;h2 id=&#34;一课题背景及意义&#34;&gt;一、课题背景及意义&lt;/h2&gt;
+&lt;p&gt;随着科学技术的进步与发展，图像作为信息传播的重要媒介，在通信、无人驾驶、医学影像分析、航天、遥感等多个领域得到了广泛的研究，并在国民社会、经济生活中承担着更加重要的角色。人们对图像研究的愈发重视，也促使计算机视觉领域迎来了蓬勃发展的黄金时代。&lt;/p&gt;
+&lt;p&gt;对于视觉应用来说，一个更现实的场景是开放集识别，在训练时存在不完整的世界知识，在测试时未知的类可以提交给算法。开放集识别就是要既能识别训练集中出现过的类，也要识别训练集中没有出现过的类。&lt;/p&gt;
+&lt;p&gt;在大多数场景下，图像中都不会只有一个孤零零的类别，随着对内容理解要求的不断提高，我们越来越需要尽可能精确的识别出图像视频中的所有类别，这时就需要用多标签识别。多标签识别旨在识别图像中的所有相关标签，是计算机视觉应用（如场景理解、监控系统和自动驾驶汽车）中的一项基本任务。在实际应用中，多标签识别系统应该学习数万个标签，在图像中定位它们，甚至处理许多看不见的标签。，迄今为止，使用可见标签训练和测试的经典多标签分类方法远远不能满足实际应用的要求，因为实际应用存在大量看不见的标签。&lt;/p&gt;
+&lt;p&gt;随着深度学习技术的发展，多标签图像识别技术已经成为当今研究热点，广泛应用于计算机视觉、图像处理等领域。然而，传统的多标签图像识别技术存在一定的局限性，如标签空间的稀疏性、标签空间的不可见性等，这些问题限制了多标签图像识别技术的发展。因此，开发一种新的多标签图像识别技术，即开放集合的多标签图像识别技术，具有重要的研究价值和应用前景。&lt;/p&gt;
+&lt;h2 id=&#34;二课题的主要内容&#34;&gt;二、课题的主要内容&lt;/h2&gt;
+&lt;p&gt;本课题的主要内容是研究开放集合的多标签图像识别技术。&lt;/p&gt;
+&lt;p&gt;（1）从方法角度，旨在找出找出一种新的研究方法或者改进现有的方法，以改善如标签空间的稀疏性、标签空间的不可见性所带来的局限，使其能更通用地使用在不同的应用场景中。同时能更好地处理在存在多个物体、多个类别标签时，建模不同物体、不同标签的相关性与依赖关系。（&lt;/p&gt;
+&lt;p&gt;2）从性能角度，对比不同的数据集与研究方法，思考在多标签识别任务时的性能提升。&lt;/p&gt;
+&lt;h2 id=&#34;三课题的研究或调研方案&#34;&gt;三、课题的研究（或调研）方案&lt;/h2&gt;
+&lt;h3 id=&#34;1拟采用的研究方法&#34;&gt;（1）拟采用的研究方法：&lt;/h3&gt;
+&lt;p&gt;多标签任务特性主要是不同物体、不同标签之间的关系建模，因此大部分方法是基于RNN、GCN、Transformer这类与关联建模相关的网络结构。但作为一个识别任务，很多其他识别任务的方法在多标签识别中也管用，比如各种attention。&lt;/p&gt;
+&lt;p&gt;例如：RNN-based Methods，引入递归神经网络（RNN）来显式地建模标签之间的依赖关系；Attention-based Methods，将attention引入多标签识别领域，用于隐式地建模不同标签之间的空间关系；GCN-based Methods，图神经网络（GCN）是一种可以明确建模关系的结构，多标签识别中对标签共现依赖的建模往往依赖于这种适合关系建模的网络结构。&lt;/p&gt;
+&lt;h3 id=&#34;2准备工作情况及主要措施&#34;&gt;（2）准备工作情况及主要措施：&lt;/h3&gt;
+&lt;p&gt;在老师悉心指导下，通过查阅图书、期刊、学术论文以及网上资源来确立研究思路，同时选择适合自身毕设的数据集。研究不同研究方法的设计思路与使用场景，认识到其局限，比对不同方法之间的性能差异。从现有方法中选择性能优异的部分进行研究并改进。&lt;/p&gt;
+&lt;h2 id=&#34;四论文设计框架结构&#34;&gt;四、论文（设计）框架结构&lt;/h2&gt;
+&lt;p&gt;论文的组成主要包括题目、摘要、关键词、正文、参考文献等这几个部分。&lt;/p&gt;
+&lt;p&gt;主要以正文框架的各组成部分进行技巧的分享与提炼，正文一般分为引言、理论基础、研究假设、论证过程、研究结论、研究不足与展望这几章节组成。&lt;/p&gt;
+&lt;p&gt;一）绪论&lt;/p&gt;
+&lt;p&gt;这部分主要是提出文中要研究的问题，引导读者阅读和理解全文，向读者勾勒出全文的基本内容和轮廓。关键内容首先是介绍本文的研究背景、目的、意义；其次是概括论文的主要内容，勾勒大体轮廓；最后是对本文运用的研究方法进行阐述。&lt;/p&gt;
+&lt;p&gt;（二）文献综述&lt;/p&gt;
+&lt;p&gt;研究往往是基于前人在本研究领域作出的贡献与理论之上展开的，理论基础这部分内容 就是为了让我们的论文更加有说服性，更加有理有据。主要从以下几个维度去组织：&lt;/p&gt;
+&lt;p&gt;\1. 研究国内相关的文献综述，分析国内外现有研究的优缺点，总结出自己的文献评述；&lt;/p&gt;
+&lt;p&gt;\2. 介绍论文重点研究的相关场景，例如研究适用于哪些场景，存在哪些局限，怎么完善优化，目前国内外现状如何；&lt;/p&gt;
+&lt;p&gt;\3. 结合自己的论文对论文使用到的相关理论内容、作用、方法以及理论的提出者进行介绍。&lt;/p&gt;
+&lt;p&gt;（三）提出研究假设&lt;/p&gt;
+&lt;p&gt;（三）（四）（五）部分是全文写作的核心内容，提出研究假设与你是否能找到正确的课堂研究方向密切相关。&lt;/p&gt;
+&lt;p&gt;（四）论证过程&lt;/p&gt;
+&lt;p&gt;这部分需要对收集的数据或材料进行分析研究，来论证研究假设是否成立，此过程会涉及到研究或者计算，如果做出来的实验有问题，需要反复进行验证。&lt;/p&gt;
+&lt;p&gt;（五）研究结果&lt;/p&gt;
+&lt;p&gt;研究结果主要是阐述研究过程可以得出什么样的结论，论文的成果到底有什么意义，有没有实用价值。&lt;/p&gt;
+&lt;p&gt;（六）研究不足与展望&lt;/p&gt;
+&lt;p&gt;选择几个研究中非原则性的问题谈一谈，例如：研究对象的范围不够广，理论模型可以再细化等。展望部分可以简单表达，例如：希望未来有人可以做相关领域的进一步研究。&lt;/p&gt;
+&lt;h2 id=&#34;五写作安排包含相似性检查的时间安排&#34;&gt;五、写作安排（包含相似性检查的时间安排）&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*序号*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*设计（论文）写作的阶段性*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*任务*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*时间*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*安排*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;收集并熟悉毕业论文资料，撰写开题报告&lt;/td&gt;
+&lt;td&gt;2023年2月25日前&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;搭建毕设所需的训练模型，获取毕设所需数据与成果&lt;/td&gt;
+&lt;td&gt;2023年2月26日—3月15日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;完成毕业论文初稿&lt;/td&gt;
+&lt;td&gt;2023年3月16日—3月26日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;完成论文修改工作&lt;/td&gt;
+&lt;td&gt;2023年3月27日—4月10日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;定稿、打印、装订&lt;/td&gt;
+&lt;td&gt;2023年4月11日—4月20日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;六参考文献&#34;&gt;六、参考文献&lt;/h2&gt;
+&lt;p&gt;[1] He, S., Guo, T., Dai, T., Qiao, R., Ren, B., &amp;amp; Xia, S. (2022). Open-Vocabulary Multi-Label Classification via Multi-modal Knowledge Transfer. ArXiv, abs/2207.01887.&lt;/p&gt;
+&lt;p&gt;[2] Chen, T., Xu, M., Hui, X., Wu, H., &amp;amp; Lin, L. (2019). Learning Semantic-Specific Graph Representation for Multi-Label Image Recognition. 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 522-531.&lt;/p&gt;
+&lt;p&gt;[3] Guo, Z., Dong, B., Ji, Z., Bai, J., Guo, Y., &amp;amp; Zuo, W. (2022). Texts as Images in Prompt Tuning for Multi-Label Image Recognition. ArXiv, abs/2211.12739.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>毕设任务书</title>
+        <link>https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/</link>
+        <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/29.jpg" alt="Featured image of post 毕设任务书" /&gt;&lt;h2 id=&#34;一毕业设计论文的内容与要求&#34;&gt;一、毕业设计（论文）的内容与要求&lt;/h2&gt;
+&lt;p&gt;内容：本课题的主要内容是研究开放集合的多标签图像识别技术。 （1）从方法角度，旨在找出找出一种新的研究方法或者改进现有的方法， 以改善如标签空间的稀疏性、标签空间的不可见性所带来的局限，使其能更通用 地使用在不同的应用场景中。同时能更好地处理在存在多个物体、多个类别标签 时，建模不同物体、不同标签的相关性与依赖关系。（2）从性能角度，对比不 同的数据集与研究方法， 思考在多标签识别任务时的性能提升。 要求：根据论文研究方向，独立进行文献查找和分析文献资料; 能够独立查 找、翻译和分析外文资料; 参考国内外研究现状和成果，独立分析、写作、完成 完整的毕业论文。完成毕业设计。&lt;/p&gt;
+&lt;h2 id=&#34;二毕业设计论文应完成的工作&#34;&gt;二、毕业设计（论文）应完成的工作&lt;/h2&gt;
+&lt;p&gt;独立完成实验，取得足够的实验数据，实验需具有探索性，而非重复已有的 工作。完成 15000 字以上的论文，其中包括文献综述、实验部分的讨论与结论等 内容。&lt;/p&gt;
+&lt;h3 id=&#34;三毕业设计论文进程安排&#34;&gt;三、毕业设计（论文）进程安排&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;设计（论文）各阶段内容&lt;/th&gt;
+&lt;th&gt;起止日期&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;在网上和图书馆查找相关资料&lt;/td&gt;
+&lt;td&gt;2022.03.11-2022.03.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;熟悉代码及实验环境搭建&lt;/td&gt;
+&lt;td&gt;2022.03.21-2022.03.31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;确定实验方案，对方案进行可行性验证&lt;/td&gt;
+&lt;td&gt;2022.04.01-2022.04.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;进行实验，记录实验结果&lt;/td&gt;
+&lt;td&gt;2022.04.11-2022.04.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;对实验结果进行整理分析&lt;/td&gt;
+&lt;td&gt;2022.04.21-2022.04.30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;对非预期结果进行分析，修正并重新实验&lt;/td&gt;
+&lt;td&gt;2022.05.01-2022.05.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;撰写毕业论文，修改内容和结构&lt;/td&gt;
+&lt;td&gt;2022.05.11-2022.05.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;毕业论文答辩&lt;/td&gt;
+&lt;td&gt;2022.05.21-2022.06.02&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;四应收集的资料及主要参考文献&#34;&gt;四、应收集的资料及主要参考文献&lt;/h4&gt;
+&lt;p&gt;[1] He, S., Guo, T., Dai, T., Qiao, R., Ren, B., &amp;amp; Xia, S. (2022). Open-Vocabulary Multi-Label Classification via Multi-modal Knowledge Transfer. ArXiv, abs/2207.01887.&lt;/p&gt;
+&lt;p&gt;[2] Chen, T., Xu, M., Hui, X., Wu, H., &amp;amp; Lin, L. (2019). Learning Semantic-Specific Graph Representation for Multi-Label Image Recognition. 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 522-531.&lt;/p&gt;
+&lt;p&gt;[3] Guo, Z., Dong, B., Ji, Z., Bai, J., Guo, Y., &amp;amp; Zuo, W. (2022). Texts as Images in Prompt Tuning for Multi-Label Image Recognition. ArXiv, abs/2211.12739.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>毕设选题调研报告</title>
+        <link>https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/28.jpg" alt="Featured image of post 毕设选题调研报告" /&gt;&lt;h2 id=&#34;一研究背景和意义&#34;&gt;&lt;strong&gt;一、研究背景和意义&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;在如今数字化和信息化的时代，图像数据正在快速地增长，如何快速而准确 地对这些海量的图像进行标注和分类已成为一个重要的研究课题。而多标签图像 识别技术就是应对这个问题的一种有效的方法。 多标签图像识别技术是指一种同时能够识别图像中包含多个标签（如人、动 物、建筑等）的技术。它已经广泛应用于图像搜索、广告投放、安防监控、智能 家居、医学影像等领域。随着云计算、人工智能、物联网等技术的不断发展，对 于多标签图像识别技术的需求也将越来越大。 而在实际应用中，图像集合的多样性和规模越来越大，如何更好地处理这些 开放集合数据成为了研究的重要方向。开放集合数据不仅包含大量标签，还存在 着标签不平衡、标签缺失和标签噪声等问题，这为多标签图像识别技术的研究和 实践带来了新的挑战。 因此，开展《开放集合的多标签图像识别技术研究》毕业设计具有重要的意 义和价值。通过深入研究和探索，可以提高多标签图像识别技术的准确率和效率， 为实际应用提供更好的支持和服务。&lt;/p&gt;
+&lt;h2 id=&#34;二相关技术调研&#34;&gt;&lt;strong&gt;二、相关技术调研&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;我们将调研常见的多标签图像识别技术和算法，并探讨目前应用较广泛的深 度学习技术在多标签图像识别中的应用。同时，我们还将分析开放集合数据集的 特点和处理方法。&lt;/p&gt;
+&lt;h3 id=&#34;多标签图像识别技术和算法&#34;&gt;&lt;strong&gt;多标签图像识别技术和算法&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;目前常见的多标签图像识别技术和算法主要包括传统的基于特征提取和分 类器构建的方法以及基于深度学习的方法。其中，基于特征提取和分类器构建的 方法包括基于局部特征的 Bag-of-Visual-Words 模型、基于全局特征的颜色直方 图、GIST、SIFT 等模型，以及基于分类器的方法如 KNN、SVM、朴素贝叶斯等。 而基于深度学习的方法则包括卷积神经网络（CNN）、循环神经网络（RNN）、 长短时记忆网络（LSTM）等。这些深度学习算法在多标签图像识别中表现出了出 色的性能，尤其是 CNN 在 ImageNet 比赛中的表现引起了广泛的关注。&lt;/p&gt;
+&lt;h3 id=&#34;深度学习在多标签图像识别中的应用&#34;&gt;&lt;strong&gt;深度学习在多标签图像识别中的应用&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;深度学习在多标签图像识别中的应用主要是基于 CNN 模型。CNN 模型能够自 动地从图像中提取出高层次的特征，并将其与标签进行关联。在多标签图像识别 中，CNN 通常采用 Softmax 激活函数，并输出每个标签的概率分布。 近年来，众多的研究者对基于 CNN 的多标签图像识别方法进行了探索和研究， 提出了许多改进和优化方法。例如，有研究者提出使用多级注意力机制来提高 CNN 模型对多标签图像的识别能力。还有研究者利用生成对抗网络（GAN）来提 高模型的泛化能力和鲁棒性。&lt;/p&gt;
+&lt;h3 id=&#34;开放集合数据集的特点和处理方法&#34;&gt;&lt;strong&gt;开放集合数据集的特点和处理方法&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;开放集合数据集是一个包含了大量来自互联网的图片和标签的数据集，这些 标签是由用户自行标注的，通常会有多个标签对应一张图片。&lt;/p&gt;
+&lt;h3 id=&#34;开放集合数据集的特点主要包括以下几个方面&#34;&gt;&lt;strong&gt;开放集合数据集的特点主要包括以下几个方面&lt;/strong&gt;：&lt;/h3&gt;
+&lt;p&gt;**标签稀疏性：**相比于传统的图像分类数据集，开放集合数据集中的图片通 常会有多个标签，因此每个标签的数量相对较少，导致标签的稀疏性较高。&lt;/p&gt;
+&lt;p&gt;**标签噪声：**由于标签是由用户自行标注的，因此会存在一定的标签噪声， 即标签可能会与图片内容不符或者存在歧义。&lt;/p&gt;
+&lt;p&gt;**标签关联性：**开放集合数据集中的标签通常具有一定的关联性，例如“猫” 和“动物”之间的关系，这些关系可以用于改善多标签图像识别的性能。&lt;/p&gt;
+&lt;h3 id=&#34;针对开放集合数据集的特点可以采用以下方法进行处理&#34;&gt;&lt;strong&gt;针对开放集合数据集的特点，可以采用以下方法进行处理：&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;**数据增强：**由于开放集合数据集的标签稀疏性较高，可以通过数据增强的 方法来扩充数据集，提高模型的泛化能力。&lt;/p&gt;
+&lt;p&gt;**标签噪声处理：**可以采用一些技术来处理标签噪声，例如基于规则的方法 或者基于学习的方法，这些方法可以帮助模型更好地学习到图片与标签之间的关 系。&lt;/p&gt;
+&lt;p&gt;**标签关联性建模：**可以通过一些技术来建模标签之间的关联性，例如基 于图模型或者基于语义相似度的方法，这些方法可以帮助模型更好地理解标签之 间的关系，提高多标签图像识别的性能。 对于开放集合数据集的处理需要考虑其特点，采用适当的方法进行数据增强、标 签噪声处理和标签关联性建模，从而提高多标签图像识别的性能。&lt;/p&gt;
+&lt;h2 id=&#34;三研究设计与实现&#34;&gt;&lt;strong&gt;三、研究设计与实现&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;研究目标和研究方法&#34;&gt;&lt;strong&gt;研究目标和研究方法&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;本毕业设计的研究目标是探究开放集合的多标签图像识别技术，并实现一个具有 较高准确率和泛化能力的多标签图像识别模型。在实现过程中，我们将采用基于 深度学习的方法，并尝试结合多级注意力机制和生成对抗网络等技术进行改进和 优化。&lt;/p&gt;
+&lt;h3 id=&#34;数据集&#34;&gt;&lt;strong&gt;数据集&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;本研究将使用开放集合数据集作为实验数据集。该数据集包含了超过 2 万个不同 种类的图像，并且每个图像都有多个标签。由于该数据集标签不平衡、标签缺失 和标签噪声等问题较为严重，因此我们将采用基于重采样的方法来处理数据集。&lt;/p&gt;
+&lt;h3 id=&#34;模型&#34;&gt;&lt;strong&gt;模型&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;本研究将使用基于 CNN 的模型进行多标签图像识别。在模型设计中，我们将采用 多级注意力机制来提高模型对多标签图像的识别能力，并利用生成对抗网络来提 高模型的泛化能力和鲁棒性。具体模型结构将根据实验结果进行不断调整和优化。&lt;/p&gt;
+&lt;h3 id=&#34;评估指标&#34;&gt;&lt;strong&gt;评估指标&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;本研究将采用 Precision、Recall、F1-score 等指标来评估模型的性能。同时， 我们还将采用 AUC、mAP 等指标来评估模型的泛化能力和鲁棒性。为了保证实验 结果的准确性，我们将使用交叉验证等技术来进行实验。&lt;/p&gt;
+&lt;h3 id=&#34;实验流程&#34;&gt;&lt;strong&gt;实验流程&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;实验流程如下： （1）数据集预处理：对开放集合数据集进行预处理，包括数据清洗、重采样等。 （2）模型设计和训练：设计基于 CNN 的多标签图像识别模型，采用多级注意力 机制和生成对抗网络等技术进行改进和优化，并利用数据集进行训练。（3）模型评估和调优：采用 Precision、Recall、F1-score 等指标对模型进行 评估，并根据实验结果进行模型调优。 （4）模型测试和应用：利用测试集对模型进行测试，并探索模型在实际应用中 的表现和应用场景。 （5）实验结果和分析：展示模型在测试集上的性能指标和预测结果，然后分析 实验结果中存在的问题和不足，并提出未来改进方向（数据集处理、模型结构设 计、算法改进）和研究方向。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Java程序分层编译技术研究</title>
+        <link>https://slothhuman.github.io/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/</link>
+        <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/27.jpg" alt="Featured image of post Java程序分层编译技术研究" /&gt;&lt;h2 id=&#34;什么是java程序分层编译&#34;&gt;什么是Java程序分层编译&lt;/h2&gt;
+&lt;p&gt;Java程序分层编译是一种将程序代码分为多个层次，分别进行编译和打包的技术。它将程序按照不同的功能、模块或组件划分为若干个层次，每个层次可以独立编译和打包，最终将这些层次整合到一起形成完整的程序。Java程序分层编译是一种非常重要的技术，特别是在大型项目和多人协作开发的情况下，它可以提高编译效率、降低维护成本、提高代码的可重用性和可维护性。&lt;/p&gt;
+&lt;h2 id=&#34;为什么需要java程序分层编译&#34;&gt;为什么需要Java程序分层编译？&lt;/h2&gt;
+&lt;p&gt;Java程序分层编译有以下几个好处：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;提高开发效率：模块化可以使得每个模块的功能清晰明确，开发人员可以更加专注于当前模块的开发，降低代码耦合度，从而提高开发效率。&lt;/li&gt;
+&lt;li&gt;提高代码质量：模块化可以使得代码结构更加清晰、可读性更强，便于进行代码重构、维护和测试，从而提高代码质量。&lt;/li&gt;
+&lt;li&gt;加快编译速度：分层编译可以使得只需要重新编译修改的模块，而不是整个程序，从而加快编译速度。&lt;/li&gt;
+&lt;li&gt;方便程序发布和部署：模块化可以将应用程序分为多个模块，每个模块都可以单独编译和打包，方便程序的发布和部署。&lt;/li&gt;
+&lt;li&gt;提高程序的可扩展性：模块化可以使得程序结构更加清晰，便于添加新的功能模块，从而提高程序的可扩展性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;分层编译的基本原理和实现方式&#34;&gt;分层编译的基本原理和实现方式&lt;/h2&gt;
+&lt;p&gt;Java程序分层编译的核心原理是将代码按照依赖关系进行分层，每一层都只依赖于其下层，从而实现代码的高效编译和管理。具体实现方式如下：&lt;/p&gt;
+&lt;h3 id=&#34;分包和类依赖关系分析&#34;&gt;分包和类依赖关系分析&lt;/h3&gt;
+&lt;p&gt;在进行分层编译前，需要对Java程序的包结构和类之间的依赖关系进行分析。通常可以使用开源的静态分析工具，如SonarQube和FindBugs等，来帮助开发人员快速分析和识别程序中的依赖关系。分析结果可以按照包和类之间的依赖关系，构建出一个依赖图谱，以便进行后续的分层编译。&lt;/p&gt;
+&lt;h3 id=&#34;分层编译的实现方式&#34;&gt;分层编译的实现方式&lt;/h3&gt;
+&lt;p&gt;分层编译的实现方式有多种，其中比较常见的两种方式是：&lt;/p&gt;
+&lt;p&gt;（1）分阶段编译：将程序分为若干阶段，每个阶段都编译一部分代码，并生成相应的类文件。下一个阶段的编译可以利用前一个阶段生成的类文件作为依赖，从而实现高效的增量编译。&lt;/p&gt;
+&lt;p&gt;（2）模块化编译：将程序按照模块进行分层，每个模块都有自己的依赖和接口规范。在编译时，每个模块都独立进行编译，生成相应的模块文件。在程序运行时，只需要将需要的模块动态加载到JVM中，就可以实现代码的高效运行。&lt;/p&gt;
+&lt;h2 id=&#34;分层编译的具体应用场景&#34;&gt;分层编译的具体应用场景&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;大型软件编译：对于大型软件，单次编译可能需要数小时或更长时间才能完成。使用分层编译技术可以将大型软件分成多个模块，每个模块可以独立进行编译，然后在最终链接的时候合并，从而减少编译所需的时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并行编译：分层编译技术还可以用来实现并行编译。将项目划分为多个模块，并在多个机器或多个处理器上同时编译这些模块，然后再将结果合并，可以大幅度提高编译速度，缩短开发周期。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;跨平台开发：当我们在不同的操作系统、平台上开发应用程序时，我们需要使用不同的编译器和构建工具。使用分层编译技术可以使得在不同平台上的编译流程保持一致，从而确保应用程序的兼容性和可移植性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译器优化：分层编译技术还可以提供更好的编译器优化。通过将程序分为多个层级，编译器可以更好地分析代码，并对不同层级的代码进行不同的优化，以提高程序的执行效率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>云服务器通过内网的交互</title>
+        <link>https://slothhuman.github.io/p/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%86%85%E7%BD%91%E7%9A%84%E4%BA%A4%E4%BA%92/</link>
+        <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%86%85%E7%BD%91%E7%9A%84%E4%BA%A4%E4%BA%92/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/26.jpg" alt="Featured image of post 云服务器通过内网的交互" /&gt;&lt;h2 id=&#34;一-介绍&#34;&gt;一、 介绍&lt;/h2&gt;
+&lt;h3 id=&#34;云服务器概念&#34;&gt;云服务器概念&lt;/h3&gt;
+&lt;p&gt;云服务器是指基于云计算技术，将计算、存储、网络等资源进行虚拟化，通过互联网提供的虚拟化服务，用户可以通过网络远程访问云服务器，进行数据存储、应用部署、数据分析等操作，实现资源共享和按需使用的目的。相比传统的物理服务器，云服务器具有更高的弹性和可扩展性，同时也更加灵活和安全。&lt;/p&gt;
+&lt;h3 id=&#34;内网互通的重要性&#34;&gt;内网互通的重要性&lt;/h3&gt;
+&lt;p&gt;内网互通指的是在同一云服务提供商下的多个云服务器之间建立起私有网络，实现内部资源共享和互相访问的功能。这种方式可以提高资源利用率和数据传输效率，同时也更加安全可靠，可以保证内部数据的私密性和完整性。在多个应用之间共享数据、实现分布式计算、构建高可用的应用架构等场景下，内网互通是必不可少的&lt;/p&gt;
+&lt;h2 id=&#34;二内网互通的方式&#34;&gt;二、内网互通的方式&lt;/h2&gt;
+&lt;p&gt;为了实现云上资源之间的内网互通，有以下几种方式：&lt;/p&gt;
+&lt;h3 id=&#34;vpnvirtual-private-network&#34;&gt;VPN（Virtual Private Network）&lt;/h3&gt;
+&lt;p&gt;VPN 是一种虚拟专用网络，通过在公共网络上建立加密通道，使得不同的网络之间可以安全地进行通信。在云计算环境中，VPN 可以用来连接位于不同地域的云服务器，或者将云服务器与本地数据中心进行连接。VPN 可以使用多种协议，如PPTP、L2TP、IPSec等。其中，IPSec 协议是一种安全性比较高的协议，可以在不同云厂商之间建立 VPN 连接。&lt;/p&gt;
+&lt;h3 id=&#34;对等连接peering-connection&#34;&gt;对等连接（Peering Connection）&lt;/h3&gt;
+&lt;p&gt;对等连接是一种云厂商提供的连接方式，可以在同一地域内，连接不同的 VPC（Virtual Private Cloud）之间的网络。对等连接通过云厂商的专用网络进行通信，使得不同 VPC 中的云服务器可以像同一网络中的服务器一样通信。对等连接可以在同一云厂商的不同账号之间进行连接，也可以在不同云厂商之间进行连接。但需要注意的是，不同云厂商之间的对等连接可能存在一些限制和费用。&lt;/p&gt;
+&lt;h3 id=&#34;云厂商提供的内网互通服务&#34;&gt;云厂商提供的内网互通服务&lt;/h3&gt;
+&lt;h2 id=&#34;三-aws阿里云华为云内网互通的介绍&#34;&gt;三、 AWS、阿里云、华为云内网互通的介绍&lt;/h2&gt;
+&lt;h3 id=&#34;aws内网互通&#34;&gt;AWS内网互通&lt;/h3&gt;
+&lt;p&gt;在AWS中，你可以使用Virtual Private Cloud（VPC）来建立私有网络，VPC中的实例可以相互通信，也可以与公共互联网进行通信。如果您需要建立不同VPC之间的内部通信，AWS提供了多种解决方案。&lt;/p&gt;
+&lt;p&gt;首先是使用VPN连接。AWS支持通过VPN连接两个VPC，也支持将VPC连接到本地数据中心。此外，AWS还提供了AWS Direct Connect服务，可以通过专线连接将本地数据中心和AWS VPC连接起来。&lt;/p&gt;
+&lt;p&gt;其次是使用VPC Peering连接。VPC Peering允许将两个VPC直接连接起来，使它们可以进行内部通信。这是一种简单且安全的方式，但只能连接两个VPC。&lt;/p&gt;
+&lt;h3 id=&#34;阿里云内网互通&#34;&gt;阿里云内网互通&lt;/h3&gt;
+&lt;p&gt;阿里云提供了多种内网互通的方式，包括VPN、专线接入、对等连接、云企业网等。其中，VPN和专线接入适用于需要长期稳定连接的场景，而对等连接和云企业网则适用于临时性连接和需要跨账号、跨区域访问的场景。&lt;/p&gt;
+&lt;p&gt;对等连接是指在两个VPC之间建立IPsec VPN隧道，实现安全、高速、可靠的VPC之间的通信。阿里云的对等连接支持同账号、跨账号、跨地域的连接。&lt;/p&gt;
+&lt;p&gt;云企业网则是通过集线器-边缘节点的形式实现了多个VPC之间的互联。通过云企业网可以实现多个账号、多个地域的VPC之间的互联。&lt;/p&gt;
+&lt;h3 id=&#34;华为云内网互通&#34;&gt;华为云内网互通&lt;/h3&gt;
+&lt;p&gt;华为云提供了VPN、专线接入、云联网等多种内网互通方式。其中，VPN适用于小型企业或者小型部门之间的内网互通，专线接入适用于需要大流量、高带宽的场景，而云联网则适用于多个账号、多个VPC之间的内网互通。&lt;/p&gt;
+&lt;p&gt;云联网是华为云提供的跨区域、跨账号的内网互通服务，可以实现多个VPC、本地数据中心和其他云厂商之间的互联。通过云联网，用户可以将多个VPC、本地数据中心互联成一个虚拟的、高速的内网。&lt;/p&gt;
+&lt;h2 id=&#34;四如何选择内网互通的方式&#34;&gt;四、如何选择内网互通的方式&lt;/h2&gt;
+&lt;p&gt;在选择内网互通的方式时，需要考虑以下几个因素：&lt;/p&gt;
+&lt;h3 id=&#34;考虑成本&#34;&gt;考虑成本&lt;/h3&gt;
+&lt;p&gt;不同的内网互通方式会有不同的成本，包括一次性费用和运维费用等。例如，使用VPN连接的成本相对较低，但是需要考虑网络带宽和VPN设备的成本；使用云厂商提供的内网互通服务可能成本较高，但是无需自己购买和维护设备，同时也能够享受云厂商提供的技术支持。&lt;/p&gt;
+&lt;h3 id=&#34;考虑可扩展性&#34;&gt;考虑可扩展性&lt;/h3&gt;
+&lt;p&gt;内网互通的方式需要考虑可扩展性，以满足未来业务增长的需求。例如，使用VPN连接可能会受到网络带宽和VPN设备的限制，如果业务量增大，可能需要升级设备或增加带宽。而使用云厂商提供的内网互通服务可以根据业务需要弹性地扩展，无需担心硬件和网络的限制。&lt;/p&gt;
+&lt;h3 id=&#34;考虑安全性&#34;&gt;考虑安全性&lt;/h3&gt;
+&lt;p&gt;内网互通的方式需要考虑数据的安全性。例如，使用VPN连接可能需要自己购买和维护设备，需要确保设备的安全性和配置的正确性；而使用云厂商提供的内网互通服务可以享受云厂商提供的安全保障措施，例如防火墙、数据加密等，可以更好地保障数据的安全性。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>RESTful API</title>
+        <link>https://slothhuman.github.io/p/restful-api/</link>
+        <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/restful-api/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/25.jpg" alt="Featured image of post RESTful API" /&gt;&lt;h2 id=&#34;一什么是restful-api&#34;&gt;一、什么是RESTful API？&lt;/h2&gt;
+&lt;p&gt;RESTful API（Representational State Transfer）是一种针对网络应用程序设计的风格和约束。它是一种基于HTTP协议的API，通过对URI的设计和对控制状态的管理来实现资源的管理和处理。&lt;/p&gt;
+&lt;h3 id=&#34;11-定义和特点&#34;&gt;1.1 定义和特点&lt;/h3&gt;
+&lt;p&gt;RESTful API是建立在REST原则之上的API，具有以下特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;基于HTTP协议设计，使用标准的HTTP方法；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;资源通过URI进行标识；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交互操作的状态以HTTP状态码返回，支持缓存机制；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持多种格式，如JSON、XML等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;12-restful规范&#34;&gt;1.2 RESTful规范&lt;/h3&gt;
+&lt;p&gt;RESTful API的规范主要包括以下几个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;资源的URI设计应符合RESTful原则；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP方法的使用应符合HTTP协议，并且应使用标准HTTP方法；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交互操作的状态码应符合HTTP状态码的规范；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回的信息应包含必要的描述信息和格式信息；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口应该尽可能简单和一致。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;二restful-api设计原则&#34;&gt;二、RESTful API设计原则&lt;/h2&gt;
+&lt;p&gt;在设计RESTful API时，应该遵循以下几个原则：&lt;/p&gt;
+&lt;h3 id=&#34;21-可读和可理解&#34;&gt;2.1 可读和可理解&lt;/h3&gt;
+&lt;p&gt;接口应该具有可读性和可理解性，能够让开发人员和使用者很容易理解其功能和使用方法。&lt;/p&gt;
+&lt;h3 id=&#34;22-可以被缓存&#34;&gt;2.2 可以被缓存&lt;/h3&gt;
+&lt;p&gt;接口应该支持缓存机制，减少重复请求的次数，提高效率。&lt;/p&gt;
+&lt;h3 id=&#34;23-统一的接口&#34;&gt;2.3 统一的接口&lt;/h3&gt;
+&lt;p&gt;接口应该具有统一的设计，统一的返回格式和错误码，让开发人员和使用者更容易使用。&lt;/p&gt;
+&lt;h3 id=&#34;24-使用hateoas&#34;&gt;2.4 使用HATEOAS&lt;/h3&gt;
+&lt;p&gt;HATEOAS（Hypertext As The Engine Of Application State）指的是把超链接嵌入到返回资源中，让客户端能够根据资源状态自主选择下一步操作。&lt;/p&gt;
+&lt;h3 id=&#34;25-无状态&#34;&gt;2.5 无状态&lt;/h3&gt;
+&lt;p&gt;每个请求都是独立的，服务器不保存请求的上下文信息，这样可使服务更容易扩展。&lt;/p&gt;
+&lt;h2 id=&#34;三restful-api请求方法&#34;&gt;三、RESTful API请求方法&lt;/h2&gt;
+&lt;p&gt;RESTful API中主要使用以下HTTP方法进行资源的管理和处理:&lt;/p&gt;
+&lt;h3 id=&#34;31-get请求&#34;&gt;3.1 GET请求&lt;/h3&gt;
+&lt;p&gt;用于获取资源的信息，不会对服务器数据进行修改。&lt;/p&gt;
+&lt;h3 id=&#34;32-post请求&#34;&gt;3.2 POST请求&lt;/h3&gt;
+&lt;p&gt;用于创建资源，会在服务器上创建一个新的资源。&lt;/p&gt;
+&lt;h3 id=&#34;33-put请求&#34;&gt;3.3 PUT请求&lt;/h3&gt;
+&lt;p&gt;用于更新资源信息，会更新服务器中已有的资源。&lt;/p&gt;
+&lt;h3 id=&#34;34-delete请求&#34;&gt;3.4 DELETE请求&lt;/h3&gt;
+&lt;p&gt;用于删除指定的资源，从服务器上删除。&lt;/p&gt;
+&lt;h2 id=&#34;四restful-api状态码&#34;&gt;四、RESTful API状态码&lt;/h2&gt;
+&lt;p&gt;RESTful API中使用HTTP状态码来表示请求的状态和结果，具体分为以下几类：&lt;/p&gt;
+&lt;h3 id=&#34;41-1xx临时响应&#34;&gt;4.1 1xx（临时响应）&lt;/h3&gt;
+&lt;p&gt;表示接收到请求并正在处理。&lt;/p&gt;
+&lt;h3 id=&#34;42-2xx成功&#34;&gt;4.2 2xx（成功）&lt;/h3&gt;
+&lt;p&gt;表示操作成功完成，如200表示正常返回数据，201表示资源已创建。&lt;/p&gt;
+&lt;h3 id=&#34;43-3xx重定向&#34;&gt;4.3 3xx（重定向）&lt;/h3&gt;
+&lt;p&gt;表示需要进一步操作才能完成请求，如302表示需要重定向到另一个URI，303表示需要重定向到客户端缓存中的URI。&lt;/p&gt;
+&lt;h3 id=&#34;44-4xx客户端错误&#34;&gt;4.4 4xx（客户端错误）&lt;/h3&gt;
+&lt;p&gt;表示请求错误或无法处理，如400表示请求参数错误，401表示需要认证或授权，403表示没有权限访问资源，404表示找不到资源。&lt;/p&gt;
+&lt;h3 id=&#34;45-5xx服务器错误&#34;&gt;4.5 5xx（服务器错误）&lt;/h3&gt;
+&lt;p&gt;表示服务器错误或无法完成请求，如500表示服务器内部错误，503表示服务不可用。&lt;/p&gt;
+&lt;h2 id=&#34;五restful-api安全&#34;&gt;五、RESTful API安全&lt;/h2&gt;
+&lt;p&gt;在设计RESTful API时，需要考虑接口的安全性，主要包括以下几点：&lt;/p&gt;
+&lt;h3 id=&#34;51-安全性考虑&#34;&gt;5.1 安全性考虑&lt;/h3&gt;
+&lt;p&gt;在设计RESTful API时，需要考虑接口的安全性，包括身份认证、访问控制和数据加密等。&lt;/p&gt;
+&lt;h3 id=&#34;52-csrf攻击预防&#34;&gt;5.2 CSRF攻击预防&lt;/h3&gt;
+&lt;p&gt;CSRF（Cross-site Request Forgery）攻击是一种通过让用户访问恶意网站来执行攻击的方式，因此需要在RESTful API中加入CSRF攻击的防范措施。&lt;/p&gt;
+&lt;h3 id=&#34;53-xss攻击预防&#34;&gt;5.3 XSS攻击预防&lt;/h3&gt;
+&lt;p&gt;XSS（Cross-site Scripting）攻击是一种攻击方式，通过在网页中插入恶意脚本来执行攻击，因此需要在RESTful API中加入XSS攻击的防范措施。&lt;/p&gt;
+&lt;h2 id=&#34;六restful-api实战步骤&#34;&gt;六、RESTful API实战步骤&lt;/h2&gt;
+&lt;p&gt;要创建和使用RESTful API，需要遵循以下步骤：&lt;/p&gt;
+&lt;h3 id=&#34;61-创建restful-api&#34;&gt;6.1 创建RESTful API&lt;/h3&gt;
+&lt;p&gt;首先，需定义好资源和它们的操作，规定好URI、HTTP方法和返回格式。&lt;/p&gt;
+&lt;h3 id=&#34;62-设计api文档&#34;&gt;6.2 设计API文档&lt;/h3&gt;
+&lt;p&gt;其次，要编写API文档，包括接口的功能、使用方法、请求参数和返回格式等。&lt;/p&gt;
+&lt;h3 id=&#34;63-api测试和调试&#34;&gt;6.3 API测试和调试&lt;/h3&gt;
+&lt;p&gt;最后，需要对API进行测试和调试，确保它能够正常地工作，并且符合预期的设计要求。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>API和SPI</title>
+        <link>https://slothhuman.github.io/p/api%E5%92%8Cspi/</link>
+        <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/api%E5%92%8Cspi/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/24.jpg" alt="Featured image of post API和SPI" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;API（Application Programming Interface）是应用程序接口的缩写，指的是为应用程序提供服务的一组方法、协议和工具集合。简单来说，API就是一种允许不同软件之间进行交互的接口。通过API，开发人员可以将自己的程序与其他程序进行连接，实现数据交换和共享，从而提高应用程序的功能和性能。API的应用范围很广，包括Web服务、操作系统、数据库、应用程序等。&lt;/p&gt;
+&lt;p&gt;SPI（Service Provider Interface）是一种允许用户扩展、替换或定制服务实现的机制。在SPI中，服务接口是一组方法的集合，而服务提供者则是一种能够实现服务接口的类或组件。通过SPI，用户可以动态地加载和使用不同的服务提供者，从而实现服务的定制和扩展。SPI的应用范围主要是Java平台，包括Java核心库、框架、插件等。&lt;/p&gt;
+&lt;h2 id=&#34;api的分类&#34;&gt;API的分类&lt;/h2&gt;
+&lt;p&gt;API是一种通过预定义的接口规范来实现应用程序间交互的方式。按照使用场景和实现方式的不同，API可以分为多种类型，包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Web API：基于HTTP/HTTPS协议，通过网络提供服务的API。Web API可以使用多种协议和数据格式进行通信，如RESTful API和GraphQL API等。&lt;/li&gt;
+&lt;li&gt;操作系统API：用于操作系统的编程接口，提供了访问系统资源和执行操作的方法，如Windows API和Linux系统调用等。&lt;/li&gt;
+&lt;li&gt;应用程序API：用于应用程序之间的交互，提供了访问数据和功能的方法，如微软Office API和Google Maps API等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;api的设计原则&#34;&gt;API的设计原则&lt;/h2&gt;
+&lt;p&gt;API的设计需要遵循一些基本原则，以保证其易用、可维护、可扩展和可靠。这些原则包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;易用性：API应该简单易用，对开发人员友好，提供清晰的文档和示例代码。&lt;/li&gt;
+&lt;li&gt;可维护性：API应该易于维护，避免对现有接口进行大规模的修改。&lt;/li&gt;
+&lt;li&gt;可扩展性：API应该易于扩展，可以在不破坏原有代码的情况下添加新功能。&lt;/li&gt;
+&lt;li&gt;可靠性：API应该稳定可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;spi分类&#34;&gt;SPI分类&lt;/h2&gt;
+&lt;p&gt;SPI全称为Service Provider Interface，是一种Java的扩展机制，用于为某个接口提供具体的实现类。在SPI中，服务接口定义了一组抽象方法，而服务提供者则提供了这些方法的具体实现。&lt;/p&gt;
+&lt;p&gt;SPI可以分为两类：基于文件的SPI和基于注解的SPI。基于文件的SPI需要在META-INF/services目录下创建一个以服务接口全限定名为名字的文件，文件中列出服务提供者的实现类全限定名；基于注解的SPI则使用@SPI注解来标识服务提供者的实现类。&lt;/p&gt;
+&lt;h2 id=&#34;spi的设计原则&#34;&gt;SPI的设计原则&lt;/h2&gt;
+&lt;p&gt;SPI设计的原则是开闭原则，即对扩展开放，对修改关闭。这意味着在SPI中，服务接口的定义是稳定的，不应该随意修改，而服务提供者的实现则可以随意扩展。&lt;/p&gt;
+&lt;h2 id=&#34;api和spi定义方式的不同&#34;&gt;API和SPI定义方式的不同&lt;/h2&gt;
+&lt;p&gt;API是应用程序接口的缩写，它是一种定义了软件系统之间如何进行通信的接口。API可以被看作是一种契约，它规定了系统之间传递的消息格式、参数、返回值等细节，以及使用这些接口的方式。&lt;/p&gt;
+&lt;p&gt;SPI是服务提供接口的缩写，它是一种在软件系统中允许插件或模块化扩展的机制。SPI定义了一个通用接口，使得应用程序可以在运行时动态加载和使用模块化扩展，而不需要在编译时就将这些扩展集成进来。&lt;/p&gt;
+&lt;h2 id=&#34;api和spi的区别和联系&#34;&gt;API和SPI的区别和联系&lt;/h2&gt;
+&lt;p&gt;API和SPI都是软件开发中常用的技术概念，它们在实现方式、使用场景、功能范围等方面存在不同。API是应用程序编程接口，提供了一组可以被其他程序调用的方法或功能，常用于构建客户端应用或者Web服务，使得不同的系统之间可以进行通信和数据交互。SPI是服务提供接口，允许应用程序通过动态加载机制来使用第三方扩展或者组件，它通过提供标准化的接口和约定来实现应用程序的可扩展性和灵活性。&lt;/p&gt;
+&lt;h2 id=&#34;应用场景的选择&#34;&gt;应用场景的选择&lt;/h2&gt;
+&lt;p&gt;API和SPI在实际应用中有不同的使用场景和目的。API通常用于构建客户端应用和Web服务，通过暴露一组可用的接口和方法，实现不同系统之间的数据交互和通信。常见的API实现方式包括RESTful API和GraphQL API等。SPI则用于实现应用程序的可扩展性和灵活性，允许应用程序通过动态加载第三方&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>AOT编译器和JIT编译器</title>
+        <link>https://slothhuman.github.io/p/aot%E7%BC%96%E8%AF%91%E5%99%A8%E5%92%8Cjit%E7%BC%96%E8%AF%91%E5%99%A8/</link>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/aot%E7%BC%96%E8%AF%91%E5%99%A8%E5%92%8Cjit%E7%BC%96%E8%AF%91%E5%99%A8/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/23.jpg" alt="Featured image of post AOT编译器和JIT编译器" /&gt;&lt;h2 id=&#34;运行时编译runtime-compilation&#34;&gt;运行时编译（Runtime Compilation）&lt;/h2&gt;
+&lt;p&gt;运行时编译（Runtime Compilation）是一种编译技术，它将代码编译为可执行程序的过程延迟到程序运行时执行，而不是在编译期间执行。在运行时编译期间，代码被编译成一种中间代码，然后由解释器或即时编译器（Just-In-Time Compiler，JIT）转换成可执行代码，以便直接在CPU上运行。&lt;/p&gt;
+&lt;p&gt;运行时编译技术常用于动态语言和脚本语言，因为这些语言通常需要在运行时才能确定变量的类型和值，而运行时编译技术可以根据变量的类型和值来优化代码，从而提高程序的性能。&lt;/p&gt;
+&lt;p&gt;另外，运行时编译也可以用于一些需要动态加载代码的应用程序，例如插件系统、动态链接库等。在这种情况下，运行时编译可以将代码编译成与宿主程序兼容的中间代码，并在程序运行时加载并执行该代码。&lt;/p&gt;
+&lt;h2 id=&#34;jitjust-in-time-compiler编译器是什么&#34;&gt;JIT（Just-In-Time Compiler）编译器是什么&lt;/h2&gt;
+&lt;p&gt;JIT（Just-In-Time）编译器是一种将字节码或中间代码转换为本地机器代码的编译器。与传统的静态编译器不同，JIT编译器在程序运行时实时地将中间代码转换成本地机器代码，以便直接在CPU上运行。这种即时编译技术可以提高程序的性能，尤其对于动态语言和脚本语言等动态生成代码的语言来说，更是有着重要的作用。JIT编译器可以将代码的执行速度提高数倍，尤其是对于一些需要频繁执行的代码块来说，它的优势更为明显。&lt;/p&gt;
+&lt;p&gt;JIT编译器工作的过程大致如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在程序运行时，JIT编译器将字节码或中间代码转换成本地机器代码。&lt;/li&gt;
+&lt;li&gt;转换的过程中，JIT编译器会进行各种优化，例如去除无用代码、减少代码执行次数等等，以提高程序的性能。&lt;/li&gt;
+&lt;li&gt;转换完成后，JIT编译器将生成的本地机器代码存储在内存中，并将程序的控制权交给生成的本地代码。&lt;/li&gt;
+&lt;li&gt;以后每次执行该代码块时，JIT编译器会直接使用存储在内存中的本地机器代码，而不需要重新编译。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;那转换完成后，JIT编译器将生成的本地机器代码存储在内存中，并将程序的控制权交给生成的本地代码。这是存储在哪里的内存中呢？&lt;/p&gt;
+&lt;p&gt;JIT编译器生成的本地机器代码存储在内存的代码段中，也称为可执行代码段。代码段通常是只读的，因为在运行时不应该修改已经编译的代码。这些代码段通常在程序的虚拟地址空间中被映射到可执行区域。不同的操作系统和架构会有不同的内存分配和映射方式。例如，Windows下的代码段通常被映射到可执行文件的 .text 节中，而Linux下的代码段通常被映射到程序的.text 段中。无论代码段在内存中的具体位置如何，JIT编译器都会将生成的本地机器代码存储在其中，并将程序的控制权交给生成的本地代码。&lt;/p&gt;
+&lt;h2 id=&#34;aotahead-of-time-compilation是什么&#34;&gt;AOT(Ahead of Time Compilation)是什么&lt;/h2&gt;
+&lt;p&gt;AOT（Ahead of Time）编译是一种在程序运行之前，将代码编译成本地机器代码的编译技术。与JIT编译器不同，AOT编译器在程序运行之前，将所有代码都编译成本地机器代码，并生成一个可执行文件，程序在运行时直接执行该文件，而不需要再进行编译。这种编译技术可以提高程序的启动速度和执行效率，因为在程序运行时，不需要再进行编译，而是直接执行本地机器代码。&lt;/p&gt;
+&lt;p&gt;AOT编译器一般用于静态编程语言，例如C、C++等，因为这些语言的代码在编译时就已经被转换成本地机器代码了。AOT编译器可以对这些代码进行各种优化，例如去除无用代码、减少代码执行次数等等，从而提高程序的性能。与JIT编译器相比，AOT编译器不需要在程序运行时进行编译，因此可以提高程序的启动速度，同时也可以减少内存的占用。但是，AOT编译器生成的代码不能根据程序运行时的状态进行优化，因此可能无法达到JIT编译器的性能优化水平。&lt;/p&gt;
+&lt;h2 id=&#34;aotahead-of-time-compilation和jit编译器有什么区别&#34;&gt;AOT(Ahead of Time Compilation)和JIT编译器有什么区别&lt;/h2&gt;
+&lt;p&gt;AOT（Ahead of Time）编译和JIT（Just-In-Time）编译是两种不同的编译技术，它们之间有以下几个区别：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;编译时机不同：AOT编译器在程序运行之前，将所有代码都编译成本地机器代码，并生成一个可执行文件，程序在运行时直接执行该文件，而不需要再进行编译。JIT编译器则是在程序运行时，实时将中间代码转换为本地机器代码。&lt;/li&gt;
+&lt;li&gt;优化策略不同：AOT编译器可以对所有代码进行全局优化，因为它在程序运行之前就已经将所有代码都编译成了本地机器代码。而JIT编译器只能对实际执行的代码进行优化，因为它是在程序运行时实时编译的。&lt;/li&gt;
+&lt;li&gt;程序启动速度和执行效率不同：AOT编译器可以提高程序的启动速度和执行效率，因为它在程序运行时不需要再进行编译，而是直接执行本地机器代码。而JIT编译器在程序运行时需要进行实时编译，因此可能会降低程序的启动速度，但可以根据程序运行时的状态进行优化，从而提高执行效率。&lt;/li&gt;
+&lt;li&gt;内存占用不同：AOT编译器生成的可执行文件通常比JIT编译器生成的代码占用更多的磁盘空间，但在程序运行时占用的内存可能会更少，因为不需要在运行时再进行编译。而JIT编译器生成的代码不需要预先编译成可执行文件，因此占用的磁盘空间更少，但在程序运行时需要占用额外的内存空间来存储生成的本地机器代码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总地来说，AOT编译器和JIT编译器是两种不同的编译技术，各自有其优缺点，应该根据具体的应用场景来选择。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>MySQL（七）大表优化</title>
         <link>https://slothhuman.github.io/p/mysql%E4%B8%83%E5%A4%A7%E8%A1%A8%E4%BC%98%E5%8C%96/</link>
         <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
@@ -3298,6 +3735,5039 @@
 &lt;p&gt;@RequestParam和@PathVariable都用于将请求参数绑定到控制器方法的参数上，但是它们的作用方式不同。@RequestParam注解绑定的参数是在请求参数中指定的，而@PathVariable注解绑定的参数是在请求URL中指定的。&lt;/p&gt;
 &lt;p&gt;@RequestBody注解用于将HTTP请求中的请求体绑定到方法参数上。请求体可以是JSON、XML、二进制数据等类型，与@RequestParam和@PathVariable不同，@RequestBody注解绑定的参数不是单个值，而是整个请求体。&lt;/p&gt;
 &lt;p&gt;综上所述，@RequestParam、@RequestBody、@PathVariable这三个注解在实际应用中各有所用，具体使用哪一个取决于控制器方法所需的参数类型和参数来源。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>传感器实验报告</title>
+        <link>https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/33.jpg" alt="Featured image of post 传感器实验报告" /&gt;&lt;h2 id=&#34;实验一金属箔式应变片及转换电路性能&#34;&gt;实验一：金属箔式应变片及转换电路性能&lt;/h2&gt;
+&lt;h3 id=&#34;1-实验目的&#34;&gt;&lt;strong&gt;1.&lt;/strong&gt; 实验目的&lt;/h3&gt;
+&lt;p&gt;1、了解应变片的测试原理与应用领域；&lt;/p&gt;
+&lt;p&gt;2、掌握应变片测试方法及典型转换电路原理；&lt;/p&gt;
+&lt;p&gt;3、通过实验数据分析处理，掌握获得传感器静态特性性能指标的过程和方法。&lt;/p&gt;
+&lt;h3 id=&#34;2-实验内容和要求&#34;&gt;&lt;strong&gt;2.&lt;/strong&gt; 实验内容和要求&lt;/h3&gt;
+&lt;p&gt;1、观察金属箔式应变片的结构、贴片方式以及接桥方式；&lt;/p&gt;
+&lt;p&gt;2、测试应变梁变形时的应变输出；&lt;/p&gt;
+&lt;p&gt;3、比较应变片不同接桥方式对电桥输出结果的影响。&lt;/p&gt;
+&lt;p&gt;4、进行实验前，先预习附录一“CYS型传感器系统综合实验仪使用指南”，了解该设备的基本结构与组成。&lt;/p&gt;
+&lt;h3 id=&#34;3实验主要仪器设备和材料&#34;&gt;3.实验主要仪器设备和材料&lt;/h3&gt;
+&lt;p&gt;1、CYS型传感器系统综合实验仪本次实验所用模块包括：①悬臂梁及金属箔式应变片；②电桥模块；③差动放大器；④直流稳压电源（±4Ｖ档）；⑤测&lt;/p&gt;
+&lt;p&gt;微头；⑥毫伏表。&lt;/p&gt;
+&lt;p&gt;2、若干接插连接实验导线。&lt;/p&gt;
+&lt;p&gt;3、万用表（非必需）。&lt;/p&gt;
+&lt;h3 id=&#34;4-实验原理与步骤&#34;&gt;&lt;strong&gt;4.&lt;/strong&gt; 实验原理与步骤&lt;/h3&gt;
+&lt;p&gt;实验原理&lt;/p&gt;
+&lt;p&gt;应变片是最常用的测力传感元件。当使用应变片进行测试时，首先要将应变片牢固地粘贴到测试体表面。当测件受力发生变形，应变片敏感栅也随同变形，其电阻值也随之发生相应变化。之后，再通过测量转换电路，将电阻值变化转换成电压信号输出显示。&lt;/p&gt;
+&lt;p&gt;实验步骤&lt;/p&gt;
+&lt;p&gt;1、仪表及电路调零&lt;/p&gt;
+&lt;p&gt;2、半桥单臂接桥方式测试&lt;/p&gt;
+&lt;p&gt;3、半桥双臂接桥方式测试&lt;/p&gt;
+&lt;p&gt;4、全桥接桥方式测试&lt;/p&gt;
+&lt;h3 id=&#34;5实验数据及统计&#34;&gt;5.实验数据及统计&lt;/h3&gt;
+&lt;p&gt;半桥单臂接桥方式测试（向上调节）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3.9&lt;/td&gt;
+&lt;td&gt;6.1&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;9.9&lt;/td&gt;
+&lt;td&gt;7.9&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;半桥单臂接桥方式测试（向下调节）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;-0.5&lt;/th&gt;
+&lt;th&gt;-1&lt;/th&gt;
+&lt;th&gt;-1.5&lt;/th&gt;
+&lt;th&gt;-2&lt;/th&gt;
+&lt;th&gt;-2.5&lt;/th&gt;
+&lt;th&gt;-2&lt;/th&gt;
+&lt;th&gt;-1.5&lt;/th&gt;
+&lt;th&gt;-1&lt;/th&gt;
+&lt;th&gt;-0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;-1.9&lt;/td&gt;
+&lt;td&gt;-3.9&lt;/td&gt;
+&lt;td&gt;-6&lt;/td&gt;
+&lt;td&gt;-8.1&lt;/td&gt;
+&lt;td&gt;-10&lt;/td&gt;
+&lt;td&gt;-8&lt;/td&gt;
+&lt;td&gt;-6.1&lt;/td&gt;
+&lt;td&gt;-4&lt;/td&gt;
+&lt;td&gt;-2.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;半桥双臂接桥方式测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;8.1&lt;/td&gt;
+&lt;td&gt;12.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;19.9&lt;/td&gt;
+&lt;td&gt;15.9&lt;/td&gt;
+&lt;td&gt;12.1&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;3.9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;全桥接桥方式测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;8.1&lt;/td&gt;
+&lt;td&gt;15.9&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;39.9&lt;/td&gt;
+&lt;td&gt;31.9&lt;/td&gt;
+&lt;td&gt;24.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;全桥接桥方式测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x(mm)&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;2.5&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;1.5&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;0.5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压V(mv)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;8.1&lt;/td&gt;
+&lt;td&gt;15.9&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;39.9&lt;/td&gt;
+&lt;td&gt;31.9&lt;/td&gt;
+&lt;td&gt;24.1&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;6实验数据分析&#34;&gt;6.实验数据分析&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;半桥单臂接桥方式测试（向上调节）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps159.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps160.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;半桥双臂接桥方式测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps161.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;全桥接桥方式测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps162.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;数据分析;&lt;/p&gt;
+&lt;p&gt;灵敏度
+&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps163.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;半桥单臂接桥方式：S≈3.93&lt;/p&gt;
+&lt;p&gt;半桥双臂接桥方式：S≈7.98&lt;/p&gt;
+&lt;p&gt;全桥接桥方式：S≈15.96&lt;/p&gt;
+&lt;p&gt;线性度&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps164.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;半桥单臂接桥方式：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps165.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;≈1.01%&lt;/p&gt;
+&lt;p&gt;半桥双臂接桥方式：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps166.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;≈0.50%&lt;/p&gt;
+&lt;p&gt;全桥接桥方式：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps167.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;≈0.25%&lt;/p&gt;
+&lt;h3 id=&#34;7实验思考&#34;&gt;7.实验思考&lt;/h3&gt;
+&lt;p&gt;1.若要计算系统的回程误差，测试数据该如何处理？&lt;/p&gt;
+&lt;p&gt;答：应该要再加一组从位移最远点回到原点的电压-位移的数据。&lt;/p&gt;
+&lt;p&gt;2.在半桥单臂电桥接线原理图中，如R和R1-R3均为应变片，接桥时未能接成差动形式，系统能否正常工作？&lt;/p&gt;
+&lt;p&gt;答：不能，因为如果不是差动式，电桥桥臂电阻差值无法通过电压侧面体现。&lt;/p&gt;
+&lt;p&gt;3．实验中，在电桥的三种状态（半桥单臂、半桥双臂和全桥）下测试，为什么要求保持差动放大器的增益不变？&lt;/p&gt;
+&lt;p&gt;答：只有保持差动放大器增益不变，三种状态下测的数据才有对比性。&lt;/p&gt;
+&lt;h2 id=&#34;实验二电容式传感器静特性测试与动特性观测&#34;&gt;实验二：电容式传感器静特性测试与动特性观测&lt;/h2&gt;
+&lt;h3 id=&#34;1-实验目的-1&#34;&gt;&lt;strong&gt;1.&lt;/strong&gt; 实验目的&lt;/h3&gt;
+&lt;p&gt;1、掌握电容式传感器的工作原理及结构类型。&lt;/p&gt;
+&lt;p&gt;2、掌握电容传感器特性的实验测试方法。&lt;/p&gt;
+&lt;p&gt;3、了解电容式传感器的工程应用。&lt;/p&gt;
+&lt;h3 id=&#34;2-实验内容和要求-1&#34;&gt;&lt;strong&gt;2.&lt;/strong&gt; 实验内容和要求&lt;/h3&gt;
+&lt;p&gt;1、观察传感器综合实验仪上电容式传感器的结构型式。&lt;/p&gt;
+&lt;p&gt;2、了解电容变换器的转换原理（参见附录二）。&lt;/p&gt;
+&lt;p&gt;3、电容式传感器静特性测试。&lt;/p&gt;
+&lt;p&gt;4、电容式传感器动态测试。&lt;/p&gt;
+&lt;p&gt;5、进行实验前，先预习附录一“CYS型传感器系统综合实验仪使用指南”，了解该设备的基本结构与组成。&lt;/p&gt;
+&lt;h3 id=&#34;3-实验主要仪器设备和材料&#34;&gt;&lt;strong&gt;3.&lt;/strong&gt; 实验主要仪器设备和材料&lt;/h3&gt;
+&lt;p&gt;1、CYS型传感器系统综合实验仪本次实验所用模块包括：①电容式传感器；②电容变换器；③差动放大器；④低通滤波器；⑤低频振荡器；⑥测微头。⑦&lt;/p&gt;
+&lt;p&gt;毫伏表或数字电压表。&lt;/p&gt;
+&lt;p&gt;2、双线示波器及实验连接导线若干。&lt;/p&gt;
+&lt;h3 id=&#34;4-实验原理与步骤-1&#34;&gt;&lt;strong&gt;4.&lt;/strong&gt; 实验原理与步骤&lt;/h3&gt;
+&lt;p&gt;实验原理&lt;/p&gt;
+&lt;p&gt;实验仪器中的电容式传感器为差动变面积型，电容传感器由两组定片和一组动片组成。当安装于振动台上的动片上、下改变位置，与两组定片之间的重叠面积发生变化，极间电容也发生相应变化，成为两差动式电容。两金属极板间电容的计算式C＝εS／δ&lt;/p&gt;
+&lt;p&gt;实验步骤&lt;/p&gt;
+&lt;p&gt;相关仪表和电路调零.&lt;/p&gt;
+&lt;p&gt;电容传感器静态特性测试&lt;/p&gt;
+&lt;p&gt;电容传感器动态特性观测&lt;/p&gt;
+&lt;h3 id=&#34;5-实验数据及统计&#34;&gt;&lt;strong&gt;5.&lt;/strong&gt; 实验数据及统计&lt;/h3&gt;
+&lt;p&gt;（1）静态试验数据与结果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps168.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;位移x/mm&lt;/th&gt;
+&lt;th&gt;-5&lt;/th&gt;
+&lt;th&gt;-4.5&lt;/th&gt;
+&lt;th&gt;-4&lt;/th&gt;
+&lt;th&gt;-3.5&lt;/th&gt;
+&lt;th&gt;-3&lt;/th&gt;
+&lt;th&gt;-2.5&lt;/th&gt;
+&lt;th&gt;-2&lt;/th&gt;
+&lt;th&gt;-1.5&lt;/th&gt;
+&lt;th&gt;-1&lt;/th&gt;
+&lt;th&gt;-0.5&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;电压U/V&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2.58&lt;/td&gt;
+&lt;td&gt;2.21&lt;/td&gt;
+&lt;td&gt;1.91&lt;/td&gt;
+&lt;td&gt;1.63&lt;/td&gt;
+&lt;td&gt;1.395&lt;/td&gt;
+&lt;td&gt;1.11&lt;/td&gt;
+&lt;td&gt;0.846&lt;/td&gt;
+&lt;td&gt;0.536&lt;/td&gt;
+&lt;td&gt;0.304&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;0.5&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1.5&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2.5&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3.5&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;4.5&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;0.312&lt;/td&gt;
+&lt;td&gt;0.572&lt;/td&gt;
+&lt;td&gt;0.886&lt;/td&gt;
+&lt;td&gt;1.173&lt;/td&gt;
+&lt;td&gt;1.457&lt;/td&gt;
+&lt;td&gt;1.738&lt;/td&gt;
+&lt;td&gt;2.01&lt;/td&gt;
+&lt;td&gt;2.36&lt;/td&gt;
+&lt;td&gt;2.66&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从所得数据绘出的图表以及拟合直线可以得出，该传感器的灵敏度S≈0.585&lt;/p&gt;
+&lt;p&gt;（2）动态实验&lt;/p&gt;
+&lt;p&gt;现象：在改变激振器的频率时候（1HZ-30HZ），低通输出的波形随着频率增大，幅值增大，此时振动台剧烈震动；到了一定的频率时候，幅值开始下降，出现了失真，此时振动台由高频的轻微震动慢慢停下来了。&lt;/p&gt;
+&lt;p&gt;此时示波器的图像如图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps169.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;6.思考题&lt;/p&gt;
+&lt;p&gt;1、实验出现的问题&lt;/p&gt;
+&lt;p&gt;答：在实验中示波器不容易找到波形，许多台机器的激振器都达不到预期的效果，使得波形不稳定。&lt;/p&gt;
+&lt;p&gt;2、实验原理图 2 中，信号处理过程是先滤波再放大，能否先 放大再滤波？观察两种状态下的波形输出。&lt;/p&gt;
+&lt;p&gt;答：如果先放大再滤波的话放大会使噪声也也被同步放大此时再滤波可能导致部分噪声无法被过滤会产生误差。&lt;/p&gt;
+&lt;p&gt;3、拟合直线的选取方法有哪几种？不同拟合直线得出的传感器静态特性指标的数值会一致吗？此时该如何合理评价传感器的特性？&lt;/p&gt;
+&lt;p&gt;答：一般有两种；解析表达式逼近离散数据法、最小二乘法。不同拟合直线得出的传感器静态特性指标的数值一般不一致。&lt;/p&gt;
+&lt;h2 id=&#34;实验三霍尔传感器的应用位移及振幅测量&#34;&gt;实验三：霍尔传感器的应用――位移及振幅测量&lt;/h2&gt;
+&lt;h3 id=&#34;1-实验目的-2&#34;&gt;&lt;strong&gt;1.&lt;/strong&gt; 实验目的&lt;/h3&gt;
+&lt;p&gt;1.了解霍尔位移传感器的工作原理与结构，学会用霍尔传感器进行位移测试；&lt;/p&gt;
+&lt;p&gt;2.了解霍尔式传感器在振动测量中的应用。&lt;/p&gt;
+&lt;h3 id=&#34;2-实验内容和要求-2&#34;&gt;&lt;strong&gt;2.&lt;/strong&gt; 实验内容和要求&lt;/h3&gt;
+&lt;p&gt;1、观察传感器系统综合实验仪上霍尔位移传感器的结构；&lt;/p&gt;
+&lt;p&gt;2、直流激励下，用霍尔位移传感器进行静态位移测试；&lt;/p&gt;
+&lt;p&gt;3、直流激励下，用霍尔位移传感器进行振动测试；&lt;/p&gt;
+&lt;p&gt;4、交流激励下，用霍尔位移传感器进行振动测试；&lt;/p&gt;
+&lt;p&gt;5、进行实验前，先预习信号幅值调制的原理。&lt;/p&gt;
+&lt;h3 id=&#34;3-实验主要仪器设备和材料-1&#34;&gt;&lt;strong&gt;3.&lt;/strong&gt; 实验主要仪器设备和材料&lt;/h3&gt;
+&lt;p&gt;1、CYS型传感器系统综合实验仪本次实验所用模块包括：①直流稳压电源；②霍尔传感器；③电桥；④差动放大器；⑤毫伏表；⑥测微头；⑦移相器；⑧相敏检波器；⑨低通滤波器；⑩音频振荡器。&lt;/p&gt;
+&lt;p&gt;2、双线示波器；&lt;/p&gt;
+&lt;p&gt;3、接插连接实验导线若干。&lt;/p&gt;
+&lt;h3 id=&#34;4-实验原理与步骤-2&#34;&gt;&lt;strong&gt;4.&lt;/strong&gt; 实验原理与步骤&lt;/h3&gt;
+&lt;p&gt;**（1）**实验原理&lt;/p&gt;
+&lt;p&gt;实验台上的霍尔传感器，由两个环形磁钢组成梯度磁场和位于梯度磁场中的霍尔元件组成。当保持霍尔元件的控制电流Ｉ恒定，在与霍尔元件控制电流相垂直的方向上就有霍尔电势输出。霍尔元件在梯度磁场中上下移动时，输出的霍尔电势U0取决于其在磁场中的位移量x，即U0＝kx，所以测得霍尔电势的大小便可获知霍尔元件的位移量。&lt;/p&gt;
+&lt;p&gt;（2）实验步骤&lt;/p&gt;
+&lt;p&gt;霍尔传感器静态位移测试&lt;/p&gt;
+&lt;p&gt;相关仪表和电路调零&lt;/p&gt;
+&lt;p&gt;按图3直流激励接线&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps170.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;旋转测微头，使测微头顶杆与振动圆盘接触。&lt;/p&gt;
+&lt;p&gt;开启电源，调节测微头和电位器WＤ，使差放输出为零&lt;/p&gt;
+&lt;p&gt;上、下移动测微头各3.5mm，每变化0.5mm读取相应的电压值&lt;/p&gt;
+&lt;p&gt;直流激励下霍尔传感器振动测试&lt;/p&gt;
+&lt;p&gt;交流激励下霍尔传感器振动测试&lt;/p&gt;
+&lt;h3 id=&#34;5-实验数据及统计-1&#34;&gt;&lt;strong&gt;5.&lt;/strong&gt; 实验数据及统计&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;（1）霍尔传感器静态位移测试&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;位移****x/mm&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****2.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****2.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****2.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****1.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;电压&lt;strong&gt;&lt;strong&gt;U&lt;/strong&gt;&lt;/strong&gt;0&lt;/strong&gt;**/m****v**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.51**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.98**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.36**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.65**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.83**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.65**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;**.36**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.96**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;**.51**&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;位移****x/mm&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;7.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;8.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.0&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;9.5&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;1****0&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;电压&lt;strong&gt;&lt;strong&gt;U&lt;/strong&gt;&lt;/strong&gt;0&lt;/strong&gt;**/**&lt;strong&gt;v&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-0.61&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.19&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.65&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-2.17&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-2.48&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-2.08&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.62&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-1.11&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-0.58&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;-0.03&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;（2）直流激励下霍尔传感器振动测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps171.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;（1） &lt;strong&gt;交流激励下霍尔传感器振动测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps172.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6-实验数据分析&#34;&gt;&lt;strong&gt;6.&lt;/strong&gt; 实验数据分析&lt;/h3&gt;
+&lt;p&gt;1、 根据直流激励下静态位移测试数据，在坐标纸上绘出霍尔位移传感器实验曲线。并按某一规则作出拟合直线，依此分析计算传感器系统的灵敏度、线性度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps173.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如上图中，虚线为拟合的曲线。拟合的方程为：y = 0.9215x-9.3573&lt;/p&gt;
+&lt;p&gt;测试的曲线与拟合直线的R平方值相关性为0.9899，说明拟合性极高。及线性度为：0.99&lt;/p&gt;
+&lt;p&gt;传感器系统的灵敏度为0.9215v/mm&lt;/p&gt;
+&lt;p&gt;2.在交流激励下的振动测试中，观察记录到了各环节输出波形变化规律，给出相应合理的解释。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps174.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt; &lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps175.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在经过低通滤波器后，波形发生了变化。&lt;/p&gt;
+&lt;p&gt;思考题：&lt;/p&gt;
+&lt;p&gt;1.对实验中存在的问题、进一步的想法等进行讨论。&lt;/p&gt;
+&lt;p&gt;答：在静态特性的测试中，开始接的为+—2V的电源，但是在测试中发现无论如何调整差动放大器的增益都会超出最大量程13V，后选用了+2V、接地测试，发现数据线性度好且不会超出量程。&lt;/p&gt;
+&lt;p&gt;2.霍尔元件用作位移测量时，为什么只允许工作在梯度磁场范围？&lt;/p&gt;
+&lt;p&gt;答：因为霍尔元件在梯度磁场中因为磁场的变化能够产生电压的变化，而电压的变化与磁场的变化在磁场范围内成线性关系，而电压的变化能够被仪器检测出来，同时它能反映出磁场的变化，因此能够准确的计算出位移与磁场强度的变化关系。&lt;/p&gt;
+&lt;p&gt;3.解释在激励源为交流且信号变化也是交变时需采用相敏检波器的原因？&lt;/p&gt;
+&lt;p&gt;答:用相敏检波器的原因是要坚持该传感器的响应时间的，同过该检波器可以检测到传感器的输入信号和输出信号之间的相位差。也就是通常所说的角差。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>“信息杯”调研报告</title>
+        <link>https://slothhuman.github.io/p/%E4%BF%A1%E6%81%AF%E6%9D%AF%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/</link>
+        <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E4%BF%A1%E6%81%AF%E6%9D%AF%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/32.jpg" alt="Featured image of post “信息杯”调研报告" /&gt;&lt;h2 id=&#34;摘要&#34;&gt;&lt;em&gt;&lt;strong&gt;*摘要*&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;​	2020年初新冠肺炎爆发以来，我国采取了停工停课、限制交通、隔离甚至封城等防疫措施，对居民的生活造成了极大的影响，人们不免产生焦虑、恐慌的情绪。随着疫情管控有效进行，我国的疫情逐步得到控制，人们的生活开始步入正轨，我国加入了后疫情时代。&lt;/p&gt;
+&lt;p&gt;​	作为青年期向成人期的转型的大学生，已经进入“心理断乳期”，正逐渐从依赖于父母的心理状态中独立出来，努力地解决所遇到的问题，是一个人社会化的过渡期，新冠疫情对大学生的情绪变化有着更大的影响。为了调查进入后疫情时代大学生对于学习、生活和就业等各方面的社会情绪变化，小组以大学城的学生为主要目标，通过问卷调查和访谈的形式了解其社会情绪变化情况，并结合网络书刊和档案资料对后疫情时代大学生的社会情绪变化进行深入分析，探索在校生常见心理问题及其产生的影响因素，提出加强大学生健康关爱工作的建议，和对后疫情学生心理问题应对措施。&lt;/p&gt;
+&lt;p&gt;****关键词：****后疫情时代  大学生  社会情绪  影响因素&lt;/p&gt;
+&lt;h1 id=&#34;第一章-绪论&#34;&gt;第一章 &lt;strong&gt;绪论&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;11研究背景&#34;&gt;&lt;strong&gt;1.1研究背景&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;新型冠状病毒肺炎（Corona Virus Disease 2019，COVID-19），简称“新冠肺炎”，世界卫生组织命名为“2019冠状病毒病”，是指2019新型冠状病毒感染导致的肺炎。2019年12月以来，湖北省武汉市部分医院陆续发现了多例有华南海鲜市场暴露史的不明原因肺炎病例，证实为2019新型冠状病毒感染引起的急性呼吸道传染病。&lt;/p&gt;
+&lt;p&gt;2020年2月11日，世界卫生组织总干事谭德塞在瑞士日内瓦宣布，将新型冠状病毒感染&lt;/p&gt;
+&lt;p&gt;的肺炎命名为“COVID-19”。2月22日，国家卫生健康委发布通知，“新型冠状病毒肺炎”英文名称修订为“COVID-19”。3月11日，世卫组织认为当前新冠肺炎疫情可被称为全球大流行。4月4日，中国举行全国性哀悼活动。8月18日，国家卫健委修订完成了新型冠状病毒肺炎诊疗方案（试行第八版）。&lt;/p&gt;
+&lt;p&gt;今年已经是2021年了，距离新冠疫情的爆发已经过去了2年，这两年虽然中国对疫情有着非常有力的控制，但是其对我们的影响也是空前的，当然不仅仅是对经济的影响，更有对人们的生活、学习工作、观念等有着很大的影响。下面我们将现在称为“后疫情时代。所谓后疫情时代，并不是我们原来想象的疫情完全消失，一切恢复如前的状况，而是疫情时起时伏，随时都可能小规模爆发，从外国外地回流以及季节性的发作，而且迁延较长时间，对各方面产生深远影响的时代。其概念如下：&lt;/p&gt;
+&lt;p&gt;新冠疫情结束，代表是疫苗正式商用和全球经贸往来的恢复。&lt;/p&gt;
+&lt;p&gt;国内变革，疫情对经济、教育、制度的影响，群众消费、健康、资讯观念的改变。&lt;/p&gt;
+&lt;p&gt;通过疫情，反应了世界格局的变化，各国应对疫情的政策方针，使得政经问题矛盾的暴露凸显，这些问题不断演变消解的过程。&lt;/p&gt;
+&lt;p&gt;传染病的全球联防联控治理将会搬上历史舞台，研究去中心化的生物安全信息网和防御生化武器再度提上日程。&lt;/p&gt;
+&lt;p&gt;作为大学生的我们也同样感受到了疫情对我们的影响，半年的网课，长时间的居家生活，相信对每一位大学生都有不小的冲击，也许正在准备考研的你无法再次静下心来，变得异常浮躁；也许计划好大学生活的你突然陷入迷茫，每天无所事事。后疫情时代大学生的情绪变化以及所受到的更深层次的影响到底有什么呢？&lt;/p&gt;
+&lt;p&gt;我们成立小组，为此立题，结合我们自身的实际能力开展一场基于广东工业大学后疫情时代大学生的社会情绪变化以及影响因素的调查研究。&lt;/p&gt;
+&lt;h2 id=&#34;12研究目的与意义&#34;&gt;&lt;strong&gt;1.2&lt;/strong&gt;	&lt;strong&gt;研究目的与意义&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;大学生是国家宝贵的人力资源，所谓青年强，则国强，作为国家未来的希望，在后疫情时代所带来的情绪变化以及背后的原因都是值得深究及调查的。&lt;/p&gt;
+&lt;p&gt;后疫情时代，国际战略关系发生变化与重组，多边主义和全球治理面临新的国际环境。在疫情的影响下，形成了一系列次生灾害，导致世界经济陷入深度衰退，全球联系大幅衰减，推动国际实力对比发生重要量变，也使国家间战略关系面临深刻重组。一些西方国家在全球抗“疫”的关键时刻，通过网络媒体等途径污蔑、抹黑、甩锅中国，制造舆论，对我国大学生进行舆论渗透、思想迷惑和精神侵蚀，他们充满正义和激情，容易被激发社会责任感，也容易陷入不良思想言论的误区。&lt;/p&gt;
+&lt;p&gt;新冠疫情的全球蔓延给国际学生流动带来了巨大的不确定性,这一不确定性是多方面的。例如留学国家出台的对国际学生的留学政策、健康安全因素的考量、国际局势的变化等。&lt;/p&gt;
+&lt;p&gt;自20世纪90年代高校扩招政策实施以来，大学毕业生“就业难”成为了当前环境下极为严峻的社会问题。2019年末，“新型冠状病毒肺炎”突然爆发，在全球范围内蔓延，供应链和价值链严重受挫，传统工商业经营困难，极大地影响了国内外的消费力度和进出口贸易规模，迫使一部分大型企业 缩编裁员、中小型企业破产倒闭，城镇失业率大幅度增加，大学毕业生面临前所未有的“就业难、创业 难”的境遇。而高校毕业人数不断创新高。&lt;/p&gt;
+&lt;p&gt;我们本次调研的主要目的着重放在以下几点：&lt;/p&gt;
+&lt;p&gt;参考已有文献及研究成果，严格遵照问卷设计的要求和原则，采用李克特量表作为评分标准设计调查问卷。&lt;/p&gt;
+&lt;p&gt;通过统计研究方法，并依据建立的数学模型对调查结果深入分析，探究后疫情时代社会情绪变化影响大学生的主要因素，进而提出针对性的改进优化建议。&lt;/p&gt;
+&lt;p&gt;对在校大学生进行访谈，了解他们如何看待亲社会行为。从学生的角度切入，找出后疫情时代影响大学生社会情绪变化的因素及具体原因，并提出一些可行的解决方案。&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;h2 id=&#34;13后疫情时代大学生的现状&#34;&gt;&lt;strong&gt;1.3后疫情时代大学生的现状&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;后疫情时代到底是怎么样的呢，大学生的现状究竟如何，根据资料的查找以及小组成员的思考，我们有以下分析：&lt;/p&gt;
+&lt;p&gt;l 复课封校难适应引情绪变化&lt;/p&gt;
+&lt;p&gt;直至8月中后旬,全国各高校开始陆续复学复课,在由于全国大学生群体庞大、人员分布复杂,且根据后疫情时代的疫情形学复课后大学生仍需封校管理。封校给学生正常生活和学习以及社交带来一些不便,封校期间学生心理情绪有变化,由此让学生产生厌烦抵抗心理也在正常范畴内，后疫情时代，由于疫情并没有完全消失，时起时伏，随时可能小规模爆发，为防止校园内学生交叉感染进行封闭校园，对大学生而言，突如其来的环境变化，让他们难以适应，容易产生心理情绪变化，随着封闭时间增加，焦虑不安等复杂情绪逐渐滋生，且越积累越容易在学生群体内爆发。&lt;/p&gt;
+&lt;p&gt;l 返乡困难促使思家之情加剧&lt;/p&gt;
+&lt;p&gt;面对当前新型冠状病毒肺炎疫情的严峻挑战，全国各地都在倡导就地居住，非必要不出校，这让某些省外或者居住地比较远的大学生无法返乡陪伴父母；一些返乡的大学生在接受长达14天的隔离之后仍遭受周边人员的疏远甚至遭受非议，这无疑让考虑返乡的大学生更加难以选择。回家的困难加剧了时刻保持高度精神紧张的大学生们的思念，为无法回家返乡感到消极烦躁&lt;/p&gt;
+&lt;p&gt;l 过度恐慌出现人际交流障碍。&lt;/p&gt;
+&lt;p&gt;这次疫情病毒的传播速度快、传播范围广、危害性强，网络上关于疫情的信息鱼龙混杂，加之后疫情的不确定，引发了“心理恐慌病毒”在大众中的蔓延。大学生作为一个特殊群体，容易受到外界环境变化的强烈影响，情绪易产生较大波动而出现两极性，即可能在短期内出现情绪高涨或消沉。极端的情绪会让大学生产生对疫情的过度恐惧，使其畏惧与人特别是陌生人的交流，出现了对任何社交行为的抵制心理，从而过度地沉溺于手机和网络的虚拟世界中，家庭成员之间矛盾呈现短期上升趋势，亲子关系紧张。&lt;/p&gt;
+&lt;p&gt;l 环境改变产生群体性焦虑。&lt;/p&gt;
+&lt;p&gt;后疫情时代打乱了他们的节奏，大学生出现了不同程度的群体性焦虑，主要表现在两个方面：一是学习方式变化引发的学业焦虑。学习从线下全面走向线上，教学场景的陌生、师生互动形式的单一、网络信号的不畅、管控手段的不足等因素，学生的学习效果受到一定程度的影响，学生产生焦虑、紧张、担心、烦躁等负面情绪。二是疫情压力下的毕业焦虑。受全球疫情影响，毕业生就业、升学、出国等各方面都不同程度受到影响，原定计划被打乱，面对模糊不确定的未来，毕业生出现担忧、迷茫、不安等情绪上焦虑。据有关数据显示，在疫情居家期间，青年人的睡眠时间更短，出现了熬夜、失眠等症状。&lt;/p&gt;
+&lt;p&gt;l 大学生实习就业形势严峻引发焦虑&lt;/p&gt;
+&lt;p&gt;如果说实习阶段是一个简单的社会锻炼的话，那么走进社会的话，才是真正的工作，走上工作岗位。由于疫情的影响，大四的学生以及要毕业的专科生失去了原本可以在实习阶段时积累的很多的知识经验，无法为将来走上工作岗位打下良好的基础，这对于他们来说是非常遗憾的，给他们的人生造成了巨大的影响，让他们情绪低落，焦虑不安。近期，在教育部、人社部召开的2021届毕业生就业创业工作会上，教育部通报的2021届毕业生将达909万，比2020年再增加35万。虽然疫情在国内得到了有效的控制，但由于前期疫情的持续影响，很多中小企业的用工需求大幅度缩减，这给大学毕业生的就业带来了巨大的压力，引起对未来就业道路的焦虑&lt;/p&gt;
+&lt;p&gt;l 外界信息冗杂促使心绪波动&lt;/p&gt;
+&lt;p&gt;大学生阶段是学生个人处于校园和社会过渡时期虽然大学生多数已经成年,但是社会阅历并不深厚,对于事件的应变能力、调节情绪抗压能力还有待提高,尤其在全国疫情大考的气氛影响下,大学生们作为时代里正青年的一个群体,对于这种极易引起家国共鸣和热血感性的事情都有自己的想法和情绪,在这样的环境影响下,心理情绪很容易受到媒体报道进入新阶段。各家体争相把疫情作为报道的重中之重,一时间信息爆炸,公众疫情新闻格外关注的同时,也容易产生不良、焦躁心理。同理,在后疫情时代，在校大学生自身对信息判断造力还不完善,容易受到一些新闻的干扰,使得心理和情绪发转变,影响心理健康开展。&lt;/p&gt;
+&lt;h2 id=&#34;14调研方案与方法&#34;&gt;&lt;strong&gt;1.4调研方案与方法&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;141调研方案&#34;&gt;&lt;em&gt;&lt;strong&gt;*1.41调研方案*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;主题：后疫情时代大学生的社会情绪变化以及影响因素的调查研究&lt;/p&gt;
+&lt;p&gt;关键词：后疫情；大学生；社会情绪变化；影响因素&lt;/p&gt;
+&lt;p&gt;思路：因此，本次调研内容应围绕上面四点展开得出相关结论，结论的落脚点在于有什么情绪变化以及产生变化的原因，最后应该要根据得出的结论提出解决办法&lt;/p&gt;
+&lt;p&gt;提问题思路（提出来的问题都是有理由的）&lt;/p&gt;
+&lt;p&gt;调研对象的性别、年级、专业（理科类，文科类）、家庭状况是否会对结果产生影响，因此问卷内容应该有这方面的涉及&lt;/p&gt;
+&lt;p&gt;接着应该要体现有一些情绪变化：通过侧面或直接性的问题了解情绪的变化，比如对一些事情会更积极的看待还是变得消极&lt;/p&gt;
+&lt;p&gt;重点应该在影响因素方面的多样性，这些方面要联系到大学生这个主体，比如：后疫情时代的——&lt;/p&gt;
+&lt;p&gt;就业情况（先调查疫情对就业的影响大不大）；&lt;/p&gt;
+&lt;p&gt;国家发展（对中国更有信心，更有安全感，就相对于外国的鸡犬不宁，因为国家动荡会让一个国家的青年人对未来更加迷茫，对自身存在的理由产生质疑）；&lt;/p&gt;
+&lt;p&gt;居住环境压力（长期性，不定时性封校，外出游玩不方便，释放压力方式局限）；&lt;/p&gt;
+&lt;p&gt;疫情的反复（对自身健康的不安全感）&lt;/p&gt;
+&lt;p&gt;家庭状况变化（有些家庭因为疫情经济状况变差）&lt;/p&gt;
+&lt;p&gt;教学条件（对网课在心理方面的看法）&lt;/p&gt;
+&lt;p&gt;对此结果，问卷从大学生的角度，体现小组对国家，社会，学校，大学生有什么建议，来更好促进大学生心理健康发展&lt;/p&gt;
+&lt;p&gt;如：你认为学校针对后疫情时代大学生心理状况调解开展相关讲座有必要吗等（有听说不少学校有人跳楼）&lt;/p&gt;
+&lt;p&gt;问卷名称&lt;/p&gt;
+&lt;p&gt;《后疫情时代大学生的社会情绪变化及影响因素的调查研究》&lt;/p&gt;
+&lt;p&gt;调研对象&lt;/p&gt;
+&lt;p&gt;以大学城校区的就读大学生为主，其中包括大一、大二、大三、大四和其他。&lt;/p&gt;
+&lt;h3 id=&#34;142调研方法&#34;&gt;&lt;em&gt;&lt;strong&gt;*1.42调研方法*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;调研方法：问卷调查法、访谈调查法、文献调查法&lt;/p&gt;
+&lt;p&gt;l 问卷调查法&lt;/p&gt;
+&lt;p&gt;本次调研采用线上问卷调查的方法，以参与者自愿填写为原则，通过简短的语句告知参与者本次调研的主题、目的及意义。问卷采取匿名形式收集，参与者能够更真实的反映出自己的想法，免去他们的顾虑，从而使问卷得到的数据更为有效，可信度更高。调查数据较多，但存在诸多客观因素，结论可能会有少许偏差。&lt;/p&gt;
+&lt;p&gt;调研问卷： 《后疫情时代大学生的社会情绪变化以及影响因素的调查研究 》&lt;/p&gt;
+&lt;p&gt;问卷内容设置：从参与者主体为大学生的基本情况作为考虑的出发点，收集参与者的基本信息、大学生的社会情绪和情绪变化的影响因素等多方面数据，预计共设置了15个问题，全部为选择题，若有选项不符参与者所想，设有其他供其填写说明。&lt;/p&gt;
+&lt;p&gt;附表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;/&lt;/th&gt;
+&lt;th&gt;线上问卷&lt;/th&gt;
+&lt;th&gt;线下问卷&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;发放数量&lt;/td&gt;
+&lt;td&gt;无上限&lt;/td&gt;
+&lt;td&gt;暂不考虑设置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;实际有效数量&lt;/td&gt;
+&lt;td&gt;350份以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有效率&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;l 访谈调查法&lt;/p&gt;
+&lt;p&gt;本次调研采用线下访谈的方法，采用面对面交流、口头问答的形式进行。访谈过程由调研者掌控，调研内容、访谈问题由调研者提出。在访谈过程中，还可以观察调查者的言行举止、表情等外在表现，可以得到更深层次的分析及研究。此方法具有充分的灵活性，可以得到较为准确且直观的访谈结果，但访谈数据偏少。&lt;/p&gt;
+&lt;p&gt;访谈内容：访谈主要围绕对后疫情时代大学生的社会情绪变化的看法以及其影响因素来展开。&lt;/p&gt;
+&lt;p&gt;访谈对象：&lt;/p&gt;
+&lt;p&gt;本次的调研访谈对象主要为广州大学城各高校大学生，且以广东工业大学大学城校区的学生为主。&lt;/p&gt;
+&lt;p&gt;为得到多角度的调研结论，可以考虑访谈多个学院的辅导员、部分学生家长代表等与大学生相关且具有代表性的更多社会角色，对此调研方面的相关感受及看法。&lt;/p&gt;
+&lt;p&gt;抽样方法：大学生采用随机抽样与分层抽样结合，老师、家长需提前联系。&lt;/p&gt;
+&lt;p&gt;若受到疫情影响，可采取线上访谈的方式，通过打电话或腾讯会议进行访谈。&lt;/p&gt;
+&lt;p&gt;附表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;/&lt;/th&gt;
+&lt;th&gt;线上访谈&lt;/th&gt;
+&lt;th&gt;线下访谈&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;发放数量&lt;/td&gt;
+&lt;td&gt;若受疫情影响，酌情考虑&lt;/td&gt;
+&lt;td&gt;学生：无上限老师：无上限家长：无上限&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;实际有效数量&lt;/td&gt;
+&lt;td&gt;学生：100老师：10家长：5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有效率&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;l 文献调查法&lt;/p&gt;
+&lt;p&gt;该方法为调研活动提供科学的理论支撑与研究方法，通过文献的二次分析，得出有价值的结论与建议，指导科学研究与实践活动，从而全面、正确地了解掌握所要研究问题的一种方法。由于文献可能并非最新理论，文献中的数据具有延时性和不确定性，由此方法得到的结论偏差较大。&lt;/p&gt;
+&lt;p&gt;文献来源：广东工业大学图书馆、广东工业大学校园网论文数据库、中国知网、百度等搜索引擎。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;*1.43分析方法*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;利用excel，spss，问卷星等软件或小程序，借助聚类分析、相关分析等分析方法，利用图表展示出结果，得到问卷的大体结论。通过对问卷的分析或者访谈的结果，用文献做科学支撑，可以得到更深层次的结论。&lt;/p&gt;
+&lt;h2 id=&#34;15调研的重难点与亮点&#34;&gt;&lt;strong&gt;1.5&lt;/strong&gt;	&lt;strong&gt;调研的重难点与亮点&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;*1.51重点*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;大量的、广泛的统计调查，取得原始的有力的调查数据。&lt;/p&gt;
+&lt;p&gt;对数据进行定量分析、定性分析。&lt;/p&gt;
+&lt;p&gt;选择合适的调研和分析工具，透彻地分析调研工具的利与弊。&lt;/p&gt;
+&lt;p&gt;选取合适的假设前提，并穷举罗列尽可能多的原因和分析，用合理的判断选取正确的结果。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;*1.52难点*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;确立后疫情时代的时间规模和时间段。疫情仍在延续和发展，还有许多未知变数。为此为明确后疫情时代，选取国务院新闻办公室6月7日发布的《抗击新冠肺炎疫情的中国行动》白皮书中分析的5个阶段作为分析基础，选取第五阶段开始直至今日（即是2021年4月29日开始直至今日）。&lt;/p&gt;
+&lt;p&gt;数据的科学性、全面性、原始性。具体在获取数据的单一层面，由执行者（本小组）发出的调研问卷对象一般集中在学校，多为执行者的身边人。调研的内容为大学生的社会情绪变化以及影响因素，出于多角度交叉验证的思考，社会情绪的变化需要有多角色多比对才能更好实现。&lt;/p&gt;
+&lt;p&gt;样本数据处理。这里的难点在于如何均等的尽可能选取多调研样本的情况下，界定不同角色样本对于数据决策的权重影响，同时考虑到权重化影响的信息损失程度。&lt;/p&gt;
+&lt;p&gt;分析工具或模型的适应性。SPSS？&lt;/p&gt;
+&lt;p&gt;原因归纳全面、深入程度。逐个逐个问题分析，采用已知的分析方法和手段。对数据进行M值、P值、F值、残差等数据处理。&lt;/p&gt;
+&lt;p&gt;设计出体现出变化需要有对比数据。难点在于获取更早的数据，以突出变化。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;*1.53亮点*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1.在问卷样本的选择上具有代表性和特殊性。样本涵盖了大一到大四的四个年级学生，包含各个专业；四个年级的学生全部经历了从疫情爆发时期过渡到后疫情时代的阶段。&lt;/p&gt;
+&lt;p&gt;2.调研方式的全面性，调研方式为查阅文献、问卷调研和访谈。通过知网、维基百科等互联网手段以及翻阅图书馆书籍等传统手段，收集到大量翔实充分的二手数据；访谈对象具有代表性，为从多个角度去分析论证调研的课题，我们访谈对象的选择包括学生家长、专业老师、辅导员、应届的毕业生和在读的本科生、研究生。通过问卷调研与访谈结果，获得了大量可靠的一手数据，一手、二手数据相结合，使得本次调研结果真实可信，内容充实。&lt;/p&gt;
+&lt;p&gt;3.数据分析的全面性。采用多种统计方法，建立模型等方式，分析结果，如利用 SPSS、问卷星等工具对调查数据进行关于后疫情时代大学生社会情绪的变化及其影响因素的调查研究。&lt;/p&gt;
+&lt;h1 id=&#34;第二章-理论基础与调研流程&#34;&gt;第二章 &lt;strong&gt;理论基础与调研流程&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;本课题研究的题目为《后疫情时代大学生的社会情绪变化以及影响因素的调查研究》，在这个课题中，我们认为需要对相关的概念进行必要的界定，以利于我们对整个调查的准确把握。&lt;/p&gt;
+&lt;h2 id=&#34;21后疫情时代的概念&#34;&gt;&lt;strong&gt;2.1后疫情时代的概念：&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;“后疫情时代”的意思是指新型冠状病毒疫情过去后的时代，但并不是我们想象的疫情完全消失，一切恢复如前的状况，而是疫情时起时伏，随时都可能小规模爆发，从外国外地回流以及季节性的发作，而且迁延较长时间，对各方面产生深远影响的时代。&lt;/p&gt;
+&lt;p&gt;由于这次疫情或将持续很长时间，经过这次疫情之后，人们的思维方式，生活习惯将会产生很大的变化。鉴于历史上的大疫情均对当时国际形势造成了巨大冲击，此次疫情也不可避免会有此影响。最重要的是，抗时间线拉长对产业的影响，比如线上线下的优劣势，以及各行各业在疫情时期受到不同程度重创，恢复期长短等等，这些将改变很多人的生活。&lt;/p&gt;
+&lt;p&gt;“后疫情时代”也可以理解为就是经历后疫情，对人们消费习惯，经济，文化，教育等影响后的时代。&lt;/p&gt;
+&lt;h2 id=&#34;22社会情绪的概念&#34;&gt;&lt;strong&gt;2.2社会情绪的概念：&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;社会情绪(social emotion)是指伴随个体整个社会心理过程产生的主观心理体验和心理感受，是个体在长期社会交往中所体验到和表达着的情绪。事实上，人作为社会关系的总和，从一出生就开始体验到的情绪，均不可避免地带有社会和文化的烙印。个体在成长过程中，不断地从与周围人的交往中习得如何表达和体验情绪。在这一过程中，个体所在的&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.com/item/%e7%a4%be%e4%bc%9a%e7%8e%af%e5%a2%83&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;社会环境&lt;/a&gt;、文化规范和&lt;a class=&#34;link&#34; href=&#34;https://baike.baidu.com/item/%e9%81%93%e5%be%b7%e4%bf%a1%e5%bf%b5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;道德信念&lt;/a&gt;等，均成为情绪表达与理解不可忽视的影响因素。社会文化的内涵和意义附加到与生俱来的基本情绪中，形成相互交织和相互渗透的诸多复杂情绪，这就是社会化的情绪。从这个意义说，人的情绪就是社会情绪，人的成长过程就是情绪的社会化过程。&lt;/p&gt;
+&lt;h2 id=&#34;23情绪的社会结构理论&#34;&gt;&lt;strong&gt;2.3****情绪的社会结构理论&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;情绪的社会结构理论认为，个体情绪的发生和发展并非完全独立于外部社会，也不是唯一来自内省。&lt;/p&gt;
+&lt;p&gt;个体的情绪体验植根于合理的社会情境关系中。因此，情绪不是固定不变的，而是随着社会情境和人际关系的改变以不同形式进行表达。该理论认为，情绪至少包括以下四种社会结构成分：①个体动机情绪；②个体的需要与期待；③在认知基础上形成的价值观和信念；④在人际关系基础上形成的价值观与信念。所有这些结构成分总是依据变化的社会情境进行着不同的整合。从这个意义上说，结构论强调情绪的社会性。另一方面，结构论还认为情绪是高度个体化的。这一特点首先突出表现在情绪体验是在个体所处的特定社会关系中；其次，情绪体验中无不渗透着个体的家庭、性别、年龄、社会地位等个体化因素的影响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.4调研流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在本次对后疫情时代大学生的社会情绪变化及影响因素的调查研究&lt;/p&gt;
+&lt;p&gt;的过程中，调查活动由调查准备、规划总体大纲、调研过程、数据分析与报告生成四大部分组成，同时各个部分联系紧密，层层推进。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps5.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;调研流程图&lt;/p&gt;
+&lt;p&gt;（1） 调研准备&lt;/p&gt;
+&lt;p&gt;这个部分是本次调研的第一步，首先分为确定主题与方向，下一步是资料的收集与文献的查询，再一步是讨论交流以及设计思路。首先本小组人员通过多次开会确定具体的方向主题，然后进一步进行分工合作，同时阅读了其他文献，从中寻找灵感，获得经验。&lt;/p&gt;
+&lt;p&gt;（2）设计调研框架&lt;/p&gt;
+&lt;p&gt;这部分主要是设计调研框架，首先是确定调研对象为在读大学生与设计本次调研问卷，然后是寻找本次调研的切入点与着重点，进一步确定调研内容，规划具体方向，然后整体总结调研流程并将各个指标具体化优化本次的调研方案，最后是准备调研材料，为调研做准备。&lt;/p&gt;
+&lt;p&gt;（3）调研过程&lt;/p&gt;
+&lt;p&gt;调研过程包括，首先进行调研大纲规划，然后进一步确定分工以及未来的日程安排，人物访谈同步进行。调查中，大家分别去分发问卷，以获得更多的数据之后，统一将数据集中进行处理，最后统计结果进行评估。&lt;/p&gt;
+&lt;p&gt;（4）数据分析与报告生成&lt;/p&gt;
+&lt;p&gt;收集完数据之后，首先对数据进行单因素分析，然后进一步运用spss软件以及数学建模等方法，对数据进行深度分析，挖掘数据间的联系，整体进行分析，加上访谈的结果，最后得出结论并进行报告的撰写。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三章&lt;/strong&gt;	&lt;strong&gt;模型的建立及问卷设计&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;21问卷设计&#34;&gt;&lt;em&gt;&lt;strong&gt;*2.1*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*问卷设计*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;本问卷将后疫情时代大学生社会情绪变化以及影响因素建立成体系，将要评测的相应指标转化为对应区域的问题，从而形成一个紧密结合的问卷体系。下表将各变量编号，以便于进一步具体深入的分析。变量代码和名称对照表如下表所示：&lt;/p&gt;
+&lt;p&gt;变量代码和名称对照表&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps6.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;22测评数据的信度与效度检验&#34;&gt;&lt;em&gt;&lt;strong&gt;*2.2测评数据的信度与效度检验*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;在调查问卷的设计和研究中，我们首先根据研究测评体系作问卷的初步设置，之后经过调研小组的讨论修改完善确定最终问卷并予以发放。对于问卷收集的数据，我们需要分析数据的可靠性和有效性，于是我们需要对数据做一个信度与效度的检验。&lt;/p&gt;
+&lt;h3 id=&#34;23信度的检验&#34;&gt;&lt;em&gt;&lt;strong&gt;*2.3信度的检验*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;问卷的信度就是问卷的可靠性，指采用同样的方法对同一对象重复测量时所得结果的一致性程度，也就是反映实际情况的程度。信度指标多以相关系数表示，大致可分为三类：稳定系数（跨时间的一致性），等值系数（跨形式的一致性）和内在一致性系数（跨项目的一致性）。信度分析的方法主要有四种：重测信度法、复本信度法、折半信度法以及 α 信度系数法。在这四种方法中，α 信度系数法是最常用的信度分析法，本文将采用此法对问卷收集的数据做可靠性的检验。&lt;/p&gt;
+&lt;p&gt;可靠性高低与 α 系数的关系对照表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;α 系数&lt;/th&gt;
+&lt;th&gt;可靠性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0-0.5&lt;/td&gt;
+&lt;td&gt;低信度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0.5-0.7&lt;/td&gt;
+&lt;td&gt;中等信度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0.7-0.9&lt;/td&gt;
+&lt;td&gt;高信度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0.9-1.0&lt;/td&gt;
+&lt;td&gt;非常高的信度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;针对本次问卷收集到数据，利用 SPSS22分析得出如下表格&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*可靠性*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*统计资*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*料*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cronbach 的 Alpha&lt;/td&gt;
+&lt;td&gt;项目个数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0.855&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从表中数据可知α 系数为0.855，说明本次调研收集到的数据具有很高的可信度。&lt;/p&gt;
+&lt;h3 id=&#34;24效度的检验&#34;&gt;&lt;em&gt;&lt;strong&gt;*2.4效度的检验*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;效度即有效性，它是指测量工具或手段能够准确测出所需测量的事物的程度。效度是指所测量到的结果反映所想要考察内容的程度，测量结果与要考察的内容越吻合，则效度越高；反之，则效度越低。在本次调研中是指调研数据的准确程度。下表给出了 KMO 检验和 Bartlett&amp;rsquo;s 球度检验结果。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*KMO*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*与*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*Bartlett*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*检定*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Kaiser-Meyer-Olkin 測量取样适当性。&lt;/td&gt;
+&lt;td&gt;.837&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bartlett 的球形检定&lt;/td&gt;
+&lt;td&gt;大约 卡方&lt;/td&gt;
+&lt;td&gt;6102.933&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;df&lt;/td&gt;
+&lt;td&gt;465&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;显著性&lt;/td&gt;
+&lt;td&gt;.000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;由上表可知，本次调研问卷的 KMO 值为 0.837，一般情况下，KMO 值&amp;gt;0.6 就默认量表的效度较高，故本次调研所设置量表题所得结果具有良好的效度。&lt;/p&gt;
+&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-1&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-2&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-3&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-4&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;25量表确定&#34;&gt;&lt;em&gt;&lt;strong&gt;*2.5量表确定*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;李克特量表(Likert scale)是属评分加总式量表最常用的一种，属同一构念的这些项目是用加总方式来计分，单独或个别项目是无意义的。它是由美国社会心理学家李克特于1932年在原有的总加量表基础上改进而成的。该量表的选项用五种评价程度表示，（比如“非常满意”、“比较满意”、“一般”、“不太满意”、“很不满意”）并分别记为 5、4、3、2、1，每个被调查者的态度总分就是他对各道题的回答所得分数的加总，这一总分可说明他的态度强弱或他在这一量表上的不同状态。本文采用 5 级 Liken 量表，针对“非常（感兴趣/了解）、比较（感兴趣/了解）、一般、不太（感兴趣/了解）、很不（感兴趣/了解）”相应赋值5,4,3,2,1。此外，本调查中也设置了矩阵量表题。&lt;/p&gt;
+&lt;p&gt;在问卷完成后，每一个选项也许会被个别的分析，或某些成组的选项被加总并建立成一个量表。因此，李克特量表常常被称为累加量表（summative scale）。&lt;/p&gt;
+&lt;p&gt;至于个别的李克特选项可视为区间数据，或只应该被视为顺序数据，仍然是具争议性的议题。许多人将这样的项目视为顺序尺度的数据，因为特别是只有使用5个等级时，无法让受测者察觉到这些相邻的项目，其间隔是等距的。在另一方面，通常（正如上面的例子）其response levels的措辞清楚的暗示出中间类别的response levels的对称性；在最低限度，这样一个项目，将变成介于顺序和区间尺度之间 ；只将它视为顺序数据将遗失一些信息。此外，如果该项目附带视觉近似评价标尺（visual analog scale），其回答程度的间隔则明确表示，其作为区间数据的论点是更加坚固。&lt;/p&gt;
+&lt;p&gt;第四章 &lt;strong&gt;数据分析结果&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;heading-5&#34;&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;41数据代表性分析&#34;&gt;&lt;em&gt;&lt;strong&gt;*4.1*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*数据代表性分析*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;第1题  您的性别    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;309&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps7.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps8.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;53.65%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;267&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps9.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps10.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;46.35%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;第2题  您的年级    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;279&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps11.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps12.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;48.44%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;142&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps13.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps14.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;24.65%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;130&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps15.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps16.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;22.57%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps17.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps18.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;4.34%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本次的问卷对象是大学生，其中男女比例与我国人口男女比例相近，说明本次调研之中，性别带来的误差相对较低。在本次数据样本中，大一的样本占总数据的48.44%，大二的样本占24.65%，大三的样本占22.57%，大四的样本占4.34%，所以本次调研的主题对象为大一、大二、大三学生。&lt;/p&gt;
+&lt;h3 id=&#34;42单因素分析&#34;&gt;&lt;em&gt;&lt;strong&gt;*4.2单因素分析*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;第3题  疫情对于您的所在地的影响程度    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;影响较小&lt;/td&gt;
+&lt;td&gt;391&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps19.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps20.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;67.88%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;影响程度中等&lt;/td&gt;
+&lt;td&gt;153&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps21.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps22.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;26.56%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;影响较大&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps23.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps24.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;5.56%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：收集到的数据显示，有67.88%的同学的所在地受本次疫情的影响较小，26.56%的同学所在地受疫情的影响程度中等，只有5.56%的同学所在地受疫情影响较大。也就是说，本次调研的对象大多数受疫情影响的程度不会很大。&lt;/p&gt;
+&lt;p&gt;第4题  疫情对您的学业有什么影响？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;封闭式学习，进步了&lt;/td&gt;
+&lt;td&gt;73&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps25.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps26.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;12.67%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;意志力坚定，影响不大&lt;/td&gt;
+&lt;td&gt;281&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps27.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps28.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;48.78%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;不想学，退步了&lt;/td&gt;
+&lt;td&gt;196&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps29.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps30.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;34.03%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps31.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps32.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;4.51%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：在本次调研对象中，因疫情封闭式学习而进步的占12.67%，对学习影响不大的占48.78%，不想学的占34.03%，有4.51%的同学有其他影响。这种反馈，说明了差不多有一半的同学，在面对封闭式学习的情况下，还是能保持原有的学习状态。而三成以上的同学，因为疫情的到来，改变了原有的学习方式，又或者疫情带来的其他问题，形成了不想学的心理，导致学习上的退步。&lt;/p&gt;
+&lt;p&gt;第5题  您就读的高校是否封过校？您是否积极配合？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;封过，积极配合&lt;/td&gt;
+&lt;td&gt;265&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps33.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps34.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;46.01%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;封过，不太乐意，但还是愿意配合&lt;/td&gt;
+&lt;td&gt;185&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps35.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps36.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;32.12%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;封过，不愿意配合&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps37.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps38.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;3.13%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;无&lt;/td&gt;
+&lt;td&gt;108&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps39.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps40.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;18.75%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：此题表明，在疫情期间，样本中有81.25%的同学就读的高校封过校，这些同学中，有一半以上的同学是积极配合的，32.12%的同学虽然对封校不太乐意，但还是愿意配合，只有极少数人不愿意配合。说明在这次的疫情中，虽然各种应对措施对同学们的生活造成了不小的影响，但是大学生依然能去配合国家政府和学校制定的相应的管制措施。&lt;/p&gt;
+&lt;p&gt;第6题  疫情背景下，您是否担心您的就业前景？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;非常担心&lt;/td&gt;
+&lt;td&gt;102&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps41.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps42.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;17.71%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有点担心&lt;/td&gt;
+&lt;td&gt;354&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps43.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps44.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;61.46%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;完全不担心&lt;/td&gt;
+&lt;td&gt;120&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps45.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps46.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;20.83%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：通过本题的样本来看，有17.71%的大学生非常担心未来的就业情况，61.46%的大学生有点担心未来的就业情况，完全不担心未来就业情况的占20.83%。有八成左右的大学生担心未来自身的就业情况，本次的疫情影响的范围很广，时间很长，对很多行业都带来了不小的冲击。所以在这时候，大部分大学生就会担心自己未来的就业前景，也有小部分的大学生，就读的专业前景受疫情的影响较小，可以完全不担心就业前景。&lt;/p&gt;
+&lt;p&gt;第7题   您对目前疫情的态度是？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;十分重视疫情发展&lt;/td&gt;
+&lt;td&gt;311&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps47.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps48.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;53.99%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;担心疫情反弹，人心惶惶，每天担心周围会不会有人感染，担心自己会不会患病&lt;/td&gt;
+&lt;td&gt;140&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps49.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps50.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;24.31%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;不太重视，认为自己所在的地方不会出现疫情&lt;/td&gt;
+&lt;td&gt;110&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps51.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps52.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;19.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自己很重视，但周围的人不怎么重视&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps53.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps54.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;2.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：据本题数据分析，大部分大学生对现在的疫情情况还是很重视的。这对于后疫情时代的大学生的社会情绪来说，是一个很重要的影响因素。在当前疫情形势下，虽然我国的疫情情况十分良好，但是大部分大学生还是会重视疫情发展，担心疫情反弹。&lt;/p&gt;
+&lt;p&gt;第8题   当前疫情的形势下你产生的情绪    [多选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;压抑&lt;/td&gt;
+&lt;td&gt;119&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps55.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps56.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;20.66%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;焦虑&lt;/td&gt;
+&lt;td&gt;134&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps57.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps58.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;23.26%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;恐慌&lt;/td&gt;
+&lt;td&gt;74&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps59.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps60.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;12.85%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;倦怠&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps61.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps62.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;21.35%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;平和&lt;/td&gt;
+&lt;td&gt;373&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps63.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps64.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;64.76%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;充满信心&lt;/td&gt;
+&lt;td&gt;220&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps65.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps66.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;38.19%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题显示，在后疫情时代下，大学生主要的情绪为平和，接近四成大学生对未来发展形势充满信心。这是由于当前我国的疫情形势基本稳定，从而使大学生的情绪变得平和，而我们国家在疫情严重的时候做出的一系列有效措施，使我国疫情在不长的时间内得到稳定，这些都是使大学生有充满信心的情绪的因素。也有小部分的大学生还是会有压抑焦虑等情绪。&lt;/p&gt;
+&lt;p&gt;第9题  您身边的人的情绪是否有影响到您？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;看到别人开心我也开心&lt;/td&gt;
+&lt;td&gt;141&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps67.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps68.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;24.48%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;无所谓，自己开心就好&lt;/td&gt;
+&lt;td&gt;235&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps69.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps70.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;40.8%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;看到负面消息，自己情绪也会低落&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps71.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps72.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;34.72%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题显示，40.8%的大学生认为自己没有受到身边的人的情绪的影响，24.48%的大学生会被身边人的正面情绪影响，34.72%的大学生会受到身边的人的负面情绪的影响。这也是影响大学生社会情绪的一个重要因素，人与人之间的情绪会产生共鸣，至少一半以上的大学生在疫情期间会受他人情绪的影响。&lt;/p&gt;
+&lt;p&gt;第10题  你是否对现阶段的疫情状况感到焦虑不安？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;非常不安，严重影响到了我的情绪&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps73.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps74.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;6.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有一点点，但不会影响我的生活&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps75.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps76.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;69.97%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;无感，跟以前一样&lt;/td&gt;
+&lt;td&gt;135&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps77.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps78.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;23.44%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】本题显示，大部分大学生对于现阶段的疫情状况还是有点担心的，但这种担心并不会影响现在的主要生活。小部分大学生已经对疫情状况无感。这说明了在现在我国疫情情况总体平稳的现状来看，大学生对于疫情的总体情绪已经相对稳定。&lt;/p&gt;
+&lt;p&gt;第11题  面对目前多地再有疫情小规模爆发，你会担心吗？你担心什么？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;担心，疫情会再次反弹&lt;/td&gt;
+&lt;td&gt;178&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps79.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps80.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;30.9%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;担心，自己或家人被感染&lt;/td&gt;
+&lt;td&gt;95&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps81.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps82.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;16.49%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;担心，会因为疫情自己的生活被再次打乱&lt;/td&gt;
+&lt;td&gt;149&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps83.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps84.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;25.87%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;担心，新冠会再次在我国发展&lt;/td&gt;
+&lt;td&gt;52&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps85.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps86.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;9.03%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;基本不担心&lt;/td&gt;
+&lt;td&gt;102&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps87.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps88.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;17.71%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题数据显示，在目前多地疫情小规模爆发的情况下大学生有82.29%会担心出现各种状况，既担心新冠疫情在我国重新爆发，也担心这种小规模的疫情爆发会为自己的生活带来不小的影响。&lt;/p&gt;
+&lt;p&gt;第12题   家人对目前疫情是否有不良情绪，主要是哪些方面的？    [多选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;缺乏新冠肺炎的相关知识&lt;/td&gt;
+&lt;td&gt;149&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps89.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps90.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;25.87%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;担心会缺少相关防护用具&lt;/td&gt;
+&lt;td&gt;142&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps91.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps92.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;24.65%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;不能正常出行&lt;/td&gt;
+&lt;td&gt;296&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps93.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps94.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;51.39%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;担心家人被感染&lt;/td&gt;
+&lt;td&gt;271&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps95.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps96.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;47.05%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全国感染人数有增加&lt;/td&gt;
+&lt;td&gt;220&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps97.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps98.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;38.19%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps99.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps100.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;5.73%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题显示，影响大部分大学生的家人对目前的疫情产生的不良情绪的因素是不能正常出行和担心家人被感染，这说明在现在疫情形势大好的情况下，不少大学生的家长们还是会担心疫情反弹带来的负面后果。&lt;/p&gt;
+&lt;p&gt;第13题  后疫情时代您与家人的关系是否受到影响？    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;有影响，促进了与家人的关系&lt;/td&gt;
+&lt;td&gt;181&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps101.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps102.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;31.42%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有影响，与家人的联系变少，没有以前亲近了&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps103.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps104.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;13.02%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;没有影响&lt;/td&gt;
+&lt;td&gt;320&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps105.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps106.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;55.56%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题数据显示55.56%的大学生在后疫情时代和家人的关系并没有太大的变化，31.42%的大学生与家人的关系变好。这说明，在疫情期间，大学生有更多时间与家人接触，从而促进了和家里人的关系 。&lt;/p&gt;
+&lt;p&gt;第14题   我能有效的调节与控制自己的情绪    [单选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;非常符合&lt;/td&gt;
+&lt;td&gt;192&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps107.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps108.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;33.33%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;比较符合&lt;/td&gt;
+&lt;td&gt;290&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps109.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps110.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;50.35%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;不确定&lt;/td&gt;
+&lt;td&gt;68&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps111.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps112.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;11.81%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;比较不符合&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps113.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps114.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;3.3%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;非常不符合&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps115.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps116.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;1.22%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题数据显示，接近九成大学生能有效地调节与控制自己情绪。在这次疫情期间，大学生体会了疫情带来的恐慌，感受了封校停课等措施带来的不便，但是在后疫情时代，大学生已经能有效地调节与控制自己的情绪。&lt;/p&gt;
+&lt;p&gt;第15题  您认为疫情对你的生活产生怎样的影响？    [多选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;学习节奏改变&lt;/td&gt;
+&lt;td&gt;353&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps117.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps118.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;61.28%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;生活作息打乱&lt;/td&gt;
+&lt;td&gt;240&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps119.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps120.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;41.67%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;生活作息改善&lt;/td&gt;
+&lt;td&gt;168&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps121.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps122.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;29.17%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;与家人相处时间增加&lt;/td&gt;
+&lt;td&gt;224&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps123.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps124.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;38.89%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;与家人相处时间减少&lt;/td&gt;
+&lt;td&gt;87&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps125.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps126.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;15.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;没有什么影响&lt;/td&gt;
+&lt;td&gt;205&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps127.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps128.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;35.59%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps129.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps130.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;4.34%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题数据显示，对大学生来说，疫情最主要的影响是打乱了大学生的学习节奏，这从封校和实行网上课堂可以看出。其次是打乱了大学生的生活作息，同时也有的大学生因为疫情在家，反而使生活作息得到改善。疫情期间，不少大学生与家人相处的时间也相应增加了。也有部分大学生认为疫情对生活产生的影响不大。&lt;/p&gt;
+&lt;p&gt;第16题  当产生这样的影响时，您会怎样调节或减轻这样的影响呢？    [多选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;运动&lt;/td&gt;
+&lt;td&gt;331&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps131.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps132.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;57.47%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;听歌&lt;/td&gt;
+&lt;td&gt;446&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps133.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps134.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;77.43%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;追剧&lt;/td&gt;
+&lt;td&gt;291&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps135.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps136.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;50.52%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;看书&lt;/td&gt;
+&lt;td&gt;308&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps137.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps138.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;53.47%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;打游戏&lt;/td&gt;
+&lt;td&gt;269&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps139.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps140.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;46.7%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps141.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps142.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;2.95%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题数据表明，在疫情背景下，大学生能通过运动、听歌、追剧、看书和打游戏等方式来调节自身的负面情绪。&lt;/p&gt;
+&lt;p&gt;第17题  疫情背景下您最担心什么，是什么影响了您的情绪？    [多选题]&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选项&lt;/th&gt;
+&lt;th&gt;小计&lt;/th&gt;
+&lt;th&gt;比例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;复课封校&lt;/td&gt;
+&lt;td&gt;292&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps143.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps144.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;50.69%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;返乡困难&lt;/td&gt;
+&lt;td&gt;306&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps145.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps146.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;53.13%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;疫情小规模爆发&lt;/td&gt;
+&lt;td&gt;338&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps147.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps148.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;58.68%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;学习环境改变&lt;/td&gt;
+&lt;td&gt;238&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps149.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps150.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;41.32%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;就业、升学、出国压力&lt;/td&gt;
+&lt;td&gt;241&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps151.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps152.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;41.84%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;公众情绪焦虑&lt;/td&gt;
+&lt;td&gt;160&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps153.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps154.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;27.78%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps155.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps156.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;1.91%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;本题有效填写人次&lt;/td&gt;
+&lt;td&gt;576&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】：本题数据表明，在现在疫情基本稳定的情况下，大学生们依然对疫情有担心的方面。最多人担心的是疫情的小规模爆发，由于新冠病毒的传染性较强且较隐蔽，产生这种担心的情绪是人之常情。其次是担心返乡困难。而与学习有关的管制措施也是大学生在疫情背景下担心的。小部分大学生担心各种情绪焦影响自身。&lt;/p&gt;
+&lt;h3 id=&#34;43双因素方差分析&#34;&gt;&lt;em&gt;&lt;strong&gt;*4.3双因素方差分析*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;探究性别、年级以及性别和年龄的交互作用是否对以下各变量有显著影响（显著水平α取0.05），以及对有显著影响的因子进一步分析&lt;/p&gt;
+&lt;p&gt;3.疫情对于您的所在地的影响程度&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;3.203&lt;/td&gt;
+&lt;td&gt;3.2034&lt;/td&gt;
+&lt;td&gt;9.41&lt;/td&gt;
+&lt;td&gt;0.002&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;1.542&lt;/td&gt;
+&lt;td&gt;0.5139&lt;/td&gt;
+&lt;td&gt;1.51&lt;/td&gt;
+&lt;td&gt;0.211&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3.518&lt;/td&gt;
+&lt;td&gt;1.1728&lt;/td&gt;
+&lt;td&gt;3.45&lt;/td&gt;
+&lt;td&gt;0.017&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;195.715&lt;/td&gt;
+&lt;td&gt;0.3404&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;202.734&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同年级的学生对于自身的所在地的影响程度不存在显著性差异, 不同性别的学生对于自身的所在地的影响程度存在显著性差异,不同性别和不同年级的交互作用对于自身的所在地的影响程度存在显著性差异。&lt;/p&gt;
+&lt;p&gt;行: 性别  列: 疫情对于您的所在地的影响程度&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*影响程度中等*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*影响较大*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*影响较小*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;234&lt;/td&gt;
+&lt;td&gt;314&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;94&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;163&lt;/td&gt;
+&lt;td&gt;269&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;153&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;397&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别因素进行分析，得出，男生选中“影响较大”或“影响中等”选项的人数比重较小，更多地认为“影响较小”而女生选中“影响较大”选项的人数比重较小，更多地认为“影响较小”或“影响中等”。这说明，女生相较于男生对于疫情对所在地的影响程度反应较为敏感。&lt;/p&gt;
+&lt;p&gt;行: 性别 / 年级  列: 疫情对于您的所在地的影响程度&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*影响程度中等*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*影响较大*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*影响较小*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;120&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;71&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;84&lt;/td&gt;
+&lt;td&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;153&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;397&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别和年级交互作用因素进行分析，得出，男大一，男大三，男大四，女大一，女大二，女大三选中“影响较大”选项的人数比重较小，更多地认为“影响较小”或“影响中等”。男大二，女大四选中“影响较小”或“影响中等”选项的人数比重较小，更多地认为“影响较大”。这说明，男大二，女大四相较于其他性别和年级交互作用对于疫情对所在地的影响程度反应较为敏感。&lt;/p&gt;
+&lt;p&gt;4、疫情对您的学业有什么影响？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.583&lt;/td&gt;
+&lt;td&gt;0.5829&lt;/td&gt;
+&lt;td&gt;0.69&lt;/td&gt;
+&lt;td&gt;0.405&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.470&lt;/td&gt;
+&lt;td&gt;1.4901&lt;/td&gt;
+&lt;td&gt;1.78&lt;/td&gt;
+&lt;td&gt;0.151&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4.035&lt;/td&gt;
+&lt;td&gt;1.3451&lt;/td&gt;
+&lt;td&gt;1.60&lt;/td&gt;
+&lt;td&gt;0.188&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;482.588&lt;/td&gt;
+&lt;td&gt;0.8393&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;492.844&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生对于自身的学业影响程度不存在显著性差异, 不同年级的学生对于自身的学业影响程度不存在显著性差异,不同性别和不同年级的交互作用对于自身的学业影响程度不存在显著性差异。&lt;/p&gt;
+&lt;p&gt;5、您就读的高校是否封过校？您是否积极配合？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.099&lt;/td&gt;
+&lt;td&gt;0.09944&lt;/td&gt;
+&lt;td&gt;0.08&lt;/td&gt;
+&lt;td&gt;0.777&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;18.237&lt;/td&gt;
+&lt;td&gt;6.07884&lt;/td&gt;
+&lt;td&gt;4.90&lt;/td&gt;
+&lt;td&gt;0.002&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;11.256&lt;/td&gt;
+&lt;td&gt;3.75214&lt;/td&gt;
+&lt;td&gt;3.03&lt;/td&gt;
+&lt;td&gt;0.029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;712.754&lt;/td&gt;
+&lt;td&gt;1.23957&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;745.482&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生对于自身高校是否封校及配合情况不存在显著性差异, 不同年级的学生对于自身高校是否封校及配合情况存在显著性差异, 不同性别及年级的交互作用的学生对于自身高校是否封校及配合情况存在显著性差异,&lt;/p&gt;
+&lt;p&gt;行:年级  列:您就读的高校是否封过校？您是否积极配合？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*封过，不太乐意，愿意配合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*封过，不愿意配合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*封过，积极配合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*无*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;57&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;146&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;58&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;54&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;132&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;142&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;td&gt;280&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;187&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;265&lt;/td&gt;
+&lt;td&gt;113&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对年级因素进行分析，大二，大三选中选项“封过，积极配合”的人数比重较小，更多地选择“封过，不太乐意，愿意配合”或“封过，不愿意配合”。大一，大四选中“封过，不太乐意，愿意配合”或“封过，不愿意配合”选项的人数比重较小，更多地选择“封过，积极配合”。这说明，大二，大三四相较于相较于大一大四对于封校的配合程度上表现较差。&lt;/p&gt;
+&lt;p&gt;行:性别 / 年级  列:您就读的高校是否封过校？您是否积极配合？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*封过，不太乐意，但还是愿意配合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*封过，不愿意配合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*封过，积极配合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*无*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;73&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;71&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;69&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;187&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;265&lt;/td&gt;
+&lt;td&gt;113&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别和年级交互作用因素进行分析，得出，男大二，男大三，女大四选中“封过，积极配合”比重较小，更多地选择“封过，不太乐意，但还是愿意配合”和“封过，不愿意配合”。男大一，男大四，女大一，女大二，女大三选中“封过，不太乐意，但还是愿意配合”和“封过，不愿意配合”选项的人数比重较小，更多地选择“封过，积极配合”。这说明，男大二，男大三，女大四相较于其他性别和年级交互作用对于封校的配合程度上表现较差。&lt;/p&gt;
+&lt;p&gt;6、疫情背景下，您是否担心您的就业前景？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.099&lt;/td&gt;
+&lt;td&gt;0.09944&lt;/td&gt;
+&lt;td&gt;0.08&lt;/td&gt;
+&lt;td&gt;0.777&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;18.237&lt;/td&gt;
+&lt;td&gt;6.07884&lt;/td&gt;
+&lt;td&gt;4.90&lt;/td&gt;
+&lt;td&gt;0.002&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;11.256&lt;/td&gt;
+&lt;td&gt;3.75214&lt;/td&gt;
+&lt;td&gt;3.03&lt;/td&gt;
+&lt;td&gt;0.029&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;712.754&lt;/td&gt;
+&lt;td&gt;1.23957&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;745.482&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生对于自身就业前景的担心情况不存在显著性差异, 不同年级的学生对于自身就业前景的担心情况存在显著性差异,不同性别及年级的交互作用的学生对于自身就业前景的担心情况存在显著性差异。&lt;/p&gt;
+&lt;p&gt;行:年级  列:疫情背景下，您是否担心您的就业前景？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*非常担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*完全不担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*有点担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;146&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;79&lt;/td&gt;
+&lt;td&gt;132&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;td&gt;177&lt;/td&gt;
+&lt;td&gt;280&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;102&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;358&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对年级因素进行分析，得出，大三选中“完全不担心”和“有点担心”选项的人数比重较小，更多地选择“非常担心”。大一，大二，大四选中“非常担心”选项的人数比重较小，更多地选择“完全不担心”和“有点担心”。这说明，大三相较于其他年级担心程度更大。&lt;/p&gt;
+&lt;p&gt;行:性别 /年级  列: 疫情背景下，您是否担心您的就业前景？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*非常担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*完全不担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*有点担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;104&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;td&gt;71&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;73&lt;/td&gt;
+&lt;td&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;102&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;358&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别和年级交互作用因素进行分析，得出，男大三，女大三选中“完全不担心”和“有点担心”选项的人数比重较小，更多地选择“非常担心”。男大一，女大一，男大二，女大二，男大四，女大四选中“非常担心”选项的人数比重较小，更多地选择“完全不担心”和“有点担心”。这说明，男大三，女大三相较于其他性别和年级的交互作用更敏感。&lt;/p&gt;
+&lt;p&gt;7、 您对目前疫情的态度是？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.067&lt;/td&gt;
+&lt;td&gt;0.06678&lt;/td&gt;
+&lt;td&gt;0.17&lt;/td&gt;
+&lt;td&gt;0.676&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3.301&lt;/td&gt;
+&lt;td&gt;1.10039&lt;/td&gt;
+&lt;td&gt;2.88&lt;/td&gt;
+&lt;td&gt;0.035&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;1.070&lt;/td&gt;
+&lt;td&gt;0.35662&lt;/td&gt;
+&lt;td&gt;0.93&lt;/td&gt;
+&lt;td&gt;0.424&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;219.836&lt;/td&gt;
+&lt;td&gt;0.38232&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;224.244&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生对于疫情的态度不存在显著性差异, 不同年级的学生对于疫情的态度存在显著性差异,不同性别及年级的交互作用的学生对于疫情的态度不存在显著性差异。&lt;/p&gt;
+&lt;p&gt;行: 年级  列:  您对目前疫情的态度是？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*不太重视*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*担心疫情反弹*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*十分重视疫情发展*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自己很重视*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;69&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;146&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;66&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;132&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;52&lt;/td&gt;
+&lt;td&gt;58&lt;/td&gt;
+&lt;td&gt;165&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;280&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;112&lt;/td&gt;
+&lt;td&gt;142&lt;/td&gt;
+&lt;td&gt;314&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对年级因素进行分析，得出，大四选中“不太重视”选项的人数比重较小，更多地选择“担心疫情反弹”和“十分重视疫情发展”。大一，大二，大三选择“担心疫情反弹”和“十分重视疫情发展”选项的人数比重较小，更多地选择“不太重视”。这说明，大四相较于其他年级对疫情更为敏感。&lt;/p&gt;
+&lt;p&gt;9、您身边的人的情绪是否有影响到您？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;3.520&lt;/td&gt;
+&lt;td&gt;3.5197&lt;/td&gt;
+&lt;td&gt;3.50&lt;/td&gt;
+&lt;td&gt;0.062&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;1.846&lt;/td&gt;
+&lt;td&gt;0.6153&lt;/td&gt;
+&lt;td&gt;0.61&lt;/td&gt;
+&lt;td&gt;0.607&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;1.515&lt;/td&gt;
+&lt;td&gt;0.5050&lt;/td&gt;
+&lt;td&gt;0.50&lt;/td&gt;
+&lt;td&gt;0.680&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;577.516&lt;/td&gt;
+&lt;td&gt;1.0044&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;588.861&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生受他人情绪影响程度不存在显著性差异, 不同年级的学生受他人情绪影响程度不存在显著性差异, 不同性别及年级的交互作用的学生受他人情绪影响程度不存在显著性差异。&lt;/p&gt;
+&lt;p&gt;10、你是否对现阶段的疫情状况感到焦虑不安？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;6.483&lt;/td&gt;
+&lt;td&gt;6.4829&lt;/td&gt;
+&lt;td&gt;9.00&lt;/td&gt;
+&lt;td&gt;0.003&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;10.200&lt;/td&gt;
+&lt;td&gt;3.4002&lt;/td&gt;
+&lt;td&gt;4.72&lt;/td&gt;
+&lt;td&gt;0.003&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3.797&lt;/td&gt;
+&lt;td&gt;1.2658&lt;/td&gt;
+&lt;td&gt;1.76&lt;/td&gt;
+&lt;td&gt;0.154&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;414.236&lt;/td&gt;
+&lt;td&gt;0.7204&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;437.777&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生的焦虑程度存在显著性差异,不同年级的学生的焦虑程度存在显著性差异,不同性别及年级的交互作用的学生的焦虑程度不存在显著性差异。&lt;/p&gt;
+&lt;p&gt;行: 性别  列: 你是否对现阶段的疫情状况感到焦虑不安？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*非常不安*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*无感*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*有一点点*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;86&lt;/td&gt;
+&lt;td&gt;202&lt;/td&gt;
+&lt;td&gt;314&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;204&lt;/td&gt;
+&lt;td&gt;269&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;139&lt;/td&gt;
+&lt;td&gt;406&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别因素进行分析，得出，男生选择“无感”选项的人数比重较小，更多地选择“有一点点”或“非常不安”，而女生选中“有一点点”或“非常不安”选项的人数比重较小，更多地认为“无感”。这说明，男生相较于女生对于疫情现阶段状况较为敏感。&lt;/p&gt;
+&lt;p&gt;行: 您的年级  列: 你是否对现阶段的疫情状况感到焦虑不安？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*非常不安*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*无感*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*有一点点*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;95&lt;/td&gt;
+&lt;td&gt;146&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;93&lt;/td&gt;
+&lt;td&gt;132&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;58&lt;/td&gt;
+&lt;td&gt;203&lt;/td&gt;
+&lt;td&gt;280&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;139&lt;/td&gt;
+&lt;td&gt;406&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对年级因素进行分析，得出，大二选择“无感”选项的人数比重较小，更多地选择“有一点点”或“非常不安”，而大一，大三，大四选中“有一点点”或“非常不安”选项的人数比重较小，更多地认为“无感”。这说明，大二相较于其他年级对于疫情现阶段状况较为敏感。&lt;/p&gt;
+&lt;p&gt;11、面对目前多地再有疫情小规模爆发，你会担心吗？你担心什么？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.052&lt;/td&gt;
+&lt;td&gt;0.05198&lt;/td&gt;
+&lt;td&gt;0.19&lt;/td&gt;
+&lt;td&gt;0.662&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;0.971&lt;/td&gt;
+&lt;td&gt;0.32375&lt;/td&gt;
+&lt;td&gt;1.19&lt;/td&gt;
+&lt;td&gt;0.312&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2.163&lt;/td&gt;
+&lt;td&gt;0.72110&lt;/td&gt;
+&lt;td&gt;2.66&lt;/td&gt;
+&lt;td&gt;0.048&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;156.119&lt;/td&gt;
+&lt;td&gt;0.27151&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;159.503&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生对疫情小规模爆发的焦虑程度不存在显著性差异,不同年级的学生对疫情小规模爆发的焦虑程度不存在显著性差异,不同性别及年级的交互作用的学生对疫情小规模爆发的焦虑程度存在显著性差异。&lt;/p&gt;
+&lt;p&gt;行: 性别 / 年级  列: 面对目前多地再有疫情小规模爆发，你会担心吗？你担心什么？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*担心，会因为*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;* *&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*疫情自己的生*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;* *&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*活被再次打乱*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*担心，新冠会再*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;* *&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*次在我国发展*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*担心，疫情会再次反弹*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*担心，自己或家人被感染*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*基本不担心*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;51&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;71&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;39&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;150&lt;/td&gt;
+&lt;td&gt;52&lt;/td&gt;
+&lt;td&gt;179&lt;/td&gt;
+&lt;td&gt;96&lt;/td&gt;
+&lt;td&gt;106&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别和年级交互作用因素进行分析，得出，男大三，女大三选中“完全不担心”选项的人数比重较小，更多地选择“担心”。男大一，女大一，男大二，女大二，男大四，女大四选中“担心”选项的人数比重较小，更多地选择“不担心”。这说明，男大三，女大三相较于其他性别和年级的交互作用对疫情发展更敏感。&lt;/p&gt;
+&lt;p&gt;13、后疫情时代您与家人的关系是否受到影响？&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.3594&lt;/td&gt;
+&lt;td&gt;0.3594&lt;/td&gt;
+&lt;td&gt;2.45&lt;/td&gt;
+&lt;td&gt;0.118&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;0.8246&lt;/td&gt;
+&lt;td&gt;0.2749&lt;/td&gt;
+&lt;td&gt;1.87&lt;/td&gt;
+&lt;td&gt;0.133&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;0.3899&lt;/td&gt;
+&lt;td&gt;0.1300&lt;/td&gt;
+&lt;td&gt;0.89&lt;/td&gt;
+&lt;td&gt;0.448&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;84.3209&lt;/td&gt;
+&lt;td&gt;0.1466&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;86.7273&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生与家人关系受影响程度不存在显著性差异,不同年级的学生与家人关系受影响程度不存在显著性差异,不同性别及年级的交互作用的学生与家人关系受影响程度不存在显著性差异。&lt;/p&gt;
+&lt;p&gt;14、 我能有效的调节与控制自己的情绪&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*来源*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*自由度*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj SS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*Adj MS*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*F*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*P*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*值*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;性别&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.217&lt;/td&gt;
+&lt;td&gt;0.2166&lt;/td&gt;
+&lt;td&gt;0.89&lt;/td&gt;
+&lt;td&gt;0.347&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;0.466&lt;/td&gt;
+&lt;td&gt;0.1555&lt;/td&gt;
+&lt;td&gt;0.64&lt;/td&gt;
+&lt;td&gt;0.591&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性别*年级&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2.132&lt;/td&gt;
+&lt;td&gt;0.7106&lt;/td&gt;
+&lt;td&gt;2.91&lt;/td&gt;
+&lt;td&gt;0.034&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;误差&lt;/td&gt;
+&lt;td&gt;575&lt;/td&gt;
+&lt;td&gt;140.306&lt;/td&gt;
+&lt;td&gt;0.2440&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;582&lt;/td&gt;
+&lt;td&gt;143.588&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【分析】&lt;/p&gt;
+&lt;p&gt;由表可知，不同性别的学生调解情绪能力不存在显著性差异,不同年级的学生调解情绪能力不存在显著性差异,不同性别及年级的交互作用的学生调解情绪能力存在显著性差异。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;*行*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*:*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*性别*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*/*&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;*年级*&lt;/strong&gt;&lt;/em&gt;  &lt;em&gt;&lt;strong&gt;*列*&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;&lt;strong&gt;*:*&lt;/strong&gt;&lt;/em&gt;  &lt;em&gt;&lt;strong&gt;*我能有效的调节与控制自己的情绪*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*比较不符合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*比较符合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*不确定*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*非常不符合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*非常符合*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;&lt;strong&gt;*全部*&lt;/strong&gt;&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;男&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;70&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;83&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;155&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;女&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大二&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;71&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大三&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;38&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;62&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大四&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;大一&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;全部&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;295&lt;/td&gt;
+&lt;td&gt;68&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;194&lt;/td&gt;
+&lt;td&gt;583&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;【进一步分析】&lt;/p&gt;
+&lt;p&gt;对性别和年级交互作用因素进行分析，得出，男大三，女大三选中“非常符合”和“比较符合”选项的人数比重较小，更多地选择“比较不符合”或“不确定”或“非常不符合”。男大一，女大一，男大二，女大二，男大四，女大四选中“比较不符合”或“不确定”或“非常不符合”选项的人数比重较小，更多地选择“非常符合”和“比较符合”。这说明，男大三，女大三相较于其他性别和年级的交互作用更为敏感。&lt;/p&gt;
+&lt;h3 id=&#34;heading-6&#34;&gt;&lt;/h3&gt;
+&lt;p&gt;第五章 &lt;strong&gt;访谈总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.1 基本情况&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2021年11月，我们队共访谈了35位对象，其中4位大学生家长，3位老师，17位大一大二学生，10位大三大四研三等应届生，1位研一学生，在了解同学老师们的基本情况的情况下，基于一问一答的访谈模式下了解老师同学们在后疫情时代的社会情绪的变化及其可能的影响因素，并都在轻松愉快的氛围下进行了访谈，同学老师们都十分支持我们的访谈，并且都积极地提出了自己对于这个课题的想法，综合多个年级的同学和老师们的访谈，我们的调研思路得到了启发，并对于这个课题有了更加深刻的思考，以下是对这次的访谈的总结。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.2 访谈情况总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;5.2.1学生&lt;/p&gt;
+&lt;p&gt;我们的访谈对象大部分都是处在广东的学生，而在疫情期间，对于广东的影响是比较小的，所以疫情对于他们的生活影响都没有特别大。&lt;/p&gt;
+&lt;p&gt;对于大学生来说，一开始大家对于突如其来的闭塞环境的相处，普遍是不适应，觉得烦躁，焦虑，有一些压抑，但情绪也没有过大的波动，而且也都跟家人待在一起，在后疫情时代就更加珍惜和家人相处的时光，也更加能明白敬畏生命的意义，但是学校方面的管理和平日出行繁琐的健康码和行程报备和各种的核酸检测，学生们虽然也积极配合疫情防控需要的工作，但出行的麻烦也一定程度上影响了人的心情；部分学校走于形式的封校和健康码的检查，也让人心生烦躁。在后疫情时代，大部分同学表示，都对疫情有了一定的了解，即使后来疫情有反复，也不会慌张，可以从容应对国家级别的突发公共卫生事件，心理上也比疫情期间更加积极乐观，对于学习上没有什么特别的影响，在以后的生活里也会更加关注社会的动态和疫情的发展。仅有少部分同学因为疫情的反复，还会担心疫情会成为未来的常态。国家在短期抑制住了疫情的发展，国家的动作也让学生们心中对国家和民族的自豪感和荣誉感油然而生。&lt;/p&gt;
+&lt;p&gt;其中对于大一大二学生而言，对他们的影响普遍是学业方面的，他们中的大部分对于疫情的态度普遍是比较积极的，少部分同学比较焦虑，在疫情期间，一是焦虑在家上网课的学习效率比不上在学校上的网课，从线下学习转变为线上学习，没办法完全适应；二是担心疫情的感染率，担心自己和家人的生命安全；还有一些比较外向的同学被迫待在家里，对心理上产生了一定的负担。在后疫情时代，大部分同学表示，由于在疫情期间明白了自律的重要性，回校之后更加努力学习，线上线下学习互相结合，也取到了不错的效果。&lt;/p&gt;
+&lt;p&gt;而对于大三大四的学生而言，对他们的影响较多的是对就业形势的恐慌，对于考研还是就业的选择和对自己未来的迷茫，而在后疫情时代，面对国家的逐渐安定的社会环境，学生们总体来说还是相对乐观的。&lt;/p&gt;
+&lt;p&gt;5.2.2老师&lt;/p&gt;
+&lt;p&gt;老师认为对于学生的情绪影响因素有大部分来自于社会大环境的变化，也有小部分是来自于学生本身，学生本身对于自己的状态和当今疫情情况的了解程度与学生本身的性格和精神状态都会对学生在疫情期间的情绪变化造成一定程度的影响。学生普遍产生焦虑都主要出现在学业就业升学方面，疫情的爆发会让许多学生错失很多机会，有学生自己本身造成的，也有出于疫情防控需要，不允许外出比赛，比赛不允许举行等等的原因，网课也造成了老师无法及时的跟进我的学生的学习状态和进度。但是随着后疫情时代的到来，学生们的情绪也逐渐明朗，有什么问题也会主动找老师交谈。&lt;/p&gt;
+&lt;p&gt;5.2.3家长&lt;/p&gt;
+&lt;p&gt;家长都认为对于孩子的情绪变化的影响因素主要来源于周围社会环境的变化，在后疫情时代，社会普遍安定，孩子的心态也逐步乐观，不再焦虑，在疫情期间，学生不管是在学业上还是在就业期间，都处于一个较为关键的时期，对于突如其来的疫情也是可以理解的，另外，疫情的出现让所有人都要足不出户，这让家长与孩子之间相处的时间更加多，了解也更加多。&lt;/p&gt;
+&lt;p&gt;第六章 &lt;strong&gt;结果与建议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.1结果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.后疫情时代由于当前我国的疫情形势基本稳定，从而使大学生的情绪总体趋于平和，也有小部分的大学生还是会有压抑焦虑等情绪。大学生们依然对疫情有担心的方面。最多人担心的是疫情的小规模爆发为自己的生活带来不便，由于新冠病毒的传染性较强且较隐蔽，产生这种担心的情绪是人之常情。其次是担心返乡困难。而与学习有关的管制措施也是大学生在疫情背景下担心的。小部分大学生担心各种情绪焦虑影响自身。&lt;/p&gt;
+&lt;p&gt;\2. 对大学生来说，疫情最主要的影响是打乱了大学生的学习节奏，这从封校和实行网上课堂可以看出。其次是打乱了大学生的生活作息，同时也有的大学生因为疫情在家，反而使生活作息得到改善。&lt;/p&gt;
+&lt;p&gt;\3.&lt;/p&gt;
+&lt;p&gt;3.大部分大学生还是会重视疫情发展，担心疫情反弹。本次的疫情影响的范围很广，时间很长，对很多行业都受到了不小的冲击。所以在这时候，大部分大学生就会担心自己未来的就业前景&lt;/p&gt;
+&lt;p&gt;\4. 约四成的大学生会受到身边的人的负面情绪的影响。这也是影响大学生社会情绪的一个重要因素，人与人之间的情绪会产生共鸣，至少一半以上的大学生在疫情期间会受他人情绪的影响。&lt;/p&gt;
+&lt;p&gt;5.影响大部分大学生的家人对目前的疫情产生的不良情绪的因素是不能正常出行和担心家人被感染，这说明在现在疫情形势大好的情况下，不少大学生的家长们还是会担心疫情反弹带来的负面后果。&lt;/p&gt;
+&lt;p&gt;\6. 疫情期间，不少大学生与家人相处的时间也相应增加，促进了与家人的关系。也有部分大学生认为疫情对生活产生的影响不大。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.2建议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.大学生应当学会自我关怀，将自我关怀作为一种情绪调节策略，不回避挫 折情境带来的负性情绪，而以善意、理解和普遍人性 的心态来对待负性情绪。&lt;/p&gt;
+&lt;p&gt;2.除了运用自己的力量形成正念调适情绪之外，和家人、朋友保持亲密关系和联结，寻求家人朋友的支持。承担力所能及的家务，和家人一起做饭，获得多巴胺的奖励，增加愉悦与轻松的情绪；一起做游戏、做运动，转移注意力、降低焦虑水平&lt;/p&gt;
+&lt;p&gt;3.如果觉察出自己一直陷在比较严重的恐惧、紧张 和焦虑的束缚中，大学生也可以寻求学校、社会心理咨询机构开通的心理热线或心理咨询公众号的专业援助，及时处理好应激障碍，把自己尽快地带离这种情绪，转而以更稳定的心理状态投入日常生活中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第七章 总结与不足&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;71队长总结&#34;&gt;&lt;strong&gt;7.1队长总结&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;我在此次调研过程中担任队长，主要负责选题的讨论、人员分工以及报告的撰写。在与队员们的讨论协商过程中让我对于相互合作有了更加深入的认识，单凭一人之力是完成不了信息杯调研工作的，需要所有人分工合作。首先设计问卷的时候，要考虑很多因素，问题要有针对性，简单明了，符合实际，题型不宜过于单一。最后在分析调研结果的时候要客观公正，多查阅和了解相关资料信息，不能凭自己的主观思想去考虑理解。出现问题，不要凭单方面去分析，要多个角度去分析它，然后结合实际，提成合理化的建议。&lt;/p&gt;
+&lt;p&gt;做的好的地方：&lt;/p&gt;
+&lt;p&gt;分配工作时根据工作量明确规定了截止时间，使得队员在高效率完成任务的同时又不会拖拉。最后能有比较充裕的时间去撰写与完善调研报告&lt;/p&gt;
+&lt;p&gt;不足之处：&lt;/p&gt;
+&lt;p&gt;1.为每个小组设立了组长去监督其工作进度，却没有亲自去跟进，导致我对于每个小组的工作情况没有清晰的了解。&lt;/p&gt;
+&lt;p&gt;2.调查问卷的发放范围不均匀，导致调研对象里面大三大四的同学数量较少，样本普遍性不足。&lt;/p&gt;
+&lt;h2 id=&#34;72队员总结&#34;&gt;&lt;strong&gt;7.2队员总结&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;第八章 附录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8.1 附件一：团队信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;队伍名称：我撞队名了就是你不队&lt;/p&gt;
+&lt;p&gt;调研课题：后疫情时代大学生社会情绪的变化以及影响因素的调查研究&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8.2 附件二:问卷内容&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目：&lt;/p&gt;
+&lt;p&gt;后疫情时代大学生的社会情绪变化以及影响因素的调查研究&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;*单选题：*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;您的性别&lt;/p&gt;
+&lt;p&gt;男or女&lt;/p&gt;
+&lt;p&gt;您的年级&lt;/p&gt;
+&lt;p&gt;大一or大二or大三or大四&lt;/p&gt;
+&lt;p&gt;疫情对于您的所在地的影响程度A.影响较小 B.影响程度中等 C.影响较大&lt;/p&gt;
+&lt;p&gt;4.疫情对您的学业有什么影响？&lt;/p&gt;
+&lt;p&gt;A封闭式学习，进步了&lt;/p&gt;
+&lt;p&gt;B意志力坚定，影响不大&lt;/p&gt;
+&lt;p&gt;C不想学，退步了&lt;/p&gt;
+&lt;p&gt;D其他&lt;/p&gt;
+&lt;p&gt;5.您就读的高校是否封过校？您是否积极配合？&lt;/p&gt;
+&lt;p&gt;A封过，积极配合&lt;/p&gt;
+&lt;p&gt;B封过，不太乐意，但还是愿意配合&lt;/p&gt;
+&lt;p&gt;C封过，不愿意配合&lt;/p&gt;
+&lt;p&gt;D无&lt;/p&gt;
+&lt;p&gt;6.疫情背景下，您是否担心您的就业前景？&lt;/p&gt;
+&lt;p&gt;A非常担心&lt;/p&gt;
+&lt;p&gt;B有点担心&lt;/p&gt;
+&lt;p&gt;C完全不担心&lt;/p&gt;
+&lt;p&gt;\7. 您对目前疫情的态度是？&lt;/p&gt;
+&lt;p&gt;十分重视疫情发展&lt;/p&gt;
+&lt;p&gt;担心疫情反弹，人心惶惶，每天担心周围会不会有人感染，担心自己会不会患病&lt;/p&gt;
+&lt;p&gt;不太重视，认为自己所在的地方不会出现疫情&lt;/p&gt;
+&lt;p&gt;自己很重视，但周围的人不怎么重视&lt;/p&gt;
+&lt;p&gt;\8. 当前疫情的形势下你产生的情绪【多选】&lt;/p&gt;
+&lt;p&gt;压抑&lt;/p&gt;
+&lt;p&gt;焦虑&lt;/p&gt;
+&lt;p&gt;恐慌&lt;/p&gt;
+&lt;p&gt;倦怠&lt;/p&gt;
+&lt;p&gt;平和&lt;/p&gt;
+&lt;p&gt;充满信心&lt;/p&gt;
+&lt;p&gt;9.您身边的人的情绪是否有影响到您？&lt;/p&gt;
+&lt;p&gt;A看到别人开心我也开心&lt;/p&gt;
+&lt;p&gt;B无所谓，自己开心就好&lt;/p&gt;
+&lt;p&gt;C看到负面消息，自己情绪也会低落&lt;/p&gt;
+&lt;p&gt;10.你是否对现阶段的疫情状况感到焦虑不安？&lt;/p&gt;
+&lt;p&gt;A非常不安，严重影响到了我的情绪&lt;/p&gt;
+&lt;p&gt;B有一点点，但不会影响我的生活&lt;/p&gt;
+&lt;p&gt;C无感，跟以前一样&lt;/p&gt;
+&lt;p&gt;11.面对目前多地再有疫情小规模爆发，你会担心吗？你担心什么？&lt;/p&gt;
+&lt;p&gt;担心疫情会再次反弹&lt;/p&gt;
+&lt;p&gt;担心自己或家人被感染&lt;/p&gt;
+&lt;p&gt;担心会因为疫情自己的生活被再次打乱&lt;/p&gt;
+&lt;p&gt;担心新冠会再次在我国发展&lt;/p&gt;
+&lt;p&gt;基本不担心&lt;/p&gt;
+&lt;p&gt;\12. 家人对目前疫情是否有不良情绪，主要是哪些方面的？&lt;/p&gt;
+&lt;p&gt;缺乏新冠肺炎的相关知识&lt;/p&gt;
+&lt;p&gt;担心会缺少相关防护用具&lt;/p&gt;
+&lt;p&gt;不能正常出行&lt;/p&gt;
+&lt;p&gt;担心家人被感染&lt;/p&gt;
+&lt;p&gt;全国感染人数有增加&lt;/p&gt;
+&lt;p&gt;其他&lt;/p&gt;
+&lt;p&gt;13.后疫情时代您与家人的关系是否受到影响？&lt;/p&gt;
+&lt;p&gt;A有影响，促进了与家人的关系&lt;/p&gt;
+&lt;p&gt;B有影响，与家人的联系变少，没有以前亲近了&lt;/p&gt;
+&lt;p&gt;C没有影响&lt;/p&gt;
+&lt;p&gt;\14. 我能有效的调节与控制自己的情绪&lt;/p&gt;
+&lt;p&gt;非常符合&lt;/p&gt;
+&lt;p&gt;比较符合&lt;/p&gt;
+&lt;p&gt;不确定&lt;/p&gt;
+&lt;p&gt;比较不符合&lt;/p&gt;
+&lt;p&gt;非常不符合&lt;/p&gt;
+&lt;p&gt;多选题：&lt;/p&gt;
+&lt;p&gt;15.您认为疫情对你的生活产生怎样的影响？&lt;/p&gt;
+&lt;p&gt;A学习节奏改变&lt;/p&gt;
+&lt;p&gt;B生活作息打乱&lt;/p&gt;
+&lt;p&gt;C生活作息改善&lt;/p&gt;
+&lt;p&gt;D与家人相处时间增加&lt;/p&gt;
+&lt;p&gt;E与家人相处时间减少&lt;/p&gt;
+&lt;p&gt;F没有什么影响&lt;/p&gt;
+&lt;p&gt;G其他&lt;/p&gt;
+&lt;p&gt;16.当产生这样的影响时，您会怎样调节或减轻这样的影响呢？&lt;/p&gt;
+&lt;p&gt;A运动&lt;/p&gt;
+&lt;p&gt;B听歌&lt;/p&gt;
+&lt;p&gt;C追剧&lt;/p&gt;
+&lt;p&gt;D看书&lt;/p&gt;
+&lt;p&gt;E打游戏&lt;/p&gt;
+&lt;p&gt;F其他&lt;/p&gt;
+&lt;p&gt;17.疫情背景下您最担心什么，是什么影响了您的情绪？&lt;/p&gt;
+&lt;p&gt;A复课封校&lt;/p&gt;
+&lt;p&gt;B返乡困难&lt;/p&gt;
+&lt;p&gt;C疫情小规模爆发&lt;/p&gt;
+&lt;p&gt;D学习环境改变&lt;/p&gt;
+&lt;p&gt;E就业、升学、出国压力&lt;/p&gt;
+&lt;p&gt;F公众情绪焦虑&lt;/p&gt;
+&lt;p&gt;G其他&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8.3&lt;/strong&gt;	&lt;strong&gt;附件三：访谈记录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;鉴于篇幅所限，因此本次只在各年级选择一名具有代表性的同学进行展示，其他仅作为数据进行参考。&lt;/p&gt;
+&lt;h3 id=&#34;831访谈对象一大一学生&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.1*&lt;/strong&gt;&lt;/em&gt;	&lt;em&gt;&lt;strong&gt;*访谈对象一——大一学生*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;访谈对象：李同学，21级工商管理新生，性别男。&lt;/p&gt;
+&lt;p&gt;访谈内容：&lt;/p&gt;
+&lt;p&gt;我：疫情爆发期间，你所在地区受到疫情的影响程度如何？&lt;/p&gt;
+&lt;p&gt;李：与全国大部分地区相比，我所在地区受到影响较小，基本上只有零星几例，并且很快就得到了控制。&lt;/p&gt;
+&lt;p&gt;我：疫情期间在家，你有感到与往常不一样的地方吗？你的感受和行为有没有发生什么变化？&lt;/p&gt;
+&lt;p&gt;李：与往常不一样的地方当然是有的，比如外出变成一件难以实现的事，我的感受是：当时有些压抑吧。但是我的家人在身边，朋友也通过网络可以联系到，因此不好的情绪并没有带来其他太大的影响。&lt;/p&gt;
+&lt;p&gt;我：疫情稍微缓解，学校复课，你有感受到什么不同吗?那时候你的感受行为是怎么样的？&lt;/p&gt;
+&lt;p&gt;李：我感觉每个人都变得有些陌生，可能是太久没见了吧，加之疫情的影响，每个人都会刻意保持距离，但是过了一段时间其实也就还好，我同样愿意跟大家做朋友，一起学习。&lt;/p&gt;
+&lt;p&gt;我：感受怎么样，有什么变化吗？&lt;/p&gt;
+&lt;p&gt;李：刚复学的时候，感觉到人与人之间的距离拉远了，后来，我们的感情都更加深厚了，其他方面就是，感觉自己的学习落下了很多，每个人也都更加敬畏生命了。&lt;/p&gt;
+&lt;p&gt;我：上了大学之后生活和学习和预想的一样吗？感受怎么样？大学生活有没有受到疫情的影响？&lt;/p&gt;
+&lt;p&gt;李：大学开始一个月之后的生活和学习是跟预想的基本上一样的，想加入的组织加入了，想当的班干部也当了，但是目前的话我就是有一些迷茫，关于学习，关于人际交往等等，总体上还是感觉大学很值得的，毕竟刚刚开始，我很有信心去过得更加精彩，疫情对于大学生活的影响应该就是对我回家有影响吧，往返于两个城市之间，我担心会出现疫情，造成不便。&lt;/p&gt;
+&lt;h3 id=&#34;832访谈对象二大二学生&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.2*&lt;/strong&gt;&lt;/em&gt;	&lt;em&gt;&lt;strong&gt;*访谈对象二——大二学生*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;访谈对象：大二学生，性别：男，专业：计算机&lt;/p&gt;
+&lt;p&gt;问题一：个人信息（年级、专业、性别）？&lt;/p&gt;
+&lt;p&gt;问2：疫情到后疫情，你的生活发生了什么变化呢？&lt;/p&gt;
+&lt;p&gt;问3：疫情大环境的转变，对你在这个专业或者这个年级的学习有什么影响？&lt;/p&gt;
+&lt;p&gt;问4：后疫情时期，有没有什么身边的事情对你产生了情绪上的影响？&lt;/p&gt;
+&lt;p&gt;问5：由疫情到后疫情，心态更好还是更坏？&lt;/p&gt;
+&lt;p&gt;问6：你觉得是什么影响了您的情绪变化？&lt;/p&gt;
+&lt;p&gt;问7：当产生这样的影响时，您会怎样调节或减轻这样的影响呢？&lt;/p&gt;
+&lt;p&gt;问题一：计算机、大二、有社团&lt;/p&gt;
+&lt;p&gt;问题二：整体的一个便利程度有很大的提升吧，比如之前每到一个地方就要进行口罩和健康码的检查，现在有些地方已经普遍大家都不戴口罩和做防护了。大学人员流动性很强，学校的防护措施也不是非常严格，没有停课在家的局促感。&lt;/p&gt;
+&lt;p&gt;问题三：专业的话，其实当时的疫情环境下，还是影响了我对专业的选择，一开始我有想过学医学方面的专业，但是看到如此疫情，父母非常担心，最后还是选择了计算机。学习上面的话，感觉没有太多的变化，对我来说线上和线下都没有什么差别。而且平时就不怎么到处走，封校与否对我个人也没有什么影响。&lt;/p&gt;
+&lt;p&gt;问题四：小区和学校门口的出入检查让我感到很麻烦，每次出入都会产生很麻烦的感觉，有时候赶时间的时候这种厌烦感觉会影响我一天的心情。&lt;/p&gt;
+&lt;p&gt;问题五：心态更好了吧，疫情状况变好了之后，防卫也松懈了，没有那种紧迫感，感觉生活在向好的方向发展。&lt;/p&gt;
+&lt;p&gt;问题六：便利程度吧，我所在的地区疫情没有太多的波及，都是通过媒体的消息了解到的情况。个人而言还是除了，自我防护之外，缺少一些实感。也可能是我心很大。&lt;/p&gt;
+&lt;p&gt;问题七：我多数都是便利程度上造成的郁闷，所以是没有办法像你说的那样通过运动什么的去调节。最多是让自己客观去看这件事情，从防疫抗疫角度来看，说服自己在做贡献，这样心态好一点。总的来说没有刻意去调节。&lt;/p&gt;
+&lt;h3 id=&#34;833访谈对象三大三学生&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.3*&lt;/strong&gt;&lt;/em&gt;	&lt;em&gt;&lt;strong&gt;*访谈对象三——大三学生*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;访谈对象：女，大三，华农，商英，贫困生，有社团经历，经常参加志愿者活动，有男朋友&lt;/p&gt;
+&lt;p&gt;在后疫情时代，你对未来有感到不安的地方吗，是哪方面会让你觉得不安？&lt;/p&gt;
+&lt;p&gt;答：工作保障和个人生命健康。&lt;/p&gt;
+&lt;p&gt;疫情影响了部分企业的生存，使企业竞争更加激烈，进而影响到个人的就业问题以及工作福利。&lt;/p&gt;
+&lt;p&gt;目前正处于疫情防控常态化下，全球疫情一日不消除，我们国内疫情总会反反复复。出于疫情保护个人生命健康的目的，我们都要佩戴口罩。但是佩戴久了，脸上容易长痘，这样子影响了我们个人的形象要求。&lt;/p&gt;
+&lt;p&gt;网课结束回到学校后，你的生活学习有什么变化吗？&lt;/p&gt;
+&lt;p&gt;答：网课返校后，我在生活上更加注重个人卫生、勤带口罩，注意与人的社交距离。&lt;/p&gt;
+&lt;p&gt;在学习上，我会更加关注与疫情有关的知识点来紧跟时势发展动态，注重个人能力的提升来提高自己的个人实力。此外，老师的教学方式更趋多样化，这也使我采用线上与线下相结合的方式来学习课程。&lt;/p&gt;
+&lt;p&gt;你觉得后疫情时代，周围的大环境有什么大的变化吗？（可以是学校环境，社会发展，国家发展等）&lt;/p&gt;
+&lt;p&gt;答：后疫情时代，周围的大环境变化挺大的，如以下两个方面。&lt;/p&gt;
+&lt;p&gt;学校环境：我们学校为了管理学生、保护学生安全，进行封校。此外，有些社团也会举报与疫情有关的活动。&lt;/p&gt;
+&lt;p&gt;社会发展：社会更加注重个人卫生的宣传、传播抗疫知识以及榜样，为我们的共同抗疫事业树立模范。此外，国家免费提供的新冠疫苗和抗疫表现都有助于稳定社会秩序，安抚群众。&lt;/p&gt;
+&lt;p&gt;当情绪不太好的时候，通常是怎么释放消极情绪的呢？&lt;/p&gt;
+&lt;p&gt;答：我会通过享受美食、看剧或者综艺、听歌和朋友倾诉等方法来跟消极情绪这些负能量说“拜拜”。&lt;/p&gt;
+&lt;h3 id=&#34;834访谈对象四大四学生&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.4*&lt;/strong&gt;&lt;/em&gt;	&lt;em&gt;&lt;strong&gt;*访谈对象四——大四学生*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;访谈对象——大四学生&lt;/p&gt;
+&lt;p&gt;Q：同学可以先介绍一下你的基本信息吗?&lt;/p&gt;
+&lt;p&gt;A：我叫黄泽鑫，来自广东广州，是广东财经大学18级应届毕业生。&lt;/p&gt;
+&lt;p&gt;Q：你所在的学校有过封校的行为吗？&lt;/p&gt;
+&lt;p&gt;A：没有。&lt;/p&gt;
+&lt;p&gt;Q：那你目前是在准备考研还是准备就业？为什么？&lt;/p&gt;
+&lt;p&gt;A：目前正在积极备考，是走考验路线。因为受之前疫情的影响，去年我们专业未就业人数多，这会使今年的就业压力变得跟去年一样大。因此，我想在大学里再深造三年，到时候就业压力就应该不会那么高了。&lt;/p&gt;
+&lt;p&gt;Q：在疫情爆发时，你是否就已经对就业形势感到担忧？&lt;/p&gt;
+&lt;p&gt;A：是的。因为大三就要开始思考走考研还是就业路线了当时疫情的爆发加上应届毕业生的就业率比往年低，就感觉有些害怕和焦虑，害怕自己不能很好的就业。&lt;/p&gt;
+&lt;p&gt;Q：现在距离考试还有一个多月，那目前你备考的心态是怎样的？是比较乐观还是依旧焦虑？&lt;/p&gt;
+&lt;p&gt;A：现在感觉比较乐观吧。既然选择了考研路，就要坚持走下去，复习的也比较好，希望可以顺利上岸吧。&lt;/p&gt;
+&lt;h3 id=&#34;835--访谈对象五研究生&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.5  访谈对象五——研究生*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;访谈对象：刚研三学生，性别：男，25，深圳&lt;/p&gt;
+&lt;p&gt;问题1：疫情爆发期间，你所处的地区受到疫情的影响大吗？具体是什么影响呢？&lt;/p&gt;
+&lt;p&gt;问题2：你认为疫情是否有影响到你和你的家人的情绪？具体是如何影响的呢？&lt;/p&gt;
+&lt;p&gt;问题3：2020全国疫情缓和后，2021年疫情在各个地区有所反复，对此你的心理变化是？你或你的家人是否有产生焦虑心理？&lt;/p&gt;
+&lt;p&gt;问题4：整场疫情的反复对你身边的大学生的有什么影响？你觉得是什么因素影响的？方便具体谈谈吗？&lt;/p&gt;
+&lt;p&gt;问题5：后疫情时代中，你身边的大学生是否有较为明显的情绪变化？你认为是什么因素导致的呢？方便具体谈谈吗？&lt;/p&gt;
+&lt;p&gt;问题1：深圳这座城市受疫情的影响并不太大，没有像武汉那样整座城市几近瘫痪的地步，到了深圳，各个疫情防控措施都已经非常成熟了。&lt;/p&gt;
+&lt;p&gt;问题2：我和我的家人都对疫情的形势十分乐观，没有特别大的情绪上的波动&lt;/p&gt;
+&lt;p&gt;问题3：我觉得疫情反复是正常现象，所以我和我的家人都没有过多的焦虑心理，心理上也没有特别的变化&lt;/p&gt;
+&lt;p&gt;问题4：大家都说“2020年的应届毕业生，毕业等于失业。”对于我们应届毕业生的影响肯定就是很难找工作啦。应届毕业生，由于缺少工作经验，又面临同届毕业的竞争者井喷式增长。疫情时期，任何一家能存活下来的企业都不敢轻易招聘新员工，而是选择稳住现有的老员工。从传统的房地产行业到新贵的互联网行业，都是泥菩萨过河——自身难保。首先，受疫情影响，对应届生毕业生消化最大的中小企业遭受严重打击，部分中小企业在无法以较低成本融资的情况下，一般会首先采取缩减业务规模、暂停招聘、调岗调薪等措施以降低成本，谋求生存发展。尽管目前国家已经采取了减免房租、职工社保等一系列帮助企业恢复生产的措施，但由于中小企业劳动密集型的较多，企业人工成本普遍较高，在企业经营陷入困难的情况下，劳动报酬的支出对于中小企业的压力依然巨大。导致很多企业由于没办法维持新进人员的培养成本而不进行招聘。其次，招聘渠道和人才市场还没正常运作。受疫情影响，为避免人口大幅度流动和聚集，全国各地先后采取了居家隔离、延长春节假期、封城、封村等防控措施，多地火车、高铁、高速、公共交通等都限制出入，甚至禁止机动车运行，跨区域求职人员困难重重，企业多会选择本地区求职者，而无法进行真正的人才选拔。在过去，企业招聘经常会运用校招、招聘网站广告、企业官网招聘频道等方式进行线上线下相结合的选拔模式。而现在为了防止人员聚集，许多人才市场还未开放，招聘会被大规模取消，多以网络招聘为主，且视频面试后期根据市场恢复情况再确定复试时间，拖延了时间。最后，出国留学暂缓，转向就业。每年出国留学成为大部分毕业生的选择，而今年受疫情影响，原定出国留学的毕业生只能暂时放弃留学事宜，转向国内就业市场，导致就业毕业生剧增。而随着国内疫情的好转，国外的疫情却大有愈演愈烈之势，安全因素成为阻碍出国留学的一大因素。外国排华势力的抬头成为阻碍毕业生出国留学的另一因素。国外泛起的种族歧视伴随着疫情的发展而迅速蔓延，国外舆论对留学生负面影响加剧，面对这些不确定性，对尚未申请的学生来说，足以导致他们重新考虑是否还愿意留学。&lt;/p&gt;
+&lt;p&gt;问题5：比较多的还是焦虑吧，还有烦躁等等的不良情绪，毕竟突如其来的疫情，让自己原本的计划全部打乱，未来是怎么样的还扑朔迷离，确实是容易让人情绪变化的。&lt;/p&gt;
+&lt;h3 id=&#34;836--访谈对象六老师&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.6  访谈对象六——老师*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;访谈对象&amp;mdash;&amp;ndash;某学院辅导员，性别：女，年纪：27，地区：广州&lt;/p&gt;
+&lt;p&gt;问题1：疫情爆发期间，你所处的地区受到疫情的影响大吗？具体是什么影响呢？&lt;/p&gt;
+&lt;p&gt;问题2：你认为疫情是否有影响到你和你的家人的情绪？具体是如何影响的呢？&lt;/p&gt;
+&lt;p&gt;问题3：2020全国疫情缓和后，2021年疫情在各个地区有所反复，对此你的心理变化是？你或你的家人是否有产生焦虑心理？&lt;/p&gt;
+&lt;p&gt;问题4：整场疫情的反复对你身边的大学生的有什么影响？你觉得是什么因素影响的？方便具体谈谈吗？&lt;/p&gt;
+&lt;p&gt;问题5：后疫情时代中，你身边的大学生是否有较为明显的情绪变化？你认为是什么因素导致的呢？方便具体谈谈吗？&lt;/p&gt;
+&lt;p&gt;问题1：疫情爆发期间，广州就是正常的停工停学，2020年的时候我带的是大四的毕业生，本来他们的大四会有很多的企业宣讲会供他们选择最终要去哪个企业就业或者说是选择考研的，但是疫情爆发，让他们的选择变少了，然后一直在准备的面试模式也改变了，然后很多学生就会有点焦虑，一直咨询我许多问题，我觉得疫情的爆发是对我的工作造成了一定的不便，和增加了工作量的，生活上的影响倒也还好。&lt;/p&gt;
+&lt;p&gt;问题2：在疫情期间，我本人是始终相信中国共产党的领导的，我也经常跟我的学生宣扬中国共产党的领导，但是我的父母呢，他们都已经上了年纪，五六十岁，他们都觉得自己经历过大风大浪，这点东西不算什么，然后在我的劝说下，他们认识到这次事故的严重性，死亡率之高之后，他们开始担心，各种的担心，看各种东西都是满眼病毒，我觉得这有些过分的担心了，大概是他们不会看网上的报道，对疫情的不了解导致的吧。&lt;/p&gt;
+&lt;p&gt;问题3：我本人是在广州工作的，在疫情的反复期间，主要是广州荔湾区的疫情比较接近我，在我知道广州荔湾疫情爆发之后，我首先是积极配合完成是否有在14天内去过荔湾区的调查，然后同时也对我的学生进行调查，我认为疫情的反复是正常现象，其中，钟南山院士也在先前提醒过疫情还会反复，所以心里上有所准备，并没有过于慌张。我的父母由于不贴近网络世界，他们经常担心我， 因为在学校人口冗杂，我常常安慰他们。&lt;/p&gt;
+&lt;p&gt;问题4：我在2020年带的是大四的毕业生，在2021年带的是大一的新生，我认为这两个群体，是这场疫情应该备受关注的对象，面对疫情，很多的企业单位都减少应聘岗位，改变面试方式，这实在是打了大四学生的一个措手不及，面对就业的严峻形势，出现焦虑的心理是在所难免的，对他们的生活的影响也是比较大的，能否成功就业？现在准备考研是否还来得及？是否考虑创业？未来何去何从？这都是困扰大四学生的因素。而对于大一新生，他们的高三与众不同，整个高三处于十分挣扎的心理，高考的延期让人心理上产生疲惫，上网课的自由让人不知如何是好，好不容易熬过疫情来到了大学，但疫情又还是反复封校，长期的封闭对学生的心理上也是一种折磨吧。&lt;/p&gt;
+&lt;p&gt;问题5：情绪变化的话刚刚已经说过了，就是大四学生在面临严峻的就业形势，会有一定程度上明显的焦虑。&lt;/p&gt;
+&lt;h3 id=&#34;837--访谈对象七学生家长&#34;&gt;&lt;em&gt;&lt;strong&gt;*8.3.7  访谈对象七——学生家长*&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;大一学生家长&lt;/p&gt;
+&lt;p&gt;您对您孩子的情绪变化是否了解？&lt;/p&gt;
+&lt;p&gt;答：我家孩子平时跟我的沟通会比较多，他平时有什么烦心事，或者在学校有什么比较开心的事都会打电话跟我讲，所以说对孩子的情绪还是比较了解。&lt;/p&gt;
+&lt;p&gt;影响您孩子情绪的来源是什么？&lt;/p&gt;
+&lt;p&gt;答：一般来说，都是成绩的不稳定以及与朋友关系波动的吧，我觉得我的小孩情绪还算是比较稳定的，一直都是比较积极向上的。&lt;/p&gt;
+&lt;p&gt;当下疫情，您最担心孩子产生什么心理？&lt;/p&gt;
+&lt;p&gt;答：我最担心孩子因为疫情在家里就懈怠了学习，放松了对学习的警惕，也没有跟同学之间的对比，好吃懒做啥也不干，也不知道上进不为自己的未来考虑。&lt;/p&gt;
+&lt;p&gt;当下疫情让您和您孩子之间的关系有什么变化？&lt;/p&gt;
+&lt;p&gt;答：因为平时他要在校居住，所以只有他打电话跟我沟通的时候，我才知道最近发生了什么事情，疫情封校，在家一段时间也让我对他有了更深入的了解。&lt;/p&gt;
+&lt;p&gt;当您发现孩子情绪有所波动，您是如何处理的呢？&lt;/p&gt;
+&lt;p&gt;答：一般来说，我会和我家孩子沟通。如果情绪有较大的波动，我是会好好的询问他到底发生了什么事儿，为什么不开心。然后和他好好聊一下这个问题，开解一下他。&lt;/p&gt;
+&lt;p&gt;您对调节情绪有什么好的建议嘛？&lt;/p&gt;
+&lt;p&gt;答：就根据孩子他的个人兴趣。他平时喜欢打球，那么如果说他情绪不太好的话，让他去好好的打一下球，或者说去听一下音乐，运动一下，放松一下自己。&lt;/p&gt;
+&lt;p&gt;8.4 附件四  参考文献&lt;/p&gt;
+&lt;p&gt;[1]李莹，许书君，“新冠”疫情期间大学生心理状况调查及对策[J]，科学咨询（科技管理），2021，（05）：112-114&lt;/p&gt;
+&lt;p&gt;[2]王鲁晓，李小蒙，新冠肺炎疫情对大学生情绪的影响及对策[J]，中国石油大学胜利学院学报，2020，34（04）：45-48&lt;/p&gt;
+&lt;p&gt;[3]陈静，新冠肺炎疫情下大学生焦虑情绪影响因素的实证研究——以北京联合大学为例[J]，北京联合大学学报， 2020,34(03)：19-26&lt;/p&gt;
+&lt;p&gt;[4] 赵波，蔡特金，张志华，新冠肺炎疫情下大学生情绪状态的呈现与调适——基于自我关怀的视角[J]，中国青年研究， 2020,(04)：49-54&lt;/p&gt;
+&lt;p&gt;[5]汪娟，何奎莲，新冠肺炎疫情下大学生情绪反应和领悟社会支持研究[J]，宜宾学院学报. 2020,20(04)：21-26&lt;/p&gt;
+&lt;h3 id=&#34;heading-7&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-8&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-9&#34;&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;heading-10&#34;&gt;&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>“信息杯”调研框架</title>
+        <link>https://slothhuman.github.io/p/%E4%BF%A1%E6%81%AF%E6%9D%AF%E8%B0%83%E7%A0%94%E6%A1%86%E6%9E%B6/</link>
+        <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E4%BF%A1%E6%81%AF%E6%9D%AF%E8%B0%83%E7%A0%94%E6%A1%86%E6%9E%B6/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/31.jpg" alt="Featured image of post “信息杯”调研框架" /&gt;&lt;h2 id=&#34;一调研背景&#34;&gt;&lt;strong&gt;一、调研背景&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;今年已经是2021年了，距离新冠疫情的爆发已经过去了2年，这两年虽然中国对疫情有着非常有力的控制，但是其对我们的影响也是空前的，当然不仅仅是对经济的影响，更有对人们的生活、学习工作、观念等有着很大的影响。下面我们将现在称为“后疫情时代。所谓后疫情时代，并不是我们原来想象的疫情完全消失，一切恢复如前的状况，而是疫情时起时伏，随时都可能小规模爆发，从外国外地回流以及季节性的发作，而且迁延较长时间，对各方面产生深远影响的时代。&lt;/p&gt;
+&lt;p&gt;作为大学生的我们也同样感受到了疫情对我们的影响，半年的网课，长时间的居家生活，相信对每一位大学生都有不小的冲击。后疫情时代大学生的情绪变化以及所受到的更深层次的影响到底有什么呢？&lt;/p&gt;
+&lt;p&gt;我们成立小组，为此立题，结合我们自身的实际能力开展一场基于广东工业大学后疫情时代大学生的社会情绪变化以及影响因素的调查研究。&lt;/p&gt;
+&lt;h2 id=&#34;二目的及意义&#34;&gt;二、&lt;strong&gt;目的及意义&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;大学生是国家宝贵的人力资源，所谓青年强，则国强，作为国家未来的希望，在后疫情时代所带来的情绪变化以及背后的原因都是值得深究及调查的。&lt;/p&gt;
+&lt;p&gt;随着我国疫情形势不断好转，国外疫情形势持续蔓延，疫情逐渐进入了后疫情时代。疫情过程中出现的各类心理问题，包括后疫情时代学校封闭管理产生的心理问题，都受到了大家越来越多的关注，成为了各类高校的普遍关注点。高校如何缓解学生心理压力，将关系到校园的安全和稳定，同时也是促进学生形成自尊自爱、平稳和谐、积极向上良好心态的必然要求。本次通过调研得出疫情后大学生社会情绪的变化现状，分析探索校生常见产生心理问题产生的影响因素，对疫情影响下大学生心理健康问题分析研究，提出加强大学生健康关爱工作的建议，疫情后的学生心理问题应对措施。&lt;/p&gt;
+&lt;p&gt;我们本次调研的主要目的着重放在以下几点：&lt;/p&gt;
+&lt;p&gt;(1) 参考已有文献及研究成果，严格遵照问卷设计的要求和原则，采用李克特量表作为评分标准设计调查问卷。&lt;/p&gt;
+&lt;p&gt;(2) 通过统计研究方法，并依据建立的数学模型对调查结果深入分析，探究后疫情时代社会情绪变化影响大学生的主要因素，进而提出针对性的改进优化建议。&lt;/p&gt;
+&lt;p&gt;(3) 对在校大学生进行访谈，了解他们如何看待亲社会行为。从学生的角度切入，找出后疫情时代影响大学生社会情绪变化的因素及具体原因，并提出一些可行的解决方案。&lt;/p&gt;
+&lt;h2 id=&#34;三现状分析&#34;&gt;三、现状分析&lt;/h2&gt;
+&lt;p&gt;后疫情时代到底是怎么样的呢，大学生的现状究竟如何，根据资料的查找以及小组成员的思考，我们有以下分析：&lt;/p&gt;
+&lt;p&gt;(1) 复课封校难适应引情绪变化&lt;/p&gt;
+&lt;p&gt;(2) 返乡困难促使思家之情加剧&lt;/p&gt;
+&lt;p&gt;(3) 过度恐慌出现人际交流障碍&lt;/p&gt;
+&lt;p&gt;(4) 环境改变产生群体性焦虑&lt;/p&gt;
+&lt;p&gt;(5) 大学生实习就业形势严峻引发焦虑&lt;/p&gt;
+&lt;p&gt;(6) 外界信息冗杂促使心绪波动&lt;/p&gt;
+&lt;h2 id=&#34;四调研内容&#34;&gt;四、调研内容&lt;/h2&gt;
+&lt;h3 id=&#34;主题&#34;&gt;主题&lt;/h3&gt;
+&lt;p&gt;后疫情时代大学生的社会情绪变化以及影响因素的调查研究&lt;/p&gt;
+&lt;h3 id=&#34;关键词&#34;&gt;关键词&lt;/h3&gt;
+&lt;p&gt;后疫情；大学生；社会情绪变化；影响因素&lt;/p&gt;
+&lt;h3 id=&#34;思路&#34;&gt;思路&lt;/h3&gt;
+&lt;p&gt;因此，本次调研内容应围绕上面四点展开得出相关结论，结论的落脚点在于有什么情绪变化以及产生变化的原因，最后应该要根据得出的结论提出解决办法&lt;/p&gt;
+&lt;h3 id=&#34;提问题思路提出来的问题都是有理由的&#34;&gt;提问题思路（提出来的问题都是有理由的）&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;调研对象的****性别、年级、专业（理科类，文科类）、家庭状况****是否会对结果产生影响，因此问卷内容应该有这方面的涉及&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接着应该要体现有一些情绪变化：通过侧面或直接性的问题****了解情绪的变化****，比如对一些事情会更积极的看待还是变得消极&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重点应该在影响因素方面的多样性，这些方面要联系到****大学生****这个主体，比如：后疫情时代的——&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;就业情况（先调查疫情对就业的影响大不大）；&lt;/p&gt;
+&lt;p&gt;国家发展（对中国更有信心，更有安全感，就相对于外国的鸡犬不宁，因为国家动荡会让一个国家的青年人对未来更加迷茫，对自身存在的理由产生质疑）；&lt;/p&gt;
+&lt;p&gt;居住环境压力（长期性，不定时性封校，外出游玩不方便，释放压力方式局限）&lt;em&gt;&lt;strong&gt;*；*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;疫情的反复（对自身健康的不安全感）&lt;/p&gt;
+&lt;p&gt;家庭状况变化（有些家庭因为疫情经济状况变差）&lt;/p&gt;
+&lt;p&gt;教学条件（对网课在心理方面的看法）&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;对此结果，问卷从大学生的角度，体现小组对国家，社会，学校，大学生有什么建议，来更好促进大学生心理健康发展&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如：你认为学校针对后疫情时代大学生心理状况调解开展相关讲座有必要吗等（有听说不少学校有人跳楼）&lt;/p&gt;
+&lt;p&gt;问卷名称&lt;/p&gt;
+&lt;p&gt;《后疫情时代大学生的社会情绪变化及影响因素的调查研究》&lt;/p&gt;
+&lt;p&gt;调研对象&lt;/p&gt;
+&lt;p&gt;以广工大学城校区的就读大学生为主，其中包括大一、大二、大三、大四和其他。&lt;/p&gt;
+&lt;h2 id=&#34;五调研重难点&#34;&gt;&lt;strong&gt;五、调研重难点&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;重点&#34;&gt;重点&lt;/h3&gt;
+&lt;p&gt;\1. 大量的、广泛的统计调查，取得原始的有力的调查数据。&lt;/p&gt;
+&lt;p&gt;\2. 对数据进行定量分析、定性分析。&lt;/p&gt;
+&lt;p&gt;\3. 选择合适的调研和分析工具，透彻地分析调研工具的利与弊。&lt;/p&gt;
+&lt;p&gt;\4. 选取合适的假设前提，并穷举罗列尽可能多的原因和分析，用合理的判断选取正确的结果。&lt;/p&gt;
+&lt;h3 id=&#34;难点&#34;&gt;难点&lt;/h3&gt;
+&lt;p&gt;\5. 确立后情时代的时间规模和时间段。&lt;/p&gt;
+&lt;p&gt;\6. 数据的科学性、全面性、原始性。&lt;/p&gt;
+&lt;p&gt;\7. 样本数据处理。&lt;/p&gt;
+&lt;p&gt;\8. 分析工具或模型的适应性。&lt;/p&gt;
+&lt;p&gt;\9. 原因归纳全面、深入程度。&lt;/p&gt;
+&lt;p&gt;\10. 设计出体现出变化需要有对比数据。&lt;/p&gt;
+&lt;h2 id=&#34;六调研方法&#34;&gt;六、调研方法&lt;/h2&gt;
+&lt;h3 id=&#34;调研方式问卷调查法访谈调查法文献调查法&#34;&gt;&lt;strong&gt;调研方式：问卷调查法、访谈调查法、文献调查法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;一问卷调查法&#34;&gt;（一）问卷调查法&lt;/h3&gt;
+&lt;p&gt;1.本次调研采用线上问卷调查的方法。&lt;/p&gt;
+&lt;p&gt;2.调研问卷：《后疫情时代大学生的社会情绪变化以及影响因素的调查研究 》&lt;/p&gt;
+&lt;p&gt;3.问卷内容设置：从参与者主体为大学生的基本情况作为考虑的出发点，收集参与者的基本信息、大学生的社会情绪和情绪变化的影响因素等多方面数据，预计共设置了15个问题，全部为选择题，若有选项不符参与者所想，设有其他供其填写说明。&lt;/p&gt;
+&lt;p&gt;1．附表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;/&lt;/th&gt;
+&lt;th&gt;线上问卷&lt;/th&gt;
+&lt;th&gt;线下问卷&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;发放数量&lt;/td&gt;
+&lt;td&gt;无上限&lt;/td&gt;
+&lt;td&gt;暂不考虑设置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;实际有效数量&lt;/td&gt;
+&lt;td&gt;350份以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有效率&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;二访谈调查法&#34;&gt;（二）访谈调查法&lt;/h3&gt;
+&lt;p&gt;本次调研采用线下访谈的方法，采用面对面交流、口头问答的形式进行。&lt;/p&gt;
+&lt;p&gt;1．访谈内容：访谈主要围绕对后疫情时代大学生的社会情绪变化的看法以及其影响因素来展开。&lt;/p&gt;
+&lt;p&gt;2．访谈对象：&lt;/p&gt;
+&lt;p&gt;\1) 本次的调研访谈对象主要为广州大学城各高校大学生，且以广东工业大学大学城校区的学生为主。&lt;/p&gt;
+&lt;p&gt;\2) 为得到多角度的调研结论，可以考虑访谈多个学院的辅导员、部分学生家长代表等与大学生相关且具有代表性的更多社会角色，对此调研方面的相关感受及看法。&lt;/p&gt;
+&lt;p&gt;3．抽样方法：大学生采用随机抽样与分层抽样结合，老师、家长需提前联系。&lt;/p&gt;
+&lt;p&gt;4．若受到疫情影响，可采取线上访谈的方式，通过打电话或腾讯会议进行访谈。&lt;/p&gt;
+&lt;p&gt;5．附表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;/&lt;/th&gt;
+&lt;th&gt;线上访谈&lt;/th&gt;
+&lt;th&gt;线下访谈&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;发放数量&lt;/td&gt;
+&lt;td&gt;若受疫情影响，酌情考虑&lt;/td&gt;
+&lt;td&gt;学生：无上限老师：无上限家长：无上限&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;实际有效数量&lt;/td&gt;
+&lt;td&gt;学生：100老师：10家长：5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;有效率&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;（三）&lt;strong&gt;文献调查法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;该方法为调研活动提供科学的理论支撑与研究方法，通过文献的二次分析，得出有价值的结论与建议，指导科学研究与实践活动，从而全面、正确地了解掌握所要研究问题的一种方法。由于文献可能并非最新理论，文献中的数据具有延时性和不确定性，由此方法得到的结论偏差较大。&lt;/p&gt;
+&lt;p&gt;1．文献来源：广东工业大学图书馆、广东工业大学校园网论文数据库、中国知网、百度等搜索引擎。&lt;/p&gt;
+&lt;h2 id=&#34;分析方法&#34;&gt;&lt;strong&gt;分析方法&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;利用excel，spss，问卷星等软件或小程序，借助聚类分析、相关分析等分析方法，利用图表展示出结果，得到问卷的大体结论。通过对问卷的分析或者访谈的结果，用文献做科学支撑，可以得到更深层次的结论。&lt;/p&gt;
+&lt;h1 id=&#34;七调研思路设计&#34;&gt;&lt;strong&gt;七、调研思路设计&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;在确定对选题“后疫情时代大学生的社会情绪变化以及影响因素的调查研究”进行专题调研之后，必须根据选题特点进行知识准备和理论武装，使自己早一点进入课题角色。知识准备主要有两大途径：一是通过网络书刊等载体，系统地从理论和政策上了解调研对象；二是查阅档案资料，了解调研对象的发生发展过程。&lt;/p&gt;
+&lt;p&gt;采用多种网上调查手段相结合。在网站上设置在线调查问卷是最基本的调研方式，但并不限于这种方式，常用的在线调研手段除了在线调查表之外，还有电子邮件调查、对访问者的随机抽样调查、固定样本调查等等。设立相应的问题，探究大学生社会情绪变化的影响因素；综合调查结果，分析与总结出现上述结果的原因与特征状态。&lt;/p&gt;
+&lt;h1 id=&#34;八调研计划&#34;&gt;&lt;strong&gt;八、调研计划&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;调研前准备&#34;&gt;&lt;strong&gt;调研前准备&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;在调研工作开展初期组织一次，围绕调研题目展开讨论，主要是为了使各位队员熟悉有关调研题目的选题背景以及调研活动的各项流程，为后期正式调研活动的顺利开展做准备。&lt;/p&gt;
+&lt;h2 id=&#34;调研工作安排&#34;&gt;&lt;strong&gt;调研工作安排&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;**1.**&lt;strong&gt;人员安排&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;采用分组负责制，每一小组负责相应的工作并由小组长进行管理。&lt;/p&gt;
+&lt;p&gt;问卷组：围绕课题进行问卷的设计与修改、确认（经全体队员进行确认）&lt;/p&gt;
+&lt;p&gt;数据分析组：将通过问卷形式所得到的数据进行预处理（编码、输入）；然后进行正式的数据分析。&lt;/p&gt;
+&lt;p&gt;访谈组：线下进行访谈&lt;/p&gt;
+&lt;p&gt;**2.**&lt;strong&gt;工作内容安排&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;调研准备（10.27～10.31）：开展全体大会；问卷的设计与确认。&lt;/p&gt;
+&lt;p&gt;正式调研阶段（11.1～11.11）：&lt;/p&gt;
+&lt;p&gt;制作好问卷后通过问卷星的形式由全体队员转发到朋友圈以及大学生群体相应群聊，以获取适量真实贴切的数据。（11.1～11.7）&lt;/p&gt;
+&lt;p&gt;​    人物访谈（11.1～11.7）&lt;/p&gt;
+&lt;p&gt;数据分析（11.8～11.11）&lt;/p&gt;
+&lt;p&gt;进入调研撰写阶段（11.12～11.17）：调研报告撰写以及修改、修正&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>常见的加速度传感器</title>
+        <link>https://slothhuman.github.io/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/</link>
+        <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://slothhuman.github.io/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/</guid>
+        <description>&lt;img src="https://slothhuman.github.io/img/34.jpg" alt="Featured image of post 常见的加速度传感器" /&gt;&lt;h2 id=&#34;一-简介&#34;&gt;一． 简介&lt;/h2&gt;
+&lt;p&gt;加速度传感器是一种能够测量加速度的传感器。通常由质量块、阻尼器、弹性元件、敏感元件和适调电路等部分组成。传感器在加速过程中，通过对质量块所受惯性力的测量，利用牛顿第二定律获得加速度值。根据传感器敏感元件的不同，常见的加速度传感器包括电容式、电感式、应变式、压阻式、压电式等。&lt;/p&gt;
+&lt;h2 id=&#34;二-分类及原理&#34;&gt;二． 分类及原理&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;压电式加速度传感器&#34;&gt;压电式加速度传感器&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;简介：&lt;/p&gt;
+&lt;p&gt;压电式加速度传感器因为具有测量频率范围宽、量程大、体积小、重量轻、对被测件的影响小以及安装使用方便等优点, 成为最常用的振动测量传感器, 广泛应用于振动测试中。&lt;/p&gt;
+&lt;p&gt;原理：&lt;/p&gt;
+&lt;p&gt;压电加速度计的工作原理是沿压电晶体的极化方向施加一外力使其变形，则压电晶体内部发生极化，受力的两端面出现极性相反的电荷，若撤去外力则压电晶体恢复到初始状态，这就是正压电效应。&lt;/p&gt;
+&lt;p&gt;压电式加速度传感器就是利用了压电晶体的正压电效应，将机械能转换为电能从而实现对振动加速度信号的测量。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps176.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;压电式加速度传感器常见的结构形式有中心压缩式、环形剪切式、三角剪切式。测量被测对象振动大小时，需选择测点并将加速度传感器安装牢靠。将压电式加速度传感器的压电晶体看做理想弹性体，忽略压电晶体与壳体之间连接胶层的质量，只考虑胶层的阻尼系数，并将压电式加速度传感器一端简化为自由端、一端简化为固定端，则可得到其工作时的力。&lt;/p&gt;
+&lt;p&gt;压电式加速度传感器的振动方程为mx2+cx1+kx=F（t）&lt;/p&gt;
+&lt;p&gt;方程式中：&lt;/p&gt;
+&lt;p&gt;m为压电晶体的质量kg&lt;/p&gt;
+&lt;p&gt;c为胶层的阻尼系数N·s/m&lt;/p&gt;
+&lt;p&gt;k为压电晶体的刚度系数N/m&lt;/p&gt;
+&lt;p&gt;x为压电晶体的位移m&lt;/p&gt;
+&lt;p&gt;x1为压电晶体的速度m/s&lt;/p&gt;
+&lt;p&gt;x2为压电晶体的加速度m/s2&lt;/p&gt;
+&lt;p&gt;F（t）为作用于压电式加速度传感器的外力N。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;电容式加速度传感器&#34;&gt;电容式加速度传感器&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;电容式MEMS加速度计因具有灵敏度高、温度漂移小、过载保护能力好等优点，成为目前重点研究的微加速度计之一。&lt;/p&gt;
+&lt;p&gt;电容式加速度计的敏感结构主要包含3个部分：惯性质量块以及与惯性质量一体的活动电容极板、固定电容极板和两者之间的弹性连接部分。MEMS电容式加速度计中，一个质量为m的质量块通过一个弹性系数为k的弹簧悬浮在两个固定电极之间，形成了两个可变电容C1、C2。当质量块受到外力的作用而偏离原位置，电容C1、C2产生了差分变化，如图1所示，通过检测电容C1、C2的变化可以得到外加加速度的值。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps177.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当差动电容信号输出后，正弦载波将低频信号调制至高频载波，通过T型阻容网络放大电路输出带载波的电压放大信号；模拟开关解调电路将信号从高频段解调至低频段；经四阶带通滤波电路得到最终的输出电压，实现电容电压转换，供后续电路检测和处理。信号读出电路原理框图如图2所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps178.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;压阻式加速度传感器&#34;&gt;压阻式加速度传感器&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;MEMS压阻式加速度传感器的敏感元件由弹性梁、质量块、固定框组成。压阻式加速度传感器实质上是一个力传感器，他是利用用测量固定质量块在受到加速度作用时产生的力F来测得加速度a的。在目前研究尺度内，可以认为其基本原理仍遵从牛顿第二定律。也就是说当有加速度a作用于传感器时，传感器的惯性质量块便会产生一个惯性力:F=ma,此惯性力F作用于传感器的弹性梁上，便会产生一个正比于F的应变。，此时弹性梁上的压敏电阻也会随之产生一个变化量△R，由压敏电阻组成的惠斯通电桥输出一个与△R成正比的电压信号V。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps179.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps180.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;电桥输出表达式为：&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps181.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三-应用&#34;&gt;三． 应用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;三轴加速度传感器&#34;&gt;三轴加速度传感器&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://slothhuman.github.io/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps182.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;三轴加速度计是一种惯性传感器，能够测量物体的比力，即去掉重力后的整体加速度或者单位质量上作用的非引力。当加速度计保持静止时，加速度计能够感知重力加速度，而整体加速度为零。在自由落体运动中，整体加速度就是重力加速度，但加速度计内部处于失重状态，而此时三轴加速度计输出为零。&lt;/p&gt;
+&lt;p&gt;一方面，要准确了解物体的运动状态，必须测得其三个坐标轴上的分量；另一方面，在预先不知道物体运动方向的场合下，只有应用三轴加速度传感器来检测加速度信号。由于三轴加速度传感器也是基于重力原理的，因此用三轴加速度传感器可以实现双轴正负90度或双轴0-360度的倾角，通过校正后期精度要高于双轴加速度传感器大于测量角度为60度的情况。&lt;/p&gt;
+&lt;p&gt;目前的三轴加速度传感器大多采用压阻式、压电式和电容式工作原理，产生的加速度正比于电阻、电压和电容的变化，通过相应的放大和滤波电路进行采集。这个和普通的加速度传感器是基于同样的原理，所以在一定的技术上三个单轴就可以变成一个三轴。而此时三轴加速度计输出为零。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;加速度传感器应用于地震检波器设计&#34;&gt;加速度传感器应用于地震检波器设计&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;地震检波器是用于地质勘探和工程测量的专用传感器，是一种将地面振动转变为电信号的传感器，能把地震波引起的地面震动转换成电信号，经过模/数转换器转换成二进制数据、进行数据组织、存储、运算处理。加速度传感器是一种能够测量加速力的电子设备，典型应用在手机、笔记本电脑、步程计和运动检测等。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;加速度传感器应用于监测高压导线舞动&#34;&gt;加速度传感器应用于监测高压导线舞动&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;目前国内对导线舞动监测多采用视频图像采集和运动加速度测量两种主要技术方案。前者在野外高温、高湿、严寒、浓雾、沙尘等天气条件下，不仅对视频设备的可靠性、稳定性要求很高，而且拍摄的视频图像的效果也会受到影响，在实际使用中只能作为辅助监测手段，无法定量分析导线运动参数；而采用加速度传感器监测导线舞动情况，虽可定量分析输电导线某一点上下振动和左右摆动的情况，但只能测出导线直线运动的振幅和频率，而对于复杂的圆周运动，则无法准确测量。所以我们必须加快加速度传感器的发展来适应诸如此类环境下进行应用。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;计步器功能&#34;&gt;计步器功能&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;加速度传感器还可以检测交流信号以及物体的振动，人在走动的时候会产生一定周期性的振动，而加速度传感器还可以检测振动的过零点，慢跑测算出人所走的步或跑步所走的步数，慢跑测算出人所移动的位移。并且利用一定的公式还可以测算出卡路里的损耗。&lt;/p&gt;
+&lt;h2 id=&#34;四-发展前景&#34;&gt;四． 发展前景&lt;/h2&gt;
+&lt;p&gt;某些传感器市场比如压力传感器、温度传感器、流量传感器、水平传感器已表现出成熟市场的特征。流量传感器、压力传感器、温度传感器的市场规模较大，分别占到整个传感器市场的21%、19%和14%。传感器市场的主要增长来自于无线传感器、MEMS传感器、生物传感器等新兴传感器。 全世界的传感器市场在不断变化的革新之中呈现出快速增长的发展趋势。相关专家指出，传感器领域的主要技术将在现有基础上予以拓宽和提升 ，世界各国将竞相加速新一代传感器的开发和产业发展，竞争也将日益激烈。新技术的发展将彻底改变未来的传感器市场，比如无线传感器、光纤传感器、智能传感器和金属氧化传感器等新型传感器的出现与市场占有率的扩大。&lt;/p&gt;
+&lt;h2 id=&#34;五-总结&#34;&gt;五． 总结&lt;/h2&gt;
+&lt;p&gt;加速度传感器，在我们各个领域之中都发挥着重要的作用，就世界范围而言，传感器市场上增长最快的依旧是汽车市场，占第二位的是过程控制市场，看好通讯市场前景。而在未来的电子产品中，多传感器将是一个重要的发展趋势，其会让电子产品在使用上更加人性化；此外，为了缩小产品尺寸和提高产品的应用价值，混合式感测器（Hybrid Sensor），如加速度传感器与陀螺仪的集成，也必然是一个发展方向，多功能混合式传感器必将以其较高的附加价值和用户操控体验占领高端市场；同时随着技术的进步，单一功能结构的传感器也将向低端市场推广和普及。&lt;/p&gt;
 </description>
         </item>
         <item>
