@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='题目《基于Vue&#43;SpringBoot的校园内推系统》大创申请书'>
+<title>大创申请书</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/%E5%A4%A7%E5%88%9B%E7%94%B3%E8%AF%B7%E4%B9%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='大创申请书'>
+<meta property='og:description' content='题目《基于Vue&#43;SpringBoot的校园内推系统》大创申请书'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E5%A4%A7%E5%88%9B%E7%94%B3%E8%AF%B7%E4%B9%A6/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='报告' /><meta property='article:published_time' content='2021-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-12-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/37.jpg' />
+<meta name="twitter:title" content="大创申请书">
+<meta name="twitter:description" content="题目《基于Vue&#43;SpringBoot的校园内推系统》大创申请书"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/37.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#heading"></a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#1研究目的"><em><strong>*（1）研究目的*</strong></em></a></li>
+            <li><a href="#招聘是学生学校企业都非常关注的问题学生希望找到好工作学校希望学生们能有好的出路企业希望招到好的员工疫情以来招聘受到了极大的负面影响如何让招聘更加顺畅可靠有效是一个值得研究的问题内推是目前企业一种比较流行的招聘方式可以通过已在企业工作的师兄师姐们的推荐绕过猎头公司招聘网站等中间步骤使学生和招聘方零距离对接起来本项目的目的在于开发实现校园内推平台通过已毕业校友的内推便利企业和学生的双向选择提高企业的招聘效率和学生的就业率响应国家的优先就业战略实现人才资源的顺畅流通和合理配置">招聘是学生、学校、企业都非常关注的问题。学生希望找到好工作，学校希望学生们能有好的出路，企业希望招到好的员工。疫情以来，招聘受到了极大的负面影响。如何让招聘更加顺畅、可靠、有效，是一个值得研究的问题。内推是目前企业一种比较流行的招聘方式。可以通过已在企业工作的师兄师姐们的推荐，绕过猎头公司、招聘网站等中间步骤，使学生和招聘方零距离对接起来。本项目的目的在于开发实现校园内推平台，通过已毕业校友的内推，便利企业和学生的双向选择，提高企业的招聘效率和学生的就业率，响应国家的优先就业战略，实现人才资源的顺畅流通和合理配置。</a></li>
+            <li><a href="#2研究内容"><em><strong>*（2）研究内容*</strong></em></a></li>
+            <li><a href="#本项目将结合javaee知识利用spring-bootmybatismybatis-plusvue框架开发搭建基于腾讯云的校园内推系统">本项目将结合JavaEE知识，利用spring boot、mybatis/mybatis-plus、vue框架，开发搭建基于腾讯云的校园内推系统。</a></li>
+            <li><a href="#项目系统分成学生端内推者端和平台管理端">项目系统分成学生端、内推者端和平台管理端。</a></li>
+            <li><a href="#每一个功能端都具有搜索功能包含模糊搜索关键字搜索等功能">每一个功能端都具有搜索功能，包含模糊搜索、关键字搜索等功能。</a></li>
+            <li><a href="#内推者端功能暂拟包括管理内推信息和内推申请在线交流个人中心企业信息管理等">内推者端功能暂拟包括：管理内推信息和内推申请；在线交流；个人中心；企业信息管理等</a></li>
+            <li><a href="#学生端功能包括个人简历管理学校信息参与应聘申请在线交流个人中心等">学生端功能包括：个人简历管理；学校信息参与；应聘申请；在线交流；个人中心等。</a></li>
+            <li><a href="#平台管理员端功能包括操作日志管理信息管理和维护包括用人单位毕业生等的信息管理和维护审核招聘者资质高校信息用人单位招聘信息等实现毕业生就业数据的分类统计批量导入导出学生信息等">平台管理员端功能包括：操作日志管理；信息管理和维护，包括用人单位、毕业生等的信息管理和维护；审核招聘者资质、高校信息、用人单位招聘信息等；实现毕业生就业数据的分类统计；批量导入导出学生信息等。</a></li>
+            <li><a href="#系统原理展示"><em><strong>*系统原理展示：*</strong></em></a></li>
+            <li><a href="#imgfilecusers86187appdatalocaltempksohtml25736wps1jpg"><img src="" alt="img"></a></li>
+            <li><a href="#功能设计展示"><em><strong>*功能设计展示：*</strong></em></a></li>
+            <li><a href="#heading-1"></a></li>
+            <li><a href="#imgfilecusers86187appdatalocaltempksohtml25736wps2jpg"><img src="" alt="img"></a></li>
+            <li><a href="#vue的基本使用"><em><strong>*Vue*</strong></em><em><strong>*的基本使用：*</strong></em></a></li>
+            <li><a href="#基于element-plus框架对页面进行静态设计并实现端的对应功能使用vue-cli脚手架对网页项目进行配置和管理根据不同端的各个功能块利用vue-router路由管理器进行路由分块同时基于不同端的权限需要在页面浏览时对用户的权限进行监控防止越权运用axious配合element-plus与后端进行交互实现页面的动态化">基于Element Plus框架，对页面进行静态设计并实现端的对应功能，使用Vue CLI脚手架对网页项目进行配置和管理，根据不同端的各个功能块利用Vue Router路由管理器进行路由分块。同时，基于不同端的权限需要在页面浏览时对用户的权限进行监控，防止越权。运用axious配合Element Plus与后端进行交互实现页面的动态化。</a></li>
+            <li><a href="#3国内外研究现状和发展动态"><em><strong>*（3）国、内外研究现状和发展动态*</strong></em></a></li>
+            <li><a href="#受疫情影响企业出于降低招聘成本的需要对内推招聘需求增大内推招聘渠道具有独特优势招聘成本低招聘效率高候选人匹配度高等">受疫情影响，企业出于降低招聘成本的需要，对内推招聘需求增大。内推招聘渠道具有独特优势：招聘成本低、招聘效率高、候选人匹配度高等。</a></li>
+            <li><a href="#目前内推渠道大部分来自企业招聘官网企业招聘公众号求职类公众号企业宣讲会等或者通过熟人直接使用微信等即时通讯软件进行推荐即内部内推目前校园内推信息机制运行不够完善存在企业与学生之间存在信息差易使学生错失好的工作机会同时企业也会措施不少优秀人才">目前，内推渠道大部分来自企业招聘官网、企业招聘公众号、求职类公众号、企业宣讲会等，或者通过熟人直接使用微信等即时通讯软件进行推荐，即内部内推。目前校园内推信息机制运行不够完善，存在企业与学生之间存在信息差，易使学生错失好的工作机会，同时，企业也会措施不少优秀人才。</a></li>
+            <li><a href="#基于内推招聘信息传递的局限性可以通过互联网技术将企业岗位内推与学生信息有机结合起来设计开发内推信息共享平台减少信息差现象">基于内推招聘信息传递的局限性，可以通过互联网技术将企业岗位内推与学生信息有机结合起来，设计开发内推信息共享平台，减少信息差现象。</a></li>
+            <li><a href="#4创新点与项目特色"><em><strong>*（4）创新点与项目特色*</strong></em></a></li>
+            <li><a href="#相较于招聘网站校友内推网站中发布内推的招聘者的信息和公司的真实性更高">相较于招聘网站，校友内推网站中发布内推的招聘者的信息和公司的真实性更高</a></li>
+            <li><a href="#学生能够直接和自己的内推者进行信息了解省去很多查找验证环节">学生能够直接和自己的内推者进行信息了解，省去很多查找验证环节</a></li>
+            <li><a href="#实现关键字搜索功能能够更快捷的过滤查找信息">实现关键字搜索功能，能够更快捷的过滤查找信息</a></li>
+            <li><a href="#页面制作简约清晰不存在广告弹窗等信息保证学生内推的高效进行">页面制作简约清晰，不存在广告弹窗等信息，保证学生内推的高效进行</a></li>
+            <li><a href="#促进了学校人才与企业资源的有机结合">促进了学校人才与企业资源的有机结合</a></li>
+            <li><a href="#5技术路线拟解决的问题及预期成果"><em><strong>*（5）技术路线、拟解决的问题及预期成果*</strong></em></a></li>
+            <li><a href="#6项目研究进度安排"><em><strong>*（6）项目研究进度安排*</strong></em></a></li>
+            <li><a href="#heading-2"></a></li>
+            <li><a href="#7已有基础"><em><strong>*（7）已有基础*</strong></em></a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%A4%A7%E5%88%9B%E7%94%B3%E8%AF%B7%E4%B9%A6/">
+                
+                    <img src="/img/37.jpg" loading="lazy" alt="Featured image of post 大创申请书" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%A4%A7%E5%88%9B%E7%94%B3%E8%AF%B7%E4%B9%A6/">大创申请书</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            题目《基于Vue&#43;SpringBoot的校园内推系统》大创申请书
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 26, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="heading"></h2>
+<h4 id="1研究目的"><em><strong>*（1）研究目的*</strong></em></h4>
+<h4 id="招聘是学生学校企业都非常关注的问题学生希望找到好工作学校希望学生们能有好的出路企业希望招到好的员工疫情以来招聘受到了极大的负面影响如何让招聘更加顺畅可靠有效是一个值得研究的问题内推是目前企业一种比较流行的招聘方式可以通过已在企业工作的师兄师姐们的推荐绕过猎头公司招聘网站等中间步骤使学生和招聘方零距离对接起来本项目的目的在于开发实现校园内推平台通过已毕业校友的内推便利企业和学生的双向选择提高企业的招聘效率和学生的就业率响应国家的优先就业战略实现人才资源的顺畅流通和合理配置">招聘是学生、学校、企业都非常关注的问题。学生希望找到好工作，学校希望学生们能有好的出路，企业希望招到好的员工。疫情以来，招聘受到了极大的负面影响。如何让招聘更加顺畅、可靠、有效，是一个值得研究的问题。内推是目前企业一种比较流行的招聘方式。可以通过已在企业工作的师兄师姐们的推荐，绕过猎头公司、招聘网站等中间步骤，使学生和招聘方零距离对接起来。本项目的目的在于开发实现校园内推平台，通过已毕业校友的内推，便利企业和学生的双向选择，提高企业的招聘效率和学生的就业率，响应国家的优先就业战略，实现人才资源的顺畅流通和合理配置。</h4>
+<h4 id="2研究内容"><em><strong>*（2）研究内容*</strong></em></h4>
+<h4 id="本项目将结合javaee知识利用spring-bootmybatismybatis-plusvue框架开发搭建基于腾讯云的校园内推系统">本项目将结合JavaEE知识，利用spring boot、mybatis/mybatis-plus、vue框架，开发搭建基于腾讯云的校园内推系统。</h4>
+<h4 id="项目系统分成学生端内推者端和平台管理端">项目系统分成学生端、内推者端和平台管理端。</h4>
+<h4 id="每一个功能端都具有搜索功能包含模糊搜索关键字搜索等功能">每一个功能端都具有搜索功能，包含模糊搜索、关键字搜索等功能。</h4>
+<h4 id="内推者端功能暂拟包括管理内推信息和内推申请在线交流个人中心企业信息管理等">内推者端功能暂拟包括：管理内推信息和内推申请；在线交流；个人中心；企业信息管理等</h4>
+<h4 id="学生端功能包括个人简历管理学校信息参与应聘申请在线交流个人中心等">学生端功能包括：个人简历管理；学校信息参与；应聘申请；在线交流；个人中心等。</h4>
+<h4 id="平台管理员端功能包括操作日志管理信息管理和维护包括用人单位毕业生等的信息管理和维护审核招聘者资质高校信息用人单位招聘信息等实现毕业生就业数据的分类统计批量导入导出学生信息等">平台管理员端功能包括：操作日志管理；信息管理和维护，包括用人单位、毕业生等的信息管理和维护；审核招聘者资质、高校信息、用人单位招聘信息等；实现毕业生就业数据的分类统计；批量导入导出学生信息等。</h4>
+<h4 id="系统原理展示"><em><strong>*系统原理展示：*</strong></em></h4>
+<h4 id="imgfilecusers86187appdatalocaltempksohtml25736wps1jpg"><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml25736%5cwps1.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></h4>
+<h4 id="功能设计展示"><em><strong>*功能设计展示：*</strong></em></h4>
+<h4 id="heading-1"></h4>
+<h4 id="imgfilecusers86187appdatalocaltempksohtml25736wps2jpg"><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml25736%5cwps2.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></h4>
+<h4 id="vue的基本使用"><em><strong>*Vue*</strong></em><em><strong>*的基本使用：*</strong></em></h4>
+<h4 id="基于element-plus框架对页面进行静态设计并实现端的对应功能使用vue-cli脚手架对网页项目进行配置和管理根据不同端的各个功能块利用vue-router路由管理器进行路由分块同时基于不同端的权限需要在页面浏览时对用户的权限进行监控防止越权运用axious配合element-plus与后端进行交互实现页面的动态化">基于Element Plus框架，对页面进行静态设计并实现端的对应功能，使用Vue CLI脚手架对网页项目进行配置和管理，根据不同端的各个功能块利用Vue Router路由管理器进行路由分块。同时，基于不同端的权限需要在页面浏览时对用户的权限进行监控，防止越权。运用axious配合Element Plus与后端进行交互实现页面的动态化。</h4>
+<h4 id="3国内外研究现状和发展动态"><em><strong>*（3）国、内外研究现状和发展动态*</strong></em></h4>
+<p>调查数据显示，在2021年全国高校应届毕业生人数已经达到了909万人以上，与2020年相比直接增加了35万人。对于应届生们来说，现在找工作的竞争压力实在是大，不少大学生会面临毕业即失业。而按照绝大多数高校毕业生找工作的条件来看，预计将有40%的大学生找不到合适的工作。其实，按照现在的社会用工需求量来看，目前市面上还是有不少岗位存在空缺。</p>
+<h4 id="受疫情影响企业出于降低招聘成本的需要对内推招聘需求增大内推招聘渠道具有独特优势招聘成本低招聘效率高候选人匹配度高等">受疫情影响，企业出于降低招聘成本的需要，对内推招聘需求增大。内推招聘渠道具有独特优势：招聘成本低、招聘效率高、候选人匹配度高等。</h4>
+<h4 id="目前内推渠道大部分来自企业招聘官网企业招聘公众号求职类公众号企业宣讲会等或者通过熟人直接使用微信等即时通讯软件进行推荐即内部内推目前校园内推信息机制运行不够完善存在企业与学生之间存在信息差易使学生错失好的工作机会同时企业也会措施不少优秀人才">目前，内推渠道大部分来自企业招聘官网、企业招聘公众号、求职类公众号、企业宣讲会等，或者通过熟人直接使用微信等即时通讯软件进行推荐，即内部内推。目前校园内推信息机制运行不够完善，存在企业与学生之间存在信息差，易使学生错失好的工作机会，同时，企业也会措施不少优秀人才。</h4>
+<h4 id="基于内推招聘信息传递的局限性可以通过互联网技术将企业岗位内推与学生信息有机结合起来设计开发内推信息共享平台减少信息差现象">基于内推招聘信息传递的局限性，可以通过互联网技术将企业岗位内推与学生信息有机结合起来，设计开发内推信息共享平台，减少信息差现象。</h4>
+<h4 id="4创新点与项目特色"><em><strong>*（4）创新点与项目特色*</strong></em></h4>
+<h4 id="相较于招聘网站校友内推网站中发布内推的招聘者的信息和公司的真实性更高">相较于招聘网站，校友内推网站中发布内推的招聘者的信息和公司的真实性更高</h4>
+<h4 id="学生能够直接和自己的内推者进行信息了解省去很多查找验证环节">学生能够直接和自己的内推者进行信息了解，省去很多查找验证环节</h4>
+<h4 id="实现关键字搜索功能能够更快捷的过滤查找信息">实现关键字搜索功能，能够更快捷的过滤查找信息</h4>
+<h4 id="页面制作简约清晰不存在广告弹窗等信息保证学生内推的高效进行">页面制作简约清晰，不存在广告弹窗等信息，保证学生内推的高效进行</h4>
+<h4 id="促进了学校人才与企业资源的有机结合">促进了学校人才与企业资源的有机结合</h4>
+<h4 id="5技术路线拟解决的问题及预期成果"><em><strong>*（5）技术路线、拟解决的问题及预期成果*</strong></em></h4>
+<p>技术路线：可行性研究，画出流程图、数据流图和数据字典——&gt;确定需求分析，制定E-R图，状态转换图并且验证软件需求——&gt;总体设计阶段，分析模块化设计，正确制定层次图——&gt;详细设计阶段，界面UI设计，程序流程图和判定树——&gt;编码软件实现，通过单元测试确保功能实现。</p>
+<p>拟解决的问题：</p>
+<p>1）框架的使用需要更加熟练，需要确切明白一些框架功能实现上的基本原理，才能更好地贴合该项目的开发 。</p>
+<p>2）需要扩大影响力，吸引优秀的团队或者个人假如我们，才能实现就业资源最大利用，才能真正落地去解决应届生/实习生的就业难、就好业难的问题。</p>
+<p>3）需要更多的像企业方面靠齐，学习能够用于用于市场的软件如何开发，如何维护，如何修复等等。</p>
+<p>预期成果：</p>
+<p>1、按照要求设计完成该作品</p>
+<p>2、研制报告和PPT各一份</p>
+<p>3、申请专利或者争取参加省级以上的学科竞赛</p>
+<h4 id="6项目研究进度安排"><em><strong>*（6）项目研究进度安排*</strong></em></h4>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><em><strong>*阶段*</strong></em></th>
+<th><em><strong>*工作*</strong></em></th>
+<th><em><strong>*具体内容*</strong></em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em><strong>*第一阶段*</strong></em></td>
+<td><em><strong>*研究内容*</strong></em></td>
+<td><em><strong>*基于V*</strong></em><em><strong>*UE*</strong></em><em><strong>*的校园内推系统基本架构的实现*</strong></em></td>
+</tr>
+<tr>
+<td><em><strong>*工作安排*</strong></em></td>
+<td><em><strong>*前端：确定页面风格，做出基本U*</strong></em><em><strong>*I*</strong></em><em><strong>*设计，能够搭建前期的静态网页，与后台完成对功能的构思，明确接口的需求。*</strong></em></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>*后台：基于框架构思，由E*</strong></em><em><strong>*-R*</strong></em><em><strong>*图、数据字典搭建mysql数据库，设计优化数据库。*</strong></em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>*第二阶段*</strong></em></td>
+<td><em><strong>*研究内容*</strong></em></td>
+<td><em><strong>*系统具体功能实现*</strong></em></td>
+</tr>
+<tr>
+<td><em><strong>*工作安排*</strong></em></td>
+<td><em><strong>*前端：使用V*</strong></em><em><strong>*UE*</strong></em><em><strong>*框架实现页面交互功能，开发平台登录，信息查询等页面，实现实时更新信息数据，从后台获取数据并且渲染到页面展示。*</strong></em></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>*后台：springboot框架实现具体的服务功能，包括对数据的收集和储存，并查询相关数据信息，利用合适的算法反馈给前台，*</strong></em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em><strong>*第三阶段*</strong></em></td>
+<td><em><strong>*研究内容*</strong></em></td>
+<td><em><strong>*前后端交互*</strong></em></td>
+</tr>
+<tr>
+<td><em><strong>*工作安排*</strong></em></td>
+<td><em><strong>*前后端页面结合调试、后端代码接口测试，搭建服务器发布测试项目。*</strong></em></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="heading-2"></h4>
+<h4 id="7已有基础"><em><strong>*（7）已有基础*</strong></em></h4>
+<p><em><strong>*1.与本项目有关的研究积累和已取得的成绩*</strong></em></p>
+<p>充分了解当前企业内推的相关情况，了解完善的内推网站的存在意义，确定了基本框架的使用。</p>
+<p><em><strong>*2.已具备的条件，尚缺少的条件及解决方法*</strong></em></p>
+<p>已具备的基础：</p>
+<p>1）学校提供创新创业资金，大力支持学生科研项目的实验，提高了我们对于开展创新创业项目的积极性。</p>
+<p>2）学校图书馆有大量的图书资源，通过考察使项目有了大量的资料基础和信息资源。</p>
+<p>3）团队成员具备扎实的专业知识，并且成员专攻方向明确，团队包含前端技术人员、后台技术人员以及页面设计人员等，分工明确。</p>
+<p>4）有着老师的认真指导，给了团队充分的信心去解决困难，并且能提供我们交流学习的机会。</p>
+<p>尚缺少的条件：整体组员相关框架学习还需要继续深入，腾讯云的搭建要继续摸索研究。</p>
+<p>解决办法：组员需要在接下来的时间里持续努力学习相关知识，保障项目的完成。同时与老师保持积极有效的沟通，听从老师的指挥分配。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%8A%A5%E5%91%8A/">报告</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/35.jpg" loading="lazy" data-key="" data-hash="/img/35.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">电子综合设计报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/36.jpg" loading="lazy" data-key="" data-hash="/img/36.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">电子综合设计任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/33.jpg" loading="lazy" data-key="" data-hash="/img/33.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">传感器实验报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/34.jpg" loading="lazy" data-key="" data-hash="/img/34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常见的加速度传感器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/30.jpg" loading="lazy" data-key="" data-hash="/img/30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设开题报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

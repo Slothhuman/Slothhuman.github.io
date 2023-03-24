@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='题目《基于STM32的可切歌灯光音乐播放系统》综合设计报告'>
+<title>电子综合设计报告</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='电子综合设计报告'>
+<meta property='og:description' content='题目《基于STM32的可切歌灯光音乐播放系统》综合设计报告'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='报告' /><meta property='article:published_time' content='2021-12-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-12-30T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/35.jpg' />
+<meta name="twitter:title" content="电子综合设计报告">
+<meta name="twitter:description" content="题目《基于STM32的可切歌灯光音乐播放系统》综合设计报告"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/35.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1设计背景">1.设计背景</a></li>
+    <li><a href="#6pwm的工作模式">6、PWM的工作模式：</a></li>
+    <li><a href="#c音调乐谱对应的音频hz">C音调乐谱对应的音频（Hz）：</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#蜂鸣器原理图">蜂鸣器原理图</a></li>
+    <li><a href="#heading"></a></li>
+    <li><a href="#蜂鸣器与stm32连接的电路图">蜂鸣器与STM32连接的电路图</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#主函数">主函数</a></li>
+    <li><a href="#初始化控制蜂鸣器的io">初始化控制蜂鸣器的IO</a></li>
+    <li><a href="#蜂鸣器宏定义">蜂鸣器宏定义</a></li>
+    <li><a href="#启动系统滴答定时器-systick">启动系统滴答定时器 SysTick</a></li>
+    <li><a href="#配置嵌套向量中断控制器nvic">配置嵌套向量中断控制器NVIC</a></li>
+    <li><a href="#配置-io为exti中断口并设置中断优先级">配置 IO为EXTI中断口，并设置中断优先级</a></li>
+    <li><a href="#配置tim复用输出pwm时用到的io">配置TIM复用输出PWM时用到的I/O</a></li>
+    <li><a href="#配置嵌套向量中断控制器nvic-1">配置嵌套向量中断控制器NVIC</a></li>
+    <li><a href="#基本定时器配置-与-pwm模式配置">基本定时器配置 与 PWM模式配置</a></li>
+    <li><a href="#heading-1"></a></li>
+    <li><a href="#tim-呼吸灯初始化">TIM 呼吸灯初始化</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#1代码上的错误">1、代码上的错误</a></li>
+    <li><a href="#2对于软件操作的不熟悉">2、对于软件操作的不熟悉</a>
+      <ol>
+        <li>
+          <ol>
+            <li></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#3宏定义">3、宏定义</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/">
+                
+                    <img src="/img/35.jpg" loading="lazy" alt="Featured image of post 电子综合设计报告" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/">电子综合设计报告</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            题目《基于STM32的可切歌灯光音乐播放系统》综合设计报告
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 30, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="一系统总体设计">一、系统总体设计</h1>
+<h2 id="1设计背景">1.设计背景</h2>
+<p>随着生活水平的提高，人们现在追求更多的个性化的享受和需求，而音响就是在这 种条件下的时代产物。20世纪50年代，我国声学工业的主要产品是电子管式中短波收音机。改革开放后，随着国家的开放，中国与外国之间的交流日益频繁。许多中国人回国和探亲访友的礼物通常是一套大型音响或立体声录音机。80年代的立体声收录机普遍繁琐，技术含量不高。</p>
+<p>进入新世纪以来，随着城市现有土地资源的紧张，房地产开发商在开发新的楼盘时更注重的是空间的搭配合 理性以及尽可能的满足现代人追求的精品生活方式，家居风格也随之发生转变。这时候迷你音乐播放器横空出世，应时而生。在最近几年里娱乐已成为个人电脑消费中的最大应用，它主要分布在音乐，多媒体，游戏，电影，这一切都与视听分不开的，用电脑组成家庭影院已成为一种潮流趋势，很多人认为音乐播放器只要能发声就行，但实际上不管是家庭影院还是个人电脑，购买 时都会配上音乐播放器，假如没有了音乐播放器，多媒体只能是一句空话。微型音乐播放器外观新颖、体积小、灵活性好，深受年轻人的喜爱。</p>
+<p>虽然国内的大型音响设备状况不是很好，但是迷你音乐播放器确 是个例外，市场发展前景不容小觑。出于市场需求，造型美观，性能优异的音乐播放器更受消费者青睐。因此要求音乐播放器具备基本的性能：抗干扰、音质好、体积小、功率大。新的迷你音乐播放器有其他额外的工作能量，例如，它可以在音乐播放器中。这些都是笔筒、花瓶、便携皮带和一些漂亮的小饰品，它们不仅容易实现，而且成本低。因此，便携式的以其较小的体积和较好的音质受到广大消费者的青睐。</p>
+<p>2、设计内容与预设功能</p>
+<p>设计内容：</p>
+<p>以音乐播放器与可调灯光系统为研究对象，提出一种基于STM32的音乐播放器和灯光系统的硬件和软件的设计方法，系统以STM32F103VET6为控制核心，利用开发板上自带的无源蜂鸣器，将不同频率的声音按一定的时间节拍转换发出，实现一段完整音乐的播放，同时利用PWM技术，进行灯光的调节。主要开发内容为按键定义，软件编写与调试等。使用片内资源（ NVIC、TIMER（定时器中断、输入捕获、PWM），SYSTICK，EXTI），并通过键盘控制。</p>
+<p>预设功能：</p>
+<p>通过PWM脉冲宽度调制控制LED的亮度呈现呼吸效果，即亮度随时间不断变化，同时通过蜂鸣器播放时下流行音乐，可通过按键动态切换歌曲。</p>
+<p>3、设计思路</p>
+<p>呼吸灯：本次课设基于STM32单片机综合开发系统，对于控制电灯由亮到暗或由暗到亮，采用的是脉宽PWM法。利用单片机的定时中断生成不同的PWM波形，通过调整PWM的周期、PWM的占空比从而控制输出平均电压，采用适当控制方法即可使电压与频率协调变化，进而达到对电灯进行光度亮暗的控制调节的效果，实现对电灯的PWM调光控制。</p>
+<p>音乐播放系统：一段音乐就是不同频率的声音按一定的时间节拍转换发出。所以音乐包含音调和节拍信息，设计获取节拍程序，控制好频率和节拍，知晓音调的频率后，进一步控制音符的演奏时间，就可以播放音乐。</p>
+<p>通过将乐谱里的每个音符的声音频率和声音时长保存在两个数组里面。</p>
+<p>1.使用通用定时器实现无中断的微秒级延时函数，控制每个音符的发声时长。</p>
+<p>2.使用系统滴答时钟Systick实现带有中断的输出控制，在中断函数里实现蜂鸣器端口输出电平反转，并且根据当前播放音符的频率重新设置中断产生时间。</p>
+<p>4、PWM概述：</p>
+<p>脉冲宽度调制是利用微处理器的数字输出来对模拟电路进行控制的一种非常有效的技术，广泛应用在从测量、通信到功率控制与变换的许多领域中。脉冲宽度调制是一种模拟控制方式，其根据相应载荷的变化来调制晶体管基极或MOS管栅极的偏置，来实现晶体管或MOS管导通时间的改变，从而实现开关稳压电源输出的改变。这种方式能使电源的输出电压在工作条件变化时保持恒定，是利用微处理器的数字信号对模拟电路进行控制的一种非常有效的技术。其实是通过改变占空比（一个周期高电平占比）来实现对模拟电路的实现。</p>
+<p>5、PWM工作原理：</p>
+<p>SMT32F1系列共有8个定时器：</p>
+<p>高级定时器（TIM1、TIM8）；通用定时器（TIM2、TIM3、TIM4、TIM5）；基本定时器（TIM6、TIM7）。</p>
+<p>STM32的每个通用定时器都有独立的4个通道可以用来作为：输入捕获、输出比较、PWM输出、单脉冲模式输出等。</p>
+<p>STM32的定时器除了TIM6和TIM7（基本定时器）之外，其他的定时器都可以产生PWM输出。其中，高级定时器TIM1、TIM8可以同时产生7路PWM输出</p>
+<p>原理讲解：</p>
+<p>下图为向上计数模式：</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps1.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>在PWM输出模式下，除了CNT（计数器当前值）、ARR（自动重装载值）之外，还多了一个值CCRx（捕获/比较寄存器值）。</p>
+<p>当CNT小于CCRx时，TIMx_CHx通道输出低电平；</p>
+<p>当CNT等于或大于CCRx时，TIMx_CHx通道输出高电平。</p>
+<p>PWM的一个周期</p>
+<p>定时器从0开始向上计数</p>
+<p>当0-t1段,定时器计数器TIMx_CNT值小于CCRx值,输出低电平</p>
+<p>t1-t2段,定时器计数器TIMx_CNT值大于CCRx值,输出高电平</p>
+<p>当TIMx_CNT值达到ARR时,定时器溢出,重新向上计数&hellip;循环此过程</p>
+<p>至此一个PWM周期完成</p>
+<p>总结：</p>
+<p>每个定时器有四个通道,每一个通道都有一个捕获比较寄存器,</p>
+<p>将寄存器值和计数器值比较,通过比较结果输出高低电平,便可以实现脉冲宽度调制模式（PWM信号）</p>
+<p>TIMx_ARR寄存器确定PWM频率，</p>
+<p>TIMx_CCRx寄存器确定占空比</p>
+<h2 id="6pwm的工作模式">6、PWM的工作模式：</h2>
+<p>PWM模式1(向上计数)  :计数器从0计数加到自动重装载值(TIMx_ARR)，然后重新从0开始计数，并且产生一个计数器溢出事件</p>
+<p>PWM模式2(向下计数)  :计数器从自动重装载值(TIMx_ARR)减到0，然后重新从重装载值(TIMx_ARR)开始递减，并且产生一个计数器溢出事件</p>
+<p>设置寄存器TIMx_CCMR1的OC1M[2:0]位来确定PWM的输出模式</p>
+<p>PWM模式1：在向上计数时，一旦TIMx_CNT&lt;TIMx_CCR1时通道1为有效电平，否则为无效电平；在向下计数时，一旦TIMx_CNT&gt;TIMx_CCR1时通道1为无效电平(OC1REF=0)，否则为有效电平(OC1REF=1)。</p>
+<p>PWM模式2：在向上计数时，一旦TIMx_CNT&lt;TIMx_CCR1时通道1为无效电平，否则为有效电平；在向下计数时，一旦TIMx_CNT&gt;TIMx_CCR1时通道1为有效电平，否则为无效电平。</p>
+<p>在两种模式下TIMx_CNT(计数器当前值)与TIMx_CCR1(捕获/比较值)  只是决定是有效电平还是无效电平</p>
+<p>有效电平可以是高电平也可以是低电平，这需要结合CCER寄存器的CC1P位的值来确定。</p>
+<p>7、单片机产生音乐的原理：
+音乐的产生主要是通过单片机的I/O口输出高低不同的脉冲信号来控制蜂鸣器发音，要想产生音频脉冲信号，需要算出某音频的周期（1/频率），然后将此周期除以2，即为半周期的时间。利用单片机定时器计时这个半周期的时间，每当计时到后就输出脉冲的I/O口反相，这样就在此I/O口上得到此脉冲的频率。</p>
+<p>通常，利用单片机的内部定时器0，工作在方式一下，改变计数初始值TH0和TL0来产生不同的率。</p>
+<p>例如，若单片机采用12MHzs晶振，要产生频率为587Hzs的音频脉冲时，其音频信号的脉冲周期T=1/587=1703.5775us，半周期时间为852us，因此总要令计时器计数=852us/1us=852，在每计数852时将I/O口反相，就得到C大调的中调Re。</p>
+<p>由于定时器0的在方式一计数方式为16位计数器，最多只能装载的数为2的16次方即65536个，也就是说定时器计数到65536就会进入中断函数，而在中断函数中将输出脉冲的I/O口反相即可，故只需设置好定时器0的初值就可以了发出特定的音频了。</p>
+<h2 id="c音调乐谱对应的音频hz">C音调乐谱对应的音频（Hz）：</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps2.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>我们知道了音调的频率后，下一步就是控制音符的演奏时间。每个音符都会播放一定的时间，这样才能构成一首优美的曲子，而不是生硬的一个调的把所有的音符一股脑的都播放出来。音符节奏分为一拍、半拍、1/4 拍、1/8 拍，我们规定一拍音符的时间为1 ；半拍为0.5 ；1/4 拍为0.25 ；1/8 拍为0.125…… ，所以我们可以为每个音符赋予这样的拍子播放出来，音乐就成了。</p>
+<h1 id="二硬件系统设计"><em><strong>*二、*</strong></em><em><strong>*硬件系统设计*</strong></em></h1>
+<h2 id="蜂鸣器原理图">蜂鸣器原理图</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps3.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="heading"></h2>
+<h2 id="蜂鸣器与stm32连接的电路图">蜂鸣器与STM32连接的电路图</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps4.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h1 id="三软件系统设计"><strong>三、</strong><em><strong>*软件系统设计*</strong></em></h1>
+<h2 id="主函数">主函数</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps5.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="初始化控制蜂鸣器的io">初始化控制蜂鸣器的IO</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps6.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="蜂鸣器宏定义">蜂鸣器宏定义</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps7.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="启动系统滴答定时器-systick">启动系统滴答定时器 SysTick</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps8.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="配置嵌套向量中断控制器nvic">配置嵌套向量中断控制器NVIC</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps9.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="配置-io为exti中断口并设置中断优先级">配置 IO为EXTI中断口，并设置中断优先级</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps10.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps11.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="配置tim复用输出pwm时用到的io">配置TIM复用输出PWM时用到的I/O</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps12.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="配置嵌套向量中断控制器nvic-1">配置嵌套向量中断控制器NVIC</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps13.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="基本定时器配置-与-pwm模式配置">基本定时器配置 与 PWM模式配置</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps14.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h2 id="heading-1"></h2>
+<h2 id="tim-呼吸灯初始化">TIM 呼吸灯初始化</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml22148%5cwps15.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h1 id="四调试结果"><strong>四、</strong><em><strong>*调试结果*</strong></em></h1>
+<p>运行代码后，开发板上LED为点亮状态，并呈现呼吸特性，初始亮度较暗，随时间逐渐变亮。按下复位键，LED恢复到初始状态。按下KEY1后，蜂鸣器响应，播放《红尘情歌》，按下复位键后播放停止，按下KEY2后，播放《小燕子》。</p>
+<h1 id="五遇到的问题"><em><strong>*五、遇到的问题*</strong></em></h1>
+<h2 id="1代码上的错误">1、代码上的错误</h2>
+<p>对于中断，按键，GPIO的代码还是不够理解，初始化设置时出现了不少错误。初始化设置后会遗漏编写服务函数，导致代码运行没有现象。</p>
+<h2 id="2对于软件操作的不熟悉">2、对于软件操作的不熟悉</h2>
+<h5 id="新建工程时可能有其中一个步骤漏了或者什么原因导致写个最简单的main函数的东西也运行不了反复看了几遍函数也没有出错但是还是会报错后来请教同学也没有解决后来只能重新看视频一一对着来新建工程">新建工程时可能有其中一个步骤漏了或者什么原因，导致写个最简单的main函数的东西也运行不了，反复看了几遍函数也没有出错，但是还是会报错，后来请教同学也没有解决，后来只能重新看视频一一对着来新建工程。</h5>
+<h5 id="调试时接线和魔法棒的配置花费了不少时间魔法棒很多配置都疏忽了导致一直">调试时接线和魔法棒的配置花费了不少时间，魔法棒很多配置都疏忽了，导致一直</h5>
+<h5 id="没有办法把程序下载到板子上最后通过请教同学才把程序下载进去成功运行">没有办法把程序下载到板子上，最后通过请教同学才把程序下载进去，成功运行。</h5>
+<h2 id="3宏定义">3、宏定义</h2>
+<p>在宏定义时，有时候没看清楚引脚的配对或者端口的错误，导致报错，找错误时花费了不少时间，以后还是要更加细心。</p>
+<h1 id="五设计感想与体会"><strong>五、</strong><em><strong>*设计感想与体会*</strong></em></h1>
+<p>这次课设让我收获良多，不仅巩固了前面的课程学习，还让我们对嵌入式系统有更深入的了解。通过这次课设，我熟悉了对keil5软件的使用，了解固件库的使用。学习嵌入式这门课程，要掌握嵌入式系统的基本组成原理及C语言程序设计结构体的基本知识与方法,以及嵌入式系统与其她设备相连接的输入输出中断等接口技术，为了实现一些功能，就要不断地看视频理解原理，掌握基本的代码和宏定义，还要学会使用参考手册与参照电路原理图，不断查阅资料。在制作课程设计的过程中，我不断通过CSDN、电子发烧友等网站去查询解决程序调试过程中出现的问题，提高了使用搜索引擎与解决问题的能力，在这次动手实践后，对stm32 单片机的了解更多了，对于如何编写代码控制单片机实现相应的功能也有了更深的掌握。</p>
+<h1 id="六参考文献"><strong>六、</strong><em><strong>*参考文献*</strong></em></h1>
+<p>[1] 吴宁.  80X86/Pentium 微型计算机原理及应用[M]. 北京：电子工业出版社，2004：1-249.</p>
+<p>[2] 蔡美琴. MCS-51系列单片机系统及其应用[M].北京：高等教育出版社，2003：1-169.</p>
+<p>[3] 段晨东. 单片机原理与接口技术[M]. 北京: 清华大学出版社, 2013:1-333</p>
+<p>[4] 吴黎明等. 单片机实验指导书[M]. 广州：广东工业大学教材科，2014</p>
+<p>[5] 邹捷，唐荣年等．基于嵌入式系统的可调灯光系统设计[J]．海南大学学报(中国水运(下半月)), 2013,13 (2):1-2．</p>
+<p>[6] 周兆丰，侯向锋，鲁池梅，李莲英等．uC/OS－II在STM32F103上移植的新方法[J]．湖北师范学院学报(自然科学版), 2013,33 (2):1-5．</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%8A%A5%E5%91%8A/">报告</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%A4%A7%E5%88%9B%E7%94%B3%E8%AF%B7%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/37.jpg" loading="lazy" data-key="" data-hash="/img/37.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">大创申请书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/36.jpg" loading="lazy" data-key="" data-hash="/img/36.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">电子综合设计任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/33.jpg" loading="lazy" data-key="" data-hash="/img/33.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">传感器实验报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/34.jpg" loading="lazy" data-key="" data-hash="/img/34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常见的加速度传感器</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/30.jpg" loading="lazy" data-key="" data-hash="/img/30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设开题报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

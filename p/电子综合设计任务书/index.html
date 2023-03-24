@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='介绍常见的几种加速度传感器'>
-<title>常见的加速度传感器</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='题目《基于STM32的可切歌灯光音乐播放系统》综合设计任务书'>
+<title>电子综合设计任务书</title>
 
-<link rel='canonical' href='https://slothhuman.github.io/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/'>
+<link rel='canonical' href='https://slothhuman.github.io/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/'>
 
-<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='常见的加速度传感器'>
-<meta property='og:description' content='介绍常见的几种加速度传感器'>
-<meta property='og:url' content='https://slothhuman.github.io/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/'>
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='电子综合设计任务书'>
+<meta property='og:description' content='题目《基于STM32的可切歌灯光音乐播放系统》综合设计任务书'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/'>
 <meta property='og:site_name' content='Slothhuman&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='报告' /><meta property='article:published_time' content='2021-10-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-10-10T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/34.jpg' />
-<meta name="twitter:title" content="常见的加速度传感器">
-<meta name="twitter:description" content="介绍常见的几种加速度传感器"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://slothhuman.github.io/img/34.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='报告' /><meta property='article:published_time' content='2021-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-12-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/36.jpg' />
+<meta name="twitter:title" content="电子综合设计任务书">
+<meta name="twitter:description" content="题目《基于STM32的可切歌灯光音乐播放系统》综合设计任务书"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/36.jpg' />
     </head>
     <body class="
     article-page
@@ -266,24 +266,16 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#一-简介">一． 简介</a></li>
-    <li><a href="#二-分类及原理">二． 分类及原理</a>
+    <li><a href="#一综合设计的内容">一、综合设计的内容</a>
       <ol>
-        <li><a href="#压电式加速度传感器">压电式加速度传感器</a></li>
-        <li><a href="#电容式加速度传感器">电容式加速度传感器</a></li>
-        <li><a href="#压阻式加速度传感器">压阻式加速度传感器</a></li>
+        <li><a href="#设计内容">设计内容：</a></li>
+        <li><a href="#预设功能">预设功能：</a></li>
       </ol>
     </li>
-    <li><a href="#三-应用">三． 应用</a>
-      <ol>
-        <li><a href="#三轴加速度传感器">三轴加速度传感器</a></li>
-        <li><a href="#加速度传感器应用于地震检波器设计">加速度传感器应用于地震检波器设计</a></li>
-        <li><a href="#加速度传感器应用于监测高压导线舞动">加速度传感器应用于监测高压导线舞动</a></li>
-        <li><a href="#计步器功能">计步器功能</a></li>
-      </ol>
-    </li>
-    <li><a href="#四-发展前景">四． 发展前景</a></li>
-    <li><a href="#五-总结">五． 总结</a></li>
+    <li><a href="#二综合设计的要求与数据">二、综合设计的要求与数据</a></li>
+    <li><a href="#三综合设计应完成的工作">三、综合设计应完成的工作</a></li>
+    <li><a href="#四综合设计进程安排">四、综合设计进程安排</a></li>
+    <li><a href="#五应收集的资料及主要参考文献">五、应收集的资料及主要参考文献</a></li>
   </ol>
 </nav>
         </div>
@@ -298,9 +290,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">
+            <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
                 
-                    <img src="/img/34.jpg" loading="lazy" alt="Featured image of post 常见的加速度传感器" />
+                    <img src="/img/36.jpg" loading="lazy" alt="Featured image of post 电子综合设计任务书" />
                 
             </a>
         </div>
@@ -319,12 +311,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">常见的加速度传感器</a>
+            <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/">电子综合设计任务书</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            介绍常见的几种加速度传感器
+            题目《基于STM32的可切歌灯光音乐播放系统》综合设计任务书
         </h3>
         
     </div>
@@ -345,7 +337,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Oct 10, 2021</time>
+                <time class="article-time--published">Dec 26, 2021</time>
             </div>
         
 
@@ -375,144 +367,95 @@
     <section class="article-content">
     
     
-    <h2 id="一-简介">一． 简介</h2>
-<p>加速度传感器是一种能够测量加速度的传感器。通常由质量块、阻尼器、弹性元件、敏感元件和适调电路等部分组成。传感器在加速过程中，通过对质量块所受惯性力的测量，利用牛顿第二定律获得加速度值。根据传感器敏感元件的不同，常见的加速度传感器包括电容式、电感式、应变式、压阻式、压电式等。</p>
-<h2 id="二-分类及原理">二． 分类及原理</h2>
-<ol>
-<li>
-<h3 id="压电式加速度传感器">压电式加速度传感器</h3>
-</li>
-</ol>
-<p>简介：</p>
-<p>压电式加速度传感器因为具有测量频率范围宽、量程大、体积小、重量轻、对被测件的影响小以及安装使用方便等优点, 成为最常用的振动测量传感器, 广泛应用于振动测试中。</p>
-<p>原理：</p>
-<p>压电加速度计的工作原理是沿压电晶体的极化方向施加一外力使其变形，则压电晶体内部发生极化，受力的两端面出现极性相反的电荷，若撤去外力则压电晶体恢复到初始状态，这就是正压电效应。</p>
-<p>压电式加速度传感器就是利用了压电晶体的正压电效应，将机械能转换为电能从而实现对振动加速度信号的测量。</p>
-<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps176.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<p>压电式加速度传感器常见的结构形式有中心压缩式、环形剪切式、三角剪切式。测量被测对象振动大小时，需选择测点并将加速度传感器安装牢靠。将压电式加速度传感器的压电晶体看做理想弹性体，忽略压电晶体与壳体之间连接胶层的质量，只考虑胶层的阻尼系数，并将压电式加速度传感器一端简化为自由端、一端简化为固定端，则可得到其工作时的力。</p>
-<p>压电式加速度传感器的振动方程为mx2+cx1+kx=F（t）</p>
-<p>方程式中：</p>
-<p>m为压电晶体的质量kg</p>
-<p>c为胶层的阻尼系数N·s/m</p>
-<p>k为压电晶体的刚度系数N/m</p>
-<p>x为压电晶体的位移m</p>
-<p>x1为压电晶体的速度m/s</p>
-<p>x2为压电晶体的加速度m/s2</p>
-<p>F（t）为作用于压电式加速度传感器的外力N。</p>
-<ol start="2">
-<li>
-<h3 id="电容式加速度传感器">电容式加速度传感器</h3>
-</li>
-</ol>
-<p>电容式MEMS加速度计因具有灵敏度高、温度漂移小、过载保护能力好等优点，成为目前重点研究的微加速度计之一。</p>
-<p>电容式加速度计的敏感结构主要包含3个部分：惯性质量块以及与惯性质量一体的活动电容极板、固定电容极板和两者之间的弹性连接部分。MEMS电容式加速度计中，一个质量为m的质量块通过一个弹性系数为k的弹簧悬浮在两个固定电极之间，形成了两个可变电容C1、C2。当质量块受到外力的作用而偏离原位置，电容C1、C2产生了差分变化，如图1所示，通过检测电容C1、C2的变化可以得到外加加速度的值。</p>
-<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps177.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<p>当差动电容信号输出后，正弦载波将低频信号调制至高频载波，通过T型阻容网络放大电路输出带载波的电压放大信号；模拟开关解调电路将信号从高频段解调至低频段；经四阶带通滤波电路得到最终的输出电压，实现电容电压转换，供后续电路检测和处理。信号读出电路原理框图如图2所示。</p>
-<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps178.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<ol start="3">
-<li>
-<h3 id="压阻式加速度传感器">压阻式加速度传感器</h3>
-</li>
-</ol>
-<p>MEMS压阻式加速度传感器的敏感元件由弹性梁、质量块、固定框组成。压阻式加速度传感器实质上是一个力传感器，他是利用用测量固定质量块在受到加速度作用时产生的力F来测得加速度a的。在目前研究尺度内，可以认为其基本原理仍遵从牛顿第二定律。也就是说当有加速度a作用于传感器时，传感器的惯性质量块便会产生一个惯性力:F=ma,此惯性力F作用于传感器的弹性梁上，便会产生一个正比于F的应变。，此时弹性梁上的压敏电阻也会随之产生一个变化量△R，由压敏电阻组成的惠斯通电桥输出一个与△R成正比的电压信号V。</p>
-<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps179.jpg"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps180.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<p>电桥输出表达式为：<img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps181.jpg"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<h2 id="三-应用">三． 应用</h2>
-<ol>
-<li>
-<h3 id="三轴加速度传感器">三轴加速度传感器</h3>
-</li>
-</ol>
-<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17036%5cwps182.jpg"
-	
-	
-	
-	loading="lazy"
-	
-		alt="img"
-	
-	
-></p>
-<p>三轴加速度计是一种惯性传感器，能够测量物体的比力，即去掉重力后的整体加速度或者单位质量上作用的非引力。当加速度计保持静止时，加速度计能够感知重力加速度，而整体加速度为零。在自由落体运动中，整体加速度就是重力加速度，但加速度计内部处于失重状态，而此时三轴加速度计输出为零。</p>
-<p>一方面，要准确了解物体的运动状态，必须测得其三个坐标轴上的分量；另一方面，在预先不知道物体运动方向的场合下，只有应用三轴加速度传感器来检测加速度信号。由于三轴加速度传感器也是基于重力原理的，因此用三轴加速度传感器可以实现双轴正负90度或双轴0-360度的倾角，通过校正后期精度要高于双轴加速度传感器大于测量角度为60度的情况。</p>
-<p>目前的三轴加速度传感器大多采用压阻式、压电式和电容式工作原理，产生的加速度正比于电阻、电压和电容的变化，通过相应的放大和滤波电路进行采集。这个和普通的加速度传感器是基于同样的原理，所以在一定的技术上三个单轴就可以变成一个三轴。而此时三轴加速度计输出为零。</p>
-<ol start="2">
-<li>
-<h3 id="加速度传感器应用于地震检波器设计">加速度传感器应用于地震检波器设计</h3>
-</li>
-</ol>
-<p>地震检波器是用于地质勘探和工程测量的专用传感器，是一种将地面振动转变为电信号的传感器，能把地震波引起的地面震动转换成电信号，经过模/数转换器转换成二进制数据、进行数据组织、存储、运算处理。加速度传感器是一种能够测量加速力的电子设备，典型应用在手机、笔记本电脑、步程计和运动检测等。</p>
-<ol start="3">
-<li>
-<h3 id="加速度传感器应用于监测高压导线舞动">加速度传感器应用于监测高压导线舞动</h3>
-</li>
-</ol>
-<p>目前国内对导线舞动监测多采用视频图像采集和运动加速度测量两种主要技术方案。前者在野外高温、高湿、严寒、浓雾、沙尘等天气条件下，不仅对视频设备的可靠性、稳定性要求很高，而且拍摄的视频图像的效果也会受到影响，在实际使用中只能作为辅助监测手段，无法定量分析导线运动参数；而采用加速度传感器监测导线舞动情况，虽可定量分析输电导线某一点上下振动和左右摆动的情况，但只能测出导线直线运动的振幅和频率，而对于复杂的圆周运动，则无法准确测量。所以我们必须加快加速度传感器的发展来适应诸如此类环境下进行应用。</p>
-<ol start="4">
-<li>
-<h3 id="计步器功能">计步器功能</h3>
-</li>
-</ol>
-<p>加速度传感器还可以检测交流信号以及物体的振动，人在走动的时候会产生一定周期性的振动，而加速度传感器还可以检测振动的过零点，慢跑测算出人所走的步或跑步所走的步数，慢跑测算出人所移动的位移。并且利用一定的公式还可以测算出卡路里的损耗。</p>
-<h2 id="四-发展前景">四． 发展前景</h2>
-<p>某些传感器市场比如压力传感器、温度传感器、流量传感器、水平传感器已表现出成熟市场的特征。流量传感器、压力传感器、温度传感器的市场规模较大，分别占到整个传感器市场的21%、19%和14%。传感器市场的主要增长来自于无线传感器、MEMS传感器、生物传感器等新兴传感器。 全世界的传感器市场在不断变化的革新之中呈现出快速增长的发展趋势。相关专家指出，传感器领域的主要技术将在现有基础上予以拓宽和提升 ，世界各国将竞相加速新一代传感器的开发和产业发展，竞争也将日益激烈。新技术的发展将彻底改变未来的传感器市场，比如无线传感器、光纤传感器、智能传感器和金属氧化传感器等新型传感器的出现与市场占有率的扩大。</p>
-<h2 id="五-总结">五． 总结</h2>
-<p>加速度传感器，在我们各个领域之中都发挥着重要的作用，就世界范围而言，传感器市场上增长最快的依旧是汽车市场，占第二位的是过程控制市场，看好通讯市场前景。而在未来的电子产品中，多传感器将是一个重要的发展趋势，其会让电子产品在使用上更加人性化；此外，为了缩小产品尺寸和提高产品的应用价值，混合式感测器（Hybrid Sensor），如加速度传感器与陀螺仪的集成，也必然是一个发展方向，多功能混合式传感器必将以其较高的附加价值和用户操控体验占领高端市场；同时随着技术的进步，单一功能结构的传感器也将向低端市场推广和普及。</p>
+    <h2 id="一综合设计的内容">一、综合设计的内容</h2>
+<h3 id="设计内容">设计内容：</h3>
+<p>以音乐播放器与可调灯光系统为研究对象，提出一种基于STM32的音乐播放器和灯光系统的硬件和软件的设计方法，系统以STM32F103VET6为控制核心，利用开发板上自带的无源蜂鸣器，将不同频率的声音按一定的时间节拍转换发出，实现一段完整音乐的播放，同时利用PWM技术，进行灯光的调节。主要开发内容为按键定义，软件编写与调试等。使用片内资源（ NVIC、TIMER（定时器中断、输入捕获、PWM），SYSTICK，EXTI），并通过键盘控制。</p>
+<h3 id="预设功能">预设功能：</h3>
+<p>通过PWM脉冲宽度调制控制LED的亮度呈现呼吸效果，即亮度随时间不断变化，同时通过蜂鸣器播放时下流行音乐，可通过按键动态切换歌曲。</p>
+<h2 id="二综合设计的要求与数据">二、综合设计的要求与数据</h2>
+<p>1 全面掌握硬件结构与电路原理；</p>
+<p>2 自行设计开发、编辑、调试应用程序；</p>
+<p>3 必须有完善的功能介绍与调试过程说明；</p>
+<p>4 提供完整的软件流程框图。</p>
+<p>5 提供完整的程序清单。</p>
+<h2 id="三综合设计应完成的工作">三、综合设计应完成的工作</h2>
+<p>1 硬件设计与安装调试；</p>
+<p>2 软件设计与开发、调试；</p>
+<p>3 软硬件联合调试与实验；</p>
+<p>4 按照学校要求撰写并上交完整的综合设计报告</p>
+<p>5 完成综合设计答辩。</p>
+<h2 id="四综合设计进程安排">四、综合设计进程安排</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>设计各阶段内容</th>
+<th>地点</th>
+<th>起止日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>查找资料，熟悉硬件电路或实验平台的资源</td>
+<td></td>
+<td>2021年12月6日－7日</td>
+</tr>
+<tr>
+<td>2</td>
+<td>整体方案设计</td>
+<td></td>
+<td>8日－10日</td>
+</tr>
+<tr>
+<td>3</td>
+<td>硬件系统开发设计</td>
+<td></td>
+<td>11-17日</td>
+</tr>
+<tr>
+<td>4</td>
+<td>软件开发设计</td>
+<td></td>
+<td>18-25日</td>
+</tr>
+<tr>
+<td>5</td>
+<td>软件调试，与硬件联合调试</td>
+<td></td>
+<td>26-27日</td>
+</tr>
+<tr>
+<td>6</td>
+<td>撰写综合设计报告</td>
+<td></td>
+<td>28-29日</td>
+</tr>
+<tr>
+<td>7</td>
+<td>综合设计答辩</td>
+<td>工1-微机实验室</td>
+<td>30-31日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>除答辩时间外，其余时间可自行调整</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="五应收集的资料及主要参考文献">五、应收集的资料及主要参考文献</h2>
+<p>[1] 吴宁.  80X86/Pentium 微型计算机原理及应用[M]. 北京：电子工业出版社，2004：1-249.</p>
+<p>[2] 蔡美琴. MCS-51系列单片机系统及其应用[M].北京：高等教育出版社，2003：1-169.</p>
+<p>[3] 段晨东. 单片机原理与接口技术[M]. 北京: 清华大学出版社, 2013:1-333</p>
+<p>[4] 吴黎明等. 单片机实验指导书[M]. 广州：广东工业大学教材科，2014</p>
 
 </section>
 
@@ -593,25 +536,6 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/img/36.jpg" loading="lazy" data-key="" data-hash="/img/36.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">电子综合设计任务书</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
         
         
@@ -624,6 +548,25 @@
 
         <div class="article-details">
             <h2 class="article-title">传感器实验报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/34.jpg" loading="lazy" data-key="" data-hash="/img/34.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">常见的加速度传感器</h2>
         </div>
     </a>
 </article>
