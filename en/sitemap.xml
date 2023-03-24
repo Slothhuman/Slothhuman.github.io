@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://slothhuman.github.io/</loc>
-    <lastmod>2023-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://slothhuman.github.io/categories/</loc>
-    <lastmod>2023-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -29,10 +29,10 @@
                 />
   </url><url>
     <loc>https://slothhuman.github.io/post/</loc>
-    <lastmod>2023-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://slothhuman.github.io/tags/</loc>
-    <lastmod>2023-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -45,7 +45,13 @@
                 />
   </url><url>
     <loc>https://slothhuman.github.io/categories/tech/</loc>
-    <lastmod>2023-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://slothhuman.github.io/tags/vm/</loc>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://slothhuman.github.io/p/%E7%BC%96%E5%86%99%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BAvm/</loc>
+    <lastmod>2023-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://slothhuman.github.io/tags/%E6%AF%95%E8%AE%BE/</loc>
     <lastmod>2023-02-21T00:00:00+00:00</lastmod>
@@ -170,6 +176,12 @@
     <loc>https://slothhuman.github.io/p/%E5%A4%A9%E6%89%8D%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8A%80%E6%9C%AF%E7%8B%82%E4%BA%BA%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E8%AF%BB%E5%90%8E%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2023-01-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://slothhuman.github.io/tags/%E6%8A%A5%E5%91%8A/</loc>
+    <lastmod>2022-12-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://slothhuman.github.io/p/%E6%99%BA%E8%83%BD%E8%BD%A6%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</loc>
+    <lastmod>2022-12-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://slothhuman.github.io/categories/api/</loc>
     <lastmod>2022-12-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -230,9 +242,6 @@
     <loc>https://slothhuman.github.io/p/%E8%AF%A6%E8%A7%A3@requestparam@requestbody@pathvariable/</loc>
     <lastmod>2022-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://slothhuman.github.io/tags/%E6%8A%A5%E5%91%8A/</loc>
-    <lastmod>2021-12-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://slothhuman.github.io/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/</loc>
     <lastmod>2021-12-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -240,7 +249,7 @@
     <lastmod>2021-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://slothhuman.github.io/p/%E7%94%B5%E5%AD%90%E7%BB%BC%E5%90%88%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E4%B9%A6/</loc>
-    <lastmod>2021-12-26T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://slothhuman.github.io/p/%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</loc>
     <lastmod>2021-11-24T00:00:00+00:00</lastmod>
@@ -299,6 +308,8 @@
                 href="https://slothhuman.github.io/about/"
                 />
   </url><url>
+    <loc>https://slothhuman.github.io/p/</loc>
+  </url><url>
     <loc>https://slothhuman.github.io/links/</loc>
     <xhtml:link
                 rel="alternate"
@@ -322,5 +333,7 @@
                 hreflang="en"
                 href="https://slothhuman.github.io/search/"
                 />
+  </url><url>
+    <loc>https://slothhuman.github.io/p/%E6%80%9D%E6%83%B3%E6%94%BF%E6%B2%BB%E7%90%86%E8%AE%BA%E8%AF%BE%E5%AE%9E%E8%B7%B5%E6%8A%A5%E5%91%8A/</loc>
   </url>
 </urlset>

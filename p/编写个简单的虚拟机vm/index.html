@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='从零开始编写⼀个简单的虚拟机(VM)'>
+<title>编写⼀个简单的虚拟机(VM)</title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/%E7%BC%96%E5%86%99%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BAvm/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='编写⼀个简单的虚拟机(VM)'>
+<meta property='og:description' content='从零开始编写⼀个简单的虚拟机(VM)'>
+<meta property='og:url' content='https://slothhuman.github.io/p/%E7%BC%96%E5%86%99%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BAvm/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VM' /><meta property='article:published_time' content='2023-02-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://slothhuman.github.io/img/41.jpg' />
+<meta name="twitter:title" content="编写⼀个简单的虚拟机(VM)">
+<meta name="twitter:description" content="从零开始编写⼀个简单的虚拟机(VM)"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://slothhuman.github.io/img/41.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#虚拟机vm概念">虚拟机（VM）概念</a></li>
+        <li><a href="#lc-3little-computer-3架构">LC-3（Little Computer 3）架构</a></li>
+        <li><a href="#冯诺依曼模型">冯诺依曼模型</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#我们的虚拟机功能如下">我们的虚拟机功能如下：</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#主内存">主内存</a>
+          <ol>
+            <li><a href="#主内存定义">主内存定义</a></li>
+            <li><a href="#于读取-mr--和写-mw--到主内存的函数">⽤于读取( mr(&hellip;) ) 和写⼊( mw(&hellip;) ) 到主内存的函数：</a></li>
+          </ol>
+        </li>
+        <li><a href="#寄存器">寄存器</a>
+          <ol>
+            <li><a href="#寄存器定义">寄存器定义</a></li>
+            <li><a href="#条件寄存器标志实现">条件寄存器标志实现</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#指令16位">指令（16位）</a>
+          <ol>
+            <li><a href="#提取opcode">提取OpCode</a></li>
+            <li><a href="#指令定义">指令定义</a></li>
+            <li><a href="#指针访问">指针访问</a></li>
+            <li><a href="#指令具体实现">指令具体实现</a></li>
+          </ol>
+        </li>
+        <li><a href="#加载与运行">加载与运行</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%BC%96%E5%86%99%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BAvm/">
+                
+                    <img src="/img/41.jpg" loading="lazy" alt="Featured image of post 编写⼀个简单的虚拟机(VM)" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" style="background-color: #2a9d8f; color: #fff;">
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%BC%96%E5%86%99%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BAvm/">编写⼀个简单的虚拟机(VM)</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            从零开始编写⼀个简单的虚拟机(VM)
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 25, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="前置知识">前置知识</h1>
+<h3 id="虚拟机vm概念">虚拟机（VM）概念</h3>
+<p>在计算领域，VM（虚拟机）是⼀个术语，指的是模拟/虚拟化计算机系统/体系结构的系统。</p>
+<ul>
+<li>系统虚拟机，可完全代替真实机器，可以共享和管理硬件，允许操作系统在它们上面运行。</li>
+<li>进程虚拟机，指在与平台无关，即独立于平台的环境中执行计算机程序，例如JVM。</li>
+</ul>
+<h3 id="lc-3little-computer-3架构">LC-3（Little Computer 3）架构</h3>
+<ul>
+<li>是⼀种计算机教育编程语⾔，⼀种汇编语⾔，⼀种低级编程语⾔。它具有相对</li>
+</ul>
+<p>简单的指令集，但可⽤于编写适度复杂的汇编程序，并且是 C 编译器的可⾏⽬标。该语⾔</p>
+<p>没有 x86 汇编那么 复杂，但具有许多类似于更复杂语⾔的功能。</p>
+<ul>
+<li>LC-3有65536个内存位置（最大可由16位无符号整数寻址），每个位置存储一个16</li>
+</ul>
+<p>位值。这意味着它总共只能存储 128KB</p>
+<h3 id="冯诺依曼模型">冯诺依曼模型</h3>
+<p>具有三个主要组 件：CPU、主存储器和输⼊/输出设备。</p>
+<h1 id="虚拟机实现原理">虚拟机实现原理</h1>
+<h3 id="我们的虚拟机功能如下">我们的虚拟机功能如下：</h3>
+<ul>
+<li>我们将程序载⼊主存；</li>
+<li>在 RPC 寄存器中，我们保存当前需要执⾏的指令；</li>
+<li>我们从指令中获取操作码（前 4 位），并以此为基础解码其余参数。</li>
+<li>我们执⾏与给定指令关联的⽅法；</li>
+<li>我们增加 RPC 并继续下⼀条指令；</li>
+</ul>
+<h1 id="实现代码">实现代码</h1>
+<h3 id="主内存">主内存</h3>
+<h4 id="主内存定义">主内存定义</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">uint16_t</span> <span class="n">PC_START</span> <span class="o">=</span> <span class="mh">0x3000</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">uint16_t</span> <span class="n">mem</span><span class="o">[</span><span class="n">UINT16_MAX</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">0</span><span class="o">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="于读取-mr--和写-mw--到主内存的函数">⽤于读取( mr(&hellip;) ) 和写⼊( mw(&hellip;) ) 到主内存的函数：</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="n">uint16_t</span> <span class="nf">mr</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">mem</span><span class="o">[</span><span class="n">address</span><span class="o">];</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span> 
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">mw</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">address</span><span class="o">,</span> <span class="n">uint16_t</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">mem</span><span class="o">[</span><span class="n">address</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="寄存器">寄存器</h3>
+<h4 id="寄存器定义">寄存器定义</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">enum</span> <span class="n">regist</span> <span class="o">{</span> <span class="n">R0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">R1</span><span class="o">,</span> <span class="n">R2</span><span class="o">,</span> <span class="n">R3</span><span class="o">,</span> <span class="n">R4</span><span class="o">,</span> <span class="n">R5</span><span class="o">,</span> <span class="n">R6</span><span class="o">,</span> <span class="n">R7</span><span class="o">,</span> <span class="n">RPC</span><span class="o">,</span> <span class="n">RCND</span><span class="o">,</span> <span class="n">RCNT</span> <span class="o">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">uint16_t</span> <span class="n">reg</span><span class="o">[</span><span class="n">RCNT</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">0</span><span class="o">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="条件寄存器标志实现">条件寄存器标志实现</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">enum</span> <span class="n">flags</span> <span class="o">{</span> <span class="n">FP</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="o">,</span> <span class="n">FZ</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="o">,</span> <span class="n">FN</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">};</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">uf</span><span class="o">(</span><span class="kd">enum</span> <span class="n">regist</span> <span class="n">r</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">r</span><span class="o">]==</span><span class="mi">0</span><span class="o">)</span> <span class="n">reg</span><span class="o">[</span><span class="n">RCND</span><span class="o">]</span> <span class="o">=</span> <span class="n">FZ</span><span class="o">;</span> <span class="c1">// the value in r is zero
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">r</span><span class="o">]&gt;&gt;</span><span class="mi">15</span><span class="o">)</span> <span class="n">reg</span><span class="o">[</span><span class="n">RCND</span><span class="o">]</span> <span class="o">=</span> <span class="n">FN</span><span class="o">;</span> <span class="c1">// the value in r is z negative number
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">else</span> <span class="n">reg</span><span class="o">[</span><span class="n">RCND</span><span class="o">]</span> <span class="o">=</span> <span class="n">FP</span><span class="o">;</span> <span class="c1">// the value in r is a positive number
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="heading"></h1>
+<h3 id="指令16位">指令（16位）</h3>
+<h4 id="提取opcode">提取OpCode</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">OPC</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">((</span><span class="n">i</span><span class="o">)&gt;&gt;</span><span class="mi">12</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="指令定义">指令定义</h4>
+<p>将所有可能的指令（及其关联的 C 函数）保存 在⼀个数组中。索引将代表实际的 OpCode（毕竟，OpCode 是从 0 到 15 的数字），⽽值将是指向相应 C 函数的指针。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">NOPS</span> <span class="o">(</span><span class="mi">16</span><span class="o">)</span> <span class="c1">// number of instructions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">typedef</span> <span class="nf">void</span> <span class="o">(*</span><span class="n">op_ex_f</span><span class="o">)(</span><span class="n">uint16_t</span> <span class="n">instruction</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ... other operations here
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* code here */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">and</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* code here */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ... other operations here
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">op_ex_f</span> <span class="n">op_ex</span><span class="o">[</span><span class="n">NOPS</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">br</span><span class="o">,</span> <span class="n">add</span><span class="o">,</span> <span class="n">ld</span><span class="o">,</span> <span class="n">st</span><span class="o">,</span> <span class="n">jsr</span><span class="o">,</span> <span class="n">and</span><span class="o">,</span> <span class="n">ldr</span><span class="o">,</span> <span class="n">str</span><span class="o">,</span> <span class="n">rti</span><span class="o">,</span> <span class="n">not</span><span class="o">,</span> <span class="n">ldi</span><span class="o">,</span> <span class="n">sti</span><span class="o">,</span> <span class="n">jmp</span><span class="o">,</span> <span class="n">res</span><span class="o">,</span> <span class="n">lea</span><span class="o">,</span> <span class="n">trap</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="指针访问">指针访问</h4>
+<p>如果我们知道 OpCode，现在可以访问所有指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">uint16_t</span> <span class="n">instr</span> <span class="o">=</span> <span class="n">instr</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">op_ex</span><span class="o">[</span><span class="n">OP</span><span class="o">(</span><span class="n">instr</span><span class="o">)](</span><span class="n">instr</span><span class="o">);</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="指令具体实现">指令具体实现</h4>
+<h5 id="1add--添加两个值">1、add- 添加两个值</h5>
+<ul>
+<li>第⼀个 ( add1 ) ⽤于将两个寄存器的值相加： SR1 , SR2 ，并将它们的总和存储在DR1</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676216049268-acaf56f4-8ef5-4f2c-96cf-b7d07350f319.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<ul>
+<li>第⼆个（ add2 ）⽤于将常量值（ IMM5 ）添加到 SR1 ，并将结果存储在 DR1</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676216166656-508609e9-fb88-455c-949a-e918ea1ae1c1.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<ul>
+<li>IMM5 是 5 位的正数或负数。这 5 个中最重要的位是符号位。我们在编写代码时需要考虑到这⼀点。对此，我们不 得不写⼀个函数来扩展符号，使其兼容16位格式</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">(((</span><span class="n">i</span><span class="o">)&gt;&gt;</span><span class="mi">9</span><span class="o">)&amp;</span><span class="mh">0x7</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">SR1</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">(((</span><span class="n">i</span><span class="o">)&gt;&gt;</span><span class="mi">6</span><span class="o">)&amp;</span><span class="mh">0x7</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">SR2</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">((</span><span class="n">i</span><span class="o">)&amp;</span><span class="mh">0x7</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">IMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">((</span><span class="n">i</span><span class="o">)&amp;</span><span class="mh">0x1F</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">FIMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">((</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">5</span><span class="o">)&amp;</span><span class="mi">1</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">SEXTIMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="n">sext</span><span class="o">(</span><span class="n">IMM</span><span class="o">(</span><span class="n">i</span><span class="o">),</span><span class="mi">5</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="n">uint16_t</span> <span class="nf">sext</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">return</span> <span class="o">((</span><span class="n">n</span><span class="o">&gt;&gt;(</span><span class="n">b</span><span class="o">-</span><span class="mi">1</span><span class="o">))&amp;</span><span class="mi">1</span><span class="o">)</span> <span class="o">?</span> <span class="c1">// if the bth bit of n is 1 (number is negative)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="o">(</span><span class="n">n</span><span class="o">|(</span><span class="mh">0xFFFF</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="o">))</span> <span class="o">:</span> <span class="n">n</span><span class="o">;</span> <span class="c1">// fill up with 1s the remaining bits (15)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="c1">// else return the number as it is
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">=</span> <span class="n">reg</span><span class="o">[</span><span class="n">SR1</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"> <span class="o">(</span><span class="n">FIMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">?</span> <span class="c1">// If the 5th bit is 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">SEXTIMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">:</span> <span class="c1">// we sign extend IMM5 and we add it to SR1 (add2)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">reg</span><span class="o">[</span><span class="n">SR2</span><span class="o">(</span><span class="n">i</span><span class="o">)]);</span> <span class="c1">// else we add the value of SR2 to SR1 (add1)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span> <span class="c1">// !! Update the conditional register depending on the value of DR1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="2and--按位逻辑与"><strong>2、and- 按位逻辑与</strong></h5>
+<ul>
+<li>第⼀个 and 对两个寄存器的值应⽤⼆进制&amp; ,SR1、SR2，并将结果存储在DR1</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676218500334-edcdf494-287e-4737-80ed-f94c08709bfd.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<ul>
+<li>第⼀个 and 用于将常量值（ IMM5 ）与SR1进行二进制&amp;，并将结果存储在DR1</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676218687898-6538d5f5-cc1d-4c42-b943-5d853dc678ee.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">and</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"> <span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">=</span> <span class="n">reg</span><span class="o">[</span><span class="n">SR1</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">&amp;</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">(</span><span class="n">FIMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">?</span> <span class="c1">// If the 5th bit is 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="n">SEXTIMM</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">:</span> <span class="c1">// We sign extend IMM5 and we &amp; it to SR1 (and1)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="n">reg</span><span class="o">[</span><span class="n">SR2</span><span class="o">(</span><span class="n">i</span><span class="o">)]);</span> <span class="c1">// Otherwise we &amp; the value of SR2 to SR1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span> <span class="c1">// Update the conditional register
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="3ld--加载-rpc--偏移量偏移量为9位只能偏移511个"><strong>3、ld- 加载 RPC + 偏移量（偏移量为9位，只能偏移511个）</strong></h5>
+<p>ld 是将数据从主内存位置加载到⽬标寄存器的指令，调⽤ ld 不会修改 RPC ;</p>
+<p>即调用RPC（程序计数器）中的起始内存地址+OFFSTET（偏移量），然后mr(读取)最终内存地址中的值到编号为DR1的寄存器中。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676300235909-e05a1147-9187-40b5-b81d-6d685cdbea18.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="n">sext</span><span class="o">((</span><span class="n">i</span><span class="o">)&amp;</span><span class="mh">0x1FF</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">              
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">ld</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">=</span> <span class="n">mr</span><span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">+</span> <span class="n">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="4ldi--间接加载"><strong>4、ldi- 间接加载</strong></h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676301393905-e9c306ca-4d21-43ae-9411-286f02fc18d0.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">ldi</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">=</span> <span class="n">mr</span><span class="o">(</span><span class="n">mr</span><span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]+</span><span class="n">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">)));</span> <span class="c1">// We perform two memory reads
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="5ldr--负载基础偏移与ld相似但其内存基地址由baser决定"><strong>5、ldr- 负载基础+偏移（与ld相似，但其内存基地址由BASER决定）</strong></h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676301607880-29469d71-84ec-4004-9930-61b03253576f.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">POFF</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="n">sext</span><span class="o">((</span><span class="n">i</span><span class="o">)&amp;</span><span class="mh">0x3F</span><span class="o">,</span> <span class="mi">6</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">ldr</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">=</span> <span class="n">mr</span><span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">SR1</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">+</span> <span class="n">POFF</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="6lea--加载有效地址"><strong>6、lea- 加载有效地址</strong></h5>
+<p>lea不将程序数据放入寄存器，而是将最终内存地址放入寄存器。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676301702147-aa9b070d-148b-4306-a71f-8fae2c186970.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">lea</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">=</span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">+</span> <span class="n">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="7not--按位补码"><strong>7、not- 按位补码</strong></h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676302037385-336c94c2-511f-4704-803f-2f6ed102ea6e.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">not</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]=~</span><span class="n">reg</span><span class="o">[</span><span class="n">SR1</span><span class="o">(</span><span class="n">i</span><span class="o">)];</span>
+</span></span><span class="line"><span class="cl">	<span class="n">uf</span><span class="o">(</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="8st--存储与ld指令类似受到内存寻址限制"><strong>8、st- 存储（与ld指令类似，受到内存寻址限制）</strong></h5>
+<p>st 指令将给定寄存器的值存储到内存位置</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676302250362-fb9b0767-b0d6-4d13-b29e-fe1b60ab8ceb.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">st</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">mw</span><span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">+</span> <span class="n">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]);</span> <span class="c1">// writes the value of DR(i) to the memory
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">address</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="9sti--间接存储类似-ldi"><strong>9、sti- 间接存储（类似 ldi）</strong></h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676302495416-17091bcb-7141-437c-8c00-30d946cdccbb.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">sti</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">mw</span><span class="o">(</span><span class="n">mr</span><span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">+</span> <span class="n">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">)),</span> <span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="10str--保存基地偏移量类似-ldr">10、str- 保存基地+偏移量（类似 ldr）</h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676302581716-d3fe827d-1387-4705-b3e3-9ded570a4282.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">str</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">mw</span><span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">SR1</span><span class="o">(</span><span class="n">i</span><span class="o">)]</span> <span class="o">+</span> <span class="n">POFF</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="n">reg</span><span class="o">[</span><span class="n">DR</span><span class="o">(</span><span class="n">i</span><span class="o">)]);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="11jmp--跳转">11、<strong>jmp- 跳转</strong></h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676303117982-373a060f-90b1-47f5-8562-7987812fcd56.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">jmp</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">=</span> <span class="n">reg</span><span class="o">[</span><span class="n">BR</span><span class="o">(</span><span class="n">i</span><span class="o">)];</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="12jsr--跳转到程序"><strong>12、jsr- 跳转到⼦程序</strong></h5>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676303255744-254c3565-cc68-4682-9ba8-bd0fea2b5a00.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>该操作的伪代码如下：</p>
+<ol>
+<li>我们保存 RPC in R7 （记住我们从哪⾥分⽀）；</li>
+<li>如果 bit[11] 设置为 0 那么我们设置 RPC = BASER ;</li>
+<li>如果 bit[11] 设置为 1 则设置 RPC = RPC + OFFSET11 ；</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">jsr</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">reg</span><span class="o">[</span><span class="n">R7</span><span class="o">]</span> <span class="o">=</span> <span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">];</span> 
+</span></span><span class="line"><span class="cl"><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="n">FL</span><span class="o">(</span><span class="n">i</span><span class="o">))</span> <span class="o">?</span> <span class="c1">// Checks bit[11]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">+</span> <span class="n">POFF11</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">:</span> <span class="c1">// rpc + offset
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">reg</span><span class="o">[</span><span class="n">BR</span><span class="o">(</span><span class="n">i</span><span class="o">)];</span> <span class="c1">// base register
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="13br--条件分"><strong>13、br- 条件分⽀</strong></h5>
+<p>该指令的⼯作⽅式与 类似 jsr ，但有⼀个很⼤的区别，只有满⾜某些条件时才会发⽣分⽀。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676303425882-f19b7d82-7ef9-4f5c-b174-5a063ebf9075.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">FCND</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">(((</span><span class="n">i</span><span class="o">)&gt;&gt;</span><span class="mi">9</span><span class="o">)&amp;</span><span class="mh">0x7</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">br</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">reg</span><span class="o">[</span><span class="n">RCND</span><span class="o">]</span> <span class="o">&amp;</span> <span class="n">FCND</span><span class="o">(</span><span class="n">i</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// if the condition is met
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">reg</span><span class="o">[</span><span class="n">RPC</span><span class="o">]</span> <span class="o">+=</span> <span class="n">POFF9</span><span class="o">(</span><span class="n">i</span><span class="o">);</span> <span class="c1">// branch to offset
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="14trap它使我们能够与-i0-以及理论上的其他设备进交互">14、trap（它使我们能够与 I/0 以及理论上的其他设备进⾏交互）</h5>
+<p>TRAPVECT 我们保留了其他函数的索引，每个陷阱都将保存在⼀个数组 trp_ex 中，该数组包含指向相关 C 函数的指针。我们遵循与指令相同的策略，但我</p>
+<p>们将使⽤⼀个单独的数组</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/29231027/1676303987802-4d5f1e57-ac32-4cf1-b1e9-e10b71e7c900.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">#</span><span class="n">define</span> <span class="nf">TRP</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">((</span><span class="n">i</span><span class="o">)&amp;</span><span class="mh">0xFF</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tgetc</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tout</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tputs</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tin</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tputsp</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">thalt</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tinu16</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">toutu16</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* code */</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="o">{</span> <span class="n">trp_offset</span> <span class="o">=</span> <span class="mh">0x20</span> <span class="o">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">typedef</span> <span class="nf">void</span> <span class="o">(*</span><span class="n">trp_ex_f</span><span class="o">)();</span>
+</span></span><span class="line"><span class="cl"><span class="n">trp_ex_f</span> <span class="n">trp_ex</span><span class="o">[</span><span class="mi">8</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span> <span class="n">tgetc</span><span class="o">,</span> <span class="n">tout</span><span class="o">,</span> <span class="n">tputs</span><span class="o">,</span> <span class="n">tin</span><span class="o">,</span> <span class="n">tputsp</span><span class="o">,</span> <span class="n">thalt</span><span class="o">,</span> <span class="n">tinu16</span><span class="o">,</span> <span class="n">toutu16</span> <span class="o">};</span>
+</span></span><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">trap</span><span class="o">(</span><span class="n">uint16_t</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">trp_ex</span><span class="o">[</span><span class="n">TRP</span><span class="o">(</span><span class="n">i</span><span class="o">)-</span><span class="n">trp_offset</span><span class="o">]();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="1tegetc--使-getchar-返回字符并将其存储到-r0">1、tegetc -使⽤ getchar() 返回字符并将其存储到 R0</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tgetc</span><span class="o">()</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">]</span> <span class="o">=</span> <span class="n">getchar</span><span class="o">();</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="2toutc--打印-r0-到标准输出">2、**toutc -**打印 R0 到标准输出</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tout</span><span class="o">()</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">fprintf</span><span class="o">(</span><span class="n">stdout</span><span class="o">,</span> <span class="s">&#34;%c&#34;</span><span class="o">,</span> <span class="o">(</span><span class="kt">char</span><span class="o">)</span><span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">]);</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="3tputs--从-开始遍历内存位置直到找到并按顺序打印每个字符">3、**tputs -**从 开始遍历内存位置直到找到并按顺序打印每个字符</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tputs</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">uint16_t</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">mem</span> <span class="o">+</span> <span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="o">(*</span><span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">fprintf</span><span class="o">(</span><span class="n">stdout</span><span class="o">,</span> <span class="s">&#34;%c&#34;</span><span class="o">,</span> <span class="o">(</span><span class="kt">char</span><span class="o">)*</span><span class="n">p</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">p</span><span class="o">++;</span>
+</span></span><span class="line"><span class="cl"> 	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="4tin--使-getchar-返回字符并将其存储到-r0并打印出来">4、**tin -**使⽤ getchar() 返回字符并将其存储到 R0并打印出来</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tin</span><span class="o">()</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">]</span> <span class="o">=</span> <span class="n">getchar</span><span class="o">();</span> 
+</span></span><span class="line"><span class="cl">	<span class="n">fprintf</span><span class="o">(</span><span class="n">stdout</span><span class="o">,</span> <span class="s">&#34;%c&#34;</span><span class="o">,</span> <span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">]);</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="5tputsp">5、tputsp</h6>
+<h6 id="6thalt">6、<strong>thalt</strong></h6>
+<p>为了跟踪正在运⾏的 VM，我们保留了⼀个 bool 名为 running . ⼀旦 thalt 被调⽤， running 设置为 false ，机 器⾃动停⽌</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">thalt</span><span class="o">()</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">running</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="7tinu16--从键盘读取并将其存储在-r0">7、tinu16 -从键盘读取并将其存储在⾥⾯ R0</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">tinu16</span><span class="o">()</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">fscanf</span><span class="o">(</span><span class="n">stdin</span><span class="o">,</span> <span class="s">&#34;%hu&#34;</span><span class="o">,</span> <span class="o">&amp;</span><span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">]);</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="8toutu16--将-uint16_t-内容写-r0-控制台">8、toutu16 -将 uint16_t 内容写⼊ R0 控制台：</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">static</span> <span class="n">inline</span> <span class="kt">void</span> <span class="nf">toutu16</span><span class="o">()</span> <span class="o">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">fprintf</span><span class="o">(</span><span class="n">stdout</span><span class="o">,</span> <span class="s">&#34;%hu\n&#34;</span><span class="o">,</span> <span class="n">reg</span><span class="o">[</span><span class="n">R0</span><span class="o">]);</span> 
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="加载与运行">加载与运行</h3>
+<p>未完成&hellip;</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vm/">VM</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/30.jpg" loading="lazy" data-key="" data-hash="/img/30.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设开题报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E4%BB%BB%E5%8A%A1%E4%B9%A6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/29.jpg" loading="lazy" data-key="" data-hash="/img/29.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设任务书</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%AF%95%E8%AE%BE%E9%80%89%E9%A2%98%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/28.jpg" loading="lazy" data-key="" data-hash="/img/28.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">毕设选题调研报告</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/java%E7%A8%8B%E5%BA%8F%E5%88%86%E5%B1%82%E7%BC%96%E8%AF%91%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/27.jpg" loading="lazy" data-key="" data-hash="/img/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Java程序分层编译技术研究</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%86%85%E7%BD%91%E7%9A%84%E4%BA%A4%E4%BA%92/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/26.jpg" loading="lazy" data-key="" data-hash="/img/26.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">云服务器通过内网的交互</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

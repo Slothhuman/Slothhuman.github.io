@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='&#43;&#43;&#43;
+author = &amp;ldquo;Slothhuman&amp;rdquo; title = &amp;ldquo;智能车综合设计Ⅳ实验报告&amp;rdquo;
+date = &amp;ldquo;2022-12-30&amp;rdquo;
+description = &amp;ldquo;智能车后端系统设计实验报告&amp;rdquo; tags = [ &amp;ldquo;报告&amp;rdquo;, ] categories = [ &amp;ldquo;Tech&amp;rdquo;,
+] series = [&amp;ldquo;Themes Guide&amp;rdquo;] aliases = [&amp;ldquo;migrate-from-jekyl&amp;rdquo;] image = &amp;ldquo;img/40.jpg&amp;rdquo;
+&#43;&#43;&#43;
+一、绪论 1.1题目要求 (1)实现小车PID参数的远程更新（通过远端浏览器输入PID参数）
+(2)云端可以保存小车以不同参数运行的多次实时行车数据（每一次数据都区分开保存到SQL数据库并可以方便读取）
+(3)前端可以选择显示某一次的实时行车轨迹以及数据统计分析结果
+1.2预期结果 （1）在前端输入pid参数单机调试后可以在matlab看到对应的参数修改提示
+（2）前端小车轨迹页面可以显示某次的行车轨迹
+1. 3前期准备 本地软件需求： matlab2018、Xshell 7、xftp 7、navicat
+云端服务器需求：MySQL、Redis、Maven、IDEA、Tomcat、Java环境
+二、前后端如何进行数据交互 网站数据处理主要分为三层。 第一层，表示层，这部分可以用HTML代码，CSS/Javascript代码来实现等。通过前端代码可以实现网页的布局和设计。这层又可以称为显示层。也就是你用浏览器打开能看到的网页。 第二层，是业务层，这层是负责处理数据的。常用的代码语言有PHP,JSP，Java等。通过这些后台处理语言的算法来处理前台传回的数据。必要的时候进行操作数据库，然后把结果返回给前端网页。 第三层，是数据层，这个就是数据库，用来存储数据的。通过业务层的操作可以实现增删改数据库的操作。 ①你接触到的是这个网页是属于表示层，这个网页一般由HTML标签结合CSS/JAVASCRIPT来实现的。 这时候你要先填入数据。 ②然后你按提交触发后台处理机制，这时候数据会传到后台的代码进行处理。这部分代码根据不同网站可以使PHP,JSP，JAVA等。 代码根据程序员预设的算法将收到的数据进行处理之后会相应的对数据库进行操作，存储数据等。 ③成功操作完数据库之后，业务层的代码会再向表示层也就是显示器端传回一个指令通知你表格填写成功
+三、Axios的使用 3.1 Axios是什么 Axios是一个基于promise的HTTP库，类似于jQuery的ajax，用于http请求。可以应用于浏览器端和node.js，既可以用于客户端，也可以用于node.js编写的服务端。
+3.2 Axios特性 （1）支持Promise API
+（2）拦截请求与响应，比如：在请求前添加授权和响应前做一些事情。
+（3）转换请求数据和响应数据，比如：进行请求加密或者响应数据加密。'>
+<title></title>
+
+<link rel='canonical' href='https://slothhuman.github.io/p/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content=''>
+<meta property='og:description' content='&#43;&#43;&#43;
+author = &amp;ldquo;Slothhuman&amp;rdquo; title = &amp;ldquo;智能车综合设计Ⅳ实验报告&amp;rdquo;
+date = &amp;ldquo;2022-12-30&amp;rdquo;
+description = &amp;ldquo;智能车后端系统设计实验报告&amp;rdquo; tags = [ &amp;ldquo;报告&amp;rdquo;, ] categories = [ &amp;ldquo;Tech&amp;rdquo;,
+] series = [&amp;ldquo;Themes Guide&amp;rdquo;] aliases = [&amp;ldquo;migrate-from-jekyl&amp;rdquo;] image = &amp;ldquo;img/40.jpg&amp;rdquo;
+&#43;&#43;&#43;
+一、绪论 1.1题目要求 (1)实现小车PID参数的远程更新（通过远端浏览器输入PID参数）
+(2)云端可以保存小车以不同参数运行的多次实时行车数据（每一次数据都区分开保存到SQL数据库并可以方便读取）
+(3)前端可以选择显示某一次的实时行车轨迹以及数据统计分析结果
+1.2预期结果 （1）在前端输入pid参数单机调试后可以在matlab看到对应的参数修改提示
+（2）前端小车轨迹页面可以显示某次的行车轨迹
+1. 3前期准备 本地软件需求： matlab2018、Xshell 7、xftp 7、navicat
+云端服务器需求：MySQL、Redis、Maven、IDEA、Tomcat、Java环境
+二、前后端如何进行数据交互 网站数据处理主要分为三层。 第一层，表示层，这部分可以用HTML代码，CSS/Javascript代码来实现等。通过前端代码可以实现网页的布局和设计。这层又可以称为显示层。也就是你用浏览器打开能看到的网页。 第二层，是业务层，这层是负责处理数据的。常用的代码语言有PHP,JSP，Java等。通过这些后台处理语言的算法来处理前台传回的数据。必要的时候进行操作数据库，然后把结果返回给前端网页。 第三层，是数据层，这个就是数据库，用来存储数据的。通过业务层的操作可以实现增删改数据库的操作。 ①你接触到的是这个网页是属于表示层，这个网页一般由HTML标签结合CSS/JAVASCRIPT来实现的。 这时候你要先填入数据。 ②然后你按提交触发后台处理机制，这时候数据会传到后台的代码进行处理。这部分代码根据不同网站可以使PHP,JSP，JAVA等。 代码根据程序员预设的算法将收到的数据进行处理之后会相应的对数据库进行操作，存储数据等。 ③成功操作完数据库之后，业务层的代码会再向表示层也就是显示器端传回一个指令通知你表格填写成功
+三、Axios的使用 3.1 Axios是什么 Axios是一个基于promise的HTTP库，类似于jQuery的ajax，用于http请求。可以应用于浏览器端和node.js，既可以用于客户端，也可以用于node.js编写的服务端。
+3.2 Axios特性 （1）支持Promise API
+（2）拦截请求与响应，比如：在请求前添加授权和响应前做一些事情。
+（3）转换请求数据和响应数据，比如：进行请求加密或者响应数据加密。'>
+<meta property='og:url' content='https://slothhuman.github.io/p/'>
+<meta property='og:site_name' content='Slothhuman&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="&#43;&#43;&#43;
+author = &amp;ldquo;Slothhuman&amp;rdquo; title = &amp;ldquo;智能车综合设计Ⅳ实验报告&amp;rdquo;
+date = &amp;ldquo;2022-12-30&amp;rdquo;
+description = &amp;ldquo;智能车后端系统设计实验报告&amp;rdquo; tags = [ &amp;ldquo;报告&amp;rdquo;, ] categories = [ &amp;ldquo;Tech&amp;rdquo;,
+] series = [&amp;ldquo;Themes Guide&amp;rdquo;] aliases = [&amp;ldquo;migrate-from-jekyl&amp;rdquo;] image = &amp;ldquo;img/40.jpg&amp;rdquo;
+&#43;&#43;&#43;
+一、绪论 1.1题目要求 (1)实现小车PID参数的远程更新（通过远端浏览器输入PID参数）
+(2)云端可以保存小车以不同参数运行的多次实时行车数据（每一次数据都区分开保存到SQL数据库并可以方便读取）
+(3)前端可以选择显示某一次的实时行车轨迹以及数据统计分析结果
+1.2预期结果 （1）在前端输入pid参数单机调试后可以在matlab看到对应的参数修改提示
+（2）前端小车轨迹页面可以显示某次的行车轨迹
+1. 3前期准备 本地软件需求： matlab2018、Xshell 7、xftp 7、navicat
+云端服务器需求：MySQL、Redis、Maven、IDEA、Tomcat、Java环境
+二、前后端如何进行数据交互 网站数据处理主要分为三层。 第一层，表示层，这部分可以用HTML代码，CSS/Javascript代码来实现等。通过前端代码可以实现网页的布局和设计。这层又可以称为显示层。也就是你用浏览器打开能看到的网页。 第二层，是业务层，这层是负责处理数据的。常用的代码语言有PHP,JSP，Java等。通过这些后台处理语言的算法来处理前台传回的数据。必要的时候进行操作数据库，然后把结果返回给前端网页。 第三层，是数据层，这个就是数据库，用来存储数据的。通过业务层的操作可以实现增删改数据库的操作。 ①你接触到的是这个网页是属于表示层，这个网页一般由HTML标签结合CSS/JAVASCRIPT来实现的。 这时候你要先填入数据。 ②然后你按提交触发后台处理机制，这时候数据会传到后台的代码进行处理。这部分代码根据不同网站可以使PHP,JSP，JAVA等。 代码根据程序员预设的算法将收到的数据进行处理之后会相应的对数据库进行操作，存储数据等。 ③成功操作完数据库之后，业务层的代码会再向表示层也就是显示器端传回一个指令通知你表格填写成功
+三、Axios的使用 3.1 Axios是什么 Axios是一个基于promise的HTTP库，类似于jQuery的ajax，用于http请求。可以应用于浏览器端和node.js，既可以用于客户端，也可以用于node.js编写的服务端。
+3.2 Axios特性 （1）支持Promise API
+（2）拦截请求与响应，比如：在请求前添加授权和响应前做一些事情。
+（3）转换请求数据和响应数据，比如：进行请求加密或者响应数据加密。">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Slothhuman_hu86b6efe1477bc0f23376d55f34c01f28_2329_300x0_resize_box_3.png" width="300"
+                            height="292" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Slothhuman&#39;s Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://slothhuman.github.io/" selected>English</option>
+                        
+                            <option value="https://slothhuman.github.io/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一绪论">一、绪论</a>
+      <ol>
+        <li><a href="#11题目要求">1.1题目要求</a></li>
+        <li><a href="#12预期结果">1.2预期结果</a></li>
+        <li><a href="#1-3前期准备">1. 3前期准备</a></li>
+      </ol>
+    </li>
+    <li><a href="#二前后端如何进行数据交互">二、前后端如何进行数据交互</a></li>
+    <li><a href="#三axios的使用">三、Axios的使用</a>
+      <ol>
+        <li><a href="#31-axios是什么">3.1 Axios是什么</a></li>
+        <li><a href="#32-axios特性">3.2 Axios特性</a></li>
+        <li><a href="#heading-4"></a></li>
+        <li><a href="#图32-post方法">图3.2 post方法</a></li>
+      </ol>
+    </li>
+    <li><a href="#四实现小车pid参数的远程更新">四、实现小车PID参数的远程更新</a></li>
+    <li><a href="#五云端可以保存小车以不同参数运行的多次实时行车数据">五、云端可以保存小车以不同参数运行的多次实时行车数据</a></li>
+    <li><a href="#六前端显示实时行车轨迹以及数据统计分析结果">六、前端显示实时行车轨迹以及数据统计分析结果</a></li>
+    <li><a href="#七总结与展望">七、总结与展望</a></li>
+    <li><a href="#八参考文献">八、参考文献</a>
+      <ol>
+        <li><a href="#83-前后端如何进行数据交互"><strong>8.3</strong> <strong>前后端如何进行数据交互</strong></a></li>
+        <li><a href="#84-axios基础"><strong>8.4</strong> <strong>Axios基础</strong></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="heading"></h1>
+<h1 id="heading-1"></h1>
+<h1 id="heading-2"></h1>
+<h1 id="heading-3"></h1>
+<p>+++</p>
+<p>author = &ldquo;Slothhuman&rdquo;
+title = &ldquo;智能车综合设计Ⅳ实验报告&rdquo;</p>
+<p>date = &ldquo;2022-12-30&rdquo;</p>
+<p>description = &ldquo;智能车后端系统设计实验报告&rdquo;
+tags = [
+&ldquo;报告&rdquo;,
+]
+categories = [
+&ldquo;Tech&rdquo;,</p>
+<p>]
+series = [&ldquo;Themes Guide&rdquo;]
+aliases = [&ldquo;migrate-from-jekyl&rdquo;]
+image = &ldquo;img/40.jpg&rdquo;</p>
+<p>+++</p>
+<h2 id="一绪论">一、绪论</h2>
+<h3 id="11题目要求">1.1题目要求</h3>
+<p>(1)实现小车PID参数的远程更新（通过远端浏览器输入PID参数）</p>
+<p>(2)云端可以保存小车以不同参数运行的多次实时行车数据（每一次数据都区分开保存到SQL数据库并可以方便读取）</p>
+<p>(3)前端可以选择显示某一次的实时行车轨迹以及数据统计分析结果</p>
+<h3 id="12预期结果">1.2预期结果</h3>
+<p>（1）在前端输入pid参数单机调试后可以在matlab看到对应的参数修改提示</p>
+<p>（2）前端小车轨迹页面可以显示某次的行车轨迹</p>
+<h3 id="1-3前期准备">1. 3前期准备</h3>
+<p>本地软件需求： matlab2018、Xshell 7、xftp 7、navicat</p>
+<p>云端服务器需求：MySQL、Redis、Maven、IDEA、Tomcat、Java环境</p>
+<h2 id="二前后端如何进行数据交互">二、前后端如何进行数据交互</h2>
+<p>网站数据处理主要分为三层。
+第一层，表示层，这部分可以用HTML代码，CSS/Javascript代码来实现等。通过前端代码可以实现网页的布局和设计。这层又可以称为显示层。也就是你用浏览器打开能看到的网页。
+第二层，是业务层，这层是负责处理数据的。常用的代码语言有PHP,JSP，Java等。通过这些后台处理语言的算法来处理前台传回的数据。必要的时候进行操作数据库，然后把结果返回给前端网页。
+第三层，是数据层，这个就是数据库，用来存储数据的。通过业务层的操作可以实现增删改数据库的操作。
+①你接触到的是这个网页是属于表示层，这个网页一般由HTML标签结合CSS/JAVASCRIPT来实现的。 这时候你要先填入数据。
+②然后你按提交触发后台处理机制，这时候数据会传到后台的代码进行处理。这部分代码根据不同网站可以使PHP,JSP，JAVA等。 代码根据程序员预设的算法将收到的数据进行处理之后会相应的对数据库进行操作，存储数据等。
+③成功操作完数据库之后，业务层的代码会再向表示层也就是显示器端传回一个指令通知你表格填写成功</p>
+<h2 id="三axios的使用">三、Axios的使用</h2>
+<h3 id="31-axios是什么">3.1 Axios是什么</h3>
+<p>Axios是一个基于promise的HTTP库，类似于jQuery的ajax，用于http请求。可以应用于浏览器端和node.js，既可以用于客户端，也可以用于node.js编写的服务端。</p>
+<h3 id="32-axios特性">3.2 Axios特性</h3>
+<p>（1）支持Promise API</p>
+<p>（2）拦截请求与响应，比如：在请求前添加授权和响应前做一些事情。</p>
+<p>（3）转换请求数据和响应数据，比如：进行请求加密或者响应数据加密。</p>
+<p>（4）取消请求</p>
+<p>（5）自动转换JSON数据</p>
+<p>（6）客户端支持防御XSRF</p>
+<p><em><strong>*3.3*</strong></em>  <em><strong>*axios常用的请求方法*</strong></em></p>
+<p>方法列举：get, post, put, patch, delete</p>
+<p>get：一般用户获取数据</p>
+<p>post：一般用于表单提交与文件上传</p>
+<p>patch：更新数据（只将修改的数据推送到后端）</p>
+<p>put：更新数据（所有数据推送到服务端）</p>
+<p>delete：删除数据</p>
+<p>备注：post一般用于新建数据，put一般用于更新数据，patch一般用于数据量较大的时候的数据更新。</p>
+<h3 id="heading-4"></h3>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps15.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图3.1 get方法</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps16.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h3 id="图32-post方法">图3.2 post方法</h3>
+<h2 id="四实现小车pid参数的远程更新">四、实现小车PID参数的远程更新</h2>
+<p>控制参数从浏览器页面端输入后下发到本地Matlab端</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps17.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图4.1 核心代码实现1</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps18.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图4.2核心代码实现2</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps19.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图4.3核心代码实现3</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps20.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图4.4 Matlab端显示效果</p>
+<h2 id="五云端可以保存小车以不同参数运行的多次实时行车数据">五、云端可以保存小车以不同参数运行的多次实时行车数据</h2>
+<p>创建car_cycle_data表，其中设置不同的字段以保存数据，建表语句如下：</p>
+<p>CREATE TABLE <code>car_cycle_data</code> (</p>
+<p><code>num</code> varchar(255) DEFAULT NULL,</p>
+<p><code>id</code> varchar(255) DEFAULT NULL,</p>
+<p><code>control_cycle</code> varchar(255) DEFAULT NULL,</p>
+<p><code>encoder_right</code> varchar(255) DEFAULT NULL,</p>
+<p><code>encoder_left</code> varchar(255) DEFAULT NULL,</p>
+<p><code>motor_control_left</code> varchar(255) DEFAULT NULL,</p>
+<p><code>motor_control_right</code> varchar(255) DEFAULT NULL,</p>
+<p><code>motor_target_left</code> varchar(255) DEFAULT NULL,</p>
+<p><code>motor_target_right</code> varchar(255) DEFAULT NULL,</p>
+<p><code>steering_gear_control</code> varchar(255) DEFAULT NULL,</p>
+<p><code>off_center</code> varchar(255) DEFAULT NULL,</p>
+<p><code>electromagnetic_left</code> varchar(255) DEFAULT NULL,</p>
+<p><code>electromagnetic_mid</code> varchar(255) DEFAULT NULL,</p>
+<p><code>electromagnetic_right</code> varchar(255) DEFAULT NULL,</p>
+<p><code>acceleration_x</code> varchar(255) DEFAULT NULL,</p>
+<p><code>acceleration_y</code> varchar(255) DEFAULT NULL,</p>
+<p><code>acceleration_z</code> varchar(255) DEFAULT NULL,</p>
+<p><code>gyroscope_x</code> varchar(255) DEFAULT NULL,</p>
+<p><code>gyroscope_y</code> varchar(255) DEFAULT NULL,</p>
+<p><code>gyroscope_z</code> varchar(255) DEFAULT NULL,</p>
+<p><code>magnetometer_x</code> varchar(255) DEFAULT NULL,</p>
+<p><code>magnetometer_y</code> varchar(255) DEFAULT NULL,</p>
+<p><code>magnetometer_z</code> varchar(255) DEFAULT NULL,</p>
+<p><code>steering_KP</code> varchar(255) DEFAULT NULL,</p>
+<p><code>steering_KI</code> varchar(255) DEFAULT NULL,</p>
+<p><code>steering_KD</code> varchar(255) DEFAULT NULL,</p>
+<p><code>servo_KP</code> varchar(255) DEFAULT NULL,</p>
+<p><code>servo_KI</code> varchar(255) DEFAULT NULL,</p>
+<p><code>servo_KD</code> varchar(255) DEFAULT NULL,</p>
+<p><code>speed</code> varchar(255) DEFAULT NULL,</p>
+<p><code>extra_one</code> varchar(255) DEFAULT NULL,</p>
+<p><code>extra_two</code> varchar(255) DEFAULT NULL</p>
+<p>) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps21.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图5.1 云端数据库car_cycle_data表数据</p>
+<h2 id="六前端显示实时行车轨迹以及数据统计分析结果">六、前端显示实时行车轨迹以及数据统计分析结果</h2>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps22.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图6.1小车运动轨迹代码实现1</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps23.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图6.2 小车运动轨迹代码实现2</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps24.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图6.3小车运动轨迹效果显示</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps25.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图6.4 数据统计分析代码实现1</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps26.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图6.5数据统计分析代码实现2</p>
+<p>：</p>
+<p><img src="/file:/C:%5cUsers%5c86187%5cAppData%5cLocal%5cTemp%5cksohtml17704%5cwps27.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<p>图6.6 数据统计分析结果显示</p>
+<h2 id="七总结与展望">七、总结与展望</h2>
+<p>此次大课设给予了我一次十分宝贵的项目经验，让我的理论知识得以进行实践。我从大三开始学习Java后端相关技术栈，经过几个月的学习已经掌握如何设计与部署项目，在部署智能车项目到服务器时依旧遇到比较大的问题。一开始是服务器环境的搭建，即使一步一步按照技术博客的步骤进行安装，依旧会出现不可预料的问题，问题可能是与云服务器版本不兼容，可能是环境变量没有设置好，即便是服务器内存与网络问题也可能导致环境的搭建失败，这时就迫使我学会调试看日志，判断可能存在的问题，定位bug再进行百度解决。项目部署过程也是如此，调试、定位bug、解决，按照博客上的步骤进行部署项目、调试项目只是最浅显的进步，而最大的进步是拥有了直面bug的勇气与定位解决bug的能力，让我从一个纸上谈兵者成长为实干家。</p>
+<h2 id="八参考文献">八、参考文献</h2>
+<p><strong>8.1 IDEA远程调试</strong></p>
+<p><a class="link" href="https://blog.csdn.net/qq_37192800/article/details/80761643?ops_request_misc=%7b%22request_id%22%3A%22167274002116800213054999%22%2C%22scm%22%3A%2220140713.130102334..%22%7d&amp;request_id=167274002116800213054999&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-80761643-null-null.142%5ev68%5econtrol,201%5ev4%5eadd_ask,213%5ev2%5et3_esquery_v2&amp;utm_term=idea%e8%bf%9c%e7%a8%8b%e8%b0%83%e8%af%95&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    > Intellij IDEA远程debug教程实战和要点总结_山月风成的博客-CSDN博客</a></p>
+<p><strong>8.2 Navicat远程连接Mysql</strong></p>
+<p><a class="link" href="https://blog.csdn.net/LLL3189860667/article/details/126752342?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%e9%98%bf%e9%87%8c%e4%ba%91%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%bf%9c%e7%a8%8b%e8%bf%9e%e6%8e%a5mysql&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-126752342.142%5ev68%5econtrol,201%5ev4%5eadd_ask,213%5ev2%5et3_esquery_v2&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    >如何在阿里云服务器上安装mysql数据库并开启远程连接_一只花小妖的博客-CSDN博客_阿里云mysql数据库怎么连接</a></p>
+<h3 id="83-前后端如何进行数据交互"><strong>8.3</strong> <strong>前后端如何进行数据交互</strong></h3>
+<p><a class="link" href="https://blog.csdn.net/chenweiqiang77/article/details/111548164?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%e5%89%8d%e7%ab%af%e4%b8%8e%e5%90%8e%e7%ab%af%e7%9a%84%e6%95%b0%e6%8d%ae%e4%ba%a4%e4%ba%92&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-111548164.142%5ev68%5econtrol,201%5ev4%5eadd_ask,213%5ev2%5et3_esquery_v2&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    > 前后端如何进行数据交互_shinshinshintaro的博客-CSDN博客_前端后端数据库交互过程</a></p>
+<h3 id="84-axios基础"><strong>8.4</strong> <strong>Axios基础</strong></h3>
+<p><a class="link" href="https://blog.csdn.net/qq_52151772/article/details/122117478?ops_request_misc=%7b%22request_id%22%3A%22167270678116782425636990%22%2C%22scm%22%3A%2220140713.130102334..%22%7d&amp;request_id=167270678116782425636990&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-122117478-null-null.142%5ev68%5econtrol,201%5ev4%5eadd_ask,213%5ev2%5et3_esquery_v2&amp;utm_term=axios&amp;spm=1018.2226.3001.4187"  target="_blank" rel="noopener"
+    >Axios（万字详细教程）_f(me)的博客-CSDN博客_axios教程</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Slothhuman&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
